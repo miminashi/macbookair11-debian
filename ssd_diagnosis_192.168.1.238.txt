@@ -1,0 +1,72 @@
+SSD診断レポート - 192.168.1.238 (Debian Rescue Mode)
+=====================================================
+日時: 2026-03-29
+ホスト: MacBook Air (Broadwell-U, 11-inch 2015)
+
+## ハードウェア情報
+- PCI: 04:00.0 SATA controller
+- デバイス: Samsung Electronics Co Ltd S4LN058A01[SSUBX] AHCI SSD Controller (Apple slot) (rev 01)
+- PCI Vendor/Device: 0x144d / 0xa801
+- インターフェース: AHCI (SATA mode), 6 Gbps, 32 command slots
+
+## 症状
+- lspciではSSDコントローラが見える
+- /dev 以下にSSD用のブロックデバイスが存在しない（/dev/sdaはUSBブートメディア）
+
+## dmesg解析 (時系列)
+
+### 初回検出時 (起動後 ~1316秒)
+- ahci 0000:04:00.0: AHCI vers 0001.0300, 1/1 ports, SATA mode
+- ata1としてデバイスを認識、/dev/sdb として登録
+- UDMA/133で構成（device error ignored）
+
+### エラー発生
+- FLUSH CACHE コマンドが繰り返し ABRT エラーで失敗
+- "LPM support broken, forcing max_power" — 電源管理異常
+- "failed to enable AA (error_mask=0x1)" — Auto Activate失敗
+
+### リンクダウンのエスカレーション
+1. 6 Gbps → SATA link down (SStatus 0 SControl 320) → hard reset
+2. 3 Gbps → SATA link down (SStatus 0 SControl 320) → hard reset
+3. 1.5 Gbps → SATA link down (SStatus 0 SControl 310) → デバイス無効化
+- ata1.00: disable device
+- ata1.00: detaching (SCSI 1:0:0:0)
+
+### ドライバリバインド試行 #1
+- ahci 0000:04:00.0: Controller reset failed (0x80000001)
+- probe with driver ahci failed with error -5 (EIO)
+
+### PCI FLR (Function Level Reset) 試行
+- pci 0000:04:00.0: not ready 1023ms after FLR; waiting
+- pci 0000:04:00.0: not ready 2047ms after FLR; waiting
+- pci 0000:04:00.0: not ready 4095ms after FLR; waiting
+- pci 0000:04:00.0: not ready 8191ms after FLR; waiting
+- pci 0000:04:00.0: not ready 16383ms after FLR; waiting
+- pci 0000:04:00.0: not ready 32767ms after FLR; waiting
+- pci 0000:04:00.0: not ready 65535ms after FLR; giving up
+- 再度 Controller reset failed (0x80000001)
+
+## SMART情報
+取得不可 — コントローラが完全に無応答のため、smartctl/hdparm いずれも使用不能。
+レスキュー環境にsmartctl/hdparmは未搭載。
+仮にツールがあってもデバイスノード（/dev/sdb）が存在せず取得不可能。
+
+## 診断結論
+SSD（Samsung S4LN058A01）がハードウェアレベルで故障している可能性が極めて高い。
+
+根拠:
+1. FLUSH CACHEコマンドの連続ABRT — SSD内部ファームウェアがキャッシュフラッシュを実行できない
+2. SATAリンクの物理層断絶 — SStatus=0 はPHY通信が完全に不能
+3. PCI FLRに65秒以上無応答 — コントローラICが応答停止
+4. Controller reset failed — AHCIレジスタへのアクセス自体が失敗
+
+考えられる原因（可能性順）:
+1. SSD内部のNANDフラッシュまたはコントローラICの故障
+2. SSD基板上のはんだ接合不良（BGA接続の劣化）
+3. MacBook Air内部のSATAフレキシブルケーブルの断線・接触不良
+4. PCIe→SATA ブリッジ部の障害
+
+推奨対応:
+- SSDの交換（MacBook Air 11-inch 2015はApple独自コネクタのPCIe SSD）
+- 交換前にSATAフレキケーブルの確認（入手可能であれば）
+- データ復旧が必要な場合は専門業者への依頼を検討
