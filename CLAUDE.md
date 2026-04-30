@@ -6,7 +6,7 @@
 - レポートのタイトルは日本語で記載する
 - レポートには日時（分まで）を入れる
 - レポートのファイル名は `yyyy-mm-dd_hhmmss_レポート名.md` にする（ファイル名のレポート名は英語）
-- タイムスタンプは `date +%Y-%m-%d_%H%M%S` コマンドで取得すること（LLM が時刻を推測してはならない）
+- タイムスタンプは `TZ=Asia/Tokyo date +%Y-%m-%d_%H%M%S` コマンドで取得すること（LLM が時刻を推測してはならない）
 - レポート内の日時表記は JST (日本標準時) で記載すること。システムが UTC の場合は +9 時間に変換する
 - 実験やタスクの前提条件・目的は専用のセクションを設けて記載する
 - 実験の再現方法（手順・コマンド等）を記載する
@@ -83,3 +83,53 @@ Proxmox VE クラスタ上に Ceph ストレージを構築し、分散ストレ
    pveceph osd create /dev/sdb
    ```
 ````
+
+## サンドボックス内からの内部ネットワークアクセス (curl)
+
+Claude Code のサンドボックス (Linux: bubblewrap) はネットワーク名前空間を分離しており、bash 内からの外向き通信はサンドボックスが提供する HTTP プロキシ (`localhost:3128`) または SOCKS5 プロキシ (`localhost:1080`) 経由でのみ可能。
+
+### 落とし穴
+
+サンドボックス内には `no_proxy=localhost,127.0.0.1,...,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,...` が設定されているため、**RFC1918 のプライベート IP** (`10.x`, `172.16-31.x`, `192.168.x`) に対して `curl` はプロキシをバイパスして直接接続を試みる。サンドボックス内には経路 (`ip route` が空) が無いので、即座に `Failed to connect ... ネットワークに届きません` で失敗する。
+
+### 内部ネットワークへの curl 手順
+
+1. **アクセスしたいホスト/ドメインを `sandbox.network.allowedDomains` に追加** (`.claude/settings.local.json`):
+
+   ```json
+   {
+     "sandbox": {
+       "enabled": true,
+       "autoAllowBashIfSandboxed": true,
+       "network": {
+         "allowedDomains": ["10.1.6.1", "*.lan"]
+       }
+     }
+   }
+   ```
+
+   - IP アドレス・ドメイン名・ワイルドカード (`*.example.com`) いずれも可
+   - ポート指定は不要 (ホスト単位で許可)
+
+2. **curl 実行時に `no_proxy` を空にして HTTP プロキシを明示**:
+
+   ```bash
+   no_proxy='' NO_PROXY='' curl -x http://localhost:3128 http://10.1.6.1:5032/path
+   ```
+
+   - 公開ドメインへのアクセスはこの工夫不要 (`no_proxy` にマッチしないので環境変数の `HTTP_PROXY` が自動で使われる)
+   - プライベート IP / `*.local` / `*.lan` 等にアクセスする場合のみ必要
+
+### 動作確認 (例)
+
+```bash
+# サンドボックス内かどうか
+echo "$SANDBOX_RUNTIME"   # → 1 ならサンドボックス内
+ip route                  # → 空ならネットワーク名前空間で隔離されている
+echo "$HTTP_PROXY"        # → http://localhost:3128
+
+# 内部 HTTP サーバから取得
+no_proxy='' NO_PROXY='' curl -sS -x "$HTTP_PROXY" http://10.1.6.1:5032/pvese/REPORT.md/raw
+```
+
+サンドボックス自体を一時的に無効化する場合はスラッシュコマンド `/sandbox` で切り替える。
