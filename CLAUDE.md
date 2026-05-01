@@ -133,3 +133,64 @@ no_proxy='' NO_PROXY='' curl -sS -x "$HTTP_PROXY" http://10.1.6.1:5032/pvese/REP
 ```
 
 サンドボックス自体を一時的に無効化する場合はスラッシュコマンド `/sandbox` で切り替える。
+
+## GitHub への push / fetch (deploy key)
+
+このリポジトリの GitHub remote には **このリポジトリ専用の deploy key** を使う。
+鍵と SSH 設定は `.deploy-key/` ディレクトリに格納している。詳細は
+[`.deploy-key/README.md`](.deploy-key/README.md) を参照。
+
+### 接続方式
+
+**`GIT_SSH_COMMAND` で `.deploy-key/config` を指定する方式**:
+
+- `~/.ssh/config` も `.git/config` も書き換えない
+- git 実行時に `GIT_SSH_COMMAND="ssh -F .../.deploy-key/config" git ...` で `.deploy-key/config` を指定する
+- 推奨は同梱ラッパー: `./.deploy-key/git.sh <subcommand>`
+- remote URL は通常通り `git@github.com:miminashi/macbookair11-debian.git`
+
+(注: `core.sshCommand` 方式と `~/.ssh/config Include` 方式は採用していない。
+Claude Code のサンドボックスが `.git/config` と `~/.ssh/config` への書き込みを
+ブロックするため、両方ともサンドボックス内では実行できない。`GIT_SSH_COMMAND` 方式は
+リポジトリ内のファイルだけで完結するためサンドボックスとの相性が良い。)
+
+### 運用ポリシー
+
+- 鍵ペア (`id_ed25519` / `id_ed25519.pub`) と `config` (絶対パス入り) はリポジトリに
+  コミットしない (`.gitignore` で除外)。マシンごとに `setup.sh` が生成する
+- GitHub Deploy keys への公開鍵登録は **ユーザが手動で行う**
+- ユーザの `~/.ssh/` 配下の個人鍵をこのリポジトリに使わない (= 素の `git push` を使わない)
+
+### 初回セットアップ (クローン直後・新マシンで 1 回だけ)
+
+1. `./.deploy-key/setup.sh` を実行する。鍵ペアと `.deploy-key/config` が自動生成され、
+   公開鍵と使い方の案内が画面に表示される。
+2. **公開鍵を GitHub に登録する** (画面に表示された手順に従う)。
+3. (まだ origin が無ければ) **remote を追加**: 通常の URL でよい:
+   ```bash
+   git remote add origin git@github.com:miminashi/macbookair11-debian.git
+   ```
+
+### Claude が GitHub にアクセスする際のルール
+
+- push / fetch / ls-remote 等は **必ずラッパー経由** で実行する:
+  ```bash
+  ./.deploy-key/git.sh push
+  ./.deploy-key/git.sh fetch
+  ./.deploy-key/git.sh ls-remote origin
+  ```
+- ラッパーは `$SANDBOX_RUNTIME` を自動検出する:
+  - サンドボックス内: HTTP CONNECT proxy (`localhost:3128`) 経由で `ssh.github.com:443`
+    に接続 (`HostKeyAlias=github.com`)、最大 3 回リトライ
+  - サンドボックス外: 直接 `github.com:22` に接続
+- サンドボックス内でラッパーがリトライしても失敗する場合はプロキシの不安定さ
+  (散発的に "Bad Gateway") が原因。再実行するかユーザに `/sandbox` 切り替えを依頼する。
+- 素の `git push` / `git fetch` は **使わない** (個人鍵で認証されてしまうため)。
+  ローカル操作 (`git status`, `git log`, `git commit` など、ネットワーク不要のもの) は
+  通常の `git` でよい。
+- push 前に `.deploy-key/config` の存在を確認する。無ければ `./.deploy-key/setup.sh` を
+  案内する。
+- `setup.sh` が **鍵を新規生成した** 場合 (出力に「鍵を新規生成したので…登録が **必須** です」と
+  表示される)、勝手に push を実行せず、**ユーザに公開鍵の登録を依頼してから** push する。
+- `.deploy-key/id_ed25519`, `.deploy-key/id_ed25519.pub`, `.deploy-key/config` は
+  すべて `.gitignore` で除外済み。`git add -f` 等で誤ってコミットしないこと。
