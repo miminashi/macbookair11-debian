@@ -137,16 +137,16 @@ no_proxy='' NO_PROXY='' curl -sS -x "$HTTP_PROXY" http://10.1.6.1:5032/pvese/REP
 ## GitHub への push / fetch (deploy key)
 
 このリポジトリの GitHub remote には **このリポジトリ専用の deploy key** を使う。
-鍵と SSH 設定は `.deploy-key/` ディレクトリに格納している。詳細は
-[`.deploy-key/README.md`](.deploy-key/README.md) を参照。
+鍵と SSH 設定は `.ssh/` ディレクトリに格納している。詳細は
+[`.ssh/README.md`](.ssh/README.md) を参照。
 
 ### 接続方式
 
-**`GIT_SSH_COMMAND` で `.deploy-key/config` を指定する方式**:
+**`GIT_SSH_COMMAND` で `.ssh/config` を指定する方式**:
 
 - `~/.ssh/config` も `.git/config` も書き換えない
-- git 実行時に `GIT_SSH_COMMAND="ssh -F .../.deploy-key/config" git ...` で `.deploy-key/config` を指定する
-- 推奨は同梱ラッパー: `./.deploy-key/git.sh <subcommand>`
+- git 実行時に `GIT_SSH_COMMAND="ssh -F .../.ssh/config" git ...` で `.ssh/config` を指定する
+- 推奨は同梱ラッパー: `./.ssh/git.sh <subcommand>`
 - remote URL は通常通り `git@github.com:miminashi/macbookair11-debian.git`
 
 (注: `core.sshCommand` 方式と `~/.ssh/config Include` 方式は採用していない。
@@ -157,16 +157,39 @@ Claude Code のサンドボックスが `.git/config` と `~/.ssh/config` への
 ### 運用ポリシー
 
 - 鍵ペア (`id_ed25519` / `id_ed25519.pub`) と `config` (絶対パス入り) はリポジトリに
-  コミットしない (`.gitignore` で除外)。マシンごとに `setup.sh` が生成する
+  コミットしない (`.gitignore` で除外)。マシンごとに手動で生成する
 - GitHub Deploy keys への公開鍵登録は **ユーザが手動で行う**
 - ユーザの `~/.ssh/` 配下の個人鍵をこのリポジトリに使わない (= 素の `git push` を使わない)
 
 ### 初回セットアップ (クローン直後・新マシンで 1 回だけ)
 
-1. `./.deploy-key/setup.sh` を実行する。鍵ペアと `.deploy-key/config` が自動生成され、
-   公開鍵と使い方の案内が画面に表示される。
-2. **公開鍵を GitHub に登録する** (画面に表示された手順に従う)。
-3. (まだ origin が無ければ) **remote を追加**: 通常の URL でよい:
+詳細は [`.ssh/README.md`](.ssh/README.md) の「初回セットアップ」を参照。
+要点だけ:
+
+1. **鍵を生成**:
+   ```bash
+   chmod 700 .ssh
+   ssh-keygen -t ed25519 -N '' \
+     -C "deploy-key:miminashi/macbookair11-debian (host: $(hostname -s))" \
+     -f .ssh/id_ed25519
+   chmod 600 .ssh/id_ed25519
+   ```
+2. **`.ssh/config` を絶対パスで作成** (リポジトリのルートで):
+   ```bash
+   ROOT="$PWD"
+   cat > .ssh/config <<EOF
+   Host github.com
+     User git
+     IdentityFile $ROOT/.ssh/id_ed25519
+     IdentitiesOnly yes
+     UserKnownHostsFile $ROOT/.ssh/known_hosts
+     StrictHostKeyChecking yes
+   EOF
+   chmod 600 .ssh/config
+   ```
+3. **公開鍵を GitHub に登録** (`cat .ssh/id_ed25519.pub` の出力を Settings →
+   Deploy keys → Add deploy key)。push が必要なら "Allow write access" を有効化。
+4. (まだ origin が無ければ) **remote を追加**:
    ```bash
    git remote add origin git@github.com:miminashi/macbookair11-debian.git
    ```
@@ -175,9 +198,9 @@ Claude Code のサンドボックスが `.git/config` と `~/.ssh/config` への
 
 - push / fetch / ls-remote 等は **必ずラッパー経由** で実行する:
   ```bash
-  ./.deploy-key/git.sh push
-  ./.deploy-key/git.sh fetch
-  ./.deploy-key/git.sh ls-remote origin
+  ./.ssh/git.sh push
+  ./.ssh/git.sh fetch
+  ./.ssh/git.sh ls-remote origin
   ```
 - ラッパーは `$SANDBOX_RUNTIME` を自動検出する:
   - サンドボックス内: HTTP CONNECT proxy (`localhost:3128`) 経由で `ssh.github.com:443`
@@ -188,9 +211,9 @@ Claude Code のサンドボックスが `.git/config` と `~/.ssh/config` への
 - 素の `git push` / `git fetch` は **使わない** (個人鍵で認証されてしまうため)。
   ローカル操作 (`git status`, `git log`, `git commit` など、ネットワーク不要のもの) は
   通常の `git` でよい。
-- push 前に `.deploy-key/config` の存在を確認する。無ければ `./.deploy-key/setup.sh` を
-  案内する。
-- `setup.sh` が **鍵を新規生成した** 場合 (出力に「鍵を新規生成したので…登録が **必須** です」と
-  表示される)、勝手に push を実行せず、**ユーザに公開鍵の登録を依頼してから** push する。
-- `.deploy-key/id_ed25519`, `.deploy-key/id_ed25519.pub`, `.deploy-key/config` は
+- push 前に `.ssh/config` の存在を確認する。無ければ
+  `.ssh/README.md` の「初回セットアップ」を案内する。
+- セットアップで **鍵を新規生成した直後** は、勝手に `git push` を実行せず、
+  **ユーザに公開鍵の登録を依頼してから** push する。
+- `.ssh/id_ed25519`, `.ssh/id_ed25519.pub`, `.ssh/config` は
   すべて `.gitignore` で除外済み。`git add -f` 等で誤ってコミットしないこと。
