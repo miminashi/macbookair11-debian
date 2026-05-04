@@ -26,6 +26,10 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
   暫定的に wpa_supplicant + systemd-networkd へ置き換えたのち、
   最終的に NetworkManager 1.52.1 のソースへ PMF=disable バグ修正パッチを適用し、
   GNOME GUI からの操作を復旧。
+- **Wi-Fi 系 (DKMS 追従)**: その後 Debian カーネル更新 (`6.12.85+deb13-amd64`) で
+  `broadcom-sta-dkms` が新カーネル向けに再ビルドされず `wl.ko` が消失し Wi-Fi が再喪失。
+  根本原因は `linux-headers-amd64` メタパッケージ未投入で、
+  メタを投入して DKMS が今後のカーネル更新に自動追従するよう恒久対策を実施。
 
 ## レポート一覧
 
@@ -33,6 +37,7 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
 
 | 日時 (JST) | タイトル | 概要 |
 |---|---|---|
+| 2026-05-05 00:09 | [カーネル更新で消えた Wi-Fi の修復 (broadcom-sta DKMS 再ビルド)](report/2026-05-05_000905_kernel_dkms_recovery.md) | Debian アップデートで `6.12.85+deb13-amd64` が入り `wl.ko` が消失。`linux-headers-amd64` メタを投入し DKMS 再ビルドで復旧、今後のカーネル追従を恒久化 |
 | 2026-04-01 18:20 | [NetworkManager WPA-PSK-SHA256 パッチ適用](report/2026-04-01_182006_networkmanager_patch.md) | NM 1.52.1 のソースに PMF=disable バグ修正パッチを適用し、GNOME GUI からの Wi-Fi 操作を復旧 |
 | 2026-04-01 08:01 | [Wi-Fi 接続問題 調査・修正](report/2026-04-01_080116_wifi_fix.md) | BCM4360 + `wl` ドライバが WPA-PSK-SHA256 非対応で接続不可。wpa_supplicant + systemd-networkd へ置き換えるワークアラウンド |
 | 2026-03-30 18:54 | [SSD 健全性レポート (交換後)](report/2026-03-30_185423_sda_health_check.md) | 交換後 SSD (S2PBNYAGB28065) の SMART・dd・I/O カウンタ検査 → PASSED |
@@ -52,6 +57,10 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
 │   ├── YYYY-MM-DD_HHMMSS_*.md
 │   └── attachment/                # 各レポートに紐づくプランファイル等
 │       └── <レポートファイル名>/
+├── .ssh/                          # GitHub deploy key 運用 (鍵本体は .gitignore で除外)
+│   ├── README.md
+│   ├── git.sh                     # GIT_SSH_COMMAND 経由の git ラッパー
+│   └── known_hosts
 └── ssd_diagnosis_192.168.1.238.txt
 ```
 
