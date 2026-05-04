@@ -1,5 +1,33 @@
 # CLAUDE.md
 
+## 操作対象 (ssh 接続先)
+
+このリポジトリは開発マシン上に置かれているが、**運用・修正対象機は別ホストの MacBook Air 11" (Early 2015)** であり、すべての診断・修正コマンドは ssh 経由で実機に対して実行する。
+
+| 項目 | 値 |
+|---|---|
+| ホスト名 | `macbookair2015.lan` |
+| ユーザ | `miminashi` |
+| 接続コマンド | `ssh miminashi@macbookair2015.lan` |
+| OS | Debian 13 (trixie) |
+| sudo | NOPASSWD 設定済み (非対話で `sudo` 可) |
+
+`nmcli` / `dpkg` / `dmesg` / `dkms` / `lsmod` / `ip` 等の診断・修正は **すべて ssh 越しに実機で実行する**。
+開発マシン (このリポジトリが置かれているマシン) で同じコマンドを叩いても無関係な情報になるため、必ず `ssh miminashi@macbookair2015.lan '...'` の形で実行すること。
+
+### サンドボックスから ssh 接続する手順
+
+Claude Code のサンドボックスはネットワーク名前空間を分離しており、デフォルトでは LAN 経路がないため `macbookair2015.lan` への ssh は通らない (`ip route` が空、`ping` も SOCK_RAW 不可)。次のいずれかの方法で経路を確保する:
+
+- **推奨**: `/sandbox` スラッシュコマンドでサンドボックスを一時無効化 (実機作業セッション中だけ無効化し、終わったら戻す)
+- もしくは `.claude/settings.local.json` の `sandbox.network.allowedDomains` に `macbookair2015.lan` (および必要なら IP) を追加
+
+### ssh 鍵の運用
+
+- ssh 接続用の鍵はユーザの `~/.ssh/` 配下にある個人鍵を利用する
+- このリポジトリ直下の `.ssh/` は **GitHub deploy key 専用** で、ssh 接続用とは別物
+- `~/.ssh/config` 等の鍵設定は Claude では編集しない (ユーザが手動管理)
+
 ## レポート作成ルール
 
 - レポートはプロジェクトルート以下の `report` ディレクトリに作成する
