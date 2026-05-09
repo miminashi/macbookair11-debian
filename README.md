@@ -30,6 +30,12 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
   `broadcom-sta-dkms` が新カーネル向けに再ビルドされず `wl.ko` が消失し Wi-Fi が再喪失。
   根本原因は `linux-headers-amd64` メタパッケージ未投入で、
   メタを投入して DKMS が今後のカーネル更新に自動追従するよう恒久対策を実施。
+- **電源管理系 (S3 ハング暫定対策)**: lid open でのスリープ復帰に時々失敗
+  (`PM: suspend entry (deep)` 直後にカーネルがハング、強制電源オフが必要) する問題を
+  ログ解析で確認 (週 ~0.7 件)。蓋開閉ラピッドファイア対照実験では reproducer に
+  ならず効果を経験的に validate できなかったが、Broadwell + i915 の Display Controller
+  ステート起因の既知不具合に対する標準的回避策として `i915.enable_dc=0` を
+  暫定設定として残し、4〜6 週間の継続観測フェーズへ。
 
 ## レポート一覧
 
@@ -37,6 +43,7 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
 
 | 日時 (JST) | タイトル | 概要 |
 |---|---|---|
+| 2026-05-10 05:50 | [lid open 復帰失敗 (S3 hang) 切り分けと暫定対策](report/2026-05-10_055032_lid_open_resume_hang.md) | journal 集計で 16 boot 中 4 件の S3 ハング (`PM: suspend entry (deep)` 直後で固まる) を確認。蓋開閉対照実験 (S3 30 cycle / s2idle 10 cycle / S3+`i915.enable_dc=0` 30 cycle) では fix の経験的 validation は得られず (A-1 でも 0 件)、理論ベースの暫定設定として `i915.enable_dc=0` を残し 4-6 週間の継続観測へ |
 | 2026-05-05 00:09 | [カーネル更新で消えた Wi-Fi の修復 (broadcom-sta DKMS 再ビルド)](report/2026-05-05_000905_kernel_dkms_recovery.md) | Debian アップデートで `6.12.85+deb13-amd64` が入り `wl.ko` が消失。`linux-headers-amd64` メタを投入し DKMS 再ビルドで復旧、今後のカーネル追従を恒久化 |
 | 2026-04-01 18:20 | [NetworkManager WPA-PSK-SHA256 パッチ適用](report/2026-04-01_182006_networkmanager_patch.md) | NM 1.52.1 のソースに PMF=disable バグ修正パッチを適用し、GNOME GUI からの Wi-Fi 操作を復旧 |
 | 2026-04-01 08:01 | [Wi-Fi 接続問題 調査・修正](report/2026-04-01_080116_wifi_fix.md) | BCM4360 + `wl` ドライバが WPA-PSK-SHA256 非対応で接続不可。wpa_supplicant + systemd-networkd へ置き換えるワークアラウンド |
