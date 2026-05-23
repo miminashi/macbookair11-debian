@@ -1,0 +1,101 @@
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x00058000-0x00058fff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x8ad01000-0x8ad48fff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x8ad5d000-0x8ad8efff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x8ae38000-0x8ae8efff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x8aecc000-0x8aefefff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x8afaa000-0x8afdefff]
+ 5月 23 14:47:02 macbookair2015 kernel: PM: hibernation: Registered nosave memory: [mem 0x8b000000-0xffffffff]
+ 5月 23 14:47:02 macbookair2015 kernel: ACPI: PM: Registering ACPI NVS region [mem 0x8ad01000-0x8ad48fff] (294912 bytes)
+ 5月 23 14:47:02 macbookair2015 kernel: ACPI: PM: (supports S0 S3 S4 S5)
+ 5月 23 14:47:03 macbookair2015 kernel: PM: genpd: Disabling unused power domains
+ 5月 23 14:47:03 macbookair2015 kernel: PM: Image not found (code -22)
+ 5月 23 14:48:46 macbookair2015 sudo[2319]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/journalctl -b _TRANSPORT=kernel --no-pager -g 'PM: suspend (entry|exit)' --no-pager
+ 5月 23 14:48:55 macbookair2015 kernel: PM: suspend entry (deep)
+ 5月 23 14:49:02 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_suspend @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: platform coretemp.0: PM: calling platform_pm_suspend @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: platform coretemp.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill1: PM: calling rfkill_suspend [rfkill] @ 2812, parent: phy0
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill1: PM: rfkill_suspend [rfkill] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input14: PM: calling input_dev_suspend @ 2812, parent: card1
+ 5月 23 14:49:02 macbookair2015 kernel: input input14: PM: input_dev_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input13: PM: calling input_dev_suspend @ 2812, parent: card1
+ 5月 23 14:49:02 macbookair2015 kernel: input input13: PM: input_dev_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC1D0c: PM: calling do_pcm_suspend [snd_pcm] @ 2812, parent: card1
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC1D0c: PM: do_pcm_suspend [snd_pcm] returned 0 after 1 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC1D0p: PM: calling do_pcm_suspend [snd_pcm] @ 2812, parent: card1
+ 5月 23 14:49:02 macbookair2015 kernel: ieee80211 phy0: PM: calling wiphy_suspend [cfg80211] @ 527, parent: 0000:03:00.0
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC1D0p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input12: PM: calling input_dev_suspend @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: input input12: PM: input_dev_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input11: PM: calling input_dev_suspend @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: input input11: PM: input_dev_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input10: PM: calling input_dev_suspend @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: input input10: PM: input_dev_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill0: PM: calling rfkill_suspend [rfkill] @ 2812, parent: hci0
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill0: PM: rfkill_suspend [rfkill] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC0D8p: PM: calling do_pcm_suspend [snd_pcm] @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC0D8p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC0D7p: PM: calling do_pcm_suspend [snd_pcm] @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: ieee80211 phy0: PM: wiphy_suspend [cfg80211] returned 0 after 4 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC0D7p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC0D3p: PM: calling do_pcm_suspend [snd_pcm] @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: sound pcmC0D3p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: platform regulatory.0: PM: calling platform_pm_suspend @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: platform regulatory.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds smc::kbd_backlight: PM: calling led_suspend @ 2812, parent: applesmc.768
+ 5月 23 14:49:02 macbookair2015 kernel: snd_hda_codec_cirrus hdaudioC1D0: PM: calling hda_codec_pm_suspend [snd_hda_codec] @ 527, parent: 0000:00:1b.0
+ 5月 23 14:49:02 macbookair2015 kernel: leds smc::kbd_backlight: PM: led_suspend returned 0 after 0 usecs
+--- snip ---
+ 5月 23 14:49:02 macbookair2015 kernel: input input4: PM: calling input_dev_resume @ 2812, parent: 0003:05AC:0290.0002
+ 5月 23 14:49:02 macbookair2015 kernel: input input4: PM: input_dev_resume returned 0 after 16 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::numlock: PM: calling led_resume @ 2812, parent: input4
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::numlock: PM: led_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::capslock: PM: calling led_resume @ 2812, parent: input4
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::capslock: PM: led_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::scrolllock: PM: calling led_resume @ 2812, parent: input4
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::scrolllock: PM: led_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::compose: PM: calling led_resume @ 2812, parent: input4
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::compose: PM: led_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::kana: PM: calling led_resume @ 2812, parent: input4
+ 5月 23 14:49:02 macbookair2015 kernel: leds input4::kana: PM: led_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input6: PM: calling input_dev_resume @ 2812, parent: LNXVIDEO:00
+ 5月 23 14:49:02 macbookair2015 kernel: input input6: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_resume returned 0 after 444059 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume @ 2842, parent: pci0000:00
+ 5月 23 14:49:02 macbookair2015 kernel: backlight acpi_video0: PM: calling backlight_resume @ 2812, parent: 0000:00:02.0
+ 5月 23 14:49:02 macbookair2015 kernel: backlight acpi_video0: PM: backlight_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input8: PM: calling input_dev_resume @ 2812, parent: 1-5:1.2
+ 5月 23 14:49:02 macbookair2015 kernel: input input8: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input9: PM: calling input_dev_resume @ 2812, parent: pcspkr
+ 5月 23 14:49:02 macbookair2015 kernel: input input9: PM: input_dev_resume returned 0 after 10 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: applesmc applesmc.768: PM: calling platform_pm_resume @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: applesmc applesmc.768: PM: platform_pm_resume returned 0 after 259 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: leds smc::kbd_backlight: PM: calling led_resume @ 2812, parent: applesmc.768
+ 5月 23 14:49:02 macbookair2015 kernel: leds smc::kbd_backlight: PM: led_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: platform regulatory.0: PM: calling platform_pm_resume @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: platform regulatory.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_resume returned 0 after 2359 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill0: PM: calling rfkill_resume [rfkill] @ 2812, parent: hci0
+ 5月 23 14:49:02 macbookair2015 kernel: snd_hda_codec_hdmi hdaudioC0D0: PM: calling hda_codec_pm_resume [snd_hda_codec] @ 2854, parent: 0000:00:03.0
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill0: PM: rfkill_resume [rfkill] returned 0 after 4 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input10: PM: calling input_dev_resume @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: input input10: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: snd_hda_codec_hdmi hdaudioC0D0: PM: hda_codec_pm_resume [snd_hda_codec] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input11: PM: calling input_dev_resume @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: input input11: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input12: PM: calling input_dev_resume @ 2812, parent: card0
+ 5月 23 14:49:02 macbookair2015 kernel: input input12: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input13: PM: calling input_dev_resume @ 2812, parent: card1
+ 5月 23 14:49:02 macbookair2015 kernel: input input13: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: input input14: PM: calling input_dev_resume @ 2812, parent: card1
+ 5月 23 14:49:02 macbookair2015 kernel: input input14: PM: input_dev_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill1: PM: calling rfkill_resume [rfkill] @ 2812, parent: phy0
+ 5月 23 14:49:02 macbookair2015 kernel: rfkill rfkill1: PM: rfkill_resume [rfkill] returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: platform coretemp.0: PM: calling platform_pm_resume @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: platform coretemp.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_resume @ 2812, parent: platform
+ 5月 23 14:49:02 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 5月 23 14:49:02 macbookair2015 kernel: PM: suspend exit

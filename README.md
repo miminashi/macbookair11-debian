@@ -48,6 +48,7 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
 
 | 日時 (JST) | タイトル | 概要 |
 |---|---|---|
+| 2026-05-23 14:45 | [S3 hang 再発 (1 日 2 回) と `pcie_aspm=off` 追加 + `pm_print_times` 永続化](report/2026-05-23_144518_s3_hang_pcie_aspm_off.md) | `applespi` blacklist 適用直後の 35h で hang 2 件 (両方とも `PM: suspend entry (deep)` 直後で停止、`no_console_suspend` で追加情報得られず)。前回プラン Phase B 候補 3 (`pcie_aspm=off`) を適用し、診断強化として `pm_print_times=1` を tmpfiles.d で永続化。次回 hang 時には device-level suspend timing から原因 device を直接特定可能に |
 | 2026-05-22 02:20 | [lid open 復帰失敗 (S3 hang) 再発と Phase B 候補 2 (applespi blacklist) 適用](report/2026-05-22_022030_s3_hang_recurrence_applespi_blacklist.md) | `i915.enable_dc=0` 導入から 12 日後の 5/19 に S3 hang 再発を確認 (停止位置は前回より早く device suspend phase)。前回プラン通り `applespi` ブラックリスト + `no_console_suspend` 追加 + 検出スクリプト v2 (末尾ログ判定方式) へ更新。v2 で過去 1 件の見落とし hang も追加発見、頻度は 4/1 〜 5/22 で 6 件 ≒ 週 0.8 件に更新 |
 | 2026-05-17 10:53 | [Debian アップデート後デグレチェック (6.12.86→6.12.88 2 段昇格)](report/2026-05-17_105358_post_update_regression_check.md) | 5/17 の 2 段カーネル昇格を含むアップデート後、NM `+broadcomfix1` hold / DKMS 全カーネル installed / `i915.enable_dc=0` / SSD SMART いずれもデグレなしを確認。5/5 で入れた DKMS 自動追従恒久対策 (`linux-headers-amd64` メタ) の初実戦テスト合格 |
 | 2026-05-10 05:50 | [lid open 復帰失敗 (S3 hang) 切り分けと暫定対策](report/2026-05-10_055032_lid_open_resume_hang.md) | journal 集計で 16 boot 中 4 件の S3 ハング (`PM: suspend entry (deep)` 直後で固まる) を確認。蓋開閉対照実験 (S3 30 cycle / s2idle 10 cycle / S3+`i915.enable_dc=0` 30 cycle) では fix の経験的 validation は得られず (A-1 でも 0 件)、理論ベースの暫定設定として `i915.enable_dc=0` を残し 4-6 週間の継続観測へ |

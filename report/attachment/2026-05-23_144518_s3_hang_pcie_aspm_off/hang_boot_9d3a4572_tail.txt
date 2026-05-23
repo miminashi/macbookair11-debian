@@ -1,0 +1,80 @@
+ 5月 23 01:45:18 macbookair2015 kernel: pcieport 0000:00:1c.5: Intel PCH root port ACS workaround enabled
+ 5月 23 01:45:18 macbookair2015 kernel: ACPI: EC: event unblocked
+ 5月 23 01:45:18 macbookair2015 kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+ 5月 23 01:45:18 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 5月 23 01:45:18 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 5月 23 01:45:18 macbookair2015 kernel: sd 0:0:0:0: [sda] Starting disk
+ 5月 23 01:45:18 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 5月 23 01:45:18 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 5月 23 01:45:18 macbookair2015 kernel: ata1.00: configured for UDMA/133
+ 5月 23 01:45:18 macbookair2015 kernel: OOM killer enabled.
+ 5月 23 01:45:18 macbookair2015 kernel: Restarting tasks ... done.
+ 5月 23 01:45:18 macbookair2015 kernel: random: crng reseeded on system resumption
+ 5月 23 01:45:18 macbookair2015 kernel: video LNXVIDEO:00: Restoring backlight state
+ 5月 23 01:45:18 macbookair2015 kernel: PM: suspend exit
+ 5月 23 01:45:18 macbookair2015 kernel: rfkill: input handler enabled
+ 5月 23 01:45:18 macbookair2015 kernel: rfkill: input handler disabled
+ 5月 23 02:25:39 macbookair2015 kernel: PM: suspend entry (deep)
+ 5月 23 02:25:39 macbookair2015 kernel: Filesystems sync: 0.017 seconds
+ 5月 23 12:26:21 macbookair2015 kernel: Freezing user space processes
+ 5月 23 12:26:21 macbookair2015 kernel: Freezing user space processes completed (elapsed 0.001 seconds)
+ 5月 23 12:26:21 macbookair2015 kernel: OOM killer disabled.
+ 5月 23 12:26:21 macbookair2015 kernel: Freezing remaining freezable tasks
+ 5月 23 12:26:21 macbookair2015 kernel: Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+ 5月 23 12:26:21 macbookair2015 kernel: ERROR @wl_notify_scan_status : 
+ 5月 23 12:26:21 macbookair2015 kernel: wlp3s0 Scan_results error (-22)
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.0: Enabling MPC IRBNCE
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.0: Intel PCH root port ACS workaround enabled
+ 5月 23 12:26:21 macbookair2015 kernel: sd 0:0:0:0: [sda] Synchronizing SCSI cache
+ 5月 23 12:26:21 macbookair2015 kernel: ata1.00: Entering standby power mode
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: EC: interrupt blocked
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: PM: Preparing to enter system sleep state S3
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: EC: event blocked
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: EC: EC stopped
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: PM: Saving platform NVS memory
+ 5月 23 12:26:21 macbookair2015 kernel: Disabling non-boot CPUs ...
+ 5月 23 12:26:21 macbookair2015 kernel: smpboot: CPU 3 is now offline
+ 5月 23 12:26:21 macbookair2015 kernel: smpboot: CPU 2 is now offline
+ 5月 23 12:26:21 macbookair2015 kernel: smpboot: CPU 1 is now offline
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: PM: Low-level resume complete
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: EC: EC started
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: PM: Restoring platform NVS memory
+ 5月 23 12:26:21 macbookair2015 kernel: Enabling non-boot CPUs ...
+ 5月 23 12:26:21 macbookair2015 kernel: smpboot: Booting Node 0 Processor 1 APIC 0x2
+ 5月 23 12:26:21 macbookair2015 kernel: CPU1 is up
+ 5月 23 12:26:21 macbookair2015 kernel: smpboot: Booting Node 0 Processor 2 APIC 0x1
+ 5月 23 12:26:21 macbookair2015 kernel: CPU2 is up
+ 5月 23 12:26:21 macbookair2015 kernel: smpboot: Booting Node 0 Processor 3 APIC 0x3
+ 5月 23 12:26:21 macbookair2015 kernel: CPU3 is up
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: PM: Waking up from system sleep state S3
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: EC: interrupt unblocked
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.0: Enabling MPC IRBNCE
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.0: Intel PCH root port ACS workaround enabled
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.1: Enabling MPC IRBNCE
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.1: Intel PCH root port ACS workaround enabled
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.4: Enabling MPC IRBNCE
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.4: Intel PCH root port ACS workaround enabled
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.2: Enabling MPC IRBNCE
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.2: Intel PCH root port ACS workaround enabled
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.5: Enabling MPC IRBNCE
+ 5月 23 12:26:21 macbookair2015 kernel: pcieport 0000:00:1c.5: Intel PCH root port ACS workaround enabled
+ 5月 23 12:26:21 macbookair2015 kernel: ACPI: EC: event unblocked
+ 5月 23 12:26:21 macbookair2015 kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+ 5月 23 12:26:21 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 5月 23 12:26:21 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 5月 23 12:26:21 macbookair2015 kernel: sd 0:0:0:0: [sda] Starting disk
+ 5月 23 12:26:21 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 5月 23 12:26:21 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 5月 23 12:26:21 macbookair2015 kernel: ata1.00: configured for UDMA/133
+ 5月 23 12:26:21 macbookair2015 kernel: OOM killer enabled.
+ 5月 23 12:26:21 macbookair2015 kernel: Restarting tasks ... done.
+ 5月 23 12:26:21 macbookair2015 kernel: random: crng reseeded on system resumption
+ 5月 23 12:26:21 macbookair2015 kernel: video LNXVIDEO:00: Restoring backlight state
+ 5月 23 12:26:21 macbookair2015 kernel: PM: suspend exit
+ 5月 23 12:27:40 macbookair2015 kernel: bluetooth hci0:12 enx98e0d98d205e: renamed from bnep0 (while UP)
+ 5月 23 12:27:55 macbookair2015 kernel: alg: No test for xcbc(camellia) (xcbc(camellia-asm))
+ 5月 23 12:27:55 macbookair2015 kernel: alg: No test for rfc3686(ctr(camellia)) (rfc3686(ctr(camellia-asm)))
+ 5月 23 12:27:56 macbookair2015 kernel: Initializing XFRM netlink socket
+ 5月 23 12:27:56 macbookair2015 kernel: IPsec XFRM device driver
+ 5月 23 12:28:02 macbookair2015 kernel: alg: No test for echainiv(authenc(hmac(sha256),cbc(aes))) (echainiv(authenc(hmac(sha256-avx2),cbc-aes-aesni)))
+ 5月 23 12:35:02 macbookair2015 kernel: PM: suspend entry (deep)

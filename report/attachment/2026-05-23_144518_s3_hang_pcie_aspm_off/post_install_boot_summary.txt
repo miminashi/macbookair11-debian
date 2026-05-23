@@ -1,0 +1,28 @@
+boot=dce6f602 off= -27 suspend=1   resume=1   diff=0  graceful
+boot=d2dd8981 off= -26 suspend=4   resume=4   diff=0  graceful
+boot=1c87ef41 off= -25 suspend=1   resume=1   diff=0  graceful
+boot=b512b88c off= -24 suspend=1   resume=1   diff=0  graceful
+boot=dab93bc3 off= -23 suspend=32  resume=32  diff=0  graceful
+boot=f606f761 off= -22 suspend=1   resume=1   diff=0  graceful
+boot=edea8161 off= -21 suspend=18  resume=17  diff=1  UNGRACEFUL [S3-HANG]
+boot=17ecb545 off= -20 suspend=1   resume=1   diff=0  UNGRACEFUL [S3-HANG]
+boot=6c9f6aa5 off= -19 suspend=1   resume=1   diff=0  graceful
+boot=418dcb77 off= -18 suspend=5   resume=5   diff=0  graceful
+boot=b4415a38 off= -17 suspend=13  resume=12  diff=1  UNGRACEFUL [S3-HANG]
+boot=8ffbacdb off= -16 suspend=5   resume=4   diff=1  UNGRACEFUL [S3-HANG]
+boot=6862b900 off= -15 suspend=3   resume=3   diff=0  graceful
+boot=eb537491 off= -14 suspend=1   resume=1   diff=0  graceful
+boot=139bb7e4 off= -13 suspend=10  resume=9   diff=1  UNGRACEFUL [S3-HANG]
+boot=123fcf32 off= -12 suspend=11  resume=11  diff=0  graceful
+boot=4aa927f2 off= -11 suspend=30  resume=30  diff=0  graceful
+boot=7ee3734f off= -10 suspend=10  resume=10  diff=0  graceful
+boot=f9c35ab3 off=  -9 suspend=66  resume=66  diff=0  graceful
+boot=b154cd0f off=  -8 suspend=1   resume=1   diff=0  graceful
+boot=0eb89502 off=  -7 suspend=1   resume=1   diff=0  graceful
+boot=b21337af off=  -6 suspend=1   resume=1   diff=0  graceful
+boot=77cd5397 off=  -5 suspend=10  resume=10  diff=0  UNGRACEFUL [S3-HANG]
+boot=52f0bd71 off=  -4 suspend=1   resume=1   diff=0  graceful
+boot=9d3a4572 off=  -3 suspend=5   resume=4   diff=1  UNGRACEFUL [S3-HANG]
+boot=260710ee off=  -2 suspend=1   resume=1   diff=0  UNGRACEFUL [S3-HANG]
+boot=3ad4dc09 off=  -1 suspend=1   resume=1   diff=0  graceful
+boot=857b9e52 off=   0 suspend=1   resume=1   diff=0  current

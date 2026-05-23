@@ -1,0 +1,80 @@
+ 5月 23 13:14:51 macbookair2015 kernel: input: HDA Intel HDMI HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:03.0/sound/card0/input14
+ 5月 23 13:14:51 macbookair2015 kernel: input: HDA Intel PCH Mic as /devices/pci0000:00/0000:00:1b.0/sound/card1/input10
+ 5月 23 13:14:51 macbookair2015 kernel: input: HDA Intel PCH Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card1/input11
+ 5月 23 13:14:51 macbookair2015 kernel: Bluetooth: hci0: BCM: chip id 73 build 0768
+ 5月 23 13:14:51 macbookair2015 kernel: Bluetooth: hci0: BCM: product 05ac:828f
+ 5月 23 13:14:51 macbookair2015 kernel: Bluetooth: hci0: BCM: features 0x07
+ 5月 23 13:14:51 macbookair2015 kernel: usb 1-3.1: USB disconnect, device number 4
+ 5月 23 13:14:51 macbookair2015 kernel: Bluetooth: hci0: BCM20702B0 Generic USB Class 1 @ 20 MHz
+ 5月 23 13:14:51 macbookair2015 kernel: wl: loading out-of-tree module taints kernel.
+ 5月 23 13:14:51 macbookair2015 kernel: wl: module license 'MIXED/Proprietary' taints kernel.
+ 5月 23 13:14:51 macbookair2015 kernel: Disabling lock debugging due to kernel taint
+ 5月 23 13:14:51 macbookair2015 kernel: wl: module verification failed: signature and/or required key missing - tainting kernel
+ 5月 23 13:14:51 macbookair2015 kernel: wl: module license taints kernel.
+ 5月 23 13:14:51 macbookair2015 kernel: wl: This driver includes a binary blob incompatible with IBT protection, available since Intel Core Tiger Lake (11th gen, 2020). If your CPU is older you can ignore the 'Unpatched return thunk in use' warnings caused by this driver. You can disable IBT by adding `ibt=off` to your kernel boot options.
+ 5月 23 13:14:51 macbookair2015 kernel: ------------[ cut here ]------------
+ 5月 23 13:14:51 macbookair2015 kernel: Unpatched return thunk in use. This should not happen!
+ 5月 23 13:14:51 macbookair2015 kernel: WARNING: CPU: 1 PID: 404 at arch/x86/kernel/cpu/bugs.c:3484 __warn_thunk+0x2a/0x40
+ 5月 23 13:14:51 macbookair2015 kernel: Modules linked in: wl(POE+) irqbypass crct10dif_pclmul ghash_clmulni_intel sha512_ssse3 binfmt_misc sha256_ssse3 snd_hda_codec_hdmi sha1_ssse3 snd_hda_codec_cirrus snd_hda_codec_generic btusb snd_hda_intel btrtl snd_intel_dspcfg aesni_intel snd_intel_sdw_acpi btintel gf128mul snd_hda_codec nls_ascii mei_pxp mei_hdcp crypto_simd btbcm cryptd nls_cp437 btmtk rapl vfat intel_cstate joydev fat snd_hda_core mei_me applesmc cfg80211 intel_uncore bluetooth snd_hwdep mei intel_pch_thermal pcspkr snd_pcm ecdh_generic bcm5974 rfkill snd_timer snd soundcore sbs acpi_als sbshc industrialio_triggered_buffer kfifo_buf industrialio ac apple_mfi_fastcharge sg evdev uinput msr parport_pc ppdev lp parport configfs efi_pstore nfnetlink efivarfs ip_tables x_tables autofs4 ext4 crc16 mbcache jbd2 crc32c_generic i915 hid_apple hid_generic usbhid hid sd_mod drm_buddy i2c_algo_bit drm_display_helper cec ahci rc_core libahci ttm libata xhci_pci xhci_hcd drm_kms_helper iTCO_wdt intel_pmc_bxt iTCO_vendor_support scsi_mod watchdog
+ 5月 23 13:14:51 macbookair2015 kernel:  usbcore thunderbolt crc32_pclmul drm crc32c_intel i2c_i801 scsi_common i2c_smbus spi_pxa2xx_pci usb_common dw_dmac_pci lpc_ich spi_pxa2xx_platform dw_dmac video dw_dmac_core button spi_pxa2xx_core wmi
+ 5月 23 13:14:51 macbookair2015 kernel: CPU: 1 UID: 0 PID: 404 Comm: (udev-worker) Tainted: P     U     OE      6.12.88+deb13-amd64 #1  Debian 6.12.88-1
+ 5月 23 13:14:51 macbookair2015 kernel: Tainted: [P]=PROPRIETARY_MODULE, [U]=USER, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+ 5月 23 13:14:51 macbookair2015 kernel: Hardware name: Apple Inc. MacBookAir7,1/Mac-9F18E312C5C2BF0B, BIOS MBA71.88Z.0166.B13.1611031424 11/03/2016
+ 5月 23 13:14:51 macbookair2015 kernel: RIP: 0010:__warn_thunk+0x2a/0x40
+ 5月 23 13:14:51 macbookair2015 kernel: Code: 66 0f 1f 00 0f 1f 44 00 00 80 3d 58 c7 dc 01 00 74 05 c3 cc cc cc cc 48 c7 c7 08 43 14 a1 c6 05 43 c7 dc 01 01 e8 f6 40 06 00 <0f> 0b c3 cc cc cc cc 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 44 00 00
+ 5月 23 13:14:51 macbookair2015 kernel: RSP: 0018:ffffd0490077fa98 EFLAGS: 00010286
+ 5月 23 13:14:51 macbookair2015 kernel: RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000027
+ 5月 23 13:14:51 macbookair2015 kernel: RDX: ffff8f182aca1788 RSI: 0000000000000001 RDI: ffff8f182aca1780
+ 5月 23 13:14:51 macbookair2015 kernel: RBP: ffffd0490077fae8 R08: 0000000000000000 R09: ffffd0490077f918
+ 5月 23 13:14:51 macbookair2015 kernel: R10: ffffffffa18b43e8 R11: 0000000000000003 R12: ffffffffc1a33bc1
+ 5月 23 13:14:51 macbookair2015 kernel: R13: ffffd0490077fb30 R14: ffff8f17ce64d9c0 R15: ffff8f17d87d8ed8
+ 5月 23 13:14:51 macbookair2015 kernel: FS:  00007f1166042980(0000) GS:ffff8f182ac80000(0000) knlGS:0000000000000000
+ 5月 23 13:14:51 macbookair2015 kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+ 5月 23 13:14:51 macbookair2015 kernel: CR2: 000055b66fb76118 CR3: 0000000119c5e001 CR4: 00000000003706f0
+ 5月 23 13:14:51 macbookair2015 kernel: Call Trace:
+ 5月 23 13:14:51 macbookair2015 kernel:  <TASK>
+ 5月 23 13:14:51 macbookair2015 kernel:  warn_thunk_thunk+0x1a/0x30
+ 5月 23 13:14:51 macbookair2015 kernel:  getvar+0x20/0x70 [wl]
+ 5月 23 13:14:51 macbookair2015 kernel:  ? orc_header+0x1628/0x1628 [wl]
+ 5月 23 13:14:51 macbookair2015 kernel:  wl_module_init+0x23/0xb0 [wl]
+ 5月 23 13:14:51 macbookair2015 kernel:  ? do_one_initcall+0x5b/0x310
+ 5月 23 13:14:51 macbookair2015 kernel:  ? do_init_module+0x60/0x230
+ 5月 23 13:14:51 macbookair2015 kernel:  ? init_module_from_file+0x89/0xe0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? idempotent_init_module+0x11e/0x310
+ 5月 23 13:14:51 macbookair2015 kernel:  ? __x64_sys_finit_module+0x5e/0xb0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? do_syscall_64+0x87/0x1b0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? __rseq_handle_notify_resume+0xa2/0x490
+ 5月 23 13:14:51 macbookair2015 kernel:  ? do_sys_openat2+0x9c/0xe0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? restore_fpregs_from_fpstate+0x3c/0xa0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? switch_fpu_return+0x4e/0xd0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x75/0xa0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? do_user_addr_fault+0x36c/0x620
+ 5月 23 13:14:51 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 5月 23 13:14:51 macbookair2015 kernel:  ? entry_SYSCALL_64_after_hwframe+0x76/0x7e
+ 5月 23 13:14:51 macbookair2015 kernel:  </TASK>
+ 5月 23 13:14:51 macbookair2015 kernel: ---[ end trace 0000000000000000 ]---
+ 5月 23 13:14:51 macbookair2015 kernel: wlan0: Broadcom BCM43a0 802.11 Hybrid Wireless Controller 6.30.223.271 (r587334)
+ 5月 23 13:14:51 macbookair2015 kernel: 
+ 5月 23 13:14:51 macbookair2015 kernel: wl 0000:03:00.0 wlp3s0: renamed from wlan0
+ 5月 23 13:14:51 macbookair2015 kernel: usb 1-3.2: USB disconnect, device number 5
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: BNEP filters: protocol multicast
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: BNEP socket layer initialized
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: MGMT ver 1.23
+ 5月 23 13:14:52 macbookair2015 kernel: NET: Registered PF_ALG protocol family
+ 5月 23 13:14:52 macbookair2015 kernel: intel_rapl_common: Found RAPL domain package
+ 5月 23 13:14:52 macbookair2015 kernel: intel_rapl_common: Found RAPL domain core
+ 5月 23 13:14:52 macbookair2015 kernel: intel_rapl_common: Found RAPL domain uncore
+ 5月 23 13:14:52 macbookair2015 kernel: intel_rapl_common: Found RAPL domain dram
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: RFCOMM TTY layer initialized
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: RFCOMM socket layer initialized
+ 5月 23 13:14:52 macbookair2015 kernel: Bluetooth: RFCOMM ver 1.11
+ 5月 23 13:14:52 macbookair2015 kernel: NET: Registered PF_QIPCRTR protocol family
+ 5月 23 13:14:55 macbookair2015 kernel: rfkill: input handler disabled
+ 5月 23 13:15:23 macbookair2015 systemd-journald[320]: File /var/log/journal/a8e1ea985fee4474bc74a1f4f5850133/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+ 5月 23 13:15:23 macbookair2015 kernel: rfkill: input handler enabled
+ 5月 23 13:15:26 macbookair2015 kernel: rfkill: input handler disabled
+ 5月 23 13:15:30 macbookair2015 kernel: input: XWayKeyz (virtual) Keyboard as /devices/virtual/input/input15
+ 5月 23 13:16:26 macbookair2015 kernel: PM: suspend entry (deep)
