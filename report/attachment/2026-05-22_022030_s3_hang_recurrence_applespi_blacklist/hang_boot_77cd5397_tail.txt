@@ -1,0 +1,20 @@
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 12[IKE] uninstalling bypass policy for 172.20.10.0/28
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 12[IKE] uninstalling bypass policy for 2001:240:2461:f4a5::/64
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 12[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to nm-xfrm-1762496)
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 12[IKE] uninstalling bypass policy for 172.20.10.1/32
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 16[IKE] deleting IKE_SA GSNet[2] between 172.20.10.6[macbookair2015]...160.16.210.47[160.16.210.47]
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 16[IKE] sending DELETE for IKE_SA GSNet[2]
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 16[ENC] generating INFORMATIONAL request 7 [ D ]
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 16[NET] sending packet: from 172.20.10.6[60777] to 160.16.210.47[4500] (80 bytes)
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 04[NET] error writing to socket: Network is unreachable
+ 5月 19 09:15:56 macbookair2015 NetworkManager[834]: <info>  [1779149756.8360] device (CC:60:23:AF:2C:60): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 5月 19 09:15:56 macbookair2015 charon-nm[218408]: 09[KNL] 192.168.83.1 disappeared from nm-xfrm-1762496
+ 5月 19 09:15:57 macbookair2015 gnome-shell[1711]: Cursor update failed: drmModeAtomicCommit: 無効な引数です
+ 5月 19 09:15:58 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+ 5月 19 09:15:58 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+ 5月 19 09:15:58 macbookair2015 systemd[1]: session-2.scope: Unit now frozen-by-parent.
+ 5月 19 09:15:58 macbookair2015 systemd[1]: user@1000.service: Unit now frozen-by-parent.
+ 5月 19 09:15:58 macbookair2015 systemd[1]: user-1000.slice: Unit now frozen-by-parent.
+ 5月 19 09:15:58 macbookair2015 systemd[1]: user.slice: Unit now frozen.
+ 5月 19 09:15:58 macbookair2015 systemd-sleep[221678]: Successfully froze unit 'user.slice'.
+ 5月 19 09:15:58 macbookair2015 systemd-sleep[221678]: Performing sleep operation 'suspend'...
