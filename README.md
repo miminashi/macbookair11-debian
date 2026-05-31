@@ -30,17 +30,20 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
   `broadcom-sta-dkms` が新カーネル向けに再ビルドされず `wl.ko` が消失し Wi-Fi が再喪失。
   根本原因は `linux-headers-amd64` メタパッケージ未投入で、
   メタを投入して DKMS が今後のカーネル更新に自動追従するよう恒久対策を実施。
-- **電源管理系 (S3 ハング暫定対策)**: lid open でのスリープ復帰に時々失敗
+- **電源管理系 (S3 ハング → s2idle へ恒久切替)**: lid open でのスリープ復帰に時々失敗
   (`PM: suspend entry (deep)` 直後にカーネルがハング、強制電源オフが必要) する問題を
-  ログ解析で確認 (週 ~0.7 件)。蓋開閉ラピッドファイア対照実験では reproducer に
-  ならず効果を経験的に validate できなかったが、Broadwell + i915 の Display Controller
-  ステート起因の既知不具合に対する標準的回避策として `i915.enable_dc=0` を
-  暫定設定として残し、4〜6 週間の継続観測フェーズへ。
-  - その後 12 日で再発 (`PM: suspend entry` より早い段階で停止 = device suspend phase
-    での hang)。Phase B 候補 2 として未使用ドライバ `applespi` をブラックリスト化し、
-    次回 hang 時の手掛かり収集用に `no_console_suspend` を追加、検出スクリプトを
-    v2 (末尾ログによる ungraceful shutdown 判定方式) へ更新して 4〜6 週間の継続観測を
-    継続。
+  ログ解析で確認 (週 ~0.7 件)。Phase B として `i915.enable_dc=0` → `applespi` blacklist
+  → `pcie_aspm=off` を順に適用したがいずれも無効で再発が続いた。
+  - cold power-off で kernel ring buffer が消え、本機には pstore/ERST も無いため、
+    journal では suspend hang と resume hang を区別できず、**1 パラメータ盲目適用 →
+    数週間観測のループはフィードバックがゼロ**であることが判明。そこで hang が紐づく
+    ACPI S3 deep の firmware 遷移そのものを使わない **s2idle へ恒久切替**
+    (`mem_sleep_default=s2idle`、失敗済みの `pcie_aspm=off`/`i915.enable_dc=0` は
+    s2idle の消費電力を悪化させるため除去)。
+  - s2idle は浅いスリープゆえネットワーク/USB で ~84s ごとに spurious wake するため、
+    `udev` で XHC1/RP01-06 の wakeup を無効化し lid-only wake に固定。この状態で
+    s2idle スリープ電力は **0.70 W** (12h で 22%、約 55.7h 持続) と実測。
+    resume 信頼性の長期観測フェーズへ。
 
 ## レポート一覧
 
@@ -48,6 +51,7 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
 
 | 日時 (JST) | タイトル | 概要 |
 |---|---|---|
+| 2026-05-31 13:21 | [S3 hang 対策: スリープモードを s2idle へ恒久切替 + spurious wakeup 抑止](report/2026-05-31_132125_s3_hang_switch_to_s2idle.md) | `pcie_aspm=off` 適用から ~7 日で再発 (5/30 18:44、`PM: suspend entry (deep)` で停止)。cold off で ring buffer 消失 + pstore/ERST 不在のため診断ループはフィードバック皆無と判明し、ACPI S3 deep を使わない **s2idle へ恒久切替** (`mem_sleep_default=s2idle`、失敗済み `pcie_aspm=off`/`i915.enable_dc=0` は除去)。s2idle の spurious wake (~84s) を `udev` で XHC1/RP01-06 wakeup 無効化し lid-only に固定。スリープ電力 0.70W (12h で 22%) を実測。resume 信頼性の長期観測へ |
 | 2026-05-23 14:45 | [S3 hang 再発 (1 日 2 回) と `pcie_aspm=off` 追加 + `pm_print_times` 永続化](report/2026-05-23_144518_s3_hang_pcie_aspm_off.md) | `applespi` blacklist 適用直後の 35h で hang 2 件 (両方とも `PM: suspend entry (deep)` 直後で停止、`no_console_suspend` で追加情報得られず)。前回プラン Phase B 候補 3 (`pcie_aspm=off`) を適用し、診断強化として `pm_print_times=1` を tmpfiles.d で永続化。次回 hang 時には device-level suspend timing から原因 device を直接特定可能に |
 | 2026-05-22 02:20 | [lid open 復帰失敗 (S3 hang) 再発と Phase B 候補 2 (applespi blacklist) 適用](report/2026-05-22_022030_s3_hang_recurrence_applespi_blacklist.md) | `i915.enable_dc=0` 導入から 12 日後の 5/19 に S3 hang 再発を確認 (停止位置は前回より早く device suspend phase)。前回プラン通り `applespi` ブラックリスト + `no_console_suspend` 追加 + 検出スクリプト v2 (末尾ログ判定方式) へ更新。v2 で過去 1 件の見落とし hang も追加発見、頻度は 4/1 〜 5/22 で 6 件 ≒ 週 0.8 件に更新 |
 | 2026-05-17 10:53 | [Debian アップデート後デグレチェック (6.12.86→6.12.88 2 段昇格)](report/2026-05-17_105358_post_update_regression_check.md) | 5/17 の 2 段カーネル昇格を含むアップデート後、NM `+broadcomfix1` hold / DKMS 全カーネル installed / `i915.enable_dc=0` / SSD SMART いずれもデグレなしを確認。5/5 で入れた DKMS 自動追従恒久対策 (`linux-headers-amd64` メタ) の初実戦テスト合格 |
