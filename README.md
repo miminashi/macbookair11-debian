@@ -30,7 +30,7 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
   `broadcom-sta-dkms` が新カーネル向けに再ビルドされず `wl.ko` が消失し Wi-Fi が再喪失。
   根本原因は `linux-headers-amd64` メタパッケージ未投入で、
   メタを投入して DKMS が今後のカーネル更新に自動追従するよう恒久対策を実施。
-- **電源管理系 (S3 ハング → s2idle へ恒久切替)**: lid open でのスリープ復帰に時々失敗
+- **電源管理系 (S3 ハング → s2idle 切替 → s2idle でも再発し原因切り分け中)**: lid open でのスリープ復帰に時々失敗
   (`PM: suspend entry (deep)` 直後にカーネルがハング、強制電源オフが必要) する問題を
   ログ解析で確認 (週 ~0.7 件)。Phase B として `i915.enable_dc=0` → `applespi` blacklist
   → `pcie_aspm=off` を順に適用したがいずれも無効で再発が続いた。
@@ -43,7 +43,14 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
   - s2idle は浅いスリープゆえネットワーク/USB で ~84s ごとに spurious wake するため、
     `udev` で XHC1/RP01-06 の wakeup を無効化し lid-only wake に固定。この状態で
     s2idle スリープ電力は **0.70 W** (12h で 22%、約 55.7h 持続) と実測。
-    resume 信頼性の長期観測フェーズへ。
+  - **s2idle 切替後 初日に hang 再発**を確認 (2026-05-31 21:25、lid trigger)。s2idle は
+    ACPI S3 deep の firmware 遷移を伴わないため、**「S3 deep firmware が原因」説は棄却**。
+    RTC 起床 (`rtcwake -m mem`) で s2idle を 68 サイクル回したところ **hang 0** (lid は
+    1/5 hang) で、wake 源非依存の suspend/resume hang は否定。ただし RTC テストは全て
+    lid open で実施＝lid 開閉/ディスプレイ復帰経路を再現していないため、残存被疑は
+    **(c) LID0 wake の間欠取りこぼし** と **(b′) lid/display 固有の resume hang**
+    (`i915.enable_dc=0` を外したぶん有力) の 2 つ。次は電源ボタン wake / lid 閉 RTC 試験で
+    (c)/(b′) を切り分け予定。
 
 ## レポート一覧
 
@@ -51,6 +58,7 @@ MacBook Air 11" で Debian 13 を安定運用するために必要な
 
 | 日時 (JST) | タイトル | 概要 |
 |---|---|---|
+| 2026-06-01 03:47 | [s2idle 切替後も resume hang 再発 — RTC ストレステストで原因切り分け](report/2026-06-01_034724_s2idle_hang_rtcwake_discrimination.md) | s2idle 切替 (5/31) 後 初日 21:25 に lid trigger で hang 再発。バッテリー枯渇ではなく真の hang と確定し、**ACPI S3 deep firmware 原因説を棄却**。`rtcwake -m mem` で s2idle を **68 サイクル (90s×60 + 1800s×6 + 既存2) 回して hang 0** (対して lid 1/5 hang)、wake 源非依存の suspend/resume hang を否定。ただし RTC は全て lid open での試験で lid 開閉/display 復帰経路を未再現のため、残存被疑は **(c) LID0 wake 間欠取りこぼし** vs **(b′) lid/display 固有 resume hang** (`i915.enable_dc=0` 除去で有力) の 2 つに絞られた。次は電源ボタン wake 検証 / lid 閉 RTC 試験で切り分け |
 | 2026-05-31 13:21 | [S3 hang 対策: スリープモードを s2idle へ恒久切替 + spurious wakeup 抑止](report/2026-05-31_132125_s3_hang_switch_to_s2idle.md) | `pcie_aspm=off` 適用から ~7 日で再発 (5/30 18:44、`PM: suspend entry (deep)` で停止)。cold off で ring buffer 消失 + pstore/ERST 不在のため診断ループはフィードバック皆無と判明し、ACPI S3 deep を使わない **s2idle へ恒久切替** (`mem_sleep_default=s2idle`、失敗済み `pcie_aspm=off`/`i915.enable_dc=0` は除去)。s2idle の spurious wake (~84s) を `udev` で XHC1/RP01-06 wakeup 無効化し lid-only に固定。スリープ電力 0.70W (12h で 22%) を実測。resume 信頼性の長期観測へ |
 | 2026-05-23 14:45 | [S3 hang 再発 (1 日 2 回) と `pcie_aspm=off` 追加 + `pm_print_times` 永続化](report/2026-05-23_144518_s3_hang_pcie_aspm_off.md) | `applespi` blacklist 適用直後の 35h で hang 2 件 (両方とも `PM: suspend entry (deep)` 直後で停止、`no_console_suspend` で追加情報得られず)。前回プラン Phase B 候補 3 (`pcie_aspm=off`) を適用し、診断強化として `pm_print_times=1` を tmpfiles.d で永続化。次回 hang 時には device-level suspend timing から原因 device を直接特定可能に |
 | 2026-05-22 02:20 | [lid open 復帰失敗 (S3 hang) 再発と Phase B 候補 2 (applespi blacklist) 適用](report/2026-05-22_022030_s3_hang_recurrence_applespi_blacklist.md) | `i915.enable_dc=0` 導入から 12 日後の 5/19 に S3 hang 再発を確認 (停止位置は前回より早く device suspend phase)。前回プラン通り `applespi` ブラックリスト + `no_console_suspend` 追加 + 検出スクリプト v2 (末尾ログ判定方式) へ更新。v2 で過去 1 件の見落とし hang も追加発見、頻度は 4/1 〜 5/22 で 6 件 ≒ 週 0.8 件に更新 |
