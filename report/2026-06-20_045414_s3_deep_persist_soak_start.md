@@ -31,8 +31,9 @@
 - 操作対象は ssh 接続先の実機 `macbookair2015.lan`。物理操作（AC 抜き差し・lid・電源ボタン）はユーザ。
 - **本セッションで 1 回再起動**（boot_id `86ba1c2d…` → `dd9c9218…`）。soak はこの新 boot から開始。
 - 永続デフォルト（GRUB）は `mem_sleep_default=s2idle` の**まま据え置き**。deep は oneshot が runtime 選択。
-- safety net（既設・不変）: logind `HandleLidSwitch=suspend-then-hibernate`（battery）/ UPower 2% Hibernate /
-  udev `BAT0 alarm=0`。
+- safety net: **睡眠中の電池保護は STH の時限ハイバネ（battery 時 logind `HandleLidSwitch=suspend-then-hibernate`、
+  `SuspendEstimationSec=30min`）が唯一**。UPower の 2% 緊急ハイバネは**睡眠中は発火しない**（ポーラが寝ているため
+  覚醒時のみ）。udev `BAT0 alarm=0` も既設。→ この STH→hibernate を deep 下で本セッションで実証済み（Part C-3）。
 - 新規残置物（本セッションで設置）:
   - `/usr/local/sbin/s3-deep-apply.sh` … 起動時に deep 選択 + LID0 無効化（ガード付き冪等）+ BOOT マーカー記録
   - `/etc/systemd/system/s3-deep-apply.service` … 上記を起動時に走らせる oneshot（**enabled**、`After=sysinit.target`）
@@ -74,6 +75,22 @@
    - **全サイクル boot_id 不変・drm_err=0・i915/DRM エラーなし**＝S3 resume 健全（画面黒なし、ユーザ目視も正常）。
    - 人手サイクルは `suspend-then-hibernate`（battery の lid 閉は logind STH 経路）で記録され、フックが両 type を
      正しく扱うことを確認。22s は STH の hibernate 遅延（30min）より十分短く、S3 suspend フェーズから電源ボタンで復帰。
+
+3. **【安全網】deep 下の STH→hibernate(S4)→resume を実証**（C-3。無人 battery soak の唯一の睡眠中電池保護なので
+   事前に1回観測）。一時的に `HibernateDelaySec=60s` の drop-in を入れ、battery で `systemctl suspend-then-hibernate`:
+   - S3(deep) 入眠 → **60s 後に RTC wake → hibernate(S4 イメージ書込) → 電源オフ** → 電源ボタンで resume。
+   - **S4 経由の決定的証拠**: resume 側カーネルログが `*_pm_restore` 系コールバック
+     （`platform_pm_restore`/`pci_pm_restore`/`usb_dev_restore`/`hda_codec_pm_restore`）＋ `PM: hibernation:
+     hibernation exit`＝**ハイバネ・イメージ復元経路**（通常 S3 resume の `_resume` ではない）。drm_err=0 で健全。
+   - 検証後に drop-in は撤去済み（`SuspendEstimationSec=30min` のみに復元）。→ S3→RTC wake と S4 hibernate の
+     **合成経路が deep でも完走**することを確認（個別には実証済みだったが合成は未観測だった点を closure）。
+
+### 採用上の留意（lid wake と AC）
+
+LID0 wake は**無条件で無効化**しているため、**AC 接続時も蓋を開けて起こせない**（deep の AC lid wake は前回 7/7 健全
+だったが、本構成では使えない）。s2idle 運用でも lid wake は元々全環境で死んでいたので**新たな退化ではない**が、AC で
+蓋開け復帰を期待すると面食らう点に注意。lid wake を AC でだけ温存したい場合は、将来 LID0 無効化を battery 限定に
+スコープすることは可能（本 soak のスコープ外）。
 
 ## 現在の状態（soak 稼働中）
 
