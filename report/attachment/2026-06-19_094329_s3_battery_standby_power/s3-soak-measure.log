@@ -1,0 +1,50 @@
+2026-06-19T00:30:52+09:00 ABORT mem_sleep is not deep: [s2idle] deep
+2026-06-19T00:31:08+09:00 ABORT LID0 wake not disabled (battery spurious-wake risk): LID0	  S4	*enabled   platform:PNP0C0D:00
+2026-06-19T00:33:44+09:00 START label=pre total_cap=3600s seg=1200s boot=86ba1c2d-b717-4113-b09f-8c0e238c7817 ac=0 mem_sleep=s2idle [deep]
+2026-06-19T00:35:09+09:00 BEFORE q=4593000 v=8440000 cap=91 t=1781796909 succ=60 fail=0 gpe70=13 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 15:55:10 2026
+2026-06-19T00:55:12+09:00 SEG#1 full seg_elapsed=1203s/1200s rc=0 q=4650000 cap=92 gpe70=13 succ=61 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 16:15:14 2026
+2026-06-19T01:15:16+09:00 SEG#2 full seg_elapsed=1204s/1200s rc=0 q=4649000 cap=92 gpe70=13 succ=62 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 16:35:11 2026
+2026-06-19T01:35:13+09:00 SEG#3 full seg_elapsed=1197s/1193s rc=0 q=4645000 cap=91 gpe70=13 succ=63 fail=0 ac=0
+2026-06-19T01:36:39+09:00 AFTER q=4570000 v=8411000 cap=90 t=1781800599 succ=63 fail=0 segments=3 spurious=0 ac=0
+RESULT dq=23000 uAh dEnergy=0.1938 Wh dt=1.025 h V_mean=8.425 V W=0.1891 W cap_drop=1% segments=3 spurious=0
+2026-06-19T01:36:39+09:00 DONE label=pre
+2026-06-19T01:39:27+09:00 START label=night total_cap=28800s seg=1800s boot=86ba1c2d-b717-4113-b09f-8c0e238c7817 ac=0 mem_sleep=s2idle [deep]
+2026-06-19T01:40:52+09:00 BEFORE q=4524000 v=8379000 cap=89 t=1781800852 succ=63 fail=0 gpe70=13 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 17:10:52 2026
+2026-06-19T02:10:54+09:00 SEG#1 full seg_elapsed=1802s/1800s rc=0 q=4567000 cap=90 gpe70=13 succ=64 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 17:40:55 2026
+2026-06-19T02:40:57+09:00 SEG#2 full seg_elapsed=1803s/1800s rc=0 q=4568000 cap=90 gpe70=13 succ=65 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 18:10:59 2026
+2026-06-19T03:11:01+09:00 SEG#3 full seg_elapsed=1804s/1800s rc=0 q=4569000 cap=90 gpe70=13 succ=66 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 18:41:03 2026
+2026-06-19T03:41:05+09:00 SEG#4 full seg_elapsed=1804s/1800s rc=0 q=4564000 cap=90 gpe70=13 succ=67 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 19:11:07 2026
+2026-06-19T04:11:09+09:00 SEG#5 full seg_elapsed=1804s/1800s rc=0 q=4558000 cap=90 gpe70=13 succ=68 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 19:41:11 2026
+2026-06-19T04:41:13+09:00 SEG#6 full seg_elapsed=1804s/1800s rc=0 q=4558000 cap=90 gpe70=13 succ=69 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 20:11:15 2026
+2026-06-19T05:11:17+09:00 SEG#7 full seg_elapsed=1804s/1800s rc=0 q=4553000 cap=90 gpe70=13 succ=70 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 20:41:19 2026
+2026-06-19T05:41:21+09:00 SEG#8 full seg_elapsed=1804s/1800s rc=0 q=4551000 cap=90 gpe70=13 succ=71 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 21:11:23 2026
+2026-06-19T06:11:25+09:00 SEG#9 full seg_elapsed=1804s/1800s rc=0 q=4545000 cap=90 gpe70=13 succ=72 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 21:41:27 2026
+2026-06-19T06:41:29+09:00 SEG#10 full seg_elapsed=1804s/1800s rc=0 q=4541000 cap=90 gpe70=13 succ=73 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 22:11:31 2026
+2026-06-19T07:11:33+09:00 SEG#11 full seg_elapsed=1804s/1800s rc=0 q=4545000 cap=90 gpe70=13 succ=74 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 22:41:35 2026
+2026-06-19T07:41:37+09:00 SEG#12 full seg_elapsed=1804s/1800s rc=0 q=4536000 cap=89 gpe70=13 succ=75 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 23:11:39 2026
+2026-06-19T08:11:41+09:00 SEG#13 full seg_elapsed=1804s/1800s rc=0 q=4529000 cap=89 gpe70=13 succ=76 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Jun 18 23:41:43 2026
+2026-06-19T08:41:45+09:00 SEG#14 full seg_elapsed=1804s/1800s rc=0 q=4524000 cap=89 gpe70=13 succ=77 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Fri Jun 19 00:11:47 2026
+2026-06-19T09:11:49+09:00 SEG#15 full seg_elapsed=1804s/1800s rc=0 q=4515000 cap=89 gpe70=13 succ=78 fail=0 ac=0
+rtcwake: wakeup from "mem" using /dev/rtc0 at Fri Jun 19 00:40:54 2026
+2026-06-19T09:40:56+09:00 SEG#16 full seg_elapsed=1747s/1743s rc=0 q=4520000 cap=89 gpe70=13 succ=79 fail=0 ac=0
+2026-06-19T09:42:21+09:00 AFTER q=4430000 v=8354000 cap=87 t=1781829741 succ=79 fail=0 segments=16 spurious=0 ac=0
+RESULT dq=94000 uAh dEnergy=0.7865 Wh dt=8.025 h V_mean=8.367 V W=0.0980 W cap_drop=2% segments=16 spurious=0
+2026-06-19T09:42:21+09:00 DONE label=night

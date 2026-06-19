@@ -1,0 +1,7 @@
+2026-06-20T04:49:40+0900 BOOT mem_sleep="s2idle [deep]" lid=*disabled boot_id=dd9c9218-a573-4735-8cc1-6640092db93f
+2026-06-20T04:51:06+0900 SLEEP type=suspend ac=0 cap=91 charge_now=4629000 ss_ok=0 ss_fail=0 gpe70=0
+2026-06-20T04:51:33+0900 WAKE type=suspend ac=0 cap=92 charge_now=4660000 ss_ok=1 ss_fail=0 gpe70=0 asleep_s=27 drm_err=0 lid=*disabled
+2026-06-20T04:51:56+0900 SLEEP type=suspend ac=0 cap=91 charge_now=4615000 ss_ok=1 ss_fail=0 gpe70=0
+2026-06-20T04:52:23+0900 WAKE type=suspend ac=0 cap=92 charge_now=4649000 ss_ok=2 ss_fail=0 gpe70=0 asleep_s=27 drm_err=0 lid=*disabled
+2026-06-20T04:53:07+0900 SLEEP type=suspend-then-hibernate ac=0 cap=91 charge_now=4597000 ss_ok=2 ss_fail=0 gpe70=0
+2026-06-20T04:53:29+0900 WAKE type=suspend-then-hibernate ac=0 cap=91 charge_now=4633000 ss_ok=3 ss_fail=0 gpe70=0 asleep_s=22 drm_err=0 lid=*disabled
