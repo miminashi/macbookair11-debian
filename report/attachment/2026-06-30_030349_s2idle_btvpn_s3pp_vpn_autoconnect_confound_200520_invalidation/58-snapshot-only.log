@@ -1,0 +1,124 @@
+ 6月 30 01:07:17 macbookair2015 58-snapshot-only[750293]: bnep delta 500ms: rx=0B tx=38B
+ 6月 30 01:07:17 macbookair2015 58-snapshot-only[750295]: bnep_session kthread alive (H2 driver present)
+ 6月 30 01:07:17 macbookair2015 58-snapshot-only[750298]: bnep netdev present
+ 6月 30 01:07:17 macbookair2015 58-snapshot-only[750305]: xfrm: state=2 policy=29
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752363]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752365]: WARN bnep_session kthread NOT FOUND
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752368]: WARN bnep netdev MISSING
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752375]: xfrm: state=2 policy=14
+ 6月 30 02:25:10 macbookair2015 58-snapshot-only[783457]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:25:10 macbookair2015 58-snapshot-only[783459]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:25:10 macbookair2015 58-snapshot-only[783462]: WARN bnep netdev MISSING
+ 6月 30 02:25:10 macbookair2015 58-snapshot-only[783469]: xfrm: state=0 policy=0
+ 6月 30 02:26:00 macbookair2015 58-snapshot-only[784334]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:26:00 macbookair2015 58-snapshot-only[784336]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:26:00 macbookair2015 58-snapshot-only[784339]: WARN bnep netdev MISSING
+ 6月 30 02:26:00 macbookair2015 58-snapshot-only[784346]: xfrm: state=0 policy=0
+ 6月 30 02:26:40 macbookair2015 58-snapshot-only[785185]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:26:40 macbookair2015 58-snapshot-only[785187]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:26:40 macbookair2015 58-snapshot-only[785190]: WARN bnep netdev MISSING
+ 6月 30 02:26:40 macbookair2015 58-snapshot-only[785197]: xfrm: state=0 policy=0
+ 6月 30 02:27:15 macbookair2015 58-snapshot-only[785994]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:27:15 macbookair2015 58-snapshot-only[785996]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:27:15 macbookair2015 58-snapshot-only[785999]: WARN bnep netdev MISSING
+ 6月 30 02:27:15 macbookair2015 58-snapshot-only[786006]: xfrm: state=0 policy=0
+ 6月 30 02:27:57 macbookair2015 58-snapshot-only[786851]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:27:57 macbookair2015 58-snapshot-only[786853]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:27:57 macbookair2015 58-snapshot-only[786856]: WARN bnep netdev MISSING
+ 6月 30 02:27:57 macbookair2015 58-snapshot-only[786863]: xfrm: state=0 policy=0
+ 6月 30 02:28:42 macbookair2015 58-snapshot-only[787687]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:28:42 macbookair2015 58-snapshot-only[787689]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:28:42 macbookair2015 58-snapshot-only[787692]: WARN bnep netdev MISSING
+ 6月 30 02:28:42 macbookair2015 58-snapshot-only[787699]: xfrm: state=0 policy=0
+ 6月 30 02:29:24 macbookair2015 58-snapshot-only[788528]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:29:24 macbookair2015 58-snapshot-only[788530]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:29:24 macbookair2015 58-snapshot-only[788533]: WARN bnep netdev MISSING
+ 6月 30 02:29:24 macbookair2015 58-snapshot-only[788540]: xfrm: state=0 policy=0
+ 6月 30 02:30:11 macbookair2015 58-snapshot-only[789362]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:30:11 macbookair2015 58-snapshot-only[789364]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:30:11 macbookair2015 58-snapshot-only[789367]: WARN bnep netdev MISSING
+ 6月 30 02:30:11 macbookair2015 58-snapshot-only[789374]: xfrm: state=0 policy=0
+ 6月 30 02:31:04 macbookair2015 58-snapshot-only[790202]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:31:05 macbookair2015 58-snapshot-only[790204]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:31:05 macbookair2015 58-snapshot-only[790207]: WARN bnep netdev MISSING
+ 6月 30 02:31:05 macbookair2015 58-snapshot-only[790214]: xfrm: state=0 policy=0
+ 6月 30 02:36:14 macbookair2015 58-snapshot-only[792158]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:36:14 macbookair2015 58-snapshot-only[792160]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:36:14 macbookair2015 58-snapshot-only[792163]: WARN bnep netdev MISSING
+ 6月 30 02:36:14 macbookair2015 58-snapshot-only[792170]: xfrm: state=0 policy=0
+ 6月 30 02:36:53 macbookair2015 58-snapshot-only[793001]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:36:53 macbookair2015 58-snapshot-only[793003]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:36:53 macbookair2015 58-snapshot-only[793006]: WARN bnep netdev MISSING
+ 6月 30 02:36:53 macbookair2015 58-snapshot-only[793013]: xfrm: state=0 policy=0
+ 6月 30 02:37:34 macbookair2015 58-snapshot-only[793837]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:37:34 macbookair2015 58-snapshot-only[793839]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:37:34 macbookair2015 58-snapshot-only[793842]: WARN bnep netdev MISSING
+ 6月 30 02:37:34 macbookair2015 58-snapshot-only[793849]: xfrm: state=0 policy=0
+ 6月 30 02:39:10 macbookair2015 58-snapshot-only[794674]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:39:10 macbookair2015 58-snapshot-only[794676]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:39:10 macbookair2015 58-snapshot-only[794679]: WARN bnep netdev MISSING
+ 6月 30 02:39:10 macbookair2015 58-snapshot-only[794686]: xfrm: state=0 policy=0
+ 6月 30 02:40:43 macbookair2015 58-snapshot-only[795519]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:40:43 macbookair2015 58-snapshot-only[795521]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:40:43 macbookair2015 58-snapshot-only[795524]: WARN bnep netdev MISSING
+ 6月 30 02:40:43 macbookair2015 58-snapshot-only[795531]: xfrm: state=0 policy=0
+ 6月 30 02:41:55 macbookair2015 58-snapshot-only[796326]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:41:55 macbookair2015 58-snapshot-only[796328]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:41:55 macbookair2015 58-snapshot-only[796331]: WARN bnep netdev MISSING
+ 6月 30 02:41:55 macbookair2015 58-snapshot-only[796338]: xfrm: state=0 policy=0
+ 6月 30 02:42:36 macbookair2015 58-snapshot-only[797102]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:42:36 macbookair2015 58-snapshot-only[797104]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:42:36 macbookair2015 58-snapshot-only[797107]: WARN bnep netdev MISSING
+ 6月 30 02:42:36 macbookair2015 58-snapshot-only[797114]: xfrm: state=0 policy=0
+ 6月 30 02:43:23 macbookair2015 58-snapshot-only[797936]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:43:23 macbookair2015 58-snapshot-only[797938]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:43:23 macbookair2015 58-snapshot-only[797941]: WARN bnep netdev MISSING
+ 6月 30 02:43:23 macbookair2015 58-snapshot-only[797948]: xfrm: state=0 policy=0
+ 6月 30 02:44:20 macbookair2015 58-snapshot-only[798766]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:44:20 macbookair2015 58-snapshot-only[798768]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:44:20 macbookair2015 58-snapshot-only[798771]: WARN bnep netdev MISSING
+ 6月 30 02:44:20 macbookair2015 58-snapshot-only[798778]: xfrm: state=0 policy=0
+ 6月 30 02:45:07 macbookair2015 58-snapshot-only[799601]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:45:07 macbookair2015 58-snapshot-only[799603]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:45:07 macbookair2015 58-snapshot-only[799606]: WARN bnep netdev MISSING
+ 6月 30 02:45:07 macbookair2015 58-snapshot-only[799613]: xfrm: state=0 policy=0
+ 6月 30 02:45:47 macbookair2015 58-snapshot-only[800439]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:45:47 macbookair2015 58-snapshot-only[800441]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:45:47 macbookair2015 58-snapshot-only[800444]: WARN bnep netdev MISSING
+ 6月 30 02:45:47 macbookair2015 58-snapshot-only[800451]: xfrm: state=0 policy=0
+ 6月 30 02:46:41 macbookair2015 58-snapshot-only[801301]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:46:41 macbookair2015 58-snapshot-only[801303]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:46:41 macbookair2015 58-snapshot-only[801306]: WARN bnep netdev MISSING
+ 6月 30 02:46:41 macbookair2015 58-snapshot-only[801313]: xfrm: state=0 policy=0
+ 6月 30 02:47:30 macbookair2015 58-snapshot-only[802139]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:47:30 macbookair2015 58-snapshot-only[802141]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:47:30 macbookair2015 58-snapshot-only[802144]: WARN bnep netdev MISSING
+ 6月 30 02:47:30 macbookair2015 58-snapshot-only[802151]: xfrm: state=0 policy=0
+ 6月 30 02:48:44 macbookair2015 58-snapshot-only[802980]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:48:44 macbookair2015 58-snapshot-only[802982]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:48:44 macbookair2015 58-snapshot-only[802985]: WARN bnep netdev MISSING
+ 6月 30 02:48:44 macbookair2015 58-snapshot-only[802992]: xfrm: state=0 policy=0
+ 6月 30 02:51:41 macbookair2015 58-snapshot-only[804792]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:51:41 macbookair2015 58-snapshot-only[804794]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:51:41 macbookair2015 58-snapshot-only[804797]: WARN bnep netdev MISSING
+ 6月 30 02:51:41 macbookair2015 58-snapshot-only[804804]: xfrm: state=0 policy=0
+ 6月 30 02:52:17 macbookair2015 58-snapshot-only[805598]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:52:17 macbookair2015 58-snapshot-only[805600]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:52:17 macbookair2015 58-snapshot-only[805603]: WARN bnep netdev MISSING
+ 6月 30 02:52:17 macbookair2015 58-snapshot-only[805610]: xfrm: state=0 policy=0
+ 6月 30 02:52:55 macbookair2015 58-snapshot-only[806407]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:52:55 macbookair2015 58-snapshot-only[806409]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:52:55 macbookair2015 58-snapshot-only[806412]: WARN bnep netdev MISSING
+ 6月 30 02:52:55 macbookair2015 58-snapshot-only[806419]: xfrm: state=0 policy=0
+ 6月 30 02:53:31 macbookair2015 58-snapshot-only[807214]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:53:31 macbookair2015 58-snapshot-only[807216]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:53:31 macbookair2015 58-snapshot-only[807219]: WARN bnep netdev MISSING
+ 6月 30 02:53:31 macbookair2015 58-snapshot-only[807226]: xfrm: state=0 policy=0
+ 6月 30 02:54:29 macbookair2015 58-snapshot-only[808019]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:54:29 macbookair2015 58-snapshot-only[808021]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:54:29 macbookair2015 58-snapshot-only[808024]: WARN bnep netdev MISSING
+ 6月 30 02:54:29 macbookair2015 58-snapshot-only[808031]: xfrm: state=0 policy=0
+ 6月 30 02:55:25 macbookair2015 58-snapshot-only[808852]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 02:55:25 macbookair2015 58-snapshot-only[808854]: WARN bnep_session kthread NOT FOUND
+ 6月 30 02:55:25 macbookair2015 58-snapshot-only[808857]: WARN bnep netdev MISSING
+ 6月 30 02:55:25 macbookair2015 58-snapshot-only[808864]: xfrm: state=0 policy=0

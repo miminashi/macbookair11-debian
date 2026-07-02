@@ -1,0 +1,291 @@
+=== 58-snapshot-only 全 cycle 一覧 (時刻 + xfrm) ===
+ 6月 30 04:29:00 macbookair2015 58-snapshot-only[842850]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 04:29:00 macbookair2015 58-snapshot-only[842852]: bnep_session kthread alive (H2 driver present)
+ 6月 30 04:29:00 macbookair2015 58-snapshot-only[842855]: bnep netdev present
+ 6月 30 04:29:00 macbookair2015 58-snapshot-only[842862]: xfrm: state=2 policy=29
+ 6月 30 04:29:59 macbookair2015 58-snapshot-only[843647]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 04:29:59 macbookair2015 58-snapshot-only[843649]: WARN bnep_session kthread NOT FOUND
+ 6月 30 04:29:59 macbookair2015 58-snapshot-only[843652]: WARN bnep netdev MISSING
+ 6月 30 04:29:59 macbookair2015 58-snapshot-only[843659]: xfrm: state=2 policy=14
+ 6月 30 04:32:29 macbookair2015 58-snapshot-only[845403]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 04:32:29 macbookair2015 58-snapshot-only[845405]: WARN bnep_session kthread NOT FOUND
+ 6月 30 04:32:29 macbookair2015 58-snapshot-only[845408]: WARN bnep netdev MISSING
+ 6月 30 04:32:29 macbookair2015 58-snapshot-only[845415]: xfrm: state=2 policy=14
+ 6月 30 05:17:26 macbookair2015 58-snapshot-only[869553]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:17:26 macbookair2015 58-snapshot-only[869555]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:17:26 macbookair2015 58-snapshot-only[869558]: WARN bnep netdev MISSING
+ 6月 30 05:17:26 macbookair2015 58-snapshot-only[869565]: xfrm: state=2 policy=14
+ 6月 30 05:18:32 macbookair2015 58-snapshot-only[870641]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:18:32 macbookair2015 58-snapshot-only[870643]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:18:32 macbookair2015 58-snapshot-only[870646]: WARN bnep netdev MISSING
+ 6月 30 05:18:32 macbookair2015 58-snapshot-only[870653]: xfrm: state=2 policy=14
+ 6月 30 05:19:25 macbookair2015 58-snapshot-only[871506]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:19:25 macbookair2015 58-snapshot-only[871508]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:19:25 macbookair2015 58-snapshot-only[871511]: WARN bnep netdev MISSING
+ 6月 30 05:19:25 macbookair2015 58-snapshot-only[871518]: xfrm: state=2 policy=14
+ 6月 30 05:20:11 macbookair2015 58-snapshot-only[872412]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:20:11 macbookair2015 58-snapshot-only[872414]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:20:11 macbookair2015 58-snapshot-only[872417]: WARN bnep netdev MISSING
+ 6月 30 05:20:11 macbookair2015 58-snapshot-only[872424]: xfrm: state=2 policy=14
+ 6月 30 05:20:53 macbookair2015 58-snapshot-only[873311]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:20:53 macbookair2015 58-snapshot-only[873313]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:20:53 macbookair2015 58-snapshot-only[873316]: WARN bnep netdev MISSING
+ 6月 30 05:20:53 macbookair2015 58-snapshot-only[873323]: xfrm: state=2 policy=14
+ 6月 30 05:21:32 macbookair2015 58-snapshot-only[874199]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:21:32 macbookair2015 58-snapshot-only[874201]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:21:32 macbookair2015 58-snapshot-only[874204]: WARN bnep netdev MISSING
+ 6月 30 05:21:32 macbookair2015 58-snapshot-only[874211]: xfrm: state=2 policy=14
+ 6月 30 05:22:19 macbookair2015 58-snapshot-only[875093]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:22:19 macbookair2015 58-snapshot-only[875095]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:22:19 macbookair2015 58-snapshot-only[875098]: WARN bnep netdev MISSING
+ 6月 30 05:22:19 macbookair2015 58-snapshot-only[875105]: xfrm: state=2 policy=14
+ 6月 30 05:23:39 macbookair2015 58-snapshot-only[876388]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:23:39 macbookair2015 58-snapshot-only[876390]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:23:39 macbookair2015 58-snapshot-only[876393]: WARN bnep netdev MISSING
+ 6月 30 05:23:39 macbookair2015 58-snapshot-only[876400]: xfrm: state=2 policy=14
+ 6月 30 05:24:50 macbookair2015 58-snapshot-only[877247]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:24:50 macbookair2015 58-snapshot-only[877249]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:24:50 macbookair2015 58-snapshot-only[877252]: WARN bnep netdev MISSING
+ 6月 30 05:24:50 macbookair2015 58-snapshot-only[877259]: xfrm: state=2 policy=14
+ 6月 30 05:26:03 macbookair2015 58-snapshot-only[878128]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:26:03 macbookair2015 58-snapshot-only[878130]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:26:03 macbookair2015 58-snapshot-only[878133]: WARN bnep netdev MISSING
+ 6月 30 05:26:03 macbookair2015 58-snapshot-only[878140]: xfrm: state=2 policy=14
+ 6月 30 05:28:44 macbookair2015 58-snapshot-only[880084]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:28:44 macbookair2015 58-snapshot-only[880086]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:28:44 macbookair2015 58-snapshot-only[880089]: WARN bnep netdev MISSING
+ 6月 30 05:28:44 macbookair2015 58-snapshot-only[880096]: xfrm: state=2 policy=14
+ 6月 30 05:29:38 macbookair2015 58-snapshot-only[880966]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:29:38 macbookair2015 58-snapshot-only[880968]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:29:38 macbookair2015 58-snapshot-only[880971]: WARN bnep netdev MISSING
+ 6月 30 05:29:38 macbookair2015 58-snapshot-only[880978]: xfrm: state=2 policy=14
+ 6月 30 05:30:18 macbookair2015 58-snapshot-only[881820]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:30:18 macbookair2015 58-snapshot-only[881822]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:30:18 macbookair2015 58-snapshot-only[881825]: WARN bnep netdev MISSING
+ 6月 30 05:30:18 macbookair2015 58-snapshot-only[881832]: xfrm: state=2 policy=14
+ 6月 30 05:31:13 macbookair2015 58-snapshot-only[882873]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:31:13 macbookair2015 58-snapshot-only[882875]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:31:13 macbookair2015 58-snapshot-only[882878]: WARN bnep netdev MISSING
+ 6月 30 05:31:13 macbookair2015 58-snapshot-only[882885]: xfrm: state=2 policy=14
+ 6月 30 05:31:53 macbookair2015 58-snapshot-only[883767]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:31:53 macbookair2015 58-snapshot-only[883769]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:31:53 macbookair2015 58-snapshot-only[883772]: WARN bnep netdev MISSING
+ 6月 30 05:31:53 macbookair2015 58-snapshot-only[883779]: xfrm: state=2 policy=14
+ 6月 30 05:32:32 macbookair2015 58-snapshot-only[884659]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:32:32 macbookair2015 58-snapshot-only[884661]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:32:32 macbookair2015 58-snapshot-only[884664]: WARN bnep netdev MISSING
+ 6月 30 05:32:32 macbookair2015 58-snapshot-only[884671]: xfrm: state=2 policy=14
+ 6月 30 05:33:37 macbookair2015 58-snapshot-only[885502]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:33:37 macbookair2015 58-snapshot-only[885504]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:33:37 macbookair2015 58-snapshot-only[885507]: WARN bnep netdev MISSING
+ 6月 30 05:33:37 macbookair2015 58-snapshot-only[885514]: xfrm: state=0 policy=8
+ 6月 30 05:34:21 macbookair2015 58-snapshot-only[886348]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:34:21 macbookair2015 58-snapshot-only[886350]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:34:21 macbookair2015 58-snapshot-only[886353]: WARN bnep netdev MISSING
+ 6月 30 05:34:21 macbookair2015 58-snapshot-only[886360]: xfrm: state=0 policy=8
+ 6月 30 05:35:17 macbookair2015 58-snapshot-only[887187]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:35:17 macbookair2015 58-snapshot-only[887189]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:35:17 macbookair2015 58-snapshot-only[887192]: WARN bnep netdev MISSING
+ 6月 30 05:35:17 macbookair2015 58-snapshot-only[887199]: xfrm: state=0 policy=8
+ 6月 30 05:57:58 macbookair2015 58-snapshot-only[899291]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:57:58 macbookair2015 58-snapshot-only[899293]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:57:58 macbookair2015 58-snapshot-only[899296]: WARN bnep netdev MISSING
+ 6月 30 05:57:58 macbookair2015 58-snapshot-only[899303]: xfrm: state=2 policy=14
+ 6月 30 05:58:37 macbookair2015 58-snapshot-only[900241]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:58:37 macbookair2015 58-snapshot-only[900243]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:58:37 macbookair2015 58-snapshot-only[900246]: WARN bnep netdev MISSING
+ 6月 30 05:58:37 macbookair2015 58-snapshot-only[900253]: xfrm: state=2 policy=14
+ 6月 30 05:59:18 macbookair2015 58-snapshot-only[901140]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:59:18 macbookair2015 58-snapshot-only[901142]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:59:18 macbookair2015 58-snapshot-only[901145]: WARN bnep netdev MISSING
+ 6月 30 05:59:18 macbookair2015 58-snapshot-only[901152]: xfrm: state=2 policy=14
+ 6月 30 05:59:58 macbookair2015 58-snapshot-only[902036]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 05:59:58 macbookair2015 58-snapshot-only[902038]: WARN bnep_session kthread NOT FOUND
+ 6月 30 05:59:58 macbookair2015 58-snapshot-only[902041]: WARN bnep netdev MISSING
+ 6月 30 05:59:58 macbookair2015 58-snapshot-only[902048]: xfrm: state=2 policy=14
+ 6月 30 06:00:40 macbookair2015 58-snapshot-only[902933]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:00:40 macbookair2015 58-snapshot-only[902935]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:00:40 macbookair2015 58-snapshot-only[902938]: WARN bnep netdev MISSING
+ 6月 30 06:00:40 macbookair2015 58-snapshot-only[902945]: xfrm: state=2 policy=14
+ 6月 30 06:01:24 macbookair2015 58-snapshot-only[903874]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:01:24 macbookair2015 58-snapshot-only[903876]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:01:24 macbookair2015 58-snapshot-only[903879]: WARN bnep netdev MISSING
+ 6月 30 06:01:24 macbookair2015 58-snapshot-only[903886]: xfrm: state=2 policy=14
+ 6月 30 06:02:52 macbookair2015 58-snapshot-only[905189]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:02:52 macbookair2015 58-snapshot-only[905191]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:02:52 macbookair2015 58-snapshot-only[905194]: WARN bnep netdev MISSING
+ 6月 30 06:02:52 macbookair2015 58-snapshot-only[905201]: xfrm: state=2 policy=14
+ 6月 30 06:03:40 macbookair2015 58-snapshot-only[906082]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:03:40 macbookair2015 58-snapshot-only[906084]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:03:40 macbookair2015 58-snapshot-only[906087]: WARN bnep netdev MISSING
+ 6月 30 06:03:40 macbookair2015 58-snapshot-only[906094]: xfrm: state=2 policy=14
+ 6月 30 06:04:25 macbookair2015 58-snapshot-only[906937]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:04:26 macbookair2015 58-snapshot-only[906939]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:04:26 macbookair2015 58-snapshot-only[906942]: WARN bnep netdev MISSING
+ 6月 30 06:04:26 macbookair2015 58-snapshot-only[906949]: xfrm: state=2 policy=14
+ 6月 30 06:05:18 macbookair2015 58-snapshot-only[907808]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:05:18 macbookair2015 58-snapshot-only[907810]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:05:18 macbookair2015 58-snapshot-only[907813]: WARN bnep netdev MISSING
+ 6月 30 06:05:18 macbookair2015 58-snapshot-only[907820]: xfrm: state=2 policy=14
+ 6月 30 06:06:38 macbookair2015 58-snapshot-only[908976]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:06:38 macbookair2015 58-snapshot-only[908978]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:06:38 macbookair2015 58-snapshot-only[908981]: WARN bnep netdev MISSING
+ 6月 30 06:06:38 macbookair2015 58-snapshot-only[908988]: xfrm: state=2 policy=14
+ 6月 30 06:07:15 macbookair2015 58-snapshot-only[909837]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 06:07:15 macbookair2015 58-snapshot-only[909839]: WARN bnep_session kthread NOT FOUND
+ 6月 30 06:07:15 macbookair2015 58-snapshot-only[909842]: WARN bnep netdev MISSING
+ 6月 30 06:07:15 macbookair2015 58-snapshot-only[909849]: xfrm: state=2 policy=14
+=== cycle-watcher 全 log ===
+ 6月 30 04:30:30 macbookair2015 cycle-watcher[843726]: suspend_stats success: 187 -> 188 (delta=1)
+ 6月 30 04:33:04 macbookair2015 cycle-watcher[845790]: suspend_stats success: 188 -> 189 (delta=1)
+ 6月 30 05:17:43 macbookair2015 cycle-watcher[869630]: suspend_stats success: 189 -> 190 (delta=1)
+ 6月 30 05:19:01 macbookair2015 cycle-watcher[871031]: suspend_stats success: 190 -> 191 (delta=1)
+ 6月 30 05:19:43 macbookair2015 cycle-watcher[871916]: suspend_stats success: 191 -> 192 (delta=1)
+ 6月 30 05:20:25 macbookair2015 cycle-watcher[872798]: suspend_stats success: 192 -> 193 (delta=1)
+ 6月 30 05:21:04 macbookair2015 cycle-watcher[873677]: suspend_stats success: 193 -> 194 (delta=1)
+ 6月 30 05:21:51 macbookair2015 cycle-watcher[874574]: suspend_stats success: 194 -> 195 (delta=1)
+ 6月 30 05:22:30 macbookair2015 cycle-watcher[875457]: suspend_stats success: 195 -> 196 (delta=1)
+ 6月 30 05:24:21 macbookair2015 cycle-watcher[876429]: suspend_stats success: 196 -> 197 (delta=1)
+ 6月 30 05:25:30 macbookair2015 cycle-watcher[877297]: suspend_stats success: 197 -> 198 (delta=1)
+ 6月 30 05:26:11 macbookair2015 cycle-watcher[878171]: suspend_stats success: 198 -> 199 (delta=1)
+ 6月 30 05:29:10 macbookair2015 cycle-watcher[880478]: suspend_stats success: 199 -> 200 (delta=1)
+ 6月 30 05:29:49 macbookair2015 cycle-watcher[880991]: suspend_stats success: 200 -> 201 (delta=1)
+ 6月 30 05:30:31 macbookair2015 cycle-watcher[882216]: suspend_stats success: 201 -> 202 (delta=1)
+ 6月 30 05:31:20 macbookair2015 cycle-watcher[883104]: suspend_stats success: 202 -> 203 (delta=1)
+ 6月 30 05:32:04 macbookair2015 cycle-watcher[884153]: suspend_stats success: 203 -> 204 (delta=1)
+ 6月 30 05:33:09 macbookair2015 cycle-watcher[885012]: suspend_stats success: 204 -> 205 (delta=1)
+ 6月 30 05:33:54 macbookair2015 cycle-watcher[885866]: suspend_stats success: 205 -> 206 (delta=1)
+ 6月 30 05:34:44 macbookair2015 cycle-watcher[886406]: suspend_stats success: 206 -> 207 (delta=1)
+ 6月 30 05:35:26 macbookair2015 cycle-watcher[887228]: suspend_stats success: 207 -> 208 (delta=1)
+ 6月 30 05:58:06 macbookair2015 cycle-watcher[899655]: suspend_stats success: 208 -> 209 (delta=1)
+ 6月 30 05:58:47 macbookair2015 cycle-watcher[900551]: suspend_stats success: 209 -> 210 (delta=1)
+ 6月 30 05:59:26 macbookair2015 cycle-watcher[901442]: suspend_stats success: 210 -> 211 (delta=1)
+ 6月 30 06:00:08 macbookair2015 cycle-watcher[902133]: suspend_stats success: 211 -> 212 (delta=1)
+ 6月 30 06:00:51 macbookair2015 cycle-watcher[902970]: suspend_stats success: 212 -> 213 (delta=1)
+ 6月 30 06:01:36 macbookair2015 cycle-watcher[903900]: suspend_stats success: 213 -> 214 (delta=1)
+ 6月 30 06:03:08 macbookair2015 cycle-watcher[905500]: suspend_stats success: 214 -> 215 (delta=1)
+ 6月 30 06:03:57 macbookair2015 cycle-watcher[906393]: suspend_stats success: 215 -> 216 (delta=1)
+ 6月 30 06:04:46 macbookair2015 cycle-watcher[906970]: suspend_stats success: 216 -> 217 (delta=1)
+ 6月 30 06:05:41 macbookair2015 cycle-watcher[908115]: suspend_stats success: 217 -> 218 (delta=1)
+ 6月 30 06:06:47 macbookair2015 cycle-watcher[909284]: suspend_stats success: 218 -> 219 (delta=1)
+ 6月 30 06:07:34 macbookair2015 cycle-watcher[909870]: suspend_stats success: 219 -> 220 (delta=1)
+=== vpn-watcher 全 log ===
+ 6月 30 04:30:33 macbookair2015 vpn-watcher[844041]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 04:30:33 macbookair2015 vpn-watcher[844043]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 04:30:41 macbookair2015 vpn-watcher[844115]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 04:30:42 macbookair2015 vpn-watcher[844117]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/400)
+ 6月 30 04:33:02 macbookair2015 vpn-watcher[845765]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 04:33:02 macbookair2015 vpn-watcher[845767]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 04:33:10 macbookair2015 vpn-watcher[845859]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 04:33:11 macbookair2015 vpn-watcher[845861]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/403)
+ 6月 30 05:17:46 macbookair2015 vpn-watcher[869952]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:17:46 macbookair2015 vpn-watcher[869954]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:17:54 macbookair2015 vpn-watcher[870046]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:17:55 macbookair2015 vpn-watcher[870048]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/406)
+ 6月 30 05:18:59 macbookair2015 vpn-watcher[870994]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:18:59 macbookair2015 vpn-watcher[870996]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:19:07 macbookair2015 vpn-watcher[871091]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:19:08 macbookair2015 vpn-watcher[871093]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/409)
+ 6月 30 05:19:42 macbookair2015 vpn-watcher[871889]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:19:42 macbookair2015 vpn-watcher[871891]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:19:50 macbookair2015 vpn-watcher[871970]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:19:51 macbookair2015 vpn-watcher[871972]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/412)
+ 6月 30 05:20:24 macbookair2015 vpn-watcher[872769]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:20:24 macbookair2015 vpn-watcher[872771]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:20:32 macbookair2015 vpn-watcher[872864]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:20:32 macbookair2015 vpn-watcher[872866]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/415)
+ 6月 30 05:21:02 macbookair2015 vpn-watcher[873646]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:21:02 macbookair2015 vpn-watcher[873648]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:21:10 macbookair2015 vpn-watcher[873754]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:21:11 macbookair2015 vpn-watcher[873756]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/418)
+ 6月 30 05:21:49 macbookair2015 vpn-watcher[874548]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:21:49 macbookair2015 vpn-watcher[874550]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:21:57 macbookair2015 vpn-watcher[874644]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:21:58 macbookair2015 vpn-watcher[874646]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/421)
+ 6月 30 05:22:28 macbookair2015 vpn-watcher[875426]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:22:28 macbookair2015 vpn-watcher[875428]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:22:36 macbookair2015 vpn-watcher[875537]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:22:37 macbookair2015 vpn-watcher[875539]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/424)
+ 6月 30 05:24:25 macbookair2015 vpn-watcher[876741]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:24:25 macbookair2015 vpn-watcher[876743]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:24:33 macbookair2015 vpn-watcher[876835]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:24:33 macbookair2015 vpn-watcher[876837]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/427)
+ 6月 30 05:25:33 macbookair2015 vpn-watcher[877594]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:25:33 macbookair2015 vpn-watcher[877596]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:25:41 macbookair2015 vpn-watcher[877686]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:25:42 macbookair2015 vpn-watcher[877688]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/430)
+ 6月 30 05:26:14 macbookair2015 vpn-watcher[878472]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:26:14 macbookair2015 vpn-watcher[878474]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:26:22 macbookair2015 vpn-watcher[878573]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:26:23 macbookair2015 vpn-watcher[878575]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/433)
+ 6月 30 05:29:09 macbookair2015 vpn-watcher[880433]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:29:10 macbookair2015 vpn-watcher[880435]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/435)
+ 6月 30 05:29:52 macbookair2015 vpn-watcher[881310]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:29:52 macbookair2015 vpn-watcher[881312]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:30:00 macbookair2015 vpn-watcher[881411]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:30:01 macbookair2015 vpn-watcher[881413]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/439)
+ 6月 30 05:30:30 macbookair2015 vpn-watcher[882175]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:30:30 macbookair2015 vpn-watcher[882177]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:30:38 macbookair2015 vpn-watcher[882270]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:30:39 macbookair2015 vpn-watcher[882272]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/442)
+ 6月 30 05:31:24 macbookair2015 vpn-watcher[883244]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:31:25 macbookair2015 vpn-watcher[883246]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/444)
+ 6月 30 05:32:02 macbookair2015 vpn-watcher[884112]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:32:02 macbookair2015 vpn-watcher[884114]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:32:10 macbookair2015 vpn-watcher[884216]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:32:11 macbookair2015 vpn-watcher[884218]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/448)
+ 6月 30 05:51:15 macbookair2015 vpn-watcher[895220]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:51:16 macbookair2015 vpn-watcher[895222]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/491)
+ 6月 30 05:54:16 macbookair2015 vpn-watcher[897011]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:54:26 macbookair2015 vpn-watcher[897013]: エラー: 接続のアクティベーションに失敗: 有効なシークレットはありません
+ 6月 30 05:54:26 macbookair2015 vpn-watcher[897013]: ヒント: 'journalctl -xe NM_CONNECTION=55a75765-d99e-4bc5-a05c-78b38cdefd19 + NM_DEVICE=34:42:62:16:03:F6' を使用して詳細を取得します。
+ 6月 30 05:54:34 macbookair2015 vpn-watcher[897167]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:54:35 macbookair2015 vpn-watcher[897169]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/494)
+ 6月 30 05:55:04 macbookair2015 vpn-watcher[897464]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:55:05 macbookair2015 vpn-watcher[897466]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/495)
+ 6月 30 05:58:08 macbookair2015 vpn-watcher[899695]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:58:08 macbookair2015 vpn-watcher[899697]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:58:16 macbookair2015 vpn-watcher[899787]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:58:17 macbookair2015 vpn-watcher[899789]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/498)
+ 6月 30 05:58:49 macbookair2015 vpn-watcher[900594]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:58:49 macbookair2015 vpn-watcher[900596]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:58:57 macbookair2015 vpn-watcher[900696]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:58:58 macbookair2015 vpn-watcher[900698]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/501)
+ 6月 30 05:59:28 macbookair2015 vpn-watcher[901488]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:59:28 macbookair2015 vpn-watcher[901490]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 05:59:36 macbookair2015 vpn-watcher[901591]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 05:59:37 macbookair2015 vpn-watcher[901593]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/504)
+ 6月 30 06:00:11 macbookair2015 vpn-watcher[902376]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:00:11 macbookair2015 vpn-watcher[902378]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:00:19 macbookair2015 vpn-watcher[902477]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:00:20 macbookair2015 vpn-watcher[902479]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/507)
+ 6月 30 06:00:54 macbookair2015 vpn-watcher[903278]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:00:54 macbookair2015 vpn-watcher[903280]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:01:02 macbookair2015 vpn-watcher[903425]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:01:03 macbookair2015 vpn-watcher[903427]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/510)
+ 6月 30 06:01:39 macbookair2015 vpn-watcher[904212]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:01:39 macbookair2015 vpn-watcher[904214]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:01:47 macbookair2015 vpn-watcher[904315]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:01:48 macbookair2015 vpn-watcher[904317]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/513)
+ 6月 30 06:03:10 macbookair2015 vpn-watcher[905537]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:03:10 macbookair2015 vpn-watcher[905539]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:03:18 macbookair2015 vpn-watcher[905625]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:03:19 macbookair2015 vpn-watcher[905627]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/516)
+ 6月 30 06:03:59 macbookair2015 vpn-watcher[906428]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:03:59 macbookair2015 vpn-watcher[906430]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:04:07 macbookair2015 vpn-watcher[906520]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:04:08 macbookair2015 vpn-watcher[906522]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/519)
+ 6月 30 06:04:49 macbookair2015 vpn-watcher[907283]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:04:49 macbookair2015 vpn-watcher[907285]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:04:57 macbookair2015 vpn-watcher[907377]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:04:58 macbookair2015 vpn-watcher[907379]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/522)
+ 6月 30 06:05:44 macbookair2015 vpn-watcher[908159]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:05:44 macbookair2015 vpn-watcher[908161]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:05:52 macbookair2015 vpn-watcher[908260]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:05:53 macbookair2015 vpn-watcher[908262]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/525)
+ 6月 30 06:06:49 macbookair2015 vpn-watcher[909330]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:06:49 macbookair2015 vpn-watcher[909332]: エラー: 接続のアクティベーションに失敗: Could not find source connection.
+ 6月 30 06:06:57 macbookair2015 vpn-watcher[909422]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:06:58 macbookair2015 vpn-watcher[909424]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/528)
+ 6月 30 06:07:38 macbookair2015 vpn-watcher[910195]: BT-PAN up but GSNet inactive, re-activating
+ 6月 30 06:07:39 macbookair2015 vpn-watcher[910197]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/530)

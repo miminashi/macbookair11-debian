@@ -1,0 +1,191 @@
+ 6月 30 01:11:17 macbookair2015 charon-nm[749513]: 12[IKE] sending keep alive to 160.16.210.47[4500]
+ 6月 30 01:11:34 macbookair2015 systemd-logind[801]: Lid closed.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.3404] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.3406] device (CC:60:23:AF:2C:60): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.3415] manager: NetworkManager state is now ASLEEP
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.3417] device (wlp3s0): state change: activated -> deactivating (reason 'sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.3432] device (34:42:62:16:03:F6): state change: activated -> deactivating (reason 'sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 dbus-daemon[785]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=855 comm="/usr/sbin/NetworkManager --no-daemon")
+ 6月 30 01:11:34 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 6月 30 01:11:34 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4260] device (wlp3s0): state change: deactivating -> disconnected (reason 'sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4296] dhcp4 (wlp3s0): canceled DHCP transaction
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4296] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4296] dhcp4 (wlp3s0): state changed no lease
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[KNL] fd9d:4bbd:50df::458 disappeared from wlp3s0
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4308] dhcp6 (wlp3s0): canceled DHCP transaction
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[KNL] fe80::2e29:a8c5:f098:a429 disappeared from wlp3s0
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4309] dhcp6 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 08[KNL] 192.168.33.145 disappeared from wlp3s0
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.4309] dhcp6 (wlp3s0): state changed no lease
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5076] device (wlp3s0): supplicant interface state: completed -> disconnected
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5083] device (wlp3s0): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[KNL] interface wlp3s0 deactivated
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5107] device (34:42:62:16:03:F6): state change: deactivating -> disconnected (reason 'sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 10[KNL] 2001:240:2429:631:f4aa:ed6f:3f86:814 disappeared from enx98e0d98d205e
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Withdrawing address record for 2001:240:2429:631:f4aa:ed6f:3f86:814 on enx98e0d98d205e.
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:2429:631:f4aa:ed6f:3f86:814.
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5133] dhcp4 (enx98e0d98d205e): canceled DHCP transaction
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Registering new address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.*.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5134] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 11[KNL] fe80::ee82:92f6:8780:60e8 disappeared from enx98e0d98d205e
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5134] dhcp4 (enx98e0d98d205e): state changed no lease
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Withdrawing address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5136] dhcp6 (enx98e0d98d205e): canceled DHCP transaction
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5136] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Interface enx98e0d98d205e.IPv6 no longer relevant for mDNS.
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.5136] dhcp6 (enx98e0d98d205e): state changed no lease
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Withdrawing address record for 172.20.10.13 on enx98e0d98d205e.
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[KNL] 172.20.10.13 disappeared from enx98e0d98d205e
+ 6月 30 01:11:34 macbookair2015 avahi-daemon[754]: Interface enx98e0d98d205e.IPv4 no longer relevant for mDNS.
+ 6月 30 01:11:34 macbookair2015 bluetoothd[317551]: profiles/network/bnep.c:bnep_if_down() bnep: Could not bring down bnep0: No such device(19)
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 10[KNL] interface enx98e0d98d205e deactivated
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 07[KNL] interface enx98e0d98d205e deleted
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[IKE] old path is not available anymore, try to find another
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 06[IKE] uninstalling bypass policy for 172.20.10.0/28
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[IKE] looking for a route to 160.16.210.47 ...
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 06[IKE] uninstalling bypass policy for 192.168.33.0/24
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[IKE] looking for a route to 192.168.0.1 ...
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[IKE] looking for a route to 10.1.0.1 ...
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 13[IKE] no route found to reach 160.16.210.47, MOBIKE update deferred
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 06[IKE] uninstalling bypass policy for 2001:240:2429:631::/64
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 06[IKE] uninstalling bypass policy for fd9d:4bbd:50df::458/128
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 06[IKE] interface change for bypass policy for fe80::/64 (from wlp3s0 to nm-xfrm-1048531)
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 06[IKE] uninstalling bypass policy for 172.20.10.1/32
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 07[IKE] deleting IKE_SA GSNet[1] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 07[IKE] sending DELETE for IKE_SA GSNet[1]
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 07[ENC] generating INFORMATIONAL request 7 [ D ]
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 07[NET] sending packet: from 172.20.10.13[49768] to 160.16.210.47[4500] (80 bytes)
+ 6月 30 01:11:34 macbookair2015 NetworkManager[855]: <info>  [1782749494.6367] device (34:42:62:16:03:F6): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 04[NET] error writing to socket: Network is unreachable
+ 6月 30 01:11:34 macbookair2015 charon-nm[749513]: 16[KNL] 192.168.83.1 disappeared from nm-xfrm-1048531
+ 6月 30 01:11:35 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+ 6月 30 01:11:35 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752363]: bnep delta 500ms: rx=0B tx=0B
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752365]: WARN bnep_session kthread NOT FOUND
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752368]: WARN bnep netdev MISSING
+ 6月 30 01:11:36 macbookair2015 58-snapshot-only[752375]: xfrm: state=2 policy=14
+ 6月 30 01:11:36 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 30 01:11:36 macbookair2015 charon-nm[749513]: 12[IKE] retransmit 1 of request with message ID 7
+ 6月 30 01:11:36 macbookair2015 charon-nm[749513]: 12[NET] sending packet: from 172.20.10.13[49768] to 160.16.210.47[4500] (80 bytes)
+ 6月 30 01:11:36 macbookair2015 charon-nm[749513]: 04[NET] error writing to socket: Network is unreachable
+ 6月 30 01:11:57 macbookair2015 kernel: PM: suspend of devices complete after 482.710 msecs
+ 6月 30 01:11:57 macbookair2015 kernel: PM: suspend-to-idle
+ 6月 30 01:11:57 macbookair2015 kernel: PM: suspend exit
+ 6月 30 01:11:57 macbookair2015 systemd-logind[801]: Lid opened.
+ 6月 30 01:11:57 macbookair2015 charon-nm[749513]: 15[IKE] retransmit 2 of request with message ID 7
+ 6月 30 01:11:57 macbookair2015 charon-nm[749513]: 15[NET] sending packet: from 172.20.10.13[49768] to 160.16.210.47[4500] (80 bytes)
+ 6月 30 01:11:57 macbookair2015 charon-nm[749513]: 04[NET] error writing to socket: Network is unreachable
+ 6月 30 01:11:57 macbookair2015 systemd[1]: systemd-suspend.service: Deactivated successfully.
+ 6月 30 01:11:57 macbookair2015 systemd[1]: Finished systemd-suspend.service - System Suspend.
+ 6月 30 01:11:57 macbookair2015 systemd[1]: Stopped target sleep.target - Sleep.
+ 6月 30 01:11:57 macbookair2015 NetworkManager[855]: <info>  [1782749517.9986] manager: sleep: wake requested (sleeping: yes  enabled: yes)
+ 6月 30 01:11:58 macbookair2015 charon-nm[749513]: 16[KNL] interface wlp3s0 activated
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0041] device (wlp3s0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0060] device (34:42:62:16:03:F6): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0077] device (CC:60:23:AF:2C:60): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0081] manager: NetworkManager state is now DISCONNECTED
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0083] device (34:42:62:16:03:F6): state change: unavailable -> disconnected (reason 'none', managed-type: 'full')
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0086] device (CC:60:23:AF:2C:60): state change: unavailable -> disconnected (reason 'none', managed-type: 'full')
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0088] policy: auto-activating connection 'iMiminashiPadPro ネットワーク' (a6300eea-6e89-45f0-b494-8d60cc8515e1)
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0094] device (34:42:62:16:03:F6): Activation: starting connection 'iMiminashiPadPro ネットワーク' (a6300eea-6e89-45f0-b494-8d60cc8515e1)
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0095] device (34:42:62:16:03:F6): state change: disconnected -> prepare (reason 'none', managed-type: 'full')
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0097] manager: NetworkManager state is now CONNECTING
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0634] device (wlp3s0): supplicant interface state: internal-starting -> disconnected
+ 6月 30 01:11:58 macbookair2015 NetworkManager[855]: <info>  [1782749518.0635] device (wlp3s0): state change: unavailable -> disconnected (reason 'supplicant-available', managed-type: 'full')
+ 6月 30 01:11:59 macbookair2015 charon-nm[749513]: 14[KNL] interface bnep0 activated
+ 6月 30 01:11:59 macbookair2015 bluetoothd[317551]: bnep0 connected
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0448] device (34:42:62:16:03:F6): state change: prepare -> config (reason 'none', managed-type: 'full')
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0454] device (34:42:62:16:03:F6): state change: config -> ip-config (reason 'none', managed-type: 'full')
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0466] dhcp4 (bnep0): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:11:59 macbookair2015 avahi-daemon[754]: Joining mDNS multicast group on interface bnep0.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 6月 30 01:11:59 macbookair2015 avahi-daemon[754]: New relevant interface bnep0.IPv6 for mDNS.
+ 6月 30 01:11:59 macbookair2015 avahi-daemon[754]: Registering new address record for fe80::ee82:92f6:8780:60e8 on bnep0.*.
+ 6月 30 01:11:59 macbookair2015 charon-nm[749513]: 07[KNL] fe80::ee82:92f6:8780:60e8 appeared on bnep0
+ 6月 30 01:11:59 macbookair2015 kernel: bluetooth hci0:12 enx98e0d98d205e: renamed from bnep0 (while UP)
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0521] device (34:42:62:16:03:F6): ip-ifname: interface index 0 renamed ip_iface (248) from 'bnep0' to 'enx98e0d98d205e'
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0521] device (34:42:62:16:03:F6): ip:dhcp4: restarting
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0796] dhcp4 (bnep0): canceled DHCP transaction
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0797] dhcp4 (bnep0): state changed no lease
+ 6月 30 01:11:59 macbookair2015 NetworkManager[855]: <info>  [1782749519.0798] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:11:59 macbookair2015 charon-nm[749513]: 08[IKE] interface change for bypass policy for fe80::/64 (from nm-xfrm-1048531 to enx98e0d98d205e)
+ 6月 30 01:12:00 macbookair2015 charon-nm[749513]: 09[KNL] flags changed for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.3722] dhcp4 (enx98e0d98d205e): state changed new lease, address=172.20.10.13, acd pending
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5358] dhcp4 (enx98e0d98d205e): state changed new lease, address=172.20.10.13
+ 6月 30 01:12:01 macbookair2015 avahi-daemon[754]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+ 6月 30 01:12:01 macbookair2015 charon-nm[749513]: 12[KNL] 172.20.10.13 appeared on enx98e0d98d205e
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5390] policy: set 'iMiminashiPadPro ネットワーク' (enx98e0d98d205e) as default for IPv4 routing and DNS
+ 6月 30 01:12:01 macbookair2015 avahi-daemon[754]: New relevant interface enx98e0d98d205e.IPv4 for mDNS.
+ 6月 30 01:12:01 macbookair2015 avahi-daemon[754]: Registering new address record for 172.20.10.13 on enx98e0d98d205e.IPv4.
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5733] device (34:42:62:16:03:F6): state change: ip-config -> ip-check (reason 'none', managed-type: 'full')
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5777] device (34:42:62:16:03:F6): state change: ip-check -> secondaries (reason 'none', managed-type: 'full')
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5780] device (34:42:62:16:03:F6): state change: secondaries -> activated (reason 'none', managed-type: 'full')
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5785] manager: NetworkManager state is now CONNECTED_SITE
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5789] device (34:42:62:16:03:F6): Activation: successful, device activated.
+ 6月 30 01:12:01 macbookair2015 NetworkManager[855]: <info>  [1782749521.5800] manager: NetworkManager state is now CONNECTED_GLOBAL
+ 6月 30 01:12:01 macbookair2015 charon-nm[749513]: 09[IKE] installed bypass policy for 172.20.10.0/28
+ 6月 30 01:12:01 macbookair2015 charon-nm[749513]: 13[IKE] retransmit 3 of request with message ID 7
+ 6月 30 01:12:01 macbookair2015 charon-nm[749513]: 13[NET] sending packet: from 172.20.10.13[49768] to 160.16.210.47[4500] (80 bytes)
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 12[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[49768] (80 bytes)
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 12[ENC] parsed INFORMATIONAL response 7 [ ]
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 12[IKE] IKE_SA deleted
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 12[KNL] error uninstalling route installed with policy 192.168.83.1/32 === 0.0.0.0/0 out
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 06[KNL] interface nm-xfrm-1048531 deactivated
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 14[KNL] fe80::4ca6:6fc0:10c4:97a8 disappeared from nm-xfrm-1048531
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 10[KNL] interface nm-xfrm-1048531 deleted
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3256] policy: auto-activating connection 'OpenWrt' (efa6ec65-e38a-4bfd-8b7d-298150fd2951)
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3281] device (wlp3s0): Activation: starting connection 'OpenWrt' (efa6ec65-e38a-4bfd-8b7d-298150fd2951)
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3284] device (wlp3s0): state change: disconnected -> prepare (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3295] device (wlp3s0): state change: prepare -> config (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3303] device (wlp3s0): Activation: (wifi) access point 'OpenWrt' has security, but secrets are required.
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3304] device (wlp3s0): state change: config -> need-auth (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3351] device (wlp3s0): state change: need-auth -> prepare (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3363] device (wlp3s0): state change: prepare -> config (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3374] device (wlp3s0): Activation: (wifi) connection 'OpenWrt' has security, and secrets exist.  No new secrets needed.
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3378] Config: added 'ssid' value 'OpenWrt'
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3379] Config: added 'scan_ssid' value '1'
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3379] Config: added 'bgscan' value 'simple:30:-70:86400'
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3380] Config: added 'key_mgmt' value 'WPA-PSK'
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3380] Config: added 'psk' value '<hidden>'
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3380] Config: added 'ieee80211w' value '0'
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.3640] device (wlp3s0): supplicant interface state: disconnected -> associating
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.5109] device (wlp3s0): supplicant interface state: associating -> 4way_handshake
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.5184] device (wlp3s0): supplicant interface state: 4way_handshake -> completed
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.5184] device (wlp3s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "OpenWrt"
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.5187] device (wlp3s0): state change: config -> ip-config (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.5206] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.5304] dhcp4 (wlp3s0): state changed new lease, address=192.168.33.145, acd pending
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 14[KNL] fe80::2e29:a8c5:f098:a429 appeared on wlp3s0
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 16[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to wlp3s0)
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.6718] dhcp4 (wlp3s0): state changed new lease, address=192.168.33.145
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 15[KNL] 192.168.33.145 appeared on wlp3s0
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.7165] device (wlp3s0): state change: ip-config -> ip-check (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.7237] device (wlp3s0): state change: ip-check -> secondaries (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.7244] device (wlp3s0): state change: secondaries -> activated (reason 'none', managed-type: 'full')
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.7263] device (wlp3s0): Activation: successful, device activated.
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 09[IKE] installed bypass policy for 192.168.33.0/24
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.8720] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:12:02 macbookair2015 avahi-daemon[754]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 16[KNL] 2001:240:2429:631:f4aa:ed6f:3f86:814 appeared on enx98e0d98d205e
+ 6月 30 01:12:02 macbookair2015 avahi-daemon[754]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:2429:631:f4aa:ed6f:3f86:814.
+ 6月 30 01:12:02 macbookair2015 avahi-daemon[754]: Registering new address record for 2001:240:2429:631:f4aa:ed6f:3f86:814 on enx98e0d98d205e.*.
+ 6月 30 01:12:02 macbookair2015 avahi-daemon[754]: Withdrawing address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.8748] policy: set 'iMiminashiPadPro ネットワーク' (enx98e0d98d205e) as default for IPv6 routing and DNS
+ 6月 30 01:12:02 macbookair2015 NetworkManager[855]: <info>  [1782749522.9119] dhcp6 (enx98e0d98d205e): state changed new lease
+ 6月 30 01:12:02 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 6月 30 01:12:02 macbookair2015 charon-nm[749513]: 10[IKE] installed bypass policy for 2001:240:2429:631::/64
+ 6月 30 01:12:04 macbookair2015 charon-nm[749513]: 11[KNL] flags changed for fe80::2e29:a8c5:f098:a429 on wlp3s0
+ 6月 30 01:12:04 macbookair2015 NetworkManager[855]: <info>  [1782749524.3235] dhcp6 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 6月 30 01:12:04 macbookair2015 NetworkManager[855]: <info>  [1782749524.3431] dhcp6 (wlp3s0): state changed new lease, address=fd9d:4bbd:50df::458
+ 6月 30 01:12:04 macbookair2015 charon-nm[749513]: 15[KNL] fd9d:4bbd:50df::458 appeared on wlp3s0
+ 6月 30 01:12:04 macbookair2015 charon-nm[749513]: 13[IKE] installed bypass policy for fd9d:4bbd:50df::458/128
+ 6月 30 01:12:04 macbookair2015 charon-nm[749513]: 09[KNL] flags changed for 2001:240:2429:631:f4aa:ed6f:3f86:814 on enx98e0d98d205e
+ 6月 30 01:12:06 macbookair2015 charon-nm[749513]: 14[KNL] flags changed for fd9d:4bbd:50df::458 on wlp3s0
+ 6月 30 01:12:06 macbookair2015 dbus-daemon[785]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=855 comm="/usr/sbin/NetworkManager --no-daemon")
+ 6月 30 01:12:06 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 6月 30 01:12:06 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 6月 30 01:12:16 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 6月 30 01:12:21 macbookair2015 sudo[752937]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/journalctl -t 58-snapshot-only -b --since '10 min ago' --no-pager
