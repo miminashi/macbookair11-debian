@@ -1,0 +1,64 @@
+ 6月 29 19:05:12 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:17:59 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:20:55 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:23:58 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:24:29 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:24:56 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:25:29 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:25:59 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:26:28 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:27:06 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:27:39 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:27:58 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:28:31 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:28:56 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:29:29 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:30:09 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:30:42 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:31:11 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:31:44 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:32:08 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:32:37 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:32:58 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:33:31 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:34:05 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:34:38 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:35:01 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:35:51 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:36:54 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:38:00 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:38:38 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:39:11 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:39:23 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:39:56 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:40:36 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:41:05 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:42:18 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:42:51 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:43:15 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:43:48 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:44:46 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:45:19 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:45:55 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:46:29 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:47:49 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:48:22 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:48:30 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:49:03 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:49:42 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:50:15 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:51:21 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:51:54 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:52:28 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:52:57 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:54:08 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:54:41 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:54:56 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:55:29 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:56:06 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:56:39 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 19:58:05 macbookair2015 kernel: PM: suspend exit
+ 6月 29 19:58:38 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 20:00:38 macbookair2015 kernel: PM: suspend exit
+ 6月 29 20:01:11 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 6月 29 20:01:42 macbookair2015 kernel: PM: suspend exit

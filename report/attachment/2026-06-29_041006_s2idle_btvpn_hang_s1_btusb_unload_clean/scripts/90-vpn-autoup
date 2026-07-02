@@ -1,0 +1,9 @@
+#!/bin/sh
+# post 時に BT-PAN/VPN 復元ワーカーを systemd transient unit として起動 (systemd-suspend cgroup から離脱)
+# プラン: macbook-air-distributed-aurora.md S1
+[ "$1" != "post" ] && exit 0
+# 一意な unit 名 (epoch 秒) で衝突回避
+UNIT="h4-vpn-restore-$(date +%s).service"
+/usr/bin/systemd-run --no-block --unit="$UNIT" --description="H4 BT-PAN/VPN restore after resume" \
+    /usr/local/sbin/h4-vpn-restore 2>&1 | logger -t 90-vpn-autoup
+exit 0

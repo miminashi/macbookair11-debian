@@ -1,0 +1,6 @@
+=== freetest cycle loop v2 START 2026年  6月 29日 月曜日 05:47:57 JST ===
+=== cycle 1 / 12 05:47:57 ===
+101
+bt rx_bytes=6593 tx_bytes=9226
+rtcwake: wakeup using /dev/rtc0 at Sun Jun 28 20:48:58 2026
+WOKE at 05:47:57 cycle=1

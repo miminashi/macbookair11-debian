@@ -1,0 +1,23 @@
+#!/bin/sh
+# S0.5 α/β 判別用: pre で必ず rtcwake を仕掛けて s2idle stuck を防ぐ
+# alpha → 60s (RTC wake で α テスト)
+# beta  → 300s (5分の safety net、ユーザは lid open で起こす)
+# プラン: macbook-air-distributed-aurora.md S0.5
+# 再発防止: 失敗時にも sleep を止めない (rtcwake が失敗しても pre は exit 0)
+PHASE="$1"
+MODE_FILE=/var/lib/h4-probe/mode
+[ "$PHASE" != "pre" ] && exit 0
+MODE=beta
+if [ -r "$MODE_FILE" ]; then
+    MODE=$(cat "$MODE_FILE" 2>/dev/null | tr -d '[:space:]')
+fi
+case "$MODE" in
+    alpha) SECS=60 ;;
+    beta|*) SECS=300 ;;
+esac
+if /usr/sbin/rtcwake -m no -s "$SECS" 2>&1 | logger -t 65-rtcwake; then
+    logger -t 65-rtcwake "set RTC alarm +${SECS}s (mode=$MODE)"
+else
+    logger -t 65-rtcwake "WARN: rtcwake -m no -s $SECS failed; suspend continues without safety net"
+fi
+exit 0

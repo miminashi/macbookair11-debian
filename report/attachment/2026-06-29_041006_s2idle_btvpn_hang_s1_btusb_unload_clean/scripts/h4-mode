@@ -1,0 +1,33 @@
+#!/bin/sh
+# H4 切り分け用 mode 切替
+# usage: h4-mode {alpha|beta|status}
+# - alpha: pre フックで rtcwake -s 60 (RTC wake で起こす = α テスト)
+# - beta:  pre フックで rtcwake -s 300 (safety net、5 分以内に lid open で起こす = β テスト)
+# - status: 現在のモードと最近の cycle 一覧
+# 非 root で実行されたら sudo に自動 elevate
+if [ "$(id -u)" -ne 0 ]; then
+    exec sudo "$0" "$@"
+fi
+set -eu
+MODE_FILE=/var/lib/h4-probe/mode
+mkdir -p "$(dirname "$MODE_FILE")"
+case "${1:-}" in
+    alpha|beta)
+        printf '%s\n' "$1" > "$MODE_FILE"
+        echo "h4-mode set to: $1 (cycle 安全網 rtcwake = $(case $1 in alpha) echo 60s;; beta) echo 300s;; esac))"
+        ;;
+    status)
+        cur=$(cat "$MODE_FILE" 2>/dev/null || echo "beta (default, no mode file)")
+        echo "current mode: $cur"
+        echo "--- recent probe files (last 6, time ASC) ---"
+        ls -1tr /var/log/h4-probe/*.pre /var/log/h4-probe/*.post 2>/dev/null | tail -6
+        echo "--- s3-soak.log tail 6 ---"
+        tail -n 6 /var/log/s3-soak.log 2>/dev/null
+        echo "--- suspend_stats success/fail ---"
+        cat /sys/power/suspend_stats/success /sys/power/suspend_stats/fail
+        ;;
+    *)
+        echo "usage: $0 {alpha|beta|status}" >&2
+        exit 1
+        ;;
+esac

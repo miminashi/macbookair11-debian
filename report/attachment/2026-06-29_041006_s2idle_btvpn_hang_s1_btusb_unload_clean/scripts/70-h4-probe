@@ -1,0 +1,58 @@
+#!/bin/sh
+# H4/H2/xfrm 切り分け用の pre/post スナップショット採取フック
+# pre 時の状態が hang 時の唯一の証拠 (post は hang で走らない)
+# プラン: macbook-air-distributed-aurora.md S0
+set -u
+PHASE="$1"
+TARGET="${2:-suspend}"
+LOGDIR=/var/log/h4-probe
+mkdir -p "$LOGDIR"
+MODE_FILE=/var/lib/h4-probe/mode
+MODE=beta
+if [ -r "$MODE_FILE" ]; then
+    MODE=$(cat "$MODE_FILE" 2>/dev/null | tr -d '[:space:]')
+fi
+TS=$(date +%s)
+ISO=$(TZ=Asia/Tokyo date +%Y-%m-%dT%H:%M:%S%z)
+FILE="$LOGDIR/${TS}.${PHASE}"
+if [ "$PHASE" = "pre" ]; then
+    echo 1 > /sys/power/pm_debug_messages 2>/dev/null || true
+fi
+{
+    echo "=== 70-h4-probe phase=$PHASE target=$TARGET mode=$MODE ts=$TS iso=$ISO ==="
+    echo "=== uname ==="; uname -a
+    echo "=== mem_sleep ==="; cat /sys/power/mem_sleep
+    echo "=== pm_debug_messages ==="; cat /sys/power/pm_debug_messages 2>/dev/null || echo "n/a"
+    echo "=== suspend_stats ==="
+    for f in /sys/power/suspend_stats/*; do
+        printf "%s: " "$(basename "$f")"; cat "$f" 2>/dev/null || echo "?"
+    done
+    echo "=== ip -o link show ==="; ip -o link show
+    echo "=== ip addr show ==="; ip -o -4 addr show; ip -o -6 addr show
+    echo "=== ip xfrm state ==="; ip xfrm state 2>&1
+    echo "=== ip xfrm policy ==="; ip xfrm policy 2>&1
+    echo "=== /proc/net/dev ==="; cat /proc/net/dev
+    echo "=== nmcli active connections ==="
+    nmcli -t -f NAME,TYPE,DEVICE,STATE con show --active 2>&1
+    echo "=== lsmod bt/xfrm ==="
+    lsmod | grep -E '^(btusb|btintel|btbcm|btrtl|btmtk|bluetooth|bnep|rfcomm|xfrm|wl)\b'
+    echo "=== USB device runtime status ==="
+    for d in /sys/bus/usb/devices/*/power; do
+        rs=$(cat "$d/runtime_status" 2>/dev/null || echo "?")
+        at=$(cat "$d/runtime_active_time" 2>/dev/null || echo "?")
+        path=$(dirname "$d")
+        prod=$(cat "$path/product" 2>/dev/null || echo "")
+        manu=$(cat "$path/manufacturer" 2>/dev/null || echo "")
+        echo "$(basename "$path"): rs=$rs at=${at}ms prod=$prod manu=$manu"
+    done
+    echo "=== /proc/acpi/wakeup ==="; cat /proc/acpi/wakeup 2>&1
+    echo "=== gpe70 status ==="; cat /sys/firmware/acpi/interrupts/gpe70 2>/dev/null || echo "n/a"
+    echo "=== bluetoothctl devices Connected ==="
+    timeout 2 bluetoothctl devices Connected 2>/dev/null || echo "n/a or timeout"
+    echo "=== dmesg tail 300 ==="; dmesg -T | tail -300
+    echo "=== journal kernel last 200 ==="; journalctl -n 200 -k --no-pager 2>&1
+    echo "=== END phase=$PHASE mode=$MODE ==="
+} > "$FILE" 2>&1
+if [ "$PHASE" = "pre" ]; then sync; fi
+logger -t 70-h4-probe "phase=$PHASE target=$TARGET mode=$MODE file=$FILE"
+exit 0

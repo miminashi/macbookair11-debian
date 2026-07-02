@@ -1,0 +1,15 @@
+=== freetest cycle loop START 2026年  6月 29日 月曜日 05:43:48 JST ===
+=== cycle 1 / 12 2026年  6月 29日 月曜日 05:43:49 JST ===
+wlp3s0: 5452400   46554    0    0    0 1010889          0         0  4997309   40733    0   31    0     0       0          0
+enx98e0d98d205e: 17842404   18637    0    0    0     0          0         0  4011053   15666    0    0    0     0       0          0
+100
+rtcwake: wakeup using /dev/rtc0 at Sun Jun 28 20:44:50 2026
+rtcwake set, suspending now...
+WOKE at 2026年  6月 29日 月曜日 05:43:49 JST cycle=1
+=== cycle 2 / 12 2026年  6月 29日 月曜日 05:43:54 JST ===
+wlp3s0: 5458015   46575    0    0    0 1010889          0         0  5003962   40757    0   32    0     0       0          0
+100
+rtcwake: wakeup using /dev/rtc0 at Sun Jun 28 20:44:55 2026
+rtcwake set, suspending now...
+Call to Suspend failed: Action suspend already in progress, refusing requested suspend operation.
+=== cycle loop END 2026年  6月 29日 月曜日 05:45:00 JST exit=0 ===

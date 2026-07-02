@@ -1,0 +1,34 @@
+#!/bin/sh
+# S1: btusb pre-unload で device-suspend 経路から btusb を除く
+# H4 (URB drain 永久ブロック) の経路有無検証
+# プラン: macbook-air-distributed-aurora.md S1
+PHASE="$1"
+case "$PHASE" in
+  pre)
+    # bluetoothd は active のまま (USB ドライバだけ抜く狙い)。
+    # bluetoothd が hci0 を握っている場合 btusb は busy になる可能性があるので、
+    # busy 時は bluetooth.service 停止 → モジュール削除 → suspend 後に再起動 する fallback も用意。
+    if /sbin/modprobe -r bnep btusb btintel 2>/tmp/55-btusb-down.err; then
+        logger -t 55-btusb-down "removed bnep+btusb+btintel"
+    else
+        ERR=$(cat /tmp/55-btusb-down.err 2>/dev/null)
+        logger -t 55-btusb-down "modprobe -r failed: $ERR — falling back to bluetooth.service stop"
+        /bin/systemctl stop bluetooth.service 2>&1 | logger -t 55-btusb-down
+        sleep 1
+        /sbin/modprobe -r bnep btusb btintel 2>&1 | logger -t 55-btusb-down
+        # mark that we stopped bluetoothd so post can restart
+        touch /run/55-btusb-down.bluetoothd-was-stopped
+    fi
+    ;;
+  post)
+    /sbin/modprobe btintel 2>&1 | logger -t 55-btusb-down
+    /sbin/modprobe btusb 2>&1 | logger -t 55-btusb-down
+    /sbin/modprobe bnep 2>&1 | logger -t 55-btusb-down
+    if [ -f /run/55-btusb-down.bluetoothd-was-stopped ]; then
+        /bin/systemctl start bluetooth.service 2>&1 | logger -t 55-btusb-down
+        rm -f /run/55-btusb-down.bluetoothd-was-stopped
+    fi
+    logger -t 55-btusb-down "modules restored"
+    ;;
+esac
+exit 0

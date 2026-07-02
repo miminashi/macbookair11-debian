@@ -1,0 +1,38 @@
+#!/bin/sh
+# resume 後に BT-PAN auto-reconnect + GSNet VPN up を待ってログに残す
+# 90-vpn-autoup から background で起動される (フックを block しない)
+exec >> /var/log/h4-vpn-restore.log 2>&1
+echo "=== $(date -Iseconds) starting (pid=$$, parent=$PPID) ==="
+VPN_NAME="GSNet"
+BT_NAME="iMiminashiPadPro ネットワーク"
+BT_IFACE="enx98e0d98d205e"
+
+for i in $(seq 1 120); do
+    bt_state=$(/usr/bin/nmcli -t -f NAME,STATE con show --active 2>/dev/null | awk -F: -v n="$BT_NAME" '$1==n{print $2}')
+    bt_ip=$(/sbin/ip -o -4 addr show dev "$BT_IFACE" 2>/dev/null | grep -oE "172\.20\.10\.[0-9]+" | head -1)
+    if [ "$bt_state" = "activated" ] && [ -n "$bt_ip" ]; then
+        echo "  BT-PAN ready at ${i}s (state=$bt_state ip=$bt_ip)"
+        break
+    fi
+    sleep 1
+done
+
+if [ "$bt_state" != "activated" ] || [ -z "$bt_ip" ]; then
+    echo "  BT-PAN not ready after 120s (state=$bt_state ip=$bt_ip), giving up"
+    exit 0
+fi
+
+for i in $(seq 1 6); do
+    if /usr/bin/nmcli -t -f NAME con show --active 2>/dev/null | grep -qx "$VPN_NAME"; then
+        echo "  VPN already active at attempt $i"
+        exit 0
+    fi
+    out=$(/usr/bin/nmcli con up "$VPN_NAME" 2>&1)
+    rc=$?
+    echo "  vpn up attempt $i: rc=$rc msg=$out"
+    if [ $rc -eq 0 ]; then
+        exit 0
+    fi
+    sleep 4
+done
+echo "  VPN up failed after 6 attempts"

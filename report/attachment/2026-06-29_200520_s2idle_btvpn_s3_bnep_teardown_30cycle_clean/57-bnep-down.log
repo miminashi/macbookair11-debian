@@ -1,0 +1,104 @@
+ 6月 29 19:05:12 macbookair2015 57-bnep-down[622383]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:05:12 macbookair2015 57-bnep-down[622383]: Disconnection successful
+ 6月 29 19:05:12 macbookair2015 57-bnep-down[622401]: bnep netdev removed after 1*0.1s
+ 6月 29 19:20:54 macbookair2015 57-bnep-down[624365]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:20:54 macbookair2015 57-bnep-down[624365]: Disconnection successful
+ 6月 29 19:20:54 macbookair2015 57-bnep-down[624381]: bnep netdev removed after 1*0.1s
+ 6月 29 19:24:29 macbookair2015 57-bnep-down[625205]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:24:29 macbookair2015 57-bnep-down[625205]: Disconnection successful
+ 6月 29 19:24:29 macbookair2015 57-bnep-down[625222]: bnep netdev removed after 1*0.1s
+ 6月 29 19:25:29 macbookair2015 57-bnep-down[626028]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:25:29 macbookair2015 57-bnep-down[626028]: Disconnection successful
+ 6月 29 19:25:29 macbookair2015 57-bnep-down[626045]: bnep netdev removed after 1*0.1s
+ 6月 29 19:26:28 macbookair2015 57-bnep-down[626827]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:26:28 macbookair2015 57-bnep-down[626827]: hci0 34:42:62:16:03:F6 type BR/EDR disconnected with reason 3
+ 6月 29 19:26:28 macbookair2015 57-bnep-down[626827]: [CHG] Device 34:42:62:16:03:F6 Connected: no
+ 6月 29 19:26:28 macbookair2015 57-bnep-down[626827]: Disconnection successful
+ 6月 29 19:26:28 macbookair2015 57-bnep-down[626862]: bnep netdev removed after 1*0.1s
+ 6月 29 19:27:39 macbookair2015 57-bnep-down[627676]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:27:39 macbookair2015 57-bnep-down[627676]: Disconnection successful
+ 6月 29 19:27:39 macbookair2015 57-bnep-down[627692]: bnep netdev removed after 1*0.1s
+ 6月 29 19:28:31 macbookair2015 57-bnep-down[628508]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:28:31 macbookair2015 57-bnep-down[628508]: Disconnection successful
+ 6月 29 19:28:31 macbookair2015 57-bnep-down[628526]: bnep netdev removed after 1*0.1s
+ 6月 29 19:29:29 macbookair2015 57-bnep-down[629323]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:29:29 macbookair2015 57-bnep-down[629323]: Disconnection successful
+ 6月 29 19:29:29 macbookair2015 57-bnep-down[629339]: bnep netdev removed after 1*0.1s
+ 6月 29 19:30:42 macbookair2015 57-bnep-down[630145]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:30:42 macbookair2015 57-bnep-down[630145]: Disconnection successful
+ 6月 29 19:30:42 macbookair2015 57-bnep-down[630162]: bnep netdev removed after 1*0.1s
+ 6月 29 19:31:44 macbookair2015 57-bnep-down[630974]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:31:44 macbookair2015 57-bnep-down[630974]: Disconnection successful
+ 6月 29 19:31:44 macbookair2015 57-bnep-down[630991]: bnep netdev removed after 1*0.1s
+ 6月 29 19:32:37 macbookair2015 57-bnep-down[631766]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:32:37 macbookair2015 57-bnep-down[631766]: hci0 34:42:62:16:03:F6 type BR/EDR disconnected with reason 3
+ 6月 29 19:32:37 macbookair2015 57-bnep-down[631766]: [CHG] Device 34:42:62:16:03:F6 Connected: no
+ 6月 29 19:32:37 macbookair2015 57-bnep-down[631766]: Disconnection successful
+ 6月 29 19:32:37 macbookair2015 57-bnep-down[631799]: bnep netdev removed after 1*0.1s
+ 6月 29 19:33:31 macbookair2015 57-bnep-down[632597]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:33:31 macbookair2015 57-bnep-down[632597]: Disconnection successful
+ 6月 29 19:33:31 macbookair2015 57-bnep-down[632615]: bnep netdev removed after 1*0.1s
+ 6月 29 19:34:38 macbookair2015 57-bnep-down[633431]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:34:38 macbookair2015 57-bnep-down[633431]: Disconnection successful
+ 6月 29 19:34:38 macbookair2015 57-bnep-down[633449]: bnep netdev removed after 1*0.1s
+ 6月 29 19:35:51 macbookair2015 57-bnep-down[634378]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:35:51 macbookair2015 57-bnep-down[634378]: Disconnection successful
+ 6月 29 19:35:51 macbookair2015 57-bnep-down[634396]: bnep netdev removed after 1*0.1s
+ 6月 29 19:38:00 macbookair2015 57-bnep-down[635447]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:38:00 macbookair2015 57-bnep-down[635447]: Disconnection successful
+ 6月 29 19:38:00 macbookair2015 57-bnep-down[635464]: bnep netdev removed after 1*0.1s
+ 6月 29 19:39:11 macbookair2015 57-bnep-down[636283]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:39:11 macbookair2015 57-bnep-down[636283]: Disconnection successful
+ 6月 29 19:39:11 macbookair2015 57-bnep-down[636300]: bnep netdev removed after 1*0.1s
+ 6月 29 19:39:56 macbookair2015 57-bnep-down[637112]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:39:56 macbookair2015 57-bnep-down[637112]: Disconnection successful
+ 6月 29 19:39:56 macbookair2015 57-bnep-down[637129]: bnep netdev removed after 1*0.1s
+ 6月 29 19:41:05 macbookair2015 57-bnep-down[637909]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:41:05 macbookair2015 57-bnep-down[637909]: hci0 34:42:62:16:03:F6 type BR/EDR disconnected with reason 3
+ 6月 29 19:41:05 macbookair2015 57-bnep-down[637909]: [CHG] Device 34:42:62:16:03:F6 Connected: no
+ 6月 29 19:41:05 macbookair2015 57-bnep-down[637909]: Disconnection successful
+ 6月 29 19:41:05 macbookair2015 57-bnep-down[638002]: bnep netdev removed after 1*0.1s
+ 6月 29 19:42:51 macbookair2015 57-bnep-down[638741]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:42:51 macbookair2015 57-bnep-down[638741]: Disconnection successful
+ 6月 29 19:42:51 macbookair2015 57-bnep-down[638757]: bnep netdev removed after 1*0.1s
+ 6月 29 19:43:48 macbookair2015 57-bnep-down[639570]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:43:48 macbookair2015 57-bnep-down[639570]: Disconnection successful
+ 6月 29 19:43:48 macbookair2015 57-bnep-down[639587]: bnep netdev removed after 1*0.1s
+ 6月 29 19:45:19 macbookair2015 57-bnep-down[640395]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:45:19 macbookair2015 57-bnep-down[640395]: Disconnection successful
+ 6月 29 19:45:19 macbookair2015 57-bnep-down[640411]: bnep netdev removed after 1*0.1s
+ 6月 29 19:46:28 macbookair2015 57-bnep-down[641259]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:46:28 macbookair2015 57-bnep-down[641259]: Disconnection successful
+ 6月 29 19:46:28 macbookair2015 57-bnep-down[641276]: bnep netdev removed after 1*0.1s
+ 6月 29 19:48:22 macbookair2015 57-bnep-down[642074]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:48:22 macbookair2015 57-bnep-down[642074]: Disconnection successful
+ 6月 29 19:48:22 macbookair2015 57-bnep-down[642091]: bnep netdev removed after 1*0.1s
+ 6月 29 19:49:03 macbookair2015 57-bnep-down[642900]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:49:03 macbookair2015 57-bnep-down[642900]: Disconnection successful
+ 6月 29 19:49:03 macbookair2015 57-bnep-down[642917]: bnep netdev removed after 1*0.1s
+ 6月 29 19:50:15 macbookair2015 57-bnep-down[643732]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:50:15 macbookair2015 57-bnep-down[643732]: Disconnection successful
+ 6月 29 19:50:15 macbookair2015 57-bnep-down[643749]: bnep netdev removed after 1*0.1s
+ 6月 29 19:51:54 macbookair2015 57-bnep-down[644555]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:51:54 macbookair2015 57-bnep-down[644555]: Disconnection successful
+ 6月 29 19:51:54 macbookair2015 57-bnep-down[644571]: bnep netdev removed after 1*0.1s
+ 6月 29 19:52:57 macbookair2015 57-bnep-down[645348]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:52:57 macbookair2015 57-bnep-down[645348]: hci0 34:42:62:16:03:F6 type BR/EDR disconnected with reason 3
+ 6月 29 19:52:57 macbookair2015 57-bnep-down[645348]: [CHG] Device 34:42:62:16:03:F6 Connected: no
+ 6月 29 19:52:57 macbookair2015 57-bnep-down[645348]: Disconnection successful
+ 6月 29 19:52:57 macbookair2015 57-bnep-down[645478]: bnep netdev removed after 1*0.1s
+ 6月 29 19:54:41 macbookair2015 57-bnep-down[646176]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:54:41 macbookair2015 57-bnep-down[646176]: Disconnection successful
+ 6月 29 19:54:41 macbookair2015 57-bnep-down[646192]: bnep netdev removed after 1*0.1s
+ 6月 29 19:55:29 macbookair2015 57-bnep-down[647005]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:55:29 macbookair2015 57-bnep-down[647005]: Disconnection successful
+ 6月 29 19:55:29 macbookair2015 57-bnep-down[647021]: bnep netdev removed after 1*0.1s
+ 6月 29 19:56:39 macbookair2015 57-bnep-down[647836]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:56:39 macbookair2015 57-bnep-down[647836]: Disconnection successful
+ 6月 29 19:56:39 macbookair2015 57-bnep-down[647853]: bnep netdev removed after 1*0.1s
+ 6月 29 19:58:38 macbookair2015 57-bnep-down[648667]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 19:58:38 macbookair2015 57-bnep-down[648667]: Disconnection successful
+ 6月 29 19:58:38 macbookair2015 57-bnep-down[648684]: bnep netdev removed after 1*0.1s
+ 6月 29 20:01:11 macbookair2015 57-bnep-down[649493]: Attempting to disconnect from 34:42:62:16:03:F6
+ 6月 29 20:01:11 macbookair2015 57-bnep-down[649493]: Disconnection successful
+ 6月 29 20:01:11 macbookair2015 57-bnep-down[649509]: bnep netdev removed after 1*0.1s
