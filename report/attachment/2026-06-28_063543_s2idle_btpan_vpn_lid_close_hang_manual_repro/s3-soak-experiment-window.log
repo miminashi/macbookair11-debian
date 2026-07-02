@@ -1,0 +1,87 @@
+2026-06-28T04:28:21+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4427000 ss_ok=28 ss_fail=0 gpe70=0
+2026-06-28T05:19:00+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=0 ss_fail=0 gpe70=0
+2026-06-28T05:19:14+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=1 ss_fail=0 gpe70=0 asleep_s=14 drm_err=0 lid=*enabled
+2026-06-28T05:19:45+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=1 ss_fail=0 gpe70=0
+2026-06-28T05:26:39+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=0 ss_fail=0 gpe70=0
+2026-06-28T05:26:59+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=1 ss_fail=0 gpe70=0 asleep_s=20 drm_err=0 lid=*enabled
+2026-06-28T05:27:31+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=1 ss_fail=0 gpe70=0
+2026-06-28T05:27:47+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=2 ss_fail=0 gpe70=0 asleep_s=16 drm_err=0 lid=*enabled
+2026-06-28T05:28:17+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=2 ss_fail=0 gpe70=0
+2026-06-28T05:28:45+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=3 ss_fail=0 gpe70=0 asleep_s=28 drm_err=0 lid=*enabled
+2026-06-28T05:29:18+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=3 ss_fail=0 gpe70=0
+2026-06-28T05:29:30+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=4 ss_fail=0 gpe70=0 asleep_s=12 drm_err=0 lid=*enabled
+2026-06-28T05:30:04+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=4 ss_fail=0 gpe70=0
+2026-06-28T05:31:45+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=5 ss_fail=0 gpe70=0 asleep_s=101 drm_err=0 lid=*enabled
+2026-06-28T05:32:18+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=5 ss_fail=0 gpe70=0
+2026-06-28T05:35:01+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=6 ss_fail=0 gpe70=0 asleep_s=163 drm_err=0 lid=*enabled
+2026-06-28T05:35:34+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=6 ss_fail=0 gpe70=0
+2026-06-28T05:36:51+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=7 ss_fail=0 gpe70=0 asleep_s=77 drm_err=0 lid=*enabled
+2026-06-28T05:37:24+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=7 ss_fail=0 gpe70=0
+2026-06-28T05:37:27+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=8 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-06-28T05:38:00+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=8 ss_fail=0 gpe70=0
+2026-06-28T05:41:26+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=9 ss_fail=0 gpe70=0 asleep_s=206 drm_err=0 lid=*enabled
+2026-06-28T05:49:37+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=9 ss_fail=0 gpe70=0
+2026-06-28T05:49:55+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=10 ss_fail=0 gpe70=0 asleep_s=18 drm_err=0 lid=*enabled
+2026-06-28T05:50:28+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=10 ss_fail=0 gpe70=0
+2026-06-28T05:50:39+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=11 ss_fail=0 gpe70=0 asleep_s=11 drm_err=0 lid=*enabled
+2026-06-28T05:51:11+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=11 ss_fail=0 gpe70=0
+2026-06-28T05:51:19+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=12 ss_fail=0 gpe70=0 asleep_s=8 drm_err=0 lid=*enabled
+2026-06-28T05:51:52+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=12 ss_fail=0 gpe70=0
+2026-06-28T05:52:03+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=13 ss_fail=0 gpe70=0 asleep_s=11 drm_err=0 lid=*enabled
+2026-06-28T05:52:36+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=13 ss_fail=0 gpe70=0
+2026-06-28T05:52:53+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=14 ss_fail=0 gpe70=0 asleep_s=17 drm_err=0 lid=*enabled
+2026-06-28T05:53:42+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=14 ss_fail=0 gpe70=0
+2026-06-28T05:55:11+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=15 ss_fail=0 gpe70=0 asleep_s=89 drm_err=0 lid=*enabled
+2026-06-28T05:55:45+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=15 ss_fail=0 gpe70=0
+2026-06-28T05:56:34+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=16 ss_fail=0 gpe70=0 asleep_s=49 drm_err=0 lid=*enabled
+2026-06-28T05:58:04+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=16 ss_fail=0 gpe70=0
+2026-06-28T05:58:21+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=17 ss_fail=0 gpe70=0 asleep_s=17 drm_err=0 lid=*enabled
+2026-06-28T05:59:11+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=17 ss_fail=0 gpe70=0
+2026-06-28T05:59:39+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=18 ss_fail=0 gpe70=0 asleep_s=28 drm_err=0 lid=*enabled
+2026-06-28T06:00:12+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=18 ss_fail=0 gpe70=0
+2026-06-28T06:00:20+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=19 ss_fail=0 gpe70=0 asleep_s=8 drm_err=0 lid=*enabled
+2026-06-28T06:00:55+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=19 ss_fail=0 gpe70=0
+2026-06-28T06:01:13+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=20 ss_fail=0 gpe70=0 asleep_s=18 drm_err=0 lid=*enabled
+2026-06-28T06:06:37+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=20 ss_fail=0 gpe70=0
+2026-06-28T06:07:06+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=21 ss_fail=0 gpe70=0 asleep_s=29 drm_err=0 lid=*enabled
+2026-06-28T06:07:39+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=21 ss_fail=0 gpe70=0
+2026-06-28T06:07:54+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=22 ss_fail=0 gpe70=0 asleep_s=15 drm_err=0 lid=*enabled
+2026-06-28T06:08:38+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=22 ss_fail=0 gpe70=0
+2026-06-28T06:09:36+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=23 ss_fail=0 gpe70=0 asleep_s=58 drm_err=0 lid=*enabled
+2026-06-28T06:10:05+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=23 ss_fail=0 gpe70=0
+2026-06-28T06:10:21+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=24 ss_fail=0 gpe70=0 asleep_s=16 drm_err=0 lid=*enabled
+2026-06-28T06:10:50+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=24 ss_fail=0 gpe70=0
+2026-06-28T06:11:15+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=25 ss_fail=0 gpe70=0 asleep_s=25 drm_err=0 lid=*enabled
+2026-06-28T06:11:44+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=25 ss_fail=0 gpe70=0
+2026-06-28T06:12:03+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=26 ss_fail=0 gpe70=0 asleep_s=19 drm_err=0 lid=*enabled
+2026-06-28T06:12:35+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=26 ss_fail=0 gpe70=0
+2026-06-28T06:12:47+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=27 ss_fail=0 gpe70=0 asleep_s=12 drm_err=0 lid=*enabled
+2026-06-28T06:13:20+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=27 ss_fail=0 gpe70=0
+2026-06-28T06:13:32+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=28 ss_fail=0 gpe70=0 asleep_s=12 drm_err=0 lid=*enabled
+2026-06-28T06:14:01+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=28 ss_fail=0 gpe70=0
+2026-06-28T06:14:14+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=29 ss_fail=0 gpe70=0 asleep_s=13 drm_err=0 lid=*enabled
+2026-06-28T06:14:47+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=29 ss_fail=0 gpe70=0
+2026-06-28T06:14:58+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=30 ss_fail=0 gpe70=0 asleep_s=11 drm_err=0 lid=*enabled
+2026-06-28T06:15:27+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=30 ss_fail=0 gpe70=0
+2026-06-28T06:15:41+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=31 ss_fail=0 gpe70=0 asleep_s=14 drm_err=0 lid=*enabled
+2026-06-28T06:16:13+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=31 ss_fail=0 gpe70=0
+2026-06-28T06:16:25+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=32 ss_fail=0 gpe70=0 asleep_s=12 drm_err=0 lid=*enabled
+2026-06-28T06:16:58+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=32 ss_fail=0 gpe70=0
+2026-06-28T06:17:14+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=33 ss_fail=0 gpe70=0 asleep_s=16 drm_err=0 lid=*enabled
+2026-06-28T06:17:44+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=33 ss_fail=0 gpe70=0
+2026-06-28T06:18:07+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=34 ss_fail=0 gpe70=0 asleep_s=23 drm_err=0 lid=*enabled
+2026-06-28T06:18:40+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=34 ss_fail=0 gpe70=0
+2026-06-28T06:18:46+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=35 ss_fail=0 gpe70=0 asleep_s=6 drm_err=0 lid=*enabled
+2026-06-28T06:22:30+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=35 ss_fail=0 gpe70=0
+2026-06-28T06:22:43+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=36 ss_fail=0 gpe70=0 asleep_s=13 drm_err=0 lid=*enabled
+2026-06-28T06:23:12+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=36 ss_fail=0 gpe70=0
+2026-06-28T06:23:23+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=37 ss_fail=0 gpe70=0 asleep_s=11 drm_err=0 lid=*enabled
+2026-06-28T06:23:56+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=37 ss_fail=0 gpe70=0
+2026-06-28T06:24:04+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=38 ss_fail=0 gpe70=0 asleep_s=8 drm_err=0 lid=*enabled
+2026-06-28T06:24:33+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=38 ss_fail=0 gpe70=0
+2026-06-28T06:24:42+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=39 ss_fail=0 gpe70=0 asleep_s=9 drm_err=0 lid=*enabled
+2026-06-28T06:25:19+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=39 ss_fail=0 gpe70=0
+2026-06-28T06:25:28+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=40 ss_fail=0 gpe70=0 asleep_s=9 drm_err=0 lid=*enabled
+2026-06-28T06:25:57+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=40 ss_fail=0 gpe70=0
+2026-06-28T06:26:11+0900 WAKE type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=41 ss_fail=0 gpe70=0 asleep_s=14 drm_err=0 lid=*enabled
+2026-06-28T06:26:43+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4431000 ss_ok=41 ss_fail=0 gpe70=0

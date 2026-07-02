@@ -1,0 +1,70 @@
+===== boot -1 (3aa09ac0...) tail (hang signature) =====
+[20812.996515] macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+[20813.030286] macbookair2015 dbus-daemon[776]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+[20813.030533] macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+[20813.031852] macbookair2015 NetworkManager[842]: <info>  [1782617398.7059] device (34:42:62:16:03:F6): state change: deactivating -> disconnected (reason 'sleeping', managed-type: 'full')
+[20813.032748] macbookair2015 avahi-daemon[759]: Withdrawing address record for 2001:240:2475:6a3b:8568:d785:9664:38db on enx98e0d98d205e.
+[20813.033472] macbookair2015 avahi-daemon[759]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:2475:6a3b:8568:d785:9664:38db.
+[20813.033757] macbookair2015 NetworkManager[842]: <info>  [1782617398.7078] dhcp4 (enx98e0d98d205e): canceled DHCP transaction
+[20813.033497] macbookair2015 avahi-daemon[759]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ec4e:efc9:876f:3362.
+[20813.033770] macbookair2015 NetworkManager[842]: <info>  [1782617398.7078] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+[20813.033526] macbookair2015 avahi-daemon[759]: Registering new address record for fe80::ec4e:efc9:876f:3362 on enx98e0d98d205e.*.
+[20813.033782] macbookair2015 NetworkManager[842]: <info>  [1782617398.7078] dhcp4 (enx98e0d98d205e): state changed no lease
+[20813.033709] macbookair2015 charon-nm[113577]: 14[KNL] 2001:240:2475:6a3b:8568:d785:9664:38db disappeared from enx98e0d98d205e
+[20813.033994] macbookair2015 NetworkManager[842]: <info>  [1782617398.7080] dhcp6 (enx98e0d98d205e): canceled DHCP transaction
+[20813.034289] macbookair2015 avahi-daemon[759]: Withdrawing address record for fe80::ec4e:efc9:876f:3362 on enx98e0d98d205e.
+[20813.034010] macbookair2015 NetworkManager[842]: <info>  [1782617398.7080] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+[20813.034316] macbookair2015 avahi-daemon[759]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ec4e:efc9:876f:3362.
+[20813.034026] macbookair2015 NetworkManager[842]: <info>  [1782617398.7081] dhcp6 (enx98e0d98d205e): state changed no lease
+[20813.034321] macbookair2015 charon-nm[113577]: 12[KNL] fe80::ec4e:efc9:876f:3362 disappeared from enx98e0d98d205e
+[20813.034343] macbookair2015 avahi-daemon[759]: Interface enx98e0d98d205e.IPv6 no longer relevant for mDNS.
+[20813.036353] macbookair2015 avahi-daemon[759]: Withdrawing address record for 172.20.10.13 on enx98e0d98d205e.
+[20813.036395] macbookair2015 avahi-daemon[759]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+[20813.037602] macbookair2015 charon-nm[113577]: 08[KNL] 172.20.10.13 disappeared from enx98e0d98d205e
+[20813.037950] macbookair2015 avahi-daemon[759]: Interface enx98e0d98d205e.IPv4 no longer relevant for mDNS.
+[20813.041472] macbookair2015 bluetoothd[774]: profiles/network/bnep.c:bnep_if_down() bnep: Could not bring down bnep0: No such device(19)
+[20813.042154] macbookair2015 charon-nm[113577]: 13[KNL] interface enx98e0d98d205e deactivated
+[20813.042361] macbookair2015 charon-nm[113577]: 08[KNL] interface enx98e0d98d205e deleted
+[20813.128577] macbookair2015 charon-nm[113577]: 11[IKE] deleting IKE_SA GSNet[22] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+[20813.128603] macbookair2015 charon-nm[113577]: 11[IKE] sending DELETE for IKE_SA GSNet[22]
+[20813.128624] macbookair2015 charon-nm[113577]: 11[ENC] generating INFORMATIONAL request 8 [ D ]
+[20813.129195] macbookair2015 NetworkManager[842]: <info>  [1782617398.8032] device (34:42:62:16:03:F6): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+[20813.129006] macbookair2015 charon-nm[113577]: 11[NET] sending packet: from 172.20.10.13[33576] to 160.16.210.47[4500] (80 bytes)
+[20813.129086] macbookair2015 charon-nm[113577]: 04[NET] error writing to socket: Network is unreachable
+[20813.130036] macbookair2015 charon-nm[113577]: 07[KNL] 192.168.83.1 disappeared from nm-xfrm-1624477
+[20813.133142] macbookair2015 charon-nm[113577]: 06[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to nm-xfrm-1624477)
+[20813.134030] macbookair2015 charon-nm[113577]: 06[IKE] uninstalling bypass policy for 172.20.10.0/28
+[20813.134158] macbookair2015 charon-nm[113577]: 06[IKE] uninstalling bypass policy for 2001:240:2475:6a3b::/64
+[20813.134253] macbookair2015 charon-nm[113577]: 06[IKE] uninstalling bypass policy for 172.20.10.1/32
+[20814.069238] macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+[20814.076794] macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+[20814.124245] macbookair2015 systemd[1]: session-2.scope: Unit now frozen-by-parent.
+[20814.124286] macbookair2015 systemd[1]: user@1000.service: Unit now frozen-by-parent.
+[20814.124740] macbookair2015 systemd[1]: user.slice: Unit now frozen.
+[20814.124795] macbookair2015 systemd[1]: user-1000.slice: Unit now frozen-by-parent.
+[20814.124813] macbookair2015 systemd-sleep[124841]: Successfully froze unit 'user.slice'.
+[20814.129740] macbookair2015 kbd-backlight-sleep[124849]: pre/suspend: saved=0 set->0
+
+===== boot -1 IKE_SA delete (last 20, proving VPN-over-BT-PAN per cycle) =====
+2026-06-28T12:01:50+09:00 macbookair2015 charon-nm[113577]: 14[IKE] deleting IKE_SA GSNet[1] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:11:47+09:00 macbookair2015 charon-nm[113577]: 11[IKE] deleting IKE_SA GSNet[2] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:12:36+09:00 macbookair2015 charon-nm[113577]: 10[IKE] deleting IKE_SA GSNet[3] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:13:13+09:00 macbookair2015 charon-nm[113577]: 13[IKE] deleting IKE_SA GSNet[4] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:14:25+09:00 macbookair2015 charon-nm[113577]: 11[IKE] deleting IKE_SA GSNet[5] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:15:07+09:00 macbookair2015 charon-nm[113577]: 11[IKE] deleting IKE_SA GSNet[6] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:15:50+09:00 macbookair2015 charon-nm[113577]: 09[IKE] deleting IKE_SA GSNet[7] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:16:31+09:00 macbookair2015 charon-nm[113577]: 07[IKE] deleting IKE_SA GSNet[8] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:17:13+09:00 macbookair2015 charon-nm[113577]: 07[IKE] deleting IKE_SA GSNet[9] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:18:07+09:00 macbookair2015 charon-nm[113577]: 09[IKE] deleting IKE_SA GSNet[10] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:18:49+09:00 macbookair2015 charon-nm[113577]: 15[IKE] deleting IKE_SA GSNet[11] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:20:56+09:00 macbookair2015 charon-nm[113577]: 13[IKE] deleting IKE_SA GSNet[12] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:21:49+09:00 macbookair2015 charon-nm[113577]: 06[IKE] deleting IKE_SA GSNet[13] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:22:32+09:00 macbookair2015 charon-nm[113577]: 09[IKE] deleting IKE_SA GSNet[14] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:23:15+09:00 macbookair2015 charon-nm[113577]: 09[IKE] deleting IKE_SA GSNet[15] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:24:16+09:00 macbookair2015 charon-nm[113577]: 14[IKE] deleting IKE_SA GSNet[16] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:24:57+09:00 macbookair2015 charon-nm[113577]: 09[IKE] deleting IKE_SA GSNet[17] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:25:40+09:00 macbookair2015 charon-nm[113577]: 11[IKE] deleting IKE_SA GSNet[18] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:26:44+09:00 macbookair2015 charon-nm[113577]: 07[IKE] deleting IKE_SA GSNet[19] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:28:33+09:00 macbookair2015 charon-nm[113577]: 09[IKE] deleting IKE_SA GSNet[20] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:29:15+09:00 macbookair2015 charon-nm[113577]: 12[IKE] deleting IKE_SA GSNet[21] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T12:29:58+09:00 macbookair2015 charon-nm[113577]: 11[IKE] deleting IKE_SA GSNet[22] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]

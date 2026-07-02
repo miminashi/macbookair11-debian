@@ -1,0 +1,35 @@
+2026-06-28T07:33:57+0900 ===== PHASE START phase=DRY N=0 bt=on wake=30s gap=15s pan=iMiminashiPadPro ネットワーク vpn=GSNet wifi_dev=wlp3s0 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:34:02+0900 DRYRUN PRECHECK phase=DRY panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 gw_dev=nm-xfrm-8442968 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:34:07+0900 DRYRUN DONE phase=DRY (wifi restored)
+2026-06-28T07:35:41+0900 ===== PHASE START phase=BTVPN N=15 bt=on wake=30s gap=15s pan=iMiminashiPadPro ネットワーク vpn=GSNet wifi_dev=wlp3s0 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:35:46+0900 ITER 1/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:36:24+0900 ITER 1/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:36:34+0900 ITER 2/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:37:17+0900 ITER 2/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:37:24+0900 ITER 3/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:38:06+0900 ITER 3/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:38:17+0900 ITER 4/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:39:00+0900 ITER 4/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:39:04+0900 ITER 5/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:39:46+0900 ITER 5/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:39:52+0900 ITER 6/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:40:34+0900 ITER 6/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:40:39+0900 ITER 7/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:41:22+0900 ITER 7/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:41:27+0900 ITER 8/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:42:09+0900 ITER 8/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:42:14+0900 ITER 9/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:42:56+0900 ITER 9/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:43:01+0900 ITER 10/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:43:43+0900 ITER 10/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:43:49+0900 ITER 11/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:44:31+0900 ITER 11/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:44:36+0900 ITER 12/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:45:18+0900 ITER 12/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:45:23+0900 ITER 13/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:46:06+0900 ITER 13/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:46:10+0900 ITER 14/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:46:52+0900 ITER 14/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:46:57+0900 ITER 15/15 phase=BTVPN bt=on PRE panup=ok pan_ip=172.20.10.13 vpnup=ok xfrm_src=172.20.10.13 mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:47:39+0900 ITER 15/15 phase=BTVPN bt=on POST mem_sleep="[s2idle] deep" lid=platform:PNP0C0D:00 ac=1
+2026-06-28T07:47:40+0900 ===== PHASE DONE phase=BTVPN (restoring wifi)

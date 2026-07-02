@@ -1,0 +1,56 @@
+実機 .config 抜粋 (/boot/config-6.12.94+deb13-amd64) — 本調査で ssh read-only 取得
+kernel: 6.12.94+deb13-amd64 (Debian 6.12.94-1, 2026-06-20, gcc-14.2.0, PREEMPT_DYNAMIC)
+
+# ===== 最重要: device-suspend ウォッチドッグ無効 =====
+# CONFIG_DPM_WATCHDOG is not set
+  → device の ->suspend/->resume callback が無限ブロックしても殺すものが無い。
+    suspend_console() が dpm_suspend_start() の前に走る (kernel/power/suspend.c:505 < :507) ため、
+    ブロックは「無ログ・PM: suspend exit 欠落・永久ハング (要強制電源断)」になる = 観測と一致。
+
+# ===== btusb ランタイム autosuspend 有効 =====
+CONFIG_BT_HCIBTUSB_AUTOSUSPEND=y
+CONFIG_BT_HCIBTUSB_POLL_SYNC=y
+/sys/module/btusb/parameters/enable_autosuspend = Y
+/sys/module/btusb/parameters/reset = Y
+usbcore.autosuspend = 2
+
+# ===== XFRM / ESP (VPN) =====
+CONFIG_XFRM=y
+CONFIG_XFRM_OFFLOAD=y
+CONFIG_XFRM_INTERFACE=m
+CONFIG_XFRM_USER=m
+CONFIG_INET_ESP=m
+CONFIG_INET_ESP_OFFLOAD=m
+CONFIG_INET6_ESP=m
+
+# ===== BT / bnep =====
+CONFIG_BT=m
+CONFIG_BT_BNEP=m
+CONFIG_BT_HCIBTUSB=m
+
+# ===== freezer / PM =====
+CONFIG_PM_SLEEP=y
+CONFIG_SUSPEND=y
+CONFIG_SUSPEND_FREEZER=y
+CONFIG_PM_DEBUG=y
+CONFIG_PM_SLEEP_DEBUG=y
+CONFIG_PM_ADVANCED_DEBUG=y
+
+# ===== デバッグ系はほぼ無効 (ref leak / deadlock が「静かに」固まる) =====
+# CONFIG_PROVE_LOCKING / LOCKDEP : 無効 (LOCKDEP_SUPPORT はarch supportのみ)
+# CONFIG_REF_TRACKER is not set
+# CONFIG_NET_DEV_REFCNT_TRACKER is not set
+# CONFIG_NET_NS_REFCNT_TRACKER is not set
+# CONFIG_DEBUG_NET is not set
+CONFIG_DETECT_HUNG_TASK=y          (timeout 120s, ただし panic 無し; freeze 中は検出kthreadも凍結で発火せず)
+CONFIG_SOFTLOCKUP_DETECTOR=y       (noirq/CPU offline 段では無効)
+CONFIG_HARDLOCKUP_DETECTOR=y
+
+# ===== ロード済みモジュール (実機 lsmod) =====
+bnep, btusb, btrtl, btintel, btbcm, btmtk, bluetooth, ecdh_generic, rfkill, usbcore, xhci_hcd ...
+(VPN×BT-PAN を張ると xfrm_interface / esp4,esp6 が追加ロードされる)
+
+# ===== ベースライン netdev/xfrm 状態 (VPN/BT 未使用時) =====
+ip -br link : lo, wlp3s0 のみ
+ip xfrm policy / state : 0 件
+(条件下=BT-PAN+VPN の残留状態 capture = F2 は後続セッションで実施予定)

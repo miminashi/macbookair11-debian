@@ -1,0 +1,51 @@
+########## HANG boot 1bc7fb70bf664140ad0c516672168eb2 : 入眠直前〜停止位置 ##########
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 09[KNL] fe80::a1c7:3bb3:3d8d:c30a disappeared from enx98e0d98d205e
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 11[KNL] 172.20.10.6 disappeared from enx98e0d98d205e
+2026-06-28T04:28:20+09:00 macbookair2015 bluetoothd[766]: profiles/network/bnep.c:bnep_if_down() bnep: Could not bring down bnep0: No such device(19)
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 11[KNL] interface enx98e0d98d205e deactivated
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 06[KNL] interface enx98e0d98d205e deleted
+2026-06-28T04:28:20+09:00 macbookair2015 NetworkManager[839]: <info>  [1782588500.1139] device (CC:60:23:AF:2C:60): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 07[IKE] deleting IKE_SA GSNet[2] between 172.20.10.6[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 07[NET] sending packet: from 172.20.10.6[43045] to 160.16.210.47[4500] (80 bytes)
+2026-06-28T04:28:20+09:00 macbookair2015 charon-nm[62147]: 01[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to nm-xfrm-1814381)
+2026-06-28T04:28:21+09:00 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+2026-06-28T04:28:21+09:00 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+2026-06-28T04:28:21+09:00 macbookair2015 kbd-backlight-sleep[62660]: pre/suspend: saved=0 set->0
+
+########## HANG boot 370de6292ebb44b4a90bd91dc444d607 : 入眠直前〜停止位置 ##########
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 08[KNL] fe80::5c43:78f1:ade3:9aeb disappeared from enx98e0d98d205e
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 08[KNL] 172.20.10.6 disappeared from enx98e0d98d205e
+2026-06-28T05:19:44+09:00 macbookair2015 bluetoothd[748]: profiles/network/bnep.c:bnep_if_down() bnep: Could not bring down bnep0: No such device(19)
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 14[KNL] interface enx98e0d98d205e deactivated
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 10[KNL] interface enx98e0d98d205e deleted
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 09[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to nm-xfrm-4778781)
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 01[IKE] deleting IKE_SA GSNet[2] between 172.20.10.6[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T05:19:44+09:00 macbookair2015 charon-nm[18005]: 01[NET] sending packet: from 172.20.10.6[58724] to 160.16.210.47[4500] (80 bytes)
+2026-06-28T05:19:44+09:00 macbookair2015 NetworkManager[853]: <info>  [1782591584.2299] device (CC:60:23:AF:2C:60): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+2026-06-28T05:19:45+09:00 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+2026-06-28T05:19:45+09:00 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+2026-06-28T05:19:45+09:00 macbookair2015 kbd-backlight-sleep[18972]: pre/suspend: saved=0 set->0
+
+########## HANG boot 7c44b92c90a845e599cd0ef40d3b91d6 : 入眠直前〜停止位置 ##########
+2026-06-28T06:26:42+09:00 macbookair2015 avahi-daemon[761]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.6.
+2026-06-28T06:26:42+09:00 macbookair2015 avahi-daemon[761]: Interface enx98e0d98d205e.IPv4 no longer relevant for mDNS.
+2026-06-28T06:26:42+09:00 macbookair2015 bluetoothd[763]: profiles/network/bnep.c:bnep_if_down() bnep: Could not bring down bnep0: No such device(19)
+2026-06-28T06:26:42+09:00 macbookair2015 charon-nm[22323]: 08[KNL] interface enx98e0d98d205e deactivated
+2026-06-28T06:26:42+09:00 macbookair2015 charon-nm[22323]: 10[KNL] interface enx98e0d98d205e deleted
+2026-06-28T06:26:42+09:00 macbookair2015 charon-nm[22323]: 09[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to nm-xfrm-3083762)
+2026-06-28T06:26:42+09:00 macbookair2015 charon-nm[22323]: 15[IKE] deleting IKE_SA GSNet[7] between 172.20.10.6[macbookair2015]...160.16.210.47[160.16.210.47]
+2026-06-28T06:26:42+09:00 macbookair2015 charon-nm[22323]: 15[NET] sending packet: from 172.20.10.6[36654] to 160.16.210.47[4500] (80 bytes)
+2026-06-28T06:26:42+09:00 macbookair2015 NetworkManager[846]: <info>  [1782595602.1797] device (CC:60:23:AF:2C:60): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+2026-06-28T06:26:43+09:00 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+2026-06-28T06:26:43+09:00 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+2026-06-28T06:26:43+09:00 macbookair2015 kbd-backlight-sleep[24637]: pre/suspend: saved=0 set->0
+
+########## list-boots (全体) ##########
+ -7 43beb4084b434feeb66999bfdcc2bb0f Sat 2026-06-27 01:03:14 JST Sat 2026-06-27 04:04:37 JST
+ -6 4427b746480147e79059d5cb4ae0a5b3 Sat 2026-06-27 06:59:25 JST Sat 2026-06-27 17:26:50 JST
+ -5 e3b3565c0e78451c929d1b302190d65c Sat 2026-06-27 17:28:31 JST Sat 2026-06-27 19:04:59 JST
+ -4 fb40865626644561b6fd58acd9fd668c Sat 2026-06-27 19:06:24 JST Sun 2026-06-28 01:24:27 JST
+ -3 1bc7fb70bf664140ad0c516672168eb2 Sun 2026-06-28 01:26:18 JST Sun 2026-06-28 04:28:21 JST
+ -2 370de6292ebb44b4a90bd91dc444d607 Sun 2026-06-28 04:30:56 JST Sun 2026-06-28 05:19:45 JST
+ -1 7c44b92c90a845e599cd0ef40d3b91d6 Sun 2026-06-28 05:22:50 JST Sun 2026-06-28 06:26:43 JST
+  0 3aa09ac0ab3f49bb9e3d5721a62c9bed Sun 2026-06-28 06:28:19 JST Sun 2026-06-28 06:36:11 JST

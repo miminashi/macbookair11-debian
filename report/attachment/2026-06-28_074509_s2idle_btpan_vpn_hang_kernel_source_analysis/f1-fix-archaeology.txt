@@ -1,0 +1,54 @@
+F1: 関連サブシステムの fix 考古学
+tree: src/linux-6.12.y (shallow-since 2026-05-15, branch tip = v6.12.94)
+
+注意: linux-6.12.y の branch tip が「ちょうど v6.12.94」(SUBLEVEL=94, git describe=v6.12.94,
+v6.12.94..HEAD = 0 commit)。= 6.12.94 が現時点の 6.12.y 系最新。よって安定ツリーには
+「6.12.94 以降の fix」がまだ無く、(A) 手元 shallow 窓 (≈6.12.85→6.12.94, 既に実機に入っている fix) と
+(B) mainline (torvalds/linux, GitHub API) の 2 系統で確認した。
+
+# ============================================================
+# (A) 手元窓 (≈6.12.85..6.12.94) で当該領域に入った fix = 既に実機 6.12.94 に込み
+#     → 本バグではないが「当該領域が最近 fragile」を示す
+# ============================================================
+net/xfrm:
+  4236c30b4 xfrm: hold dev ref until after transport_finish NF_HOOK   ← dev ref 取扱い (v6.12.94 込み確認済)
+  88697cf98 xfrm: policy: fix use-after-free on inexact bin in xfrm_policy_bysel_ctx()
+  bca6386dc xfrm: move policy_bydst RCU sync from per-netns .exit to .pre_exit
+net/bluetooth/bnep:
+  b21805258 Bluetooth: bnep: Fix UAF read of dev->name                ← bnep_session が netdev を並行 free する race
+  d76dec1a3 Bluetooth: bnep: reject short frames before parsing
+net/bluetooth/l2cap_core.c:
+  107c826e4 Bluetooth: L2CAP: fix chan ref leak in l2cap_chan_timeout() on !conn
+drivers/bluetooth/btusb.c:
+  81d8be941 Bluetooth: btusb: Allow firmware re-download when version matches
+  (suspend/URB drain 系の fix は無し = no-timeout drain は設計どおり)
+
+# ============================================================
+# (B) mainline 直近 (GitHub API torvalds/linux) — 6.12.94(2026-06-19) より後の候補
+# ============================================================
+## 6.12.94 より後 (ipsec 2026-06-22 pull, 2026-06-23 merge) — stable backport 候補:
+  - xfrm: Fix dev use-after-free in xfrm async resumption (Dong Chenchen)
+      "Stash the original skb->dev and extend the RCU critical section across xfrm_rcv_cb()
+       and transport_finish() to prevent a tunnel-device UAF and original-device refcount leak
+       when a callback replaces skb->dev."
+      → device refcount leak。ただし input/RX 経路で、本件の suspend hang とは経路が異なる。
+  - xfrm: Fix xfrm state cache insertion race (Herbert Xu)  ← state race
+  - xfrm: annotate data-races around xfrm_policy_count[]/xfrm_policy_default[] (Eric Dumazet)
+
+## 既に 6.12.94 に込み (2026-02 mainline → stable backport 済) で重要:
+  - xfrm: always flush state and policy upon NETDEV_UNREGISTER event (Tetsuo Handa)
+      Fixes: d77e38e612a0。症状 = "unregister_netdevice: waiting for netdevsim0 to become free.
+      Usage count = 2" (xfrm_dev_state_add が握った netdev ref が UNREGISTER で解放されずリーク)。
+      → これは HW-offload (NETIF_F_HW_ESP) netdev 限定。実機 v6.12.94 では xfrm_dev_unregister() が
+        net/xfrm/xfrm_device.c:520 に存在し fix 込み確認済。bnep は software netdev で offload ref を
+        握らないため、この既知リークの直接対象ではない (が「netdev_wait_allrefs が xfrm の dev ref で
+        固まる」症状クラスそのもの)。
+
+## btusb mainline 2026-06 の fix = いずれも probe/disconnect 経路 (本件の suspend drain とは無関係):
+  - Bluetooth: btusb: fix wakeup irq devres lifetime
+  - Bluetooth: btusb: fix wakeup source leak on probe failure
+  - Bluetooth: btusb: fix use-after-free on marvell/registration probe failure
+
+# 結論: btusb の no-timeout URB drain を直す mainline fix は無い (= 設計どおり、外部トリガ必須)。
+#       xfrm 側は dev refcount/race の fix が断続的に出ており (2026-06-22 pull に新しいものあり)、
+#       H1/H2 領域 (xfrm の dev ref 管理) が継続的に脆い領域であることを裏付ける。
