@@ -1,0 +1,503 @@
+Panic#1 Part25
+<6>[70306.126373] scsi host0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+<6>[70306.126438] scsi target0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 104223, parent: host0
+<6>[70306.126480] scsi target0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+<6>[70306.126518] sd 0:0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 104209, parent: target0:0:0
+<6>[70306.126565] sd 0:0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 2 usecs
+<6>[70306.131265] usb usb2: PM: usb_dev_resume [usbcore] returned 0 after 23732 usecs
+<6>[70306.158365] usb usb1: PM: usb_dev_resume [usbcore] returned 0 after 52237 usecs
+<6>[70306.158472] usb 1-3: PM: calling usb_dev_resume [usbcore] @ 104213, parent: usb1
+<6>[70306.158581] usb 1-5: PM: calling usb_dev_resume [usbcore] @ 104196, parent: usb1
+<6>[70306.161669] wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 55861 usecs
+<6>[70306.161700] ieee80211 phy0: PM: calling wiphy_resume [cfg80211] @ 104210, parent: 0000:03:00.0
+<6>[70306.162126] ieee80211 phy0: PM: wiphy_resume [cfg80211] returned 0 after 210 usecs
+<6>[70306.172035] usb 1-3: PM: usb_dev_resume [usbcore] returned 0 after 13474 usecs
+<6>[70306.172153] usb 1-3.3: PM: calling usb_dev_resume [usbcore] @ 104216, parent: 1-3
+<6>[70306.187458] usb 1-3.3: PM: usb_dev_resume [usbcore] returned 0 after 15243 usecs
+<6>[70306.259688] usb 1-5: PM: usb_dev_resume [usbcore] returned 0 after 101061 usecs
+<6>[70306.459290] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+<4>[70306.459583] ata1.00: LPM support broken, forcing max_power
+<4>[70306.459769] ata1.00: unexpected _GTF length (8)
+<5>[70306.459963] sd 0:0:0:0: [sda] Starting disk
+Panic#1 Part24
+<4>[70306.460182] ata1.00: LPM support broken, forcing max_power
+<4>[70306.460338] ata1.00: unexpected _GTF length (8)
+<6>[70306.460488] ata1.00: configured for UDMA/133
+<6>[70306.551628] i915 0000:00:02.0: PM: pci_pm_resume returned 0 after 447423 usecs
+<6>[70306.551673] snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume @ 104207, parent: pci0000:00
+<6>[70306.551688] backlight acpi_video0: PM: calling backlight_resume @ 103947, parent: 0000:00:02.0
+<6>[70306.551710] backlight acpi_video0: PM: backlight_resume returned 0 after 0 usecs
+<6>[70306.551732] input input6: PM: calling input_dev_resume @ 103947, parent: 0003:05AC:0290.0002
+<6>[70306.551781] input input6: PM: input_dev_resume returned 0 after 33 usecs
+<6>[70306.551796] leds input6::numlock: PM: calling led_resume @ 103947, parent: input6
+<6>[70306.551808] leds input6::numlock: PM: led_resume returned 0 after 0 usecs
+<6>[70306.551817] leds input6::capslock: PM: calling led_resume @ 103947, parent: input6
+<6>[70306.551826] leds input6::capslock: PM: led_resume returned 0 after 0 usecs
+<6>[70306.551836] leds input6::scrolllock: PM: calling led_resume @ 103947, parent: input6
+<6>[70306.551846] leds input6::scrolllock: PM: led_resume returned 0 after 0 usecs
+<6>[70306.551856] leds input6::compose: PM: calling led_resume @ 103947, parent: input6
+<6>[70306.551865] leds input6::compose: PM: led_resume returned 0 after 0 usecs
+<6>[70306.551875] leds input6::kana: PM: calling led_resume @ 103947, parent: input6
+<6>[70306.551884] leds input6::kana: PM: led_resume returned 0 after 0 usecs
+<6>[70306.551919] input input8: PM: calling input_dev_resume @ 103947, parent: 1-5:1.2
+Panic#1 Part23
+<6>[70306.551932] input input8: PM: input_dev_resume returned 0 after 0 usecs
+<6>[70306.551954] input input9: PM: calling input_dev_resume @ 103947, parent: pcspkr
+<6>[70306.551978] input input9: PM: input_dev_resume returned 0 after 11 usecs
+<6>[70306.554058] snd_hda_intel 0000:00:03.0: PM: pci_pm_resume returned 0 after 2367 usecs
+<6>[70306.554086] input input10: PM: calling input_dev_resume @ 103947, parent: card0
+<6>[70306.554097] input input10: PM: input_dev_resume returned 0 after 0 usecs
+<6>[70306.554106] input input11: PM: calling input_dev_resume @ 103947, parent: card0
+<6>[70306.554113] input input11: PM: input_dev_resume returned 0 after 0 usecs
+<6>[70306.554122] input input12: PM: calling input_dev_resume @ 103947, parent: card0
+<6>[70306.554129] input input12: PM: input_dev_resume returned 0 after 0 usecs
+<6>[70306.554142] applesmc applesmc.768: PM: calling platform_pm_resume @ 103947, parent: platform
+<6>[70306.554535] applesmc applesmc.768: PM: platform_pm_resume returned 0 after 382 usecs
+<6>[70306.554546] input input13: PM: calling input_dev_resume @ 103947, parent: card1
+<6>[70306.554554] input input13: PM: input_dev_resume returned 0 after 0 usecs
+<6>[70306.554562] input input14: PM: calling input_dev_resume @ 103947, parent: card1
+<6>[70306.554570] input input14: PM: input_dev_resume returned 0 after 0 usecs
+<6>[70306.554579] platform regulatory.0: PM: calling platform_pm_resume @ 103947, parent: platform
+<6>[70306.554587] platform regulatory.0: PM: platform_pm_resume returned 0 after 0 usecs
+<6>[70306.554601] rfkill rfkill0: PM: calling rfkill_resume [rfkill] @ 103947, parent: hci0
+Panic#1 Part22
+<6>[70306.554621] rfkill rfkill0: PM: rfkill_resume [rfkill] returned 0 after 5 usecs
+<6>[70306.554640] leds smc::kbd_backlight: PM: calling led_resume @ 103947, parent: applesmc.768
+<6>[70306.554647] leds smc::kbd_backlight: PM: led_resume returned 0 after 0 usecs
+<6>[70306.554654] rfkill rfkill1: PM: calling rfkill_resume [rfkill] @ 103947, parent: phy0
+<6>[70306.554665] rfkill rfkill1: PM: rfkill_resume [rfkill] returned 0 after 2 usecs
+<6>[70306.554680] platform coretemp.0: PM: calling platform_pm_resume @ 103947, parent: platform
+<6>[70306.554689] platform coretemp.0: PM: platform_pm_resume returned 0 after 0 usecs
+<6>[70306.554699] intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_resume @ 103947, parent: platform
+<6>[70306.554707] intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_resume returned 0 after 0 usecs
+<6>[70306.554721] input input15: PM: calling input_dev_resume @ 103947, parent: none
+<6>[70306.554729] input input15: PM: input_dev_resume returned 0 after 0 usecs
+<7>[70306.554744] PM: resume of devices complete after 450.703 msecs
+<6>[70306.555329] OOM killer enabled.
+<6>[70306.555335] Restarting tasks ... done.
+<5>[70306.559081] random: crng reseeded on system resumption
+<6>[70306.559087] video LNXVIDEO:00: Restoring backlight state
+<6>[70306.567682] PM: suspend exit
+<6>[70426.924999] perf: interrupt took too long (4912 > 4905), lowering kernel.perf_event_max_sample_rate to 40500
+<6>[71871.223888] PM: suspend entry (s2idle)
+<6>[71871.233516] Filesystems sync: 0.009 seconds
+<6>[71871.860011] Freezing user space processes
+<6>[71871.861765] Freezing user space processes completed (elapsed 0.001 seconds)
+<6>[71871.861772] OOM killer disabled.
+Panic#1 Part21
+<6>[71871.861773] Freezing remaining freezable tasks
+<6>[71871.863030] Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+<6>[71871.863327] input input15: PM: calling input_dev_suspend @ 113997, parent: none
+<6>[71871.863337] input input15: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863349] intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.863355] intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.863365] platform coretemp.0: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.863372] platform coretemp.0: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.863379] rfkill rfkill1: PM: calling rfkill_suspend [rfkill] @ 113997, parent: phy0
+<6>[71871.863388] rfkill rfkill1: PM: rfkill_suspend [rfkill] returned 0 after 0 usecs
+<6>[71871.863397] leds smc::kbd_backlight: PM: calling led_suspend @ 113997, parent: applesmc.768
+<6>[71871.863405] leds smc::kbd_backlight: PM: led_suspend returned 0 after 0 usecs
+<6>[71871.863411] rfkill rfkill0: PM: calling rfkill_suspend [rfkill] @ 113997, parent: hci0
+<6>[71871.863420] rfkill rfkill0: PM: rfkill_suspend [rfkill] returned 0 after 0 usecs
+<6>[71871.863435] platform regulatory.0: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.863442] platform regulatory.0: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.863450] input input14: PM: calling input_dev_suspend @ 113997, parent: card1
+<6>[71871.863457] input input14: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863463] input input13: PM: calling input_dev_suspend @ 113997, parent: card1
+Panic#1 Part20
+<6>[71871.863402] ieee80211 phy0: PM: calling wiphy_suspend [cfg80211] @ 113049, parent: 0000:03:00.0
+<6>[71871.863469] input input13: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863476] applesmc applesmc.768: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.863482] applesmc applesmc.768: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.863490] sound pcmC1D0c: PM: calling do_pcm_suspend [snd_pcm] @ 113997, parent: card1
+<6>[71871.863533] sound pcmC1D0c: PM: do_pcm_suspend [snd_pcm] returned 0 after 18 usecs
+<6>[71871.863556] sound pcmC1D0p: PM: calling do_pcm_suspend [snd_pcm] @ 113997, parent: card1
+<6>[71871.863577] sound pcmC1D0p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+<6>[71871.863533] ieee80211 phy0: PM: wiphy_suspend [cfg80211] returned 0 after 4 usecs
+<6>[71871.863603] input input12: PM: calling input_dev_suspend @ 113997, parent: card0
+<6>[71871.863608] input input12: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863615] input input11: PM: calling input_dev_suspend @ 113997, parent: card0
+<6>[71871.863619] input input11: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863625] input input10: PM: calling input_dev_suspend @ 113997, parent: card0
+<6>[71871.863630] input input10: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863637] sound pcmC0D8p: PM: calling do_pcm_suspend [snd_pcm] @ 113997, parent: card0
+<6>[71871.863657] sound pcmC0D8p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+<6>[71871.863670] sound pcmC0D7p: PM: calling do_pcm_suspend [snd_pcm] @ 113997, parent: card0
+Panic#1 Part19
+<6>[71871.863681] sound pcmC0D7p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+<6>[71871.863693] sound pcmC0D3p: PM: calling do_pcm_suspend [snd_pcm] @ 113997, parent: card0
+<6>[71871.863704] sound pcmC0D3p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+<6>[71871.863723] input input9: PM: calling input_dev_suspend @ 113997, parent: pcspkr
+<6>[71871.863730] input input9: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863725] snd_hda_codec_cirrus hdaudioC1D0: PM: calling hda_codec_pm_suspend [snd_hda_codec] @ 113049, parent: 0000:00:1b.0
+<6>[71871.863743] input input8: PM: calling input_dev_suspend @ 113997, parent: 1-5:1.2
+<6>[71871.863749] input input8: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863764] snd_hda_intel 0000:00:03.0: PM: calling pci_pm_suspend @ 104207, parent: pci0000:00
+<6>[71871.863781] leds input6::kana: PM: calling led_suspend @ 113997, parent: input6
+<6>[71871.863788] leds input6::kana: PM: led_suspend returned 0 after 0 usecs
+<6>[71871.863794] leds input6::compose: PM: calling led_suspend @ 113997, parent: input6
+<6>[71871.863800] leds input6::compose: PM: led_suspend returned 0 after 0 usecs
+<6>[71871.863806] leds input6::scrolllock: PM: calling led_suspend @ 113997, parent: input6
+<6>[71871.863811] leds input6::scrolllock: PM: led_suspend returned 0 after 0 usecs
+<6>[71871.863817] leds input6::capslock: PM: calling led_suspend @ 113997, parent: input6
+<6>[71871.863821] leds input6::capslock: PM: led_suspend returned 0 after 0 usecs
+<6>[71871.863824] leds input6::numlock: PM: calling led_suspend @ 113997, parent: input6
+Panic#1 Part18
+<6>[71871.863827] leds input6::numlock: PM: led_suspend returned 0 after 0 usecs
+<6>[71871.863832] input input6: PM: calling input_dev_suspend @ 113997, parent: 0003:05AC:0290.0002
+<6>[71871.863836] input input6: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863820] usb 1-3.3: PM: calling usb_dev_suspend [usbcore] @ 104220, parent: 1-3
+<6>[71871.863843] backlight acpi_video0: PM: calling backlight_suspend @ 113997, parent: 0000:00:02.0
+<6>[71871.863849] backlight acpi_video0: PM: backlight_suspend returned 0 after 0 usecs
+<6>[71871.863855] input input5: PM: calling input_dev_suspend @ 113997, parent: LNXVIDEO:00
+<6>[71871.863859] input input5: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.863970] platform intel-spi: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.863954] usb 1-5: PM: calling usb_dev_suspend [usbcore] @ 114035, parent: usb1
+<6>[71871.863978] platform intel-spi: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.863986] platform iTCO_wdt.1.auto: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.863992] platform iTCO_wdt.1.auto: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864007] input input3: PM: calling input_dev_suspend @ 113997, parent: LNXPWRBN:00
+<6>[71871.864014] input input3: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.864030] input input2: PM: calling input_dev_suspend @ 113997, parent: PNP0C0E:00
+<6>[71871.864035] input input2: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.864011] sd 0:0:0:0: PM: calling scsi_bus_suspend [scsi_mod] @ 104202, parent: target0:0:0
+Panic#1 Part17
+<6>[71871.864040] input input1: PM: calling input_dev_suspend @ 113997, parent: PNP0C0C:00
+<6>[71871.864044] input input1: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.864049] input input0: PM: calling input_dev_suspend @ 113997, parent: PNP0C0D:00
+<6>[71871.864054] input input0: PM: input_dev_suspend returned 0 after 0 usecs
+<6>[71871.864059] platform microcode: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864063] platform microcode: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864070] alarmtimer alarmtimer.0.auto: PM: calling platform_pm_suspend @ 113997, parent: rtc0
+<6>[71871.864107] usb 1-3.3: PM: usb_dev_suspend [usbcore] returned 0 after 252 usecs
+<6>[71871.864149] usb 1-3: PM: calling usb_dev_suspend [usbcore] @ 114240, parent: usb1
+<6>[71871.864201] usb usb2: PM: calling usb_dev_suspend [usbcore] @ 114242, parent: 0000:00:14.0
+<6>[71871.864221] usb 1-3: PM: usb_dev_suspend [usbcore] returned 0 after 43 usecs
+<6>[71871.864264] alarmtimer alarmtimer.0.auto: PM: platform_pm_suspend returned 0 after 189 usecs
+<6>[71871.864271] rtc rtc0: PM: calling rtc_suspend @ 113997, parent: 00:02
+<6>[71871.864274] pcieport 0000:06:06.0: PM: calling pci_pm_suspend @ 114243, parent: 0000:05:00.0
+<6>[71871.864276] rtc rtc0: PM: rtc_suspend returned 0 after 0 usecs
+<6>[71871.864284] pcieport 0000:06:06.0: PM: pci_pm_suspend returned 0 after 4 usecs
+<6>[71871.864284] port serial8250:0.3: PM: calling pm_runtime_force_suspend @ 113997, parent: serial8250:0
+<6>[71871.864291] pcieport 0000:06:05.0: PM: calling pci_pm_suspend @ 114243, parent: 0000:05:00.0
+Panic#1 Part16
+<6>[71871.864290] port serial8250:0.3: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+<6>[71871.864297] port serial8250:0.2: PM: calling pm_runtime_force_suspend @ 113997, parent: serial8250:0
+<6>[71871.864298] pcieport 0000:06:05.0: PM: pci_pm_suspend returned 0 after 3 usecs
+<6>[71871.864300] pcieport 0000:06:04.0: PM: calling pci_pm_suspend @ 114244, parent: 0000:05:00.0
+<6>[71871.864302] port serial8250:0.2: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+<6>[71871.864308] port serial8250:0.1: PM: calling pm_runtime_force_suspend @ 113997, parent: serial8250:0
+<6>[71871.864310] pcieport 0000:06:03.0: PM: calling pci_pm_suspend @ 114243, parent: 0000:05:00.0
+<6>[71871.864310] pcieport 0000:06:04.0: PM: pci_pm_suspend returned 0 after 4 usecs
+<6>[71871.864313] port serial8250:0.1: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+<6>[71871.864317] pcieport 0000:06:03.0: PM: pci_pm_suspend returned 0 after 3 usecs
+<6>[71871.864319] port serial8250:0.0: PM: calling pm_runtime_force_suspend @ 113997, parent: serial8250:0
+<6>[71871.864324] port serial8250:0.0: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+<6>[71871.864331] serial8250 serial8250: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864335] serial8250 serial8250: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864353] pcspkr pcspkr: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864361] pcspkr pcspkr: PM: platform_pm_suspend returned 0 after 4 usecs
+<6>[71871.864397] system 00:04: PM: calling pnp_bus_suspend @ 113997, parent: pnp0
+<6>[71871.864401] system 00:04: PM: pnp_bus_suspend returned 0 after 0 usecs
+Panic#1 Part15
+<6>[71871.864405] system 00:03: PM: calling pnp_bus_suspend @ 113997, parent: pnp0
+<6>[71871.864408] system 00:03: PM: pnp_bus_suspend returned 0 after 0 usecs
+<6>[71871.864412] rtc_cmos 00:02: PM: calling pnp_bus_suspend @ 113997, parent: pnp0
+<6>[71871.864451] rtc_cmos 00:02: PM: pnp_bus_suspend returned 0 after 36 usecs
+<6>[71871.864455] system 00:01: PM: calling pnp_bus_suspend @ 113997, parent: pnp0
+<6>[71871.864457] system 00:01: PM: pnp_bus_suspend returned 0 after 0 usecs
+<6>[71871.864461] system 00:00: PM: calling pnp_bus_suspend @ 113997, parent: pnp0
+<6>[71871.864464] system 00:00: PM: pnp_bus_suspend returned 0 after 0 usecs
+<6>[71871.864469] platform efivars.0: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864472] platform efivars.0: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864475] platform rtc-efi.0: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864478] platform rtc-efi.0: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864483] button LNXPWRBN:00: PM: calling acpi_button_suspend [button] @ 113997, parent: LNXSYSTM:00
+<6>[71871.864487] button LNXPWRBN:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+<6>[71871.864490] platform PNP0C0E:00: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864493] platform PNP0C0E:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864496] platform APP0002:00: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864499] platform APP0002:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864502] platform PNP0C0C:00: PM: calling platform_pm_suspend @ 113997, parent: platform
+Panic#1 Part14
+<6>[71871.864505] platform PNP0C0C:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864509] platform PNP0C0D:00: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864511] platform PNP0C0D:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864515] ac ACPI0003:00: PM: calling acpi_subsys_suspend @ 113997, parent: platform
+<6>[71871.864519] ac ACPI0003:00: PM: acpi_subsys_suspend returned 0 after 0 usecs
+<6>[71871.864523] platform ACPI0002:00: PM: calling platform_pm_suspend @ 113997, parent: ACPI0001:00
+<6>[71871.864526] platform ACPI0002:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864529] platform ACPI0001:00: PM: calling platform_pm_suspend @ 113997, parent: PNP0C09:00
+<6>[71871.864532] platform ACPI0001:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864536] platform PNP0C09:00: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.864538] platform PNP0C09:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864542] platform ACPI0008:00: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.864544] platform ACPI0008:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864548] platform APP0001:00: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.864550] platform APP0001:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864554] platform PNP0C04:00: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.864556] platform PNP0C04:00: PM: platform_pm_suspend returned 0 after 0 usecs
+Panic#1 Part13
+<6>[71871.864560] platform INT0800:00: PM: calling platform_pm_suspend @ 113997, parent: 0000:00:1f.0
+<6>[71871.864562] platform INT0800:00: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864574] thunderbolt 0000:07:00.0: PM: calling pci_pm_suspend @ 114243, parent: 0000:06:00.0
+<6>[71871.864579] thunderbolt 0000:07:00.0: PM: pci_pm_suspend returned 0 after 1 usecs
+<6>[71871.864583] platform acpi-cpufreq: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864587] platform acpi-cpufreq: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864587] pcieport 0000:06:00.0: PM: calling pci_pm_suspend @ 114246, parent: 0000:05:00.0
+<6>[71871.864591] button PNP0C0E:00: PM: calling acpi_button_suspend [button] @ 113997, parent: LNXSYBUS:00
+<6>[71871.864593] pcieport 0000:06:00.0: PM: pci_pm_suspend returned 0 after 1 usecs
+<6>[71871.864597] button PNP0C0E:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+<6>[71871.864601] wl 0000:03:00.0: PM: calling pci_pm_suspend @ 114246, parent: 0000:00:1c.2
+<6>[71871.864602] pcieport 0000:05:00.0: PM: calling pci_pm_suspend @ 114243, parent: 0000:00:1c.4
+<6>[71871.864603] button PNP0C0C:00: PM: calling acpi_button_suspend [button] @ 113997, parent: LNXSYBUS:00
+<6>[71871.864604] pci 0000:02:00.0: PM: calling pci_pm_suspend @ 114244, parent: 0000:00:1c.1
+<6>[71871.864607] pci 0000:02:00.0: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.864607] pcieport 0000:05:00.0: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.864608] button PNP0C0C:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+Panic#1 Part12
+<6>[71871.864613] intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_suspend @ 114243, parent: pci0000:00
+<6>[71871.864613] button PNP0C0D:00: PM: calling acpi_button_suspend [button] @ 113997, parent: LNXSYBUS:00
+<6>[71871.864613] i801_smbus 0000:00:1f.3: PM: calling pci_pm_suspend @ 114244, parent: pci0000:00
+<6>[71871.864617] button PNP0C0D:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+<6>[71871.864617] intel_pch_thermal 0000:00:1f.6: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.864624] lpc_ich 0000:00:1f.0: PM: calling pci_pm_suspend @ 114243, parent: pci0000:00
+<6>[71871.864627] lpc_ich 0000:00:1f.0: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.864676] i801_smbus 0000:00:1f.3: PM: pci_pm_suspend returned 0 after 28 usecs
+<6>[71871.864678] ec PNP0C09:00: PM: calling acpi_ec_suspend @ 113997, parent: device:0c
+<6>[71871.864681] pcieport 0000:00:1c.4: PM: calling pci_pm_suspend @ 114244, parent: pci0000:00
+<6>[71871.864683] ec PNP0C09:00: PM: acpi_ec_suspend returned 0 after 0 usecs
+<6>[71871.864686] pcieport 0000:00:1c.4: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.864715] regulator regulator.0: PM: calling regulator_suspend @ 113997, parent: reg-dummy
+<6>[71871.864721] regulator regulator.0: PM: regulator_suspend returned 0 after 0 usecs
+<6>[71871.864724] reg-dummy reg-dummy: PM: calling platform_pm_suspend @ 113997, parent: platform
+<6>[71871.864728] reg-dummy reg-dummy: PM: platform_pm_suspend returned 0 after 0 usecs
+<6>[71871.864756] pcieport 0000:00:1c.1: PM: calling pci_pm_suspend @ 114247, parent: pci0000:00
+<6>[71871.864760] pcieport 0000:00:1c.1: PM: pci_pm_suspend returned 0 after 0 usecs
+Panic#1 Part11
+<6>[71871.864766] pcieport 0000:00:1c.0: PM: calling pci_pm_suspend @ 114247, parent: pci0000:00
+<6>[71871.864773] pcieport 0000:00:1c.0: PM: pci_pm_suspend returned 0 after 3 usecs
+<6>[71871.864791] mei_me 0000:00:16.0: PM: calling pci_pm_suspend @ 114248, parent: pci0000:00
+<6>[71871.864823] pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_suspend @ 114249, parent: pci0000:00
+<6>[71871.864831] pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_suspend returned 0 after 3 usecs
+<6>[71871.864840] dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_suspend @ 114249, parent: pci0000:00
+<6>[71871.864844] dw_dmac_pci 0000:00:15.0: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.864884] bdw_uncore 0000:00:00.0: PM: calling pci_pm_suspend @ 114251, parent: pci0000:00
+<6>[71871.864888] bdw_uncore 0000:00:00.0: PM: pci_pm_suspend returned 0 after 0 usecs
+<6>[71871.870293] wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 5686 usecs
+<3>[71871.870304] ERROR @wl_notify_scan_status : 
+<4>[71871.870307] wlp3s0 Scan_results error (-22)
+<6>[71871.870310] pcieport 0000:00:1c.2: PM: calling pci_pm_suspend @ 114244, parent: pci0000:00
+<6>[71871.870338] pcieport 0000:00:1c.2: PM: pci_pm_suspend returned 0 after 1 usecs
+<6>[71871.870366] mei_me 0000:00:16.0: PM: pci_pm_suspend returned 0 after 5571 usecs
+<6>[71871.877316] snd_hda_intel 0000:00:03.0: PM: pci_pm_suspend returned 0 after 13537 usecs
+<6>[71871.877369] i915 0000:00:02.0: PM: calling pci_pm_suspend @ 114250, parent: pci0000:00
+<6>[71871.886997] usb usb2: PM: usb_dev_suspend [usbcore] returned 0 after 22773 usecs
+<6>[71871.894953] usb 1-5: PM: usb_dev_suspend [usbcore] returned 0 after 30921 usecs
+Panic#1 Part10
+<6>[71871.894965] snd_hda_codec_cirrus hdaudioC1D0: PM: hda_codec_pm_suspend [snd_hda_codec] returned 0 after 31206 usecs
+<6>[71871.895009] snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_suspend @ 114247, parent: pci0000:00
+<5>[71871.895014] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+<6>[71871.895015] usb usb1: PM: calling usb_dev_suspend [usbcore] @ 114240, parent: 0000:00:14.0
+<6>[71871.896171] snd_hda_intel 0000:00:1b.0: PM: pci_pm_suspend returned 0 after 1147 usecs
+<6>[71871.900194] sd 0:0:0:0: PM: scsi_bus_suspend [scsi_mod] returned 0 after 36141 usecs
+<6>[71871.900270] scsi target0:0:0: PM: calling scsi_bus_suspend [scsi_mod] @ 114239, parent: host0
+<6>[71871.900301] scsi target0:0:0: PM: scsi_bus_suspend [scsi_mod] returned 0 after 0 usecs
+<6>[71871.900332] scsi host0: PM: calling scsi_bus_suspend [scsi_mod] @ 104220, parent: ata1
+<6>[71871.900355] scsi host0: PM: scsi_bus_suspend [scsi_mod] returned 0 after 0 usecs
+<6>[71871.900380]  ata1: PM: calling ata_port_pm_suspend [libata] @ 114241, parent: 0000:04:00.0
+<6>[71871.903720] usb usb1: PM: usb_dev_suspend [usbcore] returned 0 after 8664 usecs
+<6>[71871.903765] xhci_hcd 0000:00:14.0: PM: calling pci_pm_suspend @ 114249, parent: pci0000:00
+<6>[71871.903836] xhci_hcd 0000:00:14.0: PM: pci_pm_suspend returned 0 after 62 usecs
+<5>[71871.921408] ata1.00: Entering standby power mode
+<6>[71871.987540]  ata1: PM: ata_port_pm_suspend [libata] returned 0 after 87125 usecs
+<6>[71871.987607] ahci 0000:04:00.0: PM: calling pci_pm_suspend @ 114245, parent: 0000:00:1c.5
+<6>[71871.987626] ahci 0000:04:00.0: PM: pci_pm_suspend returned 0 after 7 usecs
+Panic#1 Part9
+<6>[71871.987641] pcieport 0000:00:1c.5: PM: calling pci_pm_suspend @ 114243, parent: pci0000:00
+<6>[71871.987651] pcieport 0000:00:1c.5: PM: pci_pm_suspend returned 0 after 1 usecs
+<6>[71872.265775] i915 0000:00:02.0: PM: pci_pm_suspend returned 0 after 388414 usecs
+<7>[71872.265850] PM: suspend of devices complete after 402.627 msecs
+<7>[71872.265857] PM: start suspend of devices complete after 402.842 msecs
+<6>[71872.265931] snd_hda_intel 0000:00:03.0: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.265942] snd_hda_intel 0000:00:03.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266131] pcieport 0000:06:06.0: PM: calling pci_pm_suspend_late @ 114245, parent: 0000:05:00.0
+<6>[71872.266133] pcieport 0000:06:05.0: PM: calling pci_pm_suspend_late @ 114243, parent: 0000:05:00.0
+<6>[71872.266136] pcieport 0000:06:04.0: PM: calling pci_pm_suspend_late @ 114250, parent: 0000:05:00.0
+<6>[71872.266139] pcieport 0000:06:06.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266142] pcieport 0000:06:05.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266146] pcieport 0000:06:04.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266150] pcieport 0000:06:03.0: PM: calling pci_pm_suspend_late @ 114243, parent: 0000:05:00.0
+<6>[71872.266157] pcieport 0000:06:03.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266246] ac ACPI0003:00: PM: calling acpi_subsys_suspend_late @ 113997, parent: platform
+<6>[71872.266255] ac ACPI0003:00: PM: acpi_subsys_suspend_late returned 0 after 0 usecs
+<6>[71872.266287] ahci 0000:04:00.0: PM: calling pci_pm_suspend_late @ 114243, parent: 0000:00:1c.5
+Panic#1 Part8
+<6>[71872.266290] thunderbolt 0000:07:00.0: PM: calling pci_pm_suspend_late @ 114241, parent: 0000:06:00.0
+<6>[71872.266300] thunderbolt 0000:07:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266300] ahci 0000:04:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266312] wl 0000:03:00.0: PM: calling pci_pm_suspend_late @ 114241, parent: 0000:00:1c.2
+<6>[71872.266312] pci 0000:02:00.0: PM: calling pci_pm_suspend_late @ 114243, parent: 0000:00:1c.1
+<6>[71872.266316] pcieport 0000:06:00.0: PM: calling pci_pm_suspend_late @ 114251, parent: 0000:05:00.0
+<6>[71872.266318] wl 0000:03:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266320] pci 0000:02:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266326] pcieport 0000:06:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266326] intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_suspend_late @ 114241, parent: pci0000:00
+<6>[71872.266330] i801_smbus 0000:00:1f.3: PM: calling pci_pm_suspend_late @ 114243, parent: pci0000:00
+<6>[71872.266332] intel_pch_thermal 0000:00:1f.6: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266337] i801_smbus 0000:00:1f.3: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266337] lpc_ich 0000:00:1f.0: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.266340] pcieport 0000:00:1c.5: PM: calling pci_pm_suspend_late @ 114241, parent: pci0000:00
+<6>[71872.266343] lpc_ich 0000:00:1f.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266347] pcieport 0000:00:1c.5: PM: pci_pm_suspend_late returned 0 after 0 usecs
+Panic#1 Part7
+<6>[71872.266352] pcieport 0000:00:1c.2: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.266356] pcieport 0000:00:1c.2: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266355] pcieport 0000:00:1c.1: PM: calling pci_pm_suspend_late @ 114241, parent: pci0000:00
+<6>[71872.266361] pcieport 0000:00:1c.0: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.266361] pcieport 0000:00:1c.1: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266365] pcieport 0000:00:1c.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266370] snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_suspend_late @ 114241, parent: pci0000:00
+<6>[71872.266371] mei_me 0000:00:16.0: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.266375] mei_me 0000:00:16.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266375] snd_hda_intel 0000:00:1b.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266380] pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.266384] pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266384] dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_suspend_late @ 114241, parent: pci0000:00
+<6>[71872.266390] xhci_hcd 0000:00:14.0: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+<6>[71872.266394] xhci_hcd 0000:00:14.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266394] dw_dmac_pci 0000:00:15.0: PM: pci_pm_suspend_late returned 0 after 3 usecs
+<6>[71872.266400] i915 0000:00:02.0: PM: calling pci_pm_suspend_late @ 114251, parent: pci0000:00
+Panic#1 Part6
+<6>[71872.266402] bdw_uncore 0000:00:00.0: PM: calling pci_pm_suspend_late @ 114241, parent: pci0000:00
+<6>[71872.266408] bdw_uncore 0000:00:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266495] pcieport 0000:05:00.0: PM: calling pci_pm_suspend_late @ 114250, parent: 0000:00:1c.4
+<6>[71872.266500] pcieport 0000:05:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.266509] pcieport 0000:00:1c.4: PM: calling pci_pm_suspend_late @ 114243, parent: pci0000:00
+<6>[71872.266515] pcieport 0000:00:1c.4: PM: pci_pm_suspend_late returned 0 after 0 usecs
+<6>[71872.278533] i915 0000:00:02.0: PM: pci_pm_suspend_late returned 0 after 12128 usecs
+<7>[71872.278560] PM: late suspend of devices complete after 12.701 msecs
+<6>[71872.279290] snd_hda_intel 0000:00:03.0: PM: calling pci_pm_suspend_noirq @ 114241, parent: pci0000:00
+<6>[71872.279465] pcieport 0000:06:06.0: PM: calling pci_pm_suspend_noirq @ 114245, parent: 0000:05:00.0
+<6>[71872.279473] pcieport 0000:06:06.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+<6>[71872.279471] pcieport 0000:06:04.0: PM: calling pci_pm_suspend_noirq @ 114249, parent: 0000:05:00.0
+<6>[71872.279470] pcieport 0000:06:05.0: PM: calling pci_pm_suspend_noirq @ 114243, parent: 0000:05:00.0
+<6>[71872.279482] pcieport 0000:06:05.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+<6>[71872.279484] pcieport 0000:06:03.0: PM: calling pci_pm_suspend_noirq @ 114245, parent: 0000:05:00.0
+<6>[71872.279484] pcieport 0000:06:04.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+<6>[71872.279490] pcieport 0000:06:03.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+Panic#1 Part5
+<6>[71872.279525] ac ACPI0003:00: PM: calling acpi_subsys_suspend_noirq @ 113997, parent: platform
+<6>[71872.279532] ac ACPI0003:00: PM: acpi_subsys_suspend_noirq returned 0 after 0 usecs
+<6>[71872.279574] ahci 0000:04:00.0: PM: calling pci_pm_suspend_noirq @ 104220, parent: 0000:00:1c.5
+<6>[71872.279583] thunderbolt 0000:07:00.0: PM: calling pci_pm_suspend_noirq @ 114251, parent: 0000:06:00.0
+<6>[71872.279598] ec PNP0C09:00: PM: calling acpi_ec_suspend_noirq @ 113997, parent: device:0c
+<6>[71872.279604] ACPI: EC: interrupt blocked
+<6>[71872.279606] ec PNP0C09:00: PM: acpi_ec_suspend_noirq returned 0 after 1 usecs
+<6>[71872.279640] wl 0000:03:00.0: PM: calling pci_pm_suspend_noirq @ 114243, parent: 0000:00:1c.2
+<6>[71872.279703] pci 0000:02:00.0: PM: calling pci_pm_suspend_noirq @ 114245, parent: 0000:00:1c.1
+<6>[71872.279712] intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_suspend_noirq @ 114249, parent: pci0000:00
+<4>[71872.279726] intel_pch_thermal 0000:00:1f.6: CPU-PCH current temp [74C] higher than the threshold temp [50C], S0ix might fail. Start cooling...
+<6>[71872.279832] i801_smbus 0000:00:1f.3: PM: calling pci_pm_suspend_noirq @ 114239, parent: pci0000:00
+<6>[71872.279896] i801_smbus 0000:00:1f.3: PM: pci_pm_suspend_noirq returned 0 after 45 usecs
+<6>[71872.279897] lpc_ich 0000:00:1f.0: PM: calling pci_pm_suspend_noirq @ 104202, parent: pci0000:00
+<6>[71872.279902] pci 0000:02:00.0: PM: pci_pm_suspend_noirq returned 0 after 193 usecs
+<6>[71872.279916] pcieport 0000:00:1c.0: PM: calling pci_pm_suspend_noirq @ 114245, parent: pci0000:00
+<6>[71872.279916] pcieport 0000:00:1c.1: PM: calling pci_pm_suspend_noirq @ 113049, parent: pci0000:00
+Panic#1 Part4
+<6>[71872.279920] pcieport 0000:00:1c.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+<6>[71872.279934] mei_me 0000:00:16.0: PM: calling pci_pm_suspend_noirq @ 114245, parent: pci0000:00
+<6>[71872.279933] snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_suspend_noirq @ 114242, parent: pci0000:00
+<6>[71872.279936] lpc_ich 0000:00:1f.0: PM: pci_pm_suspend_noirq returned 0 after 33 usecs
+<6>[71872.279945] pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_suspend_noirq @ 104202, parent: pci0000:00
+<6>[71872.280038] dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_suspend_noirq @ 104207, parent: pci0000:00
+<6>[71872.280042] xhci_hcd 0000:00:14.0: PM: calling pci_pm_suspend_noirq @ 114248, parent: pci0000:00
+<6>[71872.280051] bdw_uncore 0000:00:00.0: PM: calling pci_pm_suspend_noirq @ 114246, parent: pci0000:00
+<6>[71872.280103] bdw_uncore 0000:00:00.0: PM: pci_pm_suspend_noirq returned 0 after 47 usecs
+<6>[71872.291082] snd_hda_intel 0000:00:03.0: PM: pci_pm_suspend_noirq returned 0 after 11780 usecs
+<6>[71872.291108] pcieport 0000:00:1c.1: PM: pci_pm_suspend_noirq returned 0 after 11183 usecs
+<6>[71872.291120] mei_me 0000:00:16.0: PM: pci_pm_suspend_noirq returned 0 after 11181 usecs
+<6>[71872.291122] i915 0000:00:02.0: PM: calling pci_pm_suspend_noirq @ 114244, parent: pci0000:00
+<6>[71872.291132] wl 0000:03:00.0: PM: pci_pm_suspend_noirq returned 0 after 11485 usecs
+<6>[71872.291134] i915 0000:00:02.0: PM: pci_pm_suspend_noirq returned 0 after 1 usecs
+<6>[71872.291150] thunderbolt 0000:07:00.0: PM: pci_pm_suspend_noirq returned 0 after 11523 usecs
+<6>[71872.291155] pcieport 0000:00:1c.2: PM: calling pci_pm_suspend_noirq @ 114239, parent: pci0000:00
+Panic#1 Part3
+<6>[71872.291168] pcieport 0000:06:00.0: PM: calling pci_pm_suspend_noirq @ 114240, parent: 0000:05:00.0
+<6>[71872.291170] pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_suspend_noirq returned 0 after 11220 usecs
+<6>[71872.291249] dw_dmac_pci 0000:00:15.0: PM: pci_pm_suspend_noirq returned 0 after 11204 usecs
+<6>[71872.291769] ahci 0000:04:00.0: PM: pci_pm_suspend_noirq returned 0 after 12180 usecs
+<6>[71872.291775] xhci_hcd 0000:00:14.0: PM: pci_pm_suspend_noirq returned 0 after 11723 usecs
+<6>[71872.291843] pcieport 0000:00:1c.5: PM: calling pci_pm_suspend_noirq @ 114247, parent: pci0000:00
+<6>[71872.303048] pcieport 0000:06:00.0: PM: pci_pm_suspend_noirq returned 0 after 11869 usecs
+<6>[71872.303080] pcieport 0000:05:00.0: PM: calling pci_pm_suspend_noirq @ 114250, parent: 0000:00:1c.4
+<6>[71872.315036] snd_hda_intel 0000:00:1b.0: PM: pci_pm_suspend_noirq returned 0 after 35095 usecs
+<6>[71872.315115] pcieport 0000:05:00.0: PM: pci_pm_suspend_noirq returned 0 after 12021 usecs
+<6>[71872.315137] pcieport 0000:00:1c.4: PM: calling pci_pm_suspend_noirq @ 114035, parent: pci0000:00
+<6>[71872.326967] pcieport 0000:00:1c.4: PM: pci_pm_suspend_noirq returned 0 after 11820 usecs
+<6>[71872.407120] pcieport 0000:00:1c.5: PM: pci_pm_suspend_noirq returned 0 after 115268 usecs
+<6>[71873.319054] pcieport 0000:00:1c.2: PM: pci_pm_suspend_noirq returned 0 after 1027943 usecs
+<0>[71932.979828] intel_pch_thermal 0000:00:1f.6: PM: **** DPM device timeout ****
+<0>[71932.979844] Call Trace:
+<0>[71932.979849]  <TASK>
+<0>[71932.979855]  __schedule+0x505/0xc00
+<0>[71932.979866]  schedule+0x27/0xf0
+<0>[71932.979872]  schedule_timeout+0x9e/0x160
+Panic#1 Part2
+<0>[71932.979881]  ? __pfx_process_timeout+0x10/0x10
+<0>[71932.979889]  msleep+0x2b/0x40
+<0>[71932.979898]  intel_pch_thermal_suspend_noirq.cold+0x4b/0x11a [intel_pch_thermal]
+<0>[71932.979920]  pci_pm_suspend_noirq+0x79/0x2a0
+<0>[71932.979927]  ? __pfx_pci_pm_suspend_noirq+0x10/0x10
+<0>[71932.979933]  dpm_run_callback+0x4a/0x150
+<0>[71932.979939]  ? __pfx_pci_pm_suspend_noirq+0x10/0x10
+<0>[71932.979945]  device_suspend_noirq+0xfa/0x330
+<0>[71932.979951]  ? __pfx_dpm_watchdog_handler+0x10/0x10
+<0>[71932.979959]  async_suspend_noirq+0x1d/0x30
+<0>[71932.979965]  async_run_entry_fn+0x34/0x130
+<0>[71932.979974]  process_one_work+0x177/0x330
+<0>[71932.979983]  worker_thread+0x191/0x2f0
+<0>[71932.979991]  ? __pfx_worker_thread+0x10/0x10
+<0>[71932.979999]  kthread+0xd2/0x100
+<0>[71932.980005]  ? __pfx_kthread+0x10/0x10
+<0>[71932.980010]  ret_from_fork+0x34/0x50
+<0>[71932.980017]  ? __pfx_kthread+0x10/0x10
+<0>[71932.980022]  ret_from_fork_asm+0x1a/0x30
+<0>[71932.980031]  </TASK>
+<0>[71932.980036] Kernel panic - not syncing: intel_pch_thermal 0000:00:1f.6: unrecoverable failure
+<4>[71932.980042] CPU: 1 UID: 0 PID: 0 Comm: swapper/1 Tainted: P        W  OE      6.12.94-dpmwd2 #3 
+<4>[71932.980053] Tainted: [P]=PROPRIETARY_MODULE, [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+<4>[71932.980057] Hardware name: Apple Inc. MacBookAir7,1/Mac-9F18E312C5C2BF0B, BIOS MBA71.88Z.0166.B13.1611031424 11/03/2016
+<4>[71932.980062] Call Trace:
+<4>[71932.980065]  <IRQ>
+<4>[71932.980068]  dump_stack_lvl+0x5d/0x80
+<4>[71932.980074]  panic+0x118/0x2db
+<4>[71932.980083]  ? __pfx_dpm_watchdog_handler+0x10/0x10
+<4>[71932.980090]  ? __pfx_dpm_watchdog_handler+0x10/0x10
+Panic#1 Part1
+<4>[71932.980095]  dpm_watchdog_handler+0x56/0x60
+<4>[71932.980102]  call_timer_fn+0x2a/0x120
+<4>[71932.980108]  __run_timers+0x1f1/0x280
+<4>[71932.980115]  timer_expire_remote+0x4a/0x70
+<4>[71932.980122]  tmigr_handle_remote+0x307/0x470
+<4>[71932.980129]  handle_softirqs+0xcf/0x280
+<4>[71932.980136]  __irq_exit_rcu+0x8d/0xb0
+<4>[71932.980141]  sysvec_apic_timer_interrupt+0x71/0x90
+<4>[71932.980147]  </IRQ>
+<4>[71932.980150]  <TASK>
+<4>[71932.980153]  asm_sysvec_apic_timer_interrupt+0x1a/0x20
+<4>[71932.980160] RIP: 0010:cpuidle_enter_state+0xc6/0x420
+<4>[71932.980167] Code: 00 00 e8 9d 49 44 ff e8 28 f2 ff ff 49 89 c5 0f 1f 44 00 00 31 ff e8 19 2b 43 ff 45 84 ff 0f 85 aa 01 00 00 fb 0f 1f 44 00 00 <45> 85 f6 0f 88 84 01 00 00 49 63 d6 48 8d 04 52 48 8d 04 82 49 8d
+<4>[71932.980176] RSP: 0018:ffffce1fc00ebe90 EFLAGS: 00000246
+<4>[71932.980182] RAX: ffff8b41aac80000 RBX: 0000000000000008 RCX: 0000000000000000
+<4>[71932.980187] RDX: 0000416c33b589d0 RSI: fffffffc80796279 RDI: 0000000000000000
+<4>[71932.980191] RBP: ffffee1fbfcb4950 R08: 0000000000000002 R09: 0000000000000002
+<4>[71932.980196] R10: 0000000000000001 R11: ffff8b41aacb474c R12: ffffffff9b3b93e0
+<4>[71932.980200] R13: 0000416c33b589d0 R14: 0000000000000008 R15: 0000000000000000
+<4>[71932.980207]  cpuidle_enter+0x2d/0x40
+<4>[71932.980215]  do_idle+0x142/0x2a0
+<4>[71932.980220]  cpu_startup_entry+0x29/0x30
+<4>[71932.980225]  start_secondary+0x11e/0x140
+<4>[71932.980233]  common_startup_64+0x13e/0x141
+<4>[71932.980242]  </TASK>
+<0>[71932.980279] Kernel Offset: 0x18a00000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)
