@@ -1,0 +1,314 @@
+===== SESSION-C6-START.marker =====
+C6 pcie_port_pm=off session start 1783267993
+===== cmdline (介入検収) =====
+BOOT_IMAGE=/boot/vmlinuz-6.12.94-dpmwd4 root=UUID=147f49dc-e854-47df-a721-b304a1c0c7bd ro quiet no_console_suspend mem_sleep_default=s2idle panic=15 pcie_port_pm=off
+===== cycle-watch-c6.log (全 32 ペア) =====
+1783268210.935111 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783268245.290123 macbookair2015 kernel: PM: suspend exit
+1783268260.239100 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783268263.167603 macbookair2015 kernel: PM: suspend exit
+1783269040.555600 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269048.803965 macbookair2015 kernel: PM: suspend exit
+1783269146.285909 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269149.756151 macbookair2015 kernel: PM: suspend exit
+1783269177.461931 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269180.727050 macbookair2015 kernel: PM: suspend exit
+1783269212.017929 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269214.756777 macbookair2015 kernel: PM: suspend exit
+1783269247.345906 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269250.277230 macbookair2015 kernel: PM: suspend exit
+1783269282.846625 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269285.867077 macbookair2015 kernel: PM: suspend exit
+1783269589.705496 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269593.110338 macbookair2015 kernel: PM: suspend exit
+1783269672.674127 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269675.970737 macbookair2015 kernel: PM: suspend exit
+1783269736.550814 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269740.362066 macbookair2015 kernel: PM: suspend exit
+1783269798.095174 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269810.762913 macbookair2015 kernel: PM: suspend exit
+1783269835.807363 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269850.053847 macbookair2015 kernel: PM: suspend exit
+1783269946.354433 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269956.432272 macbookair2015 kernel: PM: suspend exit
+1783269985.006789 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783269995.846106 macbookair2015 kernel: PM: suspend exit
+1783270022.750652 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270033.192027 macbookair2015 kernel: PM: suspend exit
+1783270059.690440 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270073.962061 macbookair2015 kernel: PM: suspend exit
+1783270101.230430 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270125.158138 macbookair2015 kernel: PM: suspend exit
+1783270152.766416 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270178.623753 macbookair2015 kernel: PM: suspend exit
+1783270254.613441 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270275.213767 macbookair2015 kernel: PM: suspend exit
+1783270303.357616 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270336.775648 macbookair2015 kernel: PM: suspend exit
+1783270361.241421 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270395.919004 macbookair2015 kernel: PM: suspend exit
+1783270420.041549 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270439.992511 macbookair2015 kernel: PM: suspend exit
+1783270469.309430 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270494.395248 macbookair2015 kernel: PM: suspend exit
+1783270520.591505 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270538.531481 macbookair2015 kernel: PM: suspend exit
+1783270564.957457 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270591.300924 macbookair2015 kernel: PM: suspend exit
+1783270616.329470 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270635.624831 macbookair2015 kernel: PM: suspend exit
+1783270661.425452 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270679.558976 macbookair2015 kernel: PM: suspend exit
+1783270706.398795 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270744.908630 macbookair2015 kernel: PM: suspend exit
+1783270772.669478 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270792.789736 macbookair2015 kernel: PM: suspend exit
+1783270860.493972 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270883.245297 macbookair2015 kernel: PM: suspend exit
+1783270913.793903 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783270943.690201 macbookair2015 kernel: PM: suspend exit
+===== vpn-watch-c6.log (全量) =====
+1783267993  xfrm=0
+1783268013  xfrm=0
+1783268033  xfrm=0
+1783268053  xfrm=0
+1783268073  xfrm=0
+1783268093  xfrm=0
+1783268113  xfrm=0
+1783268133  xfrm=0
+1783268153  xfrm=0
+1783268173  xfrm=0
+1783268193  xfrm=0
+1783268244  xfrm=0
+1783268265  xfrm=0
+1783268285  xfrm=0
+1783268510  xfrm=0
+1783268530  xfrm=0
+1783268550  xfrm=0
+1783268570  xfrm=0
+1783268590  xfrm=0
+1783268610  xfrm=0
+1783268630  xfrm=0
+1783268650  xfrm=0
+1783268670  xfrm=0
+1783268690  xfrm=0
+1783268710  xfrm=0
+1783268730  xfrm=0
+1783268750  xfrm=0
+1783268770 172.20.10.13/28 xfrm=2
+1783268790 172.20.10.13/28 xfrm=2
+1783268810 172.20.10.13/28 xfrm=2
+1783268830 172.20.10.13/28 xfrm=2
+1783268850 172.20.10.13/28 xfrm=0
+1783268870 172.20.10.13/28 xfrm=0
+1783268890 172.20.10.13/28 xfrm=0
+1783268910 172.20.10.13/28 xfrm=0
+1783268930 172.20.10.13/28 xfrm=0
+1783268950 172.20.10.13/28 xfrm=0
+1783268970 172.20.10.13/28 xfrm=0
+1783268990 172.20.10.13/28 xfrm=0
+1783269010 172.20.10.13/28 xfrm=2
+1783269030 172.20.10.13/28 xfrm=2
+1783269051  xfrm=2
+1783269071 172.20.10.13/28 xfrm=2
+1783269139 172.20.10.13/28 xfrm=2
+1783269159  xfrm=0
+1783269180  xfrm=2
+1783269200 172.20.10.13/28 xfrm=2
+1783269220  xfrm=2
+1783269240 172.20.10.13/28 xfrm=2
+1783269260  xfrm=0
+1783269280  xfrm=2
+1783269300  xfrm=0
+1783269582 172.20.10.13/28 xfrm=2
+1783269602  xfrm=0
+1783269622 172.20.10.13/28 xfrm=2
+1783269689 172.20.10.13/28 xfrm=1
+1783269735  xfrm=2
+1783269755 172.20.10.13/28 xfrm=0
+1783269798  xfrm=2
+1783269818  xfrm=2
+1783269849  xfrm=2
+1783269869  xfrm=0
+1783269956  xfrm=2
+1783269976 172.20.10.13/28 xfrm=2
+1783269996  xfrm=2
+1783270016 172.20.10.13/28 xfrm=2
+1783270036  xfrm=2
+1783270056 172.20.10.13/28 xfrm=2
+1783270076  xfrm=2
+1783270096 172.20.10.13/28 xfrm=2
+1783270124  xfrm=2
+1783270144 172.20.10.13/28 xfrm=2
+1783270178  xfrm=2
+1783270198 172.20.10.13/28 xfrm=2
+1783270227 172.20.10.13/28 xfrm=2
+1783270247 172.20.10.13/28 xfrm=2
+1783270274  xfrm=2
+1783270295 172.20.10.13/28 xfrm=2
+1783270336  xfrm=2
+1783270356 172.20.10.13/28 xfrm=2
+1783270395  xfrm=2
+1783270415 172.20.10.13/28 xfrm=2
+1783270439  xfrm=2
+1783270459 172.20.10.13/28 xfrm=2
+1783270494  xfrm=2
+1783270514 172.20.10.13/28 xfrm=2
+1783270538  xfrm=2
+1783270558 172.20.10.13/28 xfrm=2
+1783270590  xfrm=2
+1783270610 172.20.10.13/28 xfrm=2
+1783270635  xfrm=2
+1783270655 172.20.10.13/28 xfrm=2
+1783270679  xfrm=2
+1783270699 172.20.10.13/28 xfrm=2
+1783270744  xfrm=2
+1783270764 172.20.10.13/28 xfrm=2
+1783270792  xfrm=2
+1783270812 172.20.10.13/28 xfrm=2
+1783270882  xfrm=2
+1783270903 172.20.10.13/28 xfrm=2
+1783270943  xfrm=2
+1783270963  xfrm=0
+1783270983  xfrm=0
+1783271003  xfrm=0
+1783271023  xfrm=0
+1783271043  xfrm=0
+1783271063  xfrm=0
+1783271083  xfrm=0
+1783271103  xfrm=0
+===== src-IP + ESP SA gate per PRE (本番 30 cycle) =====
+1783269039: src 172.20.10.13 esp_lines=5
+1783269145: src 172.20.10.13 esp_lines=5
+1783269176: src 172.20.10.13 esp_lines=5
+1783269211: src 172.20.10.13 esp_lines=5
+1783269246: src 172.20.10.13 esp_lines=5
+1783269282: src 172.20.10.13 esp_lines=5
+1783269589: src 172.20.10.13 esp_lines=5
+1783269672: src 172.20.10.13 esp_lines=5
+1783269735: src 172.20.10.13 esp_lines=5
+1783269797: src 172.20.10.13 esp_lines=5
+1783269835: src 172.20.10.13 esp_lines=5
+1783269945: src 172.20.10.13 esp_lines=5
+1783269984: src 172.20.10.13 esp_lines=5
+1783270022: src 172.20.10.13 esp_lines=5
+1783270059: src 172.20.10.13 esp_lines=5
+1783270100: src 172.20.10.13 esp_lines=5
+1783270152: src 172.20.10.13 esp_lines=5
+1783270254: src 172.20.10.13 esp_lines=5
+1783270302: src 172.20.10.13 esp_lines=5
+1783270360: src 172.20.10.13 esp_lines=5
+1783270419: src 172.20.10.13 esp_lines=5
+1783270468: src 172.20.10.13 esp_lines=5
+1783270519: src 172.20.10.13 esp_lines=5
+1783270564: src 172.20.10.13 esp_lines=5
+1783270615: src 172.20.10.13 esp_lines=5
+1783270660: src 172.20.10.13 esp_lines=5
+1783270705: src 172.20.10.13 esp_lines=5
+1783270772: src 172.20.10.13 esp_lines=5
+1783270859: src 172.20.10.13 esp_lines=5
+1783270913: src 172.20.10.13 esp_lines=5
+===== PRE/POST pairing (C6 セッション全ファイル) =====
+1783268210.pre
+1783268244.post
+1783268259.pre
+1783268262.post
+1783269039.pre
+1783269048.post
+1783269145.pre
+1783269149.post
+1783269176.pre
+1783269180.post
+1783269211.pre
+1783269214.post
+1783269246.pre
+1783269250.post
+1783269282.pre
+1783269285.post
+1783269589.pre
+1783269592.post
+1783269672.pre
+1783269675.post
+1783269735.pre
+1783269740.post
+1783269797.pre
+1783269810.post
+1783269835.pre
+1783269849.post
+1783269945.pre
+1783269956.post
+1783269984.pre
+1783269995.post
+1783270022.pre
+1783270032.post
+1783270059.pre
+1783270073.post
+1783270100.pre
+1783270124.post
+1783270152.pre
+1783270178.post
+1783270254.pre
+1783270274.post
+1783270302.pre
+1783270336.post
+1783270360.pre
+1783270395.post
+1783270419.pre
+1783270439.post
+1783270468.pre
+1783270494.post
+1783270519.pre
+1783270538.post
+1783270564.pre
+1783270590.post
+1783270615.pre
+1783270635.post
+1783270660.pre
+1783270679.post
+1783270705.pre
+1783270744.post
+1783270772.pre
+1783270792.post
+1783270859.pre
+1783270882.post
+1783270913.pre
+1783270943.post
+===== pstore (teardown 時点) =====
+(空なら何も出ない)
+
+===== TB/PCIe ポート runtime PM スナップショット (セッション中に取得、transcript より) =====
+--- 介入前 (dpmwd4, pcie_port_pm なし, 01:10 JST) ---
+0000:05:00.0: status=active    state=D0
+0000:06:00.0: status=active    state=D0
+0000:06:03.0: status=suspended state=D3hot   <- C-5 署名 A (hang #1)
+0000:06:04.0: status=suspended state=D3hot
+0000:06:05.0: status=suspended state=D3hot
+0000:06:06.0: status=suspended state=D3hot   <- C-5 署名 A (hang #3)
+0000:07:00.0: status=active    state=D0
+0000:00:1c.0: status=suspended state=D3hot
+0000:00:1c.1/2/4/5: active D0
+--- 介入後 (pcie_port_pm=off, boot 直後 + 4 分後の 2 回とも) ---
+0000:06:03.0 / 06:04.0 / 06:05.0 / 06:06.0 / 00:1c.0 を含む全ポート: status=active state=D0
+
+===== smoke 検証 (WiFi, 2 cycle) =====
+RTC 最終値 (UTC): 2027-08-03 00:00:24 -> decode: Magic 15:1 = device_resume exit (post, main)
+[成功 cycle の最終値], dev hash 一致候補: device:4e  (C-5 t4 と同形)
+
+===== 統計 =====
+C-6 arm (dpmwd4 + pm_trace=1 + pcie_port_pm=off): hang 0/30 (全 BT_PAN_VALID)
+ベースライン同摂動 arm (dpmwd3 C-4: 4/9, dpmwd4 C-5: 4/10 -> pooled 8/19 ≈ 42%)
+Fisher exact 片側 p = 1.676e-04
+(参考: 対 42% の binomial (1-8/19)^30 ≈ 7.6e-08)
+
+===== 事後厳密照合 (レポート矛盾チェック時に追加実施、02:20 頃 JST) =====
+全 30 本番 PRE ファイルの ESP SA 双方向アドレス照合:
+  "src 172.20.10.13 dst 160.16.210.47" かつ "src 160.16.210.47 dst 172.20.10.13" の両行存在
+  → SA アドレス完全一致: 30/30 (MISMATCH ゼロ)
+
+vpn-watch の cycle 開始前窓 (1783267993-1783269039) の解釈:
+  01:13:13-01:25:50  xfrm=0 (arm 直後はテザリング/VPN 未接続。BT-PAN アドレスも 01:21:50-01:25:50 は不在
+                      = radio off 後の NM 再構成で一時消失。01:18 頃の WiFi 上 SA ×2 (src 192.168.33.145)
+                      は 20 秒サンプリングの隙間で vpn-watch には写っていない)
+  01:26:10-01:27:10  172.20.10.13 + xfrm=2 (ユーザの GSNet 再確立、BT-PAN アドレスで SA 成立)
+  01:27:30-01:29:50  172.20.10.13 + xfrm=0 (再フラップ)
+  01:30:10-          172.20.10.13 + xfrm=2 で安定 → 01:30:39 に最初の有効 cycle
