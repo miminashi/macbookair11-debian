@@ -1,0 +1,1442 @@
+ 7月 04 02:03:03.850138 macbookair2015 gdm-password][27601]: gkr-pam: unlocked login keyring
+ 7月 04 02:03:04.051075 macbookair2015 NetworkManager[840]: <info>  [1783098184.0510] agent-manager: agent[3e9138863f91dc8a,:1.89/org.gnome.Shell.NetworkAgent/1000]: agent registered
+ 7月 04 02:03:10.494417 macbookair2015 systemd[2116]: Started app-gnome-org.gnome.Terminal-27688.scope - Application launched by gnome-shell.
+ 7月 04 02:03:10.594495 macbookair2015 dbus-daemon[2139]: [session uid=1000 pid=2139 pidfd=5] Activating via systemd: service name='org.gnome.Terminal' unit='gnome-terminal-server.service' requested by ':1.133' (uid=1000 pid=27688 comm="/usr/bin/gnome-terminal")
+ 7月 04 02:03:10.597248 macbookair2015 systemd[2116]: Created slice app-org.gnome.Terminal.slice - Slice /app/org.gnome.Terminal.
+ 7月 04 02:03:10.598823 macbookair2015 systemd[2116]: Starting gnome-terminal-server.service - GNOME Terminal Server...
+ 7月 04 02:03:10.832354 macbookair2015 dbus-daemon[2139]: [session uid=1000 pid=2139 pidfd=5] Successfully activated service 'org.gnome.Terminal'
+ 7月 04 02:03:10.832581 macbookair2015 systemd[2116]: Started gnome-terminal-server.service - GNOME Terminal Server.
+ 7月 04 02:03:10.966394 macbookair2015 systemd[2116]: Started vte-spawn-820e7afe-f3d9-4e0e-a322-23fbecb46826.scope - VTE child process 27703 launched by org.gnome.Terminal process 27695.
+ 7月 04 02:03:46.241576 macbookair2015 sshd-session[27907]: Accepted publickey for miminashi from 192.168.33.215 port 45210 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:03:46.243745 macbookair2015 sshd-session[27907]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:03:46.249328 macbookair2015 systemd-logind[788]: New session 21 of user miminashi.
+ 7月 04 02:03:46.262363 macbookair2015 systemd[1]: Started session-21.scope - Session 21 of User miminashi.
+ 7月 04 02:03:46.352127 macbookair2015 sudo[27919]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/mkdir -p /home/miminashi/pstore-recovered/20260704_020346
+ 7月 04 02:03:46.352813 macbookair2015 sudo[27919]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.358243 macbookair2015 sudo[27919]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.371106 macbookair2015 sudo[27922]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/cp -a /sys/fs/pstore/. /home/miminashi/pstore-recovered/20260704_020346/sys-fs-pstore/
+ 7月 04 02:03:46.371476 macbookair2015 sudo[27922]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.378073 macbookair2015 sudo[27922]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.390846 macbookair2015 sudo[27925]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/cp -a /var/lib/systemd/pstore/. /home/miminashi/pstore-recovered/20260704_020346/var-lib-systemd-pstore/
+ 7月 04 02:03:46.391407 macbookair2015 sudo[27925]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.397122 macbookair2015 sudo[27925]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.410477 macbookair2015 sudo[27930]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/find /home/miminashi/pstore-recovered/20260704_020346 -type f
+ 7月 04 02:03:46.410989 macbookair2015 sudo[27930]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.413800 macbookair2015 sudo[27930]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.429225 macbookair2015 sudo[27936]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/find /home/miminashi/pstore-recovered/20260704_020346 -type f
+ 7月 04 02:03:46.429723 macbookair2015 sudo[27936]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.432433 macbookair2015 sudo[27936]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.445125 macbookair2015 sudo[27940]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/rm -f /sys/fs/pstore/dmesg-*
+ 7月 04 02:03:46.445617 macbookair2015 sudo[27940]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.448182 macbookair2015 sudo[27940]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.460256 macbookair2015 sudo[27943]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/rm -rf /var/lib/systemd/pstore/1783080747
+ 7月 04 02:03:46.460808 macbookair2015 sudo[27943]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.464389 macbookair2015 sudo[27943]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.480009 macbookair2015 sudo[27917]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/ls -la /sys/fs/pstore/ /var/lib/systemd/pstore/
+ 7月 04 02:03:46.480504 macbookair2015 sudo[27917]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:03:46.484054 macbookair2015 sudo[27917]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:03:46.488270 macbookair2015 sshd-session[27916]: Received disconnect from 192.168.33.215 port 45210:11: disconnected by user
+ 7月 04 02:03:46.488549 macbookair2015 sshd-session[27916]: Disconnected from user miminashi 192.168.33.215 port 45210
+ 7月 04 02:03:46.489431 macbookair2015 sshd-session[27907]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:03:46.497859 macbookair2015 systemd[1]: session-21.scope: Deactivated successfully.
+ 7月 04 02:03:46.502128 macbookair2015 systemd-logind[788]: Session 21 logged out. Waiting for processes to exit.
+ 7月 04 02:03:46.504461 macbookair2015 systemd-logind[788]: Removed session 21.
+ 7月 04 02:04:01.023708 macbookair2015 sshd-session[28042]: Accepted publickey for miminashi from 192.168.33.215 port 59468 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:04:01.025678 macbookair2015 sshd-session[28042]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:04:01.031781 macbookair2015 systemd-logind[788]: New session 22 of user miminashi.
+ 7月 04 02:04:01.046387 macbookair2015 systemd[1]: Started session-22.scope - Session 22 of User miminashi.
+ 7月 04 02:04:01.247797 macbookair2015 sshd-session[28051]: Received disconnect from 192.168.33.215 port 59468:11: disconnected by user
+ 7月 04 02:04:01.248087 macbookair2015 sshd-session[28051]: Disconnected from user miminashi 192.168.33.215 port 59468
+ 7月 04 02:04:01.252305 macbookair2015 systemd[1]: session-22.scope: Deactivated successfully.
+ 7月 04 02:04:01.249095 macbookair2015 sshd-session[28042]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:04:01.254356 macbookair2015 systemd-logind[788]: Session 22 logged out. Waiting for processes to exit.
+ 7月 04 02:04:01.256708 macbookair2015 systemd-logind[788]: Removed session 22.
+ 7月 04 02:04:17.678373 macbookair2015 sshd-session[28168]: Accepted publickey for miminashi from 192.168.33.215 port 55378 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:04:17.680411 macbookair2015 sshd-session[28168]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:04:17.686389 macbookair2015 systemd-logind[788]: New session 23 of user miminashi.
+ 7月 04 02:04:17.706380 macbookair2015 systemd[1]: Started session-23.scope - Session 23 of User miminashi.
+ 7月 04 02:04:17.782589 macbookair2015 sudo[28179]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/sbin/sysctl -w kernel.hung_task_panic=1
+ 7月 04 02:04:17.782982 macbookair2015 sudo[28179]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:17.787689 macbookair2015 sudo[28179]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:17.799485 macbookair2015 sudo[28182]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/nmcli con modify 'iMiminashiPadPro ネットワーク' connection.autoconnect yes
+ 7月 04 02:04:17.799852 macbookair2015 sudo[28182]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:17.827989 macbookair2015 NetworkManager[840]: <info>  [1783098257.8279] audit: op="connection-update" uuid="a6300eea-6e89-45f0-b494-8d60cc8515e1" name="iMiminashiPadPro ネットワーク" args="connection.autoconnect,connection.timestamp" pid=28184 uid=0 result="success"
+ 7月 04 02:04:17.828207 macbookair2015 NetworkManager[840]: <info>  [1783098257.8281] policy: auto-activating connection 'iMiminashiPadPro ネットワーク' (a6300eea-6e89-45f0-b494-8d60cc8515e1)
+ 7月 04 02:04:17.828870 macbookair2015 NetworkManager[840]: <info>  [1783098257.8288] device (34:42:62:16:03:F6): Activation: starting connection 'iMiminashiPadPro ネットワーク' (a6300eea-6e89-45f0-b494-8d60cc8515e1)
+ 7月 04 02:04:17.828965 macbookair2015 NetworkManager[840]: <info>  [1783098257.8289] device (34:42:62:16:03:F6): state change: disconnected -> prepare (reason 'none', managed-type: 'full')
+ 7月 04 02:04:17.831500 macbookair2015 sudo[28182]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:17.847779 macbookair2015 sudo[28189]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/nmcli con modify GSNet connection.autoconnect yes
+ 7月 04 02:04:17.848193 macbookair2015 sudo[28189]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:17.876388 macbookair2015 NetworkManager[840]: <info>  [1783098257.8763] audit: op="connection-update" uuid="55a75765-d99e-4bc5-a05c-78b38cdefd19" name="GSNet" args="connection.autoconnect,connection.timestamp" pid=28192 uid=0 result="success"
+ 7月 04 02:04:17.879664 macbookair2015 sudo[28189]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:17.891246 macbookair2015 sudo[28197]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/nmcli con modify OpenWrt connection.autoconnect no
+ 7月 04 02:04:17.891788 macbookair2015 sudo[28197]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:17.921108 macbookair2015 NetworkManager[840]: <info>  [1783098257.9210] audit: op="connection-update" uuid="efa6ec65-e38a-4bfd-8b7d-298150fd2951" name="OpenWrt" args="connection.autoconnect,connection.timestamp" pid=28199 uid=0 result="success"
+ 7月 04 02:04:17.924441 macbookair2015 sudo[28197]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:17.935466 macbookair2015 sudo[28204]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/nmcli con modify OpenWrt ipv4.route-metric 800
+ 7月 04 02:04:17.935989 macbookair2015 sudo[28204]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:17.964881 macbookair2015 NetworkManager[840]: <info>  [1783098257.9648] audit: op="connection-update" uuid="efa6ec65-e38a-4bfd-8b7d-298150fd2951" name="OpenWrt" args="ipv4.route-metric" pid=28206 uid=0 result="success"
+ 7月 04 02:04:17.968220 macbookair2015 sudo[28204]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:17.994601 macbookair2015 sshd-session[28177]: Received disconnect from 192.168.33.215 port 55378:11: disconnected by user
+ 7月 04 02:04:17.994889 macbookair2015 sshd-session[28177]: Disconnected from user miminashi 192.168.33.215 port 55378
+ 7月 04 02:04:17.995720 macbookair2015 sshd-session[28168]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:04:17.998755 macbookair2015 systemd[1]: session-23.scope: Deactivated successfully.
+ 7月 04 02:04:18.000318 macbookair2015 systemd-logind[788]: Session 23 logged out. Waiting for processes to exit.
+ 7月 04 02:04:18.002676 macbookair2015 systemd-logind[788]: Removed session 23.
+ 7月 04 02:04:18.999402 macbookair2015 systemd[2116]: Reached target bluetooth.target - Bluetooth.
+ 7月 04 02:04:19.403761 macbookair2015 bluetoothd[743]: bnep0 connected
+ 7月 04 02:04:19.407368 macbookair2015 NetworkManager[840]: <info>  [1783098259.4073] device (34:42:62:16:03:F6): state change: prepare -> config (reason 'none', managed-type: 'full')
+ 7月 04 02:04:19.407988 macbookair2015 NetworkManager[840]: <info>  [1783098259.4079] device (34:42:62:16:03:F6): state change: config -> ip-config (reason 'none', managed-type: 'full')
+ 7月 04 02:04:19.410645 macbookair2015 NetworkManager[840]: <info>  [1783098259.4106] dhcp4 (bnep0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:19.412472 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface bnep0.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 7月 04 02:04:19.414752 macbookair2015 kernel: bluetooth hci0:12 enx98e0d98d205e: renamed from bnep0 (while UP)
+ 7月 04 02:04:19.414192 macbookair2015 avahi-daemon[740]: New relevant interface bnep0.IPv6 for mDNS.
+ 7月 04 02:04:19.414237 macbookair2015 avahi-daemon[740]: Registering new address record for fe80::ee82:92f6:8780:60e8 on bnep0.*.
+ 7月 04 02:04:19.416881 macbookair2015 NetworkManager[840]: <info>  [1783098259.4168] device (34:42:62:16:03:F6): ip-ifname: interface index 0 renamed ip_iface (3) from 'bnep0' to 'enx98e0d98d205e'
+ 7月 04 02:04:19.416906 macbookair2015 NetworkManager[840]: <info>  [1783098259.4168] device (34:42:62:16:03:F6): ip:dhcp4: restarting
+ 7月 04 02:04:19.435921 macbookair2015 ModemManager[889]: <wrn> [plugin-manager] task 4: port context already scheduled
+ 7月 04 02:04:19.442182 macbookair2015 NetworkManager[840]: <info>  [1783098259.4421] dhcp4 (bnep0): canceled DHCP transaction
+ 7月 04 02:04:19.442208 macbookair2015 NetworkManager[840]: <info>  [1783098259.4421] dhcp4 (bnep0): state changed no lease
+ 7月 04 02:04:19.442289 macbookair2015 NetworkManager[840]: <info>  [1783098259.4422] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:21.710670 macbookair2015 NetworkManager[840]: <info>  [1783098261.7106] dhcp4 (enx98e0d98d205e): state changed new lease, address=172.20.10.13, acd pending
+ 7月 04 02:04:21.890376 macbookair2015 NetworkManager[840]: <info>  [1783098261.8903] dhcp4 (enx98e0d98d205e): state changed new lease, address=172.20.10.13
+ 7月 04 02:04:21.892590 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+ 7月 04 02:04:21.892692 macbookair2015 avahi-daemon[740]: New relevant interface enx98e0d98d205e.IPv4 for mDNS.
+ 7月 04 02:04:21.892791 macbookair2015 avahi-daemon[740]: Registering new address record for 172.20.10.13 on enx98e0d98d205e.IPv4.
+ 7月 04 02:04:21.931461 macbookair2015 NetworkManager[840]: <info>  [1783098261.9314] device (34:42:62:16:03:F6): state change: ip-config -> ip-check (reason 'none', managed-type: 'full')
+ 7月 04 02:04:21.931775 macbookair2015 dbus-daemon[754]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=840 comm="/usr/sbin/NetworkManager --no-daemon")
+ 7月 04 02:04:21.944843 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 7月 04 02:04:21.995970 macbookair2015 dbus-daemon[754]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 7月 04 02:04:21.996247 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 7月 04 02:04:21.999638 macbookair2015 NetworkManager[840]: <info>  [1783098261.9996] device (34:42:62:16:03:F6): state change: ip-check -> secondaries (reason 'none', managed-type: 'full')
+ 7月 04 02:04:21.999936 macbookair2015 NetworkManager[840]: <info>  [1783098261.9999] device (34:42:62:16:03:F6): state change: secondaries -> activated (reason 'none', managed-type: 'full')
+ 7月 04 02:04:22.001026 macbookair2015 NetworkManager[840]: <info>  [1783098262.0009] device (34:42:62:16:03:F6): Activation: successful, device activated.
+ 7月 04 02:04:23.146829 macbookair2015 NetworkManager[840]: <info>  [1783098263.1467] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:23.149104 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 7月 04 02:04:23.149208 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:242d:2423:e808:55a1:d86c:ca33.
+ 7月 04 02:04:23.153437 macbookair2015 NetworkManager[840]: <info>  [1783098263.1533] policy: set 'iMiminashiPadPro ネットワーク' (enx98e0d98d205e) as default for IPv6 routing and DNS
+ 7月 04 02:04:23.149262 macbookair2015 avahi-daemon[740]: Registering new address record for 2001:240:242d:2423:e808:55a1:d86c:ca33 on enx98e0d98d205e.*.
+ 7月 04 02:04:23.149433 macbookair2015 avahi-daemon[740]: Withdrawing address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.
+ 7月 04 02:04:23.222546 macbookair2015 NetworkManager[840]: <info>  [1783098263.2224] dhcp6 (enx98e0d98d205e): state changed new lease
+ 7月 04 02:04:23.431200 macbookair2015 ModemManager[889]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.3': not supported by any plugin
+ 7月 04 02:04:32.008979 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 7月 04 02:04:32.194822 macbookair2015 sshd-session[28318]: Accepted publickey for miminashi from 192.168.33.215 port 33442 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:04:32.196437 macbookair2015 sshd-session[28318]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:04:32.202067 macbookair2015 systemd-logind[788]: New session 24 of user miminashi.
+ 7月 04 02:04:32.226462 macbookair2015 systemd[1]: Started session-24.scope - Session 24 of User miminashi.
+ 7月 04 02:04:32.307974 macbookair2015 sudo[28329]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/systemd-run --unit=vpn-watcher --collect bash -c '#012while true; do#012  if ip -br link show enx98e0d98d205e 2>/dev/null | grep -q UP; then#012    if ! nmcli -t -f GENERAL.STATE con show GSNet | grep -q activated; then#012      nmcli con up GSNet 2>&1 | logger -t vpn-watcher#012    fi#012  fi#012  sleep 3#012done#012'
+ 7月 04 02:04:32.308613 macbookair2015 sudo[28329]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:32.322985 macbookair2015 systemd[1]: Started vpn-watcher.service - [systemd-run] /usr/bin/bash -c "\nwhile true; do\n  if ip -br link show enx98e0d98d205e 2>/dev/null | grep -q UP; then\n    if ! nmcli -t -f GENERAL.STATE con show GSNet | grep -q activated; then\n      nmcli con up GSNet 2>&1 | logger -t vpn-watcher\n    fi\n  fi\n  sleep 3\ndone\n".
+ 7月 04 02:04:32.324626 macbookair2015 sudo[28329]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:32.336776 macbookair2015 sudo[28333]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/systemd-run --unit=cycle-watcher --collect bash -c '#012prev=$(cat /sys/power/suspend_stats/success)#012cycle_num=0#012while true; do#012  curr=$(cat /sys/power/suspend_stats/success)#012  if [ "$curr" != "$prev" ]; then#012    cycle_num=$((cycle_num+1))#012    logger -t cycle-watcher "cycle $cycle_num: suspend_stats $prev -> $curr"#012    echo "cycle $cycle_num at $(date -Iseconds)" >> /dev/shm/cycle-progress#012    prev=$curr#012  fi#012  sleep 5#012done#012'
+ 7月 04 02:04:32.337139 macbookair2015 sudo[28333]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:32.351885 macbookair2015 systemd[1]: Started cycle-watcher.service - [systemd-run] /usr/bin/bash -c "\nprev=\$(cat /sys/power/suspend_stats/success)\ncycle_num=0\nwhile true; do\n  curr=\$(cat /sys/power/suspend_stats/success)\n  if [ \"\$curr\" != \"\$prev\" ]; then\n    cycle_num=\$((cycle_num+1))\n    logger -t cycle-watcher \"cycle \$cycle_num: suspend_stats \$prev -> \$curr\"\n    echo \"cycle \$cycle_num at \$(date -Iseconds)\" >> /dev/shm/cycle-progress\n    prev=\$curr\n  fi\n  sleep 5\ndone\n".
+ 7月 04 02:04:32.356521 macbookair2015 sudo[28333]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:32.373520 macbookair2015 sshd-session[28327]: Received disconnect from 192.168.33.215 port 33442:11: disconnected by user
+ 7月 04 02:04:32.373724 macbookair2015 sshd-session[28327]: Disconnected from user miminashi 192.168.33.215 port 33442
+ 7月 04 02:04:32.374759 macbookair2015 sshd-session[28318]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:04:32.380823 macbookair2015 systemd[1]: session-24.scope: Deactivated successfully.
+ 7月 04 02:04:32.384182 macbookair2015 systemd-logind[788]: Session 24 logged out. Waiting for processes to exit.
+ 7月 04 02:04:32.388998 macbookair2015 systemd-logind[788]: Removed session 24.
+ 7月 04 02:04:32.408689 macbookair2015 NetworkManager[840]: <info>  [1783098272.4086] agent-manager: agent[f5681130a3ce0338,:1.6098/nmcli-connect/0]: agent registered
+ 7月 04 02:04:32.410049 macbookair2015 NetworkManager[840]: <info>  [1783098272.4100] vpn[0x55c05ddb2b60,55a75765-d99e-4bc5-a05c-78b38cdefd19,"GSNet"]: starting strongswan
+ 7月 04 02:04:32.410436 macbookair2015 NetworkManager[840]: <info>  [1783098272.4104] audit: op="connection-activate" uuid="55a75765-d99e-4bc5-a05c-78b38cdefd19" name="GSNet" pid=28349 uid=0 result="success"
+ 7月 04 02:04:32.438685 macbookair2015 charon-nm[28356]: 00[DMN] Starting charon NetworkManager backend (strongSwan 6.0.1)
+ 7月 04 02:04:32.447239 macbookair2015 charon-nm[28356]: 00[PTS] TPM 2.0 - could not load "libtss2-tcti-tabrmd.so.0"
+ 7月 04 02:04:32.447253 macbookair2015 charon-nm[28356]: 00[LIB] plugin 'tpm': failed to load - tpm_plugin_create returned NULL
+ 7月 04 02:04:32.457352 macbookair2015 charon-nm[28356]: 00[LIB] providers loaded by OpenSSL: legacy default
+ 7月 04 02:04:32.542176 macbookair2015 kernel: alg: No test for xcbc(camellia) (xcbc(camellia-asm))
+ 7月 04 02:04:32.618047 macbookair2015 kernel: alg: No test for rfc3686(ctr(camellia)) (rfc3686(ctr(camellia-asm)))
+ 7月 04 02:04:32.810056 macbookair2015 kernel: IPsec XFRM device driver
+ 7月 04 02:04:32.813963 macbookair2015 NetworkManager[840]: <info>  [1783098272.8139] manager: (xfrmi-test-1292): new Generic device (/org/freedesktop/NetworkManager/Devices/4)
+ 7月 04 02:04:32.844896 macbookair2015 charon-nm[28356]: 00[LIB] loaded plugins: nm-backend charon-nm ldap pkcs11 aesni aes rc2 sha2 sha1 md5 mgf1 rdrand random nonce x509 revocation constraints pkcs1 pkcs7 sshkey pem openssl gcrypt pkcs8 af-alg fips-prf gmp curve25519 agent chapoly xcbc cmac hmac kdf ctr ccm gcm drbg curl kernel-netlink socket-default bypass-lan eap-identity eap-md5 eap-gtc eap-mschapv2 eap-tls eap-ttls
+ 7月 04 02:04:32.844920 macbookair2015 charon-nm[28356]: 00[LIB] dropped capabilities, running as uid 0, gid 0
+ 7月 04 02:04:32.844941 macbookair2015 charon-nm[28356]: 00[JOB] spawning 16 worker threads
+ 7月 04 02:04:32.846726 macbookair2015 charon-nm[28356]: 07[IKE] installed bypass policy for 172.20.10.0/28
+ 7月 04 02:04:32.847171 macbookair2015 charon-nm[28356]: 07[IKE] installed bypass policy for 192.168.33.0/24
+ 7月 04 02:04:32.847727 macbookair2015 charon-nm[28356]: 07[IKE] installed bypass policy for 2001:240:242d:2423::/64
+ 7月 04 02:04:32.848200 macbookair2015 charon-nm[28356]: 07[IKE] installed bypass policy for fd9d:4bbd:50df::458/128
+ 7月 04 02:04:32.849348 macbookair2015 charon-nm[28356]: 07[IKE] installed bypass policy for fe80::/64
+ 7月 04 02:04:32.849407 macbookair2015 charon-nm[28356]: 07[IKE] interface change for bypass policy for fe80::/64 (from wlp3s0 to enx98e0d98d205e)
+ 7月 04 02:04:32.855889 macbookair2015 charon-nm[28356]: 06[CFG] received initiate for NetworkManager connection GSNet
+ 7月 04 02:04:32.858111 macbookair2015 charon-nm[28356]: 06[CFG] using gateway identity '160.16.210.47'
+ 7月 04 02:04:32.858711 macbookair2015 charon-nm[28356]: 10[KNL] interface nm-xfrm-1584672 activated
+ 7月 04 02:04:32.859250 macbookair2015 charon-nm[28356]: 13[KNL] fe80::7a0:4a49:8aae:51b2 appeared on nm-xfrm-1584672
+ 7月 04 02:04:32.859459 macbookair2015 charon-nm[28356]: 06[CFG] created XFRM interface nm-xfrm-1584672 for NetworkManager connection GSNet
+ 7月 04 02:04:32.860392 macbookair2015 charon-nm[28356]: 06[IKE] initiating IKE_SA GSNet[1] to 160.16.210.47
+ 7月 04 02:04:32.860906 macbookair2015 NetworkManager[840]: <info>  [1783098272.8608] manager: (nm-xfrm-1584672): new Generic device (/org/freedesktop/NetworkManager/Devices/5)
+ 7月 04 02:04:32.864678 macbookair2015 charon-nm[28356]: 06[ENC] generating IKE_SA_INIT request 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(FRAG_SUP) N(HASH_ALG) N(REDIR_SUP) ]
+ 7月 04 02:04:32.864829 macbookair2015 charon-nm[28356]: 06[NET] sending packet: from 192.168.33.145[39520] to 160.16.210.47[500] (1080 bytes)
+ 7月 04 02:04:32.912065 macbookair2015 charon-nm[28356]: 16[NET] received packet: from 160.16.210.47[500] to 192.168.33.145[39520] (280 bytes)
+ 7月 04 02:04:32.912121 macbookair2015 charon-nm[28356]: 16[ENC] parsed IKE_SA_INIT response 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(FRAG_SUP) N(HASH_ALG) N(CHDLESS_SUP) N(MULT_AUTH) ]
+ 7月 04 02:04:32.912192 macbookair2015 charon-nm[28356]: 16[CFG] selected proposal: IKE:AES_CBC_128/HMAC_SHA2_256_128/PRF_AES128_XCBC/ECP_256
+ 7月 04 02:04:32.912288 macbookair2015 charon-nm[28356]: 16[IKE] local host is behind NAT, sending keep alives
+ 7月 04 02:04:32.912306 macbookair2015 charon-nm[28356]: 16[IKE] remote host is behind NAT
+ 7月 04 02:04:32.915527 macbookair2015 charon-nm[28356]: 16[IKE] sending cert request for "CN=GSNet mmns CA"
+ 7月 04 02:04:32.915623 macbookair2015 charon-nm[28356]: 16[IKE] establishing CHILD_SA GSNet{1}
+ 7月 04 02:04:32.915755 macbookair2015 charon-nm[28356]: 16[ENC] generating IKE_AUTH request 1 [ IDi N(INIT_CONTACT) CERTREQ IDr CPRQ(ADDR ADDR6 DNS NBNS DNS6) SA TSi TSr N(MOBIKE_SUP) N(ADD_4_ADDR) N(ADD_6_ADDR) N(ADD_6_ADDR) N(MULT_AUTH) N(EAP_ONLY) N(MSG_ID_SYN_SUP) ]
+ 7月 04 02:04:32.915868 macbookair2015 charon-nm[28356]: 16[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (544 bytes)
+ 7月 04 02:04:32.975956 macbookair2015 charon-nm[28356]: 12[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (1236 bytes)
+ 7月 04 02:04:32.976076 macbookair2015 charon-nm[28356]: 12[ENC] parsed IKE_AUTH response 1 [ EF(1/2) ]
+ 7月 04 02:04:32.976127 macbookair2015 charon-nm[28356]: 12[ENC] received fragment #1 of 2, waiting for complete IKE message
+ 7月 04 02:04:32.976287 macbookair2015 charon-nm[28356]: 09[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (756 bytes)
+ 7月 04 02:04:32.976413 macbookair2015 charon-nm[28356]: 09[ENC] parsed IKE_AUTH response 1 [ EF(2/2) ]
+ 7月 04 02:04:32.976478 macbookair2015 charon-nm[28356]: 09[ENC] received fragment #2 of 2, reassembled fragmented IKE message (1920 bytes)
+ 7月 04 02:04:32.976563 macbookair2015 charon-nm[28356]: 09[ENC] parsed IKE_AUTH response 1 [ IDr CERT AUTH EAP/REQ/ID ]
+ 7月 04 02:04:32.977440 macbookair2015 charon-nm[28356]: 09[IKE] received end entity cert "CN=160.16.210.47"
+ 7月 04 02:04:32.978048 macbookair2015 charon-nm[28356]: 09[CFG]   using certificate "CN=160.16.210.47"
+ 7月 04 02:04:32.978706 macbookair2015 charon-nm[28356]: 09[CFG]   using trusted ca certificate "CN=GSNet mmns CA"
+ 7月 04 02:04:32.978767 macbookair2015 charon-nm[28356]: 09[CFG]   reached self-signed root ca with a path length of 0
+ 7月 04 02:04:32.978800 macbookair2015 charon-nm[28356]: 09[CFG] checking certificate status of "CN=160.16.210.47"
+ 7月 04 02:04:32.978870 macbookair2015 charon-nm[28356]: 09[CFG] certificate status is not available
+ 7月 04 02:04:32.979631 macbookair2015 charon-nm[28356]: 09[IKE] authentication of '160.16.210.47' with RSA_EMSA_PKCS1_SHA2_384 successful
+ 7月 04 02:04:32.979749 macbookair2015 charon-nm[28356]: 09[IKE] server requested EAP_IDENTITY (id 0x00), sending 'macbookair2015'
+ 7月 04 02:04:32.979847 macbookair2015 charon-nm[28356]: 09[ENC] generating IKE_AUTH request 2 [ EAP/RES/ID ]
+ 7月 04 02:04:32.979994 macbookair2015 charon-nm[28356]: 09[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (96 bytes)
+ 7月 04 02:04:33.034572 macbookair2015 charon-nm[28356]: 13[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (112 bytes)
+ 7月 04 02:04:33.034703 macbookair2015 charon-nm[28356]: 13[ENC] parsed IKE_AUTH response 2 [ EAP/REQ/MSCHAPV2 ]
+ 7月 04 02:04:33.034750 macbookair2015 charon-nm[28356]: 13[IKE] server requested EAP_MSCHAPV2 authentication (id 0x42)
+ 7月 04 02:04:33.035376 macbookair2015 charon-nm[28356]: 13[ENC] generating IKE_AUTH request 3 [ EAP/RES/MSCHAPV2 ]
+ 7月 04 02:04:33.035488 macbookair2015 charon-nm[28356]: 13[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (144 bytes)
+ 7月 04 02:04:33.064245 macbookair2015 charon-nm[28356]: 04[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (144 bytes)
+ 7月 04 02:04:33.064348 macbookair2015 charon-nm[28356]: 04[ENC] parsed IKE_AUTH response 3 [ EAP/REQ/MSCHAPV2 ]
+ 7月 04 02:04:33.064412 macbookair2015 charon-nm[28356]: 04[IKE] EAP-MS-CHAPv2 succeeded: 'Welcome2strongSwan'
+ 7月 04 02:04:33.064470 macbookair2015 charon-nm[28356]: 04[ENC] generating IKE_AUTH request 4 [ EAP/RES/MSCHAPV2 ]
+ 7月 04 02:04:33.064561 macbookair2015 charon-nm[28356]: 04[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:04:33.102419 macbookair2015 charon-nm[28356]: 14[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (80 bytes)
+ 7月 04 02:04:33.102476 macbookair2015 charon-nm[28356]: 14[ENC] parsed IKE_AUTH response 4 [ EAP/SUCC ]
+ 7月 04 02:04:33.102508 macbookair2015 charon-nm[28356]: 14[IKE] EAP method EAP_MSCHAPV2 succeeded, MSK established
+ 7月 04 02:04:33.102529 macbookair2015 charon-nm[28356]: 14[IKE] authentication of 'macbookair2015' (myself) with EAP
+ 7月 04 02:04:33.102560 macbookair2015 charon-nm[28356]: 14[ENC] generating IKE_AUTH request 5 [ AUTH ]
+ 7月 04 02:04:33.102608 macbookair2015 charon-nm[28356]: 14[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (96 bytes)
+ 7月 04 02:04:33.134072 macbookair2015 charon-nm[28356]: 15[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (256 bytes)
+ 7月 04 02:04:33.134173 macbookair2015 charon-nm[28356]: 15[ENC] parsed IKE_AUTH response 5 [ AUTH CPRP(ADDR DNS DNS) SA TSi TSr N(MOBIKE_SUP) N(ADD_4_ADDR) N(ADD_4_ADDR) ]
+ 7月 04 02:04:33.134211 macbookair2015 charon-nm[28356]: 15[IKE] authentication of '160.16.210.47' with EAP successful
+ 7月 04 02:04:33.134247 macbookair2015 charon-nm[28356]: 15[IKE] installing new virtual IP 192.168.83.1
+ 7月 04 02:04:33.134434 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+ 7月 04 02:04:33.134462 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface lo.IPv4 with address 192.168.83.1.
+ 7月 04 02:04:33.134481 macbookair2015 avahi-daemon[740]: Registering new address record for 192.168.83.1 on lo.IPv4.
+ 7月 04 02:04:33.134531 macbookair2015 avahi-daemon[740]: Withdrawing address record for 127.0.0.1 on lo.
+ 7月 04 02:04:33.135650 macbookair2015 charon-nm[28356]: 15[IKE] peer supports MOBIKE
+ 7月 04 02:04:33.135696 macbookair2015 charon-nm[28356]: 15[IKE] IKE_SA GSNet[1] established between 192.168.33.145[macbookair2015]...160.16.210.47[160.16.210.47]
+ 7月 04 02:04:33.135715 macbookair2015 charon-nm[28356]: 15[IKE] scheduling rekeying in 35463s
+ 7月 04 02:04:33.135729 macbookair2015 charon-nm[28356]: 15[IKE] maximum IKE_SA lifetime 36063s
+ 7月 04 02:04:33.135843 macbookair2015 charon-nm[28356]: 15[CFG] selected proposal: ESP:AES_CBC_128/HMAC_SHA2_256_128/NO_EXT_SEQ
+ 7月 04 02:04:33.171327 macbookair2015 charon-nm[28356]: 15[IKE] CHILD_SA GSNet{1} established with SPIs c6a46064_i c74297d3_o and TS 192.168.83.1/32 === 0.0.0.0/0
+ 7月 04 02:04:33.174061 macbookair2015 kernel: alg: No test for echainiv(authenc(hmac(sha256),cbc(aes))) (echainiv(authenc(hmac(sha256-avx2),cbc-aes-aesni)))
+ 7月 04 02:04:33.201304 macbookair2015 charon-nm[28356]: 13[KNL] 192.168.83.1 appeared on nm-xfrm-1584672
+ 7月 04 02:04:33.202030 macbookair2015 dbus-daemon[754]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=840 comm="/usr/sbin/NetworkManager --no-daemon")
+ 7月 04 02:04:33.205996 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 7月 04 02:04:33.250813 macbookair2015 dbus-daemon[754]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 7月 04 02:04:33.251078 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 7月 04 02:04:33.257386 macbookair2015 vpn-watcher[28350]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/7)
+ 7月 04 02:04:33.274847 macbookair2015 charon-nm[28356]: 16[IKE] sending address list update using MOBIKE
+ 7月 04 02:04:33.274948 macbookair2015 charon-nm[28356]: 16[ENC] generating INFORMATIONAL request 6 [ N(ADD_6_ADDR) N(ADD_4_ADDR) N(ADD_6_ADDR) N(ADD_4_ADDR) ]
+ 7月 04 02:04:33.275298 macbookair2015 charon-nm[28356]: 11[IKE] installed bypass policy for 192.168.33.1/32
+ 7月 04 02:04:33.275571 macbookair2015 charon-nm[28356]: 16[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (144 bytes)
+ 7月 04 02:04:33.304079 macbookair2015 charon-nm[28356]: 08[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (80 bytes)
+ 7月 04 02:04:33.304131 macbookair2015 charon-nm[28356]: 08[ENC] parsed INFORMATIONAL response 6 [ ]
+ 7月 04 02:04:43.261586 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 7月 04 02:04:44.162392 macbookair2015 sshd-session[28726]: Accepted publickey for miminashi from 192.168.33.215 port 36812 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:04:44.164027 macbookair2015 sshd-session[28726]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:04:44.169740 macbookair2015 systemd-logind[788]: New session 25 of user miminashi.
+ 7月 04 02:04:44.202382 macbookair2015 systemd[1]: Started session-25.scope - Session 25 of User miminashi.
+ 7月 04 02:04:44.277977 macbookair2015 sudo[28738]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/systemctl start systemd-suspend.service --wait
+ 7月 04 02:04:44.278525 macbookair2015 sudo[28738]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:44.280744 macbookair2015 sudo[28737]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/sbin/rtcwake -m no -s 10
+ 7月 04 02:04:44.281107 macbookair2015 sudo[28737]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:44.286653 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+ 7月 04 02:04:44.288389 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+ 7月 04 02:04:44.294225 macbookair2015 sudo[28737]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:44.342836 macbookair2015 systemd[1]: user@1000.service: Unit now frozen-by-parent.
+ 7月 04 02:04:44.342869 macbookair2015 systemd[1]: session-25.scope: Unit now frozen-by-parent.
+ 7月 04 02:04:44.342889 macbookair2015 systemd[1]: session-3.scope: Unit now frozen-by-parent.
+ 7月 04 02:04:44.342907 macbookair2015 systemd[1]: user-1000.slice: Unit now frozen-by-parent.
+ 7月 04 02:04:44.342933 macbookair2015 systemd[1]: user.slice: Unit now frozen.
+ 7月 04 02:04:44.343329 macbookair2015 systemd-sleep[28743]: Successfully froze unit 'user.slice'.
+ 7月 04 02:04:44.349497 macbookair2015 kbd-backlight-sleep[28752]: pre/suspend: saved=77 set->0
+ 7月 04 02:04:44.358526 macbookair2015 snapshot-only[28773]: [PRE] bnep_rx=0 bnep_tx=0
+ 7月 04 02:04:44.385340 macbookair2015 snapshot-only[28795]: [PRE] kbnepd_session=alive
+ 7月 04 02:04:44.396350 macbookair2015 snapshot-only[28807]: [PRE] bnep_netdev=MISSING
+ 7月 04 02:04:44.404968 macbookair2015 snapshot-only[28818]: [PRE] xfrm_state=2 xfrm_policy=29
+ 7月 04 02:04:44.436110 macbookair2015 snapshot-only[28839]: [PRE] ping_running=NO
+ 7月 04 02:04:44.457313 macbookair2015 snapshot-only[28852]: [PRE] wl_loaded=YES cfg80211_loaded=YES wlp3s0_present=YES
+ 7月 04 02:04:44.634796 macbookair2015 70-h4-probe[29006]: phase=pre target=suspend mode=beta file=/var/log/h4-probe/1783098284.pre
+ 7月 04 02:04:44.973082 macbookair2015 systemd-sleep[28743]: Performing sleep operation 'suspend'...
+ 7月 04 02:04:44.974061 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 7月 04 02:04:44.986038 macbookair2015 kernel: Filesystems sync: 0.010 seconds
+ 7月 04 02:04:45.028547 macbookair2015 bluetoothd[743]: bnep0 disconnected
+ 7月 04 02:04:45.028587 macbookair2015 avahi-daemon[740]: Interface enx98e0d98d205e.IPv6 no longer relevant for mDNS.
+ 7月 04 02:04:55.562708 macbookair2015 kernel: Freezing user space processes
+ 7月 04 02:04:55.562784 macbookair2015 kernel: Freezing user space processes completed (elapsed 0.001 seconds)
+ 7月 04 02:04:55.562821 macbookair2015 kernel: OOM killer disabled.
+ 7月 04 02:04:55.562854 macbookair2015 kernel: Freezing remaining freezable tasks
+ 7月 04 02:04:55.562889 macbookair2015 kernel: Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+ 7月 04 02:04:55.562924 macbookair2015 kernel: input input15: PM: calling input_dev_suspend @ 28743, parent: none
+ 7月 04 02:04:55.575500 macbookair2015 kernel: input input15: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.576131 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.576543 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.576886 macbookair2015 kernel: platform coretemp.0: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.600068 macbookair2015 kernel: platform coretemp.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.600445 macbookair2015 kernel: rfkill rfkill1: PM: calling rfkill_suspend [rfkill] @ 28743, parent: phy0
+ 7月 04 02:04:55.600855 macbookair2015 kernel: rfkill rfkill1: PM: rfkill_suspend [rfkill] returned 0 after 0 usecs
+ 7月 04 02:04:55.601226 macbookair2015 kernel: rfkill rfkill0: PM: calling rfkill_suspend [rfkill] @ 28743, parent: hci0
+ 7月 04 02:04:55.601655 macbookair2015 kernel: rfkill rfkill0: PM: rfkill_suspend [rfkill] returned 0 after 0 usecs
+ 7月 04 02:04:55.602085 macbookair2015 kernel: input input11: PM: calling input_dev_suspend @ 28743, parent: card1
+ 7月 04 02:04:55.602494 macbookair2015 kernel: input input11: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.602896 macbookair2015 kernel: input input10: PM: calling input_dev_suspend @ 28743, parent: card1
+ 7月 04 02:04:55.603305 macbookair2015 kernel: input input10: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.619470 macbookair2015 kernel: sound pcmC1D0c: PM: calling do_pcm_suspend [snd_pcm] @ 28743, parent: card1
+ 7月 04 02:04:55.620344 macbookair2015 kernel: ieee80211 phy0: PM: calling wiphy_suspend [cfg80211] @ 24610, parent: 0000:03:00.0
+ 7月 04 02:04:55.620712 macbookair2015 kernel: sound pcmC1D0c: PM: do_pcm_suspend [snd_pcm] returned 0 after 1 usecs
+ 7月 04 02:04:55.621066 macbookair2015 kernel: sound pcmC1D0p: PM: calling do_pcm_suspend [snd_pcm] @ 28743, parent: card1
+ 7月 04 02:04:55.621408 macbookair2015 kernel: sound pcmC1D0p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 7月 04 02:04:55.621734 macbookair2015 kernel: input input14: PM: calling input_dev_suspend @ 28743, parent: card0
+ 7月 04 02:04:55.622203 macbookair2015 kernel: input input14: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.622673 macbookair2015 kernel: input input13: PM: calling input_dev_suspend @ 28743, parent: card0
+ 7月 04 02:04:55.623144 macbookair2015 kernel: input input13: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.623604 macbookair2015 kernel: input input12: PM: calling input_dev_suspend @ 28743, parent: card0
+ 7月 04 02:04:55.634414 macbookair2015 kernel: input input12: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.634860 macbookair2015 kernel: sound pcmC0D8p: PM: calling do_pcm_suspend [snd_pcm] @ 28743, parent: card0
+ 7月 04 02:04:55.635181 macbookair2015 kernel: sound pcmC0D8p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 7月 04 02:04:55.635442 macbookair2015 kernel: sound pcmC0D7p: PM: calling do_pcm_suspend [snd_pcm] @ 28743, parent: card0
+ 7月 04 02:04:55.640068 macbookair2015 kernel: sound pcmC0D7p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 7月 04 02:04:55.640492 macbookair2015 kernel: sound pcmC0D3p: PM: calling do_pcm_suspend [snd_pcm] @ 28743, parent: card0
+ 7月 04 02:04:55.640833 macbookair2015 kernel: sound pcmC0D3p: PM: do_pcm_suspend [snd_pcm] returned 0 after 0 usecs
+ 7月 04 02:04:55.641126 macbookair2015 kernel: leds smc::kbd_backlight: PM: calling led_suspend @ 28743, parent: applesmc.768
+ 7月 04 02:04:55.641493 macbookair2015 kernel: leds smc::kbd_backlight: PM: led_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.641869 macbookair2015 kernel: platform regulatory.0: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.642306 macbookair2015 kernel: platform regulatory.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.642720 macbookair2015 kernel: applesmc applesmc.768: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.643132 macbookair2015 kernel: applesmc applesmc.768: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.643537 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_suspend @ 11416, parent: pci0000:00
+ 7月 04 02:04:55.645846 macbookair2015 kernel: input input9: PM: calling input_dev_suspend @ 28743, parent: pcspkr
+ 7月 04 02:04:55.647617 macbookair2015 kernel: input input9: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.649583 macbookair2015 kernel: input input8: PM: calling input_dev_suspend @ 28743, parent: 1-5:1.2
+ 7月 04 02:04:55.650076 macbookair2015 kernel: input input8: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.650518 macbookair2015 kernel: backlight acpi_video0: PM: calling backlight_suspend @ 28743, parent: 0000:00:02.0
+ 7月 04 02:04:55.650837 macbookair2015 kernel: backlight acpi_video0: PM: backlight_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.651135 macbookair2015 kernel: leds input4::kana: PM: calling led_suspend @ 28743, parent: input4
+ 7月 04 02:04:55.651475 macbookair2015 kernel: leds input4::kana: PM: led_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.652876 macbookair2015 kernel: leds input4::compose: PM: calling led_suspend @ 28743, parent: input4
+ 7月 04 02:04:55.653237 macbookair2015 kernel: leds input4::compose: PM: led_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.653576 macbookair2015 kernel: leds input4::scrolllock: PM: calling led_suspend @ 28743, parent: input4
+ 7月 04 02:04:55.653926 macbookair2015 kernel: leds input4::scrolllock: PM: led_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.654254 macbookair2015 kernel: leds input4::capslock: PM: calling led_suspend @ 28743, parent: input4
+ 7月 04 02:04:55.654581 macbookair2015 kernel: leds input4::capslock: PM: led_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.654906 macbookair2015 kernel: leds input4::numlock: PM: calling led_suspend @ 28743, parent: input4
+ 7月 04 02:04:55.655232 macbookair2015 kernel: leds input4::numlock: PM: led_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.655648 macbookair2015 kernel: input input5: PM: calling input_dev_suspend @ 28743, parent: LNXVIDEO:00
+ 7月 04 02:04:55.656053 macbookair2015 kernel: input input5: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.656394 macbookair2015 kernel: usb 1-3.3: PM: calling usb_dev_suspend [usbcore] @ 27774, parent: 1-3
+ 7月 04 02:04:55.656786 macbookair2015 kernel: input input4: PM: calling input_dev_suspend @ 28743, parent: 0003:05AC:0290.0002
+ 7月 04 02:04:55.657274 macbookair2015 kernel: input input4: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.657781 macbookair2015 kernel: usb 1-5: PM: calling usb_dev_suspend [usbcore] @ 28401, parent: usb1
+ 7月 04 02:04:55.658136 macbookair2015 kernel: platform intel-spi: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.658511 macbookair2015 kernel: platform intel-spi: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.658797 macbookair2015 kernel: platform iTCO_wdt.1.auto: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.659117 macbookair2015 kernel: platform iTCO_wdt.1.auto: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.659446 macbookair2015 kernel: input input3: PM: calling input_dev_suspend @ 28743, parent: LNXPWRBN:00
+ 7月 04 02:04:55.659799 macbookair2015 kernel: input input3: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.660129 macbookair2015 kernel: input input2: PM: calling input_dev_suspend @ 28743, parent: PNP0C0E:00
+ 7月 04 02:04:55.665948 macbookair2015 kernel: input input2: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.666454 macbookair2015 kernel: input input1: PM: calling input_dev_suspend @ 28743, parent: PNP0C0C:00
+ 7月 04 02:04:55.666874 macbookair2015 kernel: input input1: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.667199 macbookair2015 kernel: input input0: PM: calling input_dev_suspend @ 28743, parent: PNP0C0D:00
+ 7月 04 02:04:55.667533 macbookair2015 kernel: input input0: PM: input_dev_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.667883 macbookair2015 kernel: platform microcode: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.668251 macbookair2015 kernel: platform microcode: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.668600 macbookair2015 kernel: alarmtimer alarmtimer.0.auto: PM: calling platform_pm_suspend @ 28743, parent: rtc0
+ 7月 04 02:04:55.668978 macbookair2015 kernel: alarmtimer alarmtimer.0.auto: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.669353 macbookair2015 kernel: rtc rtc0: PM: calling rtc_suspend @ 28743, parent: 00:02
+ 7月 04 02:04:55.669616 macbookair2015 kernel: rtc rtc0: PM: rtc_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.669836 macbookair2015 kernel: port serial8250:0.3: PM: calling pm_runtime_force_suspend @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.670145 macbookair2015 kernel: port serial8250:0.3: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.670419 macbookair2015 kernel: port serial8250:0.2: PM: calling pm_runtime_force_suspend @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.670714 macbookair2015 kernel: port serial8250:0.2: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.670993 macbookair2015 kernel: port serial8250:0.1: PM: calling pm_runtime_force_suspend @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.671276 macbookair2015 kernel: port serial8250:0.1: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.671547 macbookair2015 kernel: port serial8250:0.0: PM: calling pm_runtime_force_suspend @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.672998 macbookair2015 kernel: port serial8250:0.0: PM: pm_runtime_force_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.673377 macbookair2015 kernel: serial8250 serial8250: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.673686 macbookair2015 kernel: serial8250 serial8250: PM: platform_pm_suspend returned 0 after 1 usecs
+ 7月 04 02:04:55.673982 macbookair2015 kernel: pcspkr pcspkr: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.674270 macbookair2015 kernel: pcspkr pcspkr: PM: platform_pm_suspend returned 0 after 5 usecs
+ 7月 04 02:04:55.674554 macbookair2015 kernel: ieee80211 phy0: PM: wiphy_suspend [cfg80211] returned 0 after 762 usecs
+ 7月 04 02:04:55.674838 macbookair2015 kernel: system 00:04: PM: calling pnp_bus_suspend @ 28743, parent: pnp0
+ 7月 04 02:04:55.675133 macbookair2015 kernel: system 00:04: PM: pnp_bus_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.675401 macbookair2015 kernel: system 00:03: PM: calling pnp_bus_suspend @ 28743, parent: pnp0
+ 7月 04 02:04:55.675709 macbookair2015 kernel: system 00:03: PM: pnp_bus_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.675955 macbookair2015 kernel: rtc_cmos 00:02: PM: calling pnp_bus_suspend @ 28743, parent: pnp0
+ 7月 04 02:04:55.676207 macbookair2015 kernel: sd 0:0:0:0: PM: calling scsi_bus_suspend [scsi_mod] @ 24610, parent: target0:0:0
+ 7月 04 02:04:55.676581 macbookair2015 kernel: usb 1-3.3: PM: usb_dev_suspend [usbcore] returned 0 after 500 usecs
+ 7月 04 02:04:55.676870 macbookair2015 kernel: rtc_cmos 00:02: PM: pnp_bus_suspend returned 0 after 77 usecs
+ 7月 04 02:04:55.677105 macbookair2015 kernel: system 00:01: PM: calling pnp_bus_suspend @ 28743, parent: pnp0
+ 7月 04 02:04:55.677334 macbookair2015 kernel: system 00:01: PM: pnp_bus_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.677559 macbookair2015 kernel: system 00:00: PM: calling pnp_bus_suspend @ 28743, parent: pnp0
+ 7月 04 02:04:55.677781 macbookair2015 kernel: system 00:00: PM: pnp_bus_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.677995 macbookair2015 kernel: platform efivars.0: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.678235 macbookair2015 kernel: platform efivars.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.678462 macbookair2015 kernel: platform rtc-efi.0: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.678695 macbookair2015 kernel: platform rtc-efi.0: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.678944 macbookair2015 kernel: button LNXPWRBN:00: PM: calling acpi_button_suspend [button] @ 28743, parent: LNXSYSTM:00
+ 7月 04 02:04:55.679243 macbookair2015 kernel: button LNXPWRBN:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+ 7月 04 02:04:55.679492 macbookair2015 kernel: platform PNP0C0E:00: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.679755 macbookair2015 kernel: platform PNP0C0E:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.679984 macbookair2015 kernel: platform APP0002:00: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.680217 macbookair2015 kernel: platform APP0002:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.680451 macbookair2015 kernel: platform PNP0C0C:00: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.680699 macbookair2015 kernel: platform PNP0C0C:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.680986 macbookair2015 kernel: platform PNP0C0D:00: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.681240 macbookair2015 kernel: usb 1-3: PM: calling usb_dev_suspend [usbcore] @ 22356, parent: usb1
+ 7月 04 02:04:55.681527 macbookair2015 kernel: platform PNP0C0D:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.681831 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.682074 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.682345 macbookair2015 kernel: platform ACPI0002:00: PM: calling platform_pm_suspend @ 28743, parent: ACPI0001:00
+ 7月 04 02:04:55.682642 macbookair2015 kernel: platform ACPI0002:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.682895 macbookair2015 kernel: platform ACPI0001:00: PM: calling platform_pm_suspend @ 28743, parent: PNP0C09:00
+ 7月 04 02:04:55.683144 macbookair2015 kernel: platform ACPI0001:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.683386 macbookair2015 kernel: platform PNP0C09:00: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.683691 macbookair2015 kernel: platform PNP0C09:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.683975 macbookair2015 kernel: platform ACPI0008:00: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.684254 macbookair2015 kernel: platform ACPI0008:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.684993 macbookair2015 kernel: platform APP0001:00: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.685274 macbookair2015 kernel: platform APP0001:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.685956 macbookair2015 kernel: platform PNP0C04:00: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.686318 macbookair2015 kernel: platform PNP0C04:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.686673 macbookair2015 kernel: platform INT0800:00: PM: calling platform_pm_suspend @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.687033 macbookair2015 kernel: platform INT0800:00: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.687390 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_suspend @ 29016, parent: 0000:05:00.0
+ 7月 04 02:04:55.687802 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_suspend returned 0 after 5 usecs
+ 7月 04 02:04:55.688184 macbookair2015 kernel: platform acpi-cpufreq: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.688542 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_suspend @ 29016, parent: 0000:05:00.0
+ 7月 04 02:04:55.688944 macbookair2015 kernel: platform acpi-cpufreq: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.689275 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_suspend returned 0 after 3 usecs
+ 7月 04 02:04:55.689812 macbookair2015 kernel: button PNP0C0E:00: PM: calling acpi_button_suspend [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55.690189 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_suspend @ 29016, parent: 0000:05:00.0
+ 7月 04 02:04:55.690461 macbookair2015 kernel: button PNP0C0E:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+ 7月 04 02:04:55.690684 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_suspend returned 0 after 3 usecs
+ 7月 04 02:04:55.690917 macbookair2015 kernel: button PNP0C0C:00: PM: calling acpi_button_suspend [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55.691166 macbookair2015 kernel: button PNP0C0C:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+ 7月 04 02:04:55.691482 macbookair2015 kernel: usb 1-3: PM: usb_dev_suspend [usbcore] returned 0 after 102 usecs
+ 7月 04 02:04:55.692169 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_suspend @ 29016, parent: 0000:05:00.0
+ 7月 04 02:04:55.692634 macbookair2015 kernel: button PNP0C0D:00: PM: calling acpi_button_suspend [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55.692998 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_suspend returned 0 after 3 usecs
+ 7月 04 02:04:55.693352 macbookair2015 kernel: button PNP0C0D:00: PM: acpi_button_suspend [button] returned 0 after 0 usecs
+ 7月 04 02:04:55.693687 macbookair2015 kernel: usb usb2: PM: calling usb_dev_suspend [usbcore] @ 22356, parent: 0000:00:14.0
+ 7月 04 02:04:55.694058 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_suspend @ 29018, parent: 0000:06:00.0
+ 7月 04 02:04:55.694491 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_suspend returned 0 after 1 usecs
+ 7月 04 02:04:55.694889 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_suspend @ 29018, parent: 0000:05:00.0
+ 7月 04 02:04:55.695269 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_suspend returned 0 after 1 usecs
+ 7月 04 02:04:55.695640 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_suspend @ 29018, parent: 0000:00:1c.4
+ 7月 04 02:04:55.696728 macbookair2015 kernel: ec PNP0C09:00: PM: calling acpi_ec_suspend @ 28743, parent: device:0c
+ 7月 04 02:04:55.697140 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.697482 macbookair2015 kernel: ec PNP0C09:00: PM: acpi_ec_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.697881 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_suspend @ 29018, parent: 0000:00:1c.1
+ 7月 04 02:04:55.698314 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_suspend @ 29019, parent: 0000:00:1c.2
+ 7月 04 02:04:55.698721 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.699120 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_suspend @ 29018, parent: pci0000:00
+ 7月 04 02:04:55.699403 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.699780 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: calling pci_pm_suspend @ 29018, parent: pci0000:00
+ 7月 04 02:04:55.700171 macbookair2015 kernel: regulator regulator.0: PM: calling regulator_suspend @ 28743, parent: reg-dummy
+ 7月 04 02:04:55.700523 macbookair2015 kernel: regulator regulator.0: PM: regulator_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.700861 macbookair2015 kernel: reg-dummy reg-dummy: PM: calling platform_pm_suspend @ 28743, parent: platform
+ 7月 04 02:04:55.701220 macbookair2015 kernel: reg-dummy reg-dummy: PM: platform_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.701522 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_suspend returned 0 after 51 usecs
+ 7月 04 02:04:55.701917 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: calling pci_pm_suspend @ 29020, parent: pci0000:00
+ 7月 04 02:04:55.702334 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.702728 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: calling pci_pm_suspend @ 29020, parent: pci0000:00
+ 7月 04 02:04:55.703137 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.703545 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: calling pci_pm_suspend @ 29021, parent: pci0000:00
+ 7月 04 02:04:55.703981 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.704374 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_suspend @ 29021, parent: pci0000:00
+ 7月 04 02:04:55.704777 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_suspend returned 0 after 7 usecs
+ 7月 04 02:04:55.705170 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_suspend @ 29022, parent: pci0000:00
+ 7月 04 02:04:55.705738 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_suspend @ 29021, parent: pci0000:00
+ 7月 04 02:04:55.706002 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_suspend @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.706358 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_suspend returned 0 after 6 usecs
+ 7月 04 02:04:55.706753 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_suspend @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.707164 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.707552 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_suspend @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.708005 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_suspend returned 0 after 0 usecs
+ 7月 04 02:04:55.708415 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_suspend returned 0 after 502 usecs
+ 7月 04 02:04:55.708680 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 1068 usecs
+ 7月 04 02:04:55.708937 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: calling pci_pm_suspend @ 29020, parent: pci0000:00
+ 7月 04 02:04:55.709184 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: pci_pm_suspend returned 0 after 1 usecs
+ 7月 04 02:04:55.709420 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_suspend returned 0 after 13480 usecs
+ 7月 04 02:04:55.709699 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_suspend @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.709998 macbookair2015 kernel: sd 0:0:0:0: [sda] Synchronizing SCSI cache
+ 7月 04 02:04:55.710271 macbookair2015 kernel: usb usb2: PM: usb_dev_suspend [usbcore] returned 0 after 22223 usecs
+ 7月 04 02:04:55.710632 macbookair2015 kernel: sd 0:0:0:0: PM: scsi_bus_suspend [scsi_mod] returned 0 after 23546 usecs
+ 7月 04 02:04:55.710908 macbookair2015 kernel: scsi target0:0:0: PM: calling scsi_bus_suspend [scsi_mod] @ 27774, parent: host0
+ 7月 04 02:04:55.711267 macbookair2015 kernel: scsi target0:0:0: PM: scsi_bus_suspend [scsi_mod] returned 0 after 0 usecs
+ 7月 04 02:04:55.711501 macbookair2015 kernel: scsi host0: PM: calling scsi_bus_suspend [scsi_mod] @ 29015, parent: ata1
+ 7月 04 02:04:55.711844 macbookair2015 kernel: scsi host0: PM: scsi_bus_suspend [scsi_mod] returned 0 after 0 usecs
+ 7月 04 02:04:55.712102 macbookair2015 kernel:  ata1: PM: calling ata_port_pm_suspend [libata] @ 28402, parent: 0000:04:00.0
+ 7月 04 02:04:55.712129 macbookair2015 kernel: usb 1-5: PM: usb_dev_suspend [usbcore] returned 0 after 38869 usecs
+ 7月 04 02:04:55.712411 macbookair2015 kernel: usb usb1: PM: calling usb_dev_suspend [usbcore] @ 29017, parent: 0000:00:14.0
+ 7月 04 02:04:55.712673 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_suspend returned 0 after 37957 usecs
+ 7月 04 02:04:55.712922 macbookair2015 kernel: ata1.00: Entering standby power mode
+ 7月 04 02:04:55.712942 macbookair2015 kernel: usb usb1: PM: usb_dev_suspend [usbcore] returned 0 after 8035 usecs
+ 7月 04 02:04:55.713176 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: calling pci_pm_suspend @ 29024, parent: pci0000:00
+ 7月 04 02:04:55.713420 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_suspend returned 0 after 64 usecs
+ 7月 04 02:04:55.713695 macbookair2015 kernel:  ata1: PM: ata_port_pm_suspend [libata] returned 0 after 80494 usecs
+ 7月 04 02:04:55.713734 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_suspend @ 29016, parent: 0000:00:1c.5
+ 7月 04 02:04:55.714082 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_suspend returned 0 after 7 usecs
+ 7月 04 02:04:55.714391 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: calling pci_pm_suspend @ 29018, parent: pci0000:00
+ 7月 04 02:04:55.714753 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: pci_pm_suspend returned 0 after 1 usecs
+ 7月 04 02:04:55.715142 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_suspend returned 0 after 384591 usecs
+ 7月 04 02:04:55.715551 macbookair2015 kernel: PM: suspend of devices complete after 398.689 msecs
+ 7月 04 02:04:55.715600 macbookair2015 kernel: PM: start suspend of devices complete after 451.488 msecs
+ 7月 04 02:04:55.715725 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.716110 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_suspend_late returned 0 after 1 usecs
+ 7月 04 02:04:55.716487 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_suspend_late @ 29023, parent: 0000:05:00.0
+ 7月 04 02:04:55.716900 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.717315 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_suspend_late @ 29018, parent: 0000:05:00.0
+ 7月 04 02:04:55.717701 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_suspend_late @ 29023, parent: 0000:05:00.0
+ 7月 04 02:04:55.718049 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.718483 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.718892 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_suspend_late @ 29023, parent: 0000:05:00.0
+ 7月 04 02:04:55.719316 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.719770 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_suspend_late @ 28743, parent: platform
+ 7月 04 02:04:55.720154 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.720522 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_suspend_late @ 29018, parent: 0000:00:1c.5
+ 7月 04 02:04:55.720929 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_suspend_late @ 29023, parent: 0000:06:00.0
+ 7月 04 02:04:55.721347 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.721732 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.722132 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_suspend_late @ 29018, parent: 0000:00:1c.2
+ 7月 04 02:04:55.722561 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_suspend_late @ 29025, parent: 0000:00:1c.1
+ 7月 04 02:04:55.722952 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.723334 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.723750 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.724137 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.724524 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: calling pci_pm_suspend_late @ 29018, parent: pci0000:00
+ 7月 04 02:04:55.724898 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.725269 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.725649 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.726030 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.726435 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.726813 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.727195 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.727570 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.728015 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.728420 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.728845 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.729238 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.729618 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.729982 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.730403 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.730780 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.731145 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.731526 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.731978 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.732382 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.732769 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_suspend_late returned 0 after 3 usecs
+ 7月 04 02:04:55.733154 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_suspend_late @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.733575 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_suspend_late @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.733962 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.740328 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_suspend_late @ 29016, parent: 0000:05:00.0
+ 7月 04 02:04:55.740758 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.741150 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_suspend_late @ 28402, parent: 0000:00:1c.4
+ 7月 04 02:04:55.741522 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.741895 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: calling pci_pm_suspend_late @ 29018, parent: pci0000:00
+ 7月 04 02:04:55.742268 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: pci_pm_suspend_late returned 0 after 0 usecs
+ 7月 04 02:04:55.742622 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_suspend_late returned 0 after 12185 usecs
+ 7月 04 02:04:55.742990 macbookair2015 kernel: PM: late suspend of devices complete after 12.771 msecs
+ 7月 04 02:04:55.743025 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_suspend_noirq @ 29025, parent: pci0000:00
+ 7月 04 02:04:55.743386 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_suspend_noirq @ 29023, parent: 0000:05:00.0
+ 7月 04 02:04:55.745020 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_suspend_noirq @ 29016, parent: 0000:05:00.0
+ 7月 04 02:04:55.745469 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_suspend_noirq @ 28402, parent: 0000:05:00.0
+ 7月 04 02:04:55.745851 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.746115 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.746359 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.746592 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_suspend_noirq @ 29023, parent: 0000:05:00.0
+ 7月 04 02:04:55.746820 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.747053 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_suspend_noirq @ 28743, parent: platform
+ 7月 04 02:04:55.747268 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.747483 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_suspend_noirq @ 29016, parent: 0000:00:1c.5
+ 7月 04 02:04:55.747806 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_suspend_noirq @ 29023, parent: 0000:06:00.0
+ 7月 04 02:04:55.748218 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_suspend_noirq @ 28402, parent: 0000:00:1c.2
+ 7月 04 02:04:55.748614 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_suspend_noirq @ 29017, parent: 0000:00:1c.1
+ 7月 04 02:04:55.749001 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_suspend_noirq @ 29022, parent: pci0000:00
+ 7月 04 02:04:55.749410 macbookair2015 kernel: ec PNP0C09:00: PM: calling acpi_ec_suspend_noirq @ 28743, parent: device:0c
+ 7月 04 02:04:55.749763 macbookair2015 kernel: ACPI: EC: interrupt blocked
+ 7月 04 02:04:55.749800 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: CPU-PCH current temp [56C] higher than the threshold temp [50C], S0ix might fail. Start cooling...
+ 7月 04 02:04:55.750175 macbookair2015 kernel: ec PNP0C09:00: PM: acpi_ec_suspend_noirq returned 0 after 3 usecs
+ 7月 04 02:04:55.750521 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: calling pci_pm_suspend_noirq @ 28401, parent: pci0000:00
+ 7月 04 02:04:55.750855 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_suspend_noirq returned 0 after 80 usecs
+ 7月 04 02:04:55.751185 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: calling pci_pm_suspend_noirq @ 28401, parent: pci0000:00
+ 7月 04 02:04:55.751524 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: pci_pm_suspend_noirq returned 0 after 86 usecs
+ 7月 04 02:04:55.751958 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_suspend_noirq returned 0 after 264 usecs
+ 7月 04 02:04:55.752309 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: calling pci_pm_suspend_noirq @ 27774, parent: pci0000:00
+ 7月 04 02:04:55.752657 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_suspend_noirq @ 24610, parent: pci0000:00
+ 7月 04 02:04:55.753005 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.753365 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_suspend_noirq @ 22356, parent: pci0000:00
+ 7月 04 02:04:55.753729 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_suspend_noirq @ 11416, parent: pci0000:00
+ 7月 04 02:04:55.754092 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_suspend_noirq @ 24610, parent: pci0000:00
+ 7月 04 02:04:55.754538 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_suspend_noirq @ 29026, parent: pci0000:00
+ 7月 04 02:04:55.754895 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: calling pci_pm_suspend_noirq @ 29020, parent: pci0000:00
+ 7月 04 02:04:55.755218 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_suspend_noirq @ 29021, parent: pci0000:00
+ 7月 04 02:04:55.755535 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_suspend_noirq returned 0 after 22 usecs
+ 7月 04 02:04:55.755879 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_suspend_noirq returned 0 after 10837 usecs
+ 7月 04 02:04:55.756249 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend_noirq returned 0 after 11243 usecs
+ 7月 04 02:04:55.756637 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_suspend_noirq returned 0 after 11652 usecs
+ 7月 04 02:04:55.757008 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: calling pci_pm_suspend_noirq @ 29017, parent: pci0000:00
+ 7月 04 02:04:55.757298 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_suspend_noirq returned 0 after 10866 usecs
+ 7月 04 02:04:55.757531 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_suspend_noirq @ 29019, parent: pci0000:00
+ 7月 04 02:04:55.757768 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.758006 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_suspend_noirq returned 0 after 11424 usecs
+ 7月 04 02:04:55.758251 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_suspend_noirq returned 0 after 10999 usecs
+ 7月 04 02:04:55.758485 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_suspend_noirq @ 29018, parent: 0000:05:00.0
+ 7月 04 02:04:55.758723 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: pci_pm_suspend_noirq returned 0 after 11111 usecs
+ 7月 04 02:04:55.758947 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_suspend_noirq returned 0 after 12231 usecs
+ 7月 04 02:04:55.759181 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_suspend_noirq returned 0 after 11682 usecs
+ 7月 04 02:04:55.759400 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: calling pci_pm_suspend_noirq @ 28401, parent: pci0000:00
+ 7月 04 02:04:55.759617 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_suspend_noirq returned 0 after 11896 usecs
+ 7月 04 02:04:55.760942 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_suspend_noirq @ 29024, parent: 0000:00:1c.4
+ 7月 04 02:04:55.762439 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_suspend_noirq returned 0 after 34935 usecs
+ 7月 04 02:04:55.762840 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_suspend_noirq returned 0 after 12041 usecs
+ 7月 04 02:04:55.763234 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: calling pci_pm_suspend_noirq @ 29015, parent: pci0000:00
+ 7月 04 02:04:55.763611 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: pci_pm_suspend_noirq returned 0 after 11878 usecs
+ 7月 04 02:04:55.765420 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: pci_pm_suspend_noirq returned 0 after 115165 usecs
+ 7月 04 02:04:55.765827 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: pci_pm_suspend_noirq returned 0 after 1028112 usecs
+ 7月 04 02:04:55.766355 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: CPU-PCH is cool [49C] after 4300 ms delay
+ 7月 04 02:04:55.766722 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: pci_pm_suspend_noirq returned 0 after 4483291 usecs
+ 7月 04 02:04:55.767092 macbookair2015 kernel: PM: noirq suspend of devices complete after 4483.865 msecs
+ 7月 04 02:04:55.767136 macbookair2015 kernel: PM: suspend-to-idle
+ 7月 04 02:04:55.767269 macbookair2015 kernel: Timekeeping suspended for 5.017 seconds
+ 7月 04 02:04:55.767305 macbookair2015 kernel: PM: Triggering wakeup from IRQ 9
+ 7月 04 02:04:55.767335 macbookair2015 kernel: ACPI: PM: ACPI fixed event wakeup
+ 7月 04 02:04:55.767372 macbookair2015 kernel: PM: resume from suspend-to-idle
+ 7月 04 02:04:55.767400 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_resume_noirq @ 28401, parent: pci0000:00
+ 7月 04 02:04:55.767791 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: calling pci_pm_resume_noirq @ 29017, parent: pci0000:00
+ 7月 04 02:04:55.768145 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_resume_noirq @ 29021, parent: pci0000:00
+ 7月 04 02:04:55.768507 macbookair2015 kernel: ec PNP0C09:00: PM: calling acpi_ec_resume_noirq @ 28743, parent: device:0c
+ 7月 04 02:04:55.768872 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_resume_noirq @ 29022, parent: pci0000:00
+ 7月 04 02:04:55.769222 macbookair2015 kernel: ACPI: EC: interrupt unblocked
+ 7月 04 02:04:55.769275 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_resume_noirq @ 29015, parent: pci0000:00
+ 7月 04 02:04:55.769646 macbookair2015 kernel: ec PNP0C09:00: PM: acpi_ec_resume_noirq returned 0 after 3 usecs
+ 7月 04 02:04:55.770012 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_resume_noirq @ 29024, parent: pci0000:00
+ 7月 04 02:04:55.770376 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_resume_noirq returned 0 after 60 usecs
+ 7月 04 02:04:55.770735 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_resume_noirq @ 29022, parent: pci0000:00
+ 7月 04 02:04:55.771096 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_resume_noirq @ 22356, parent: pci0000:00
+ 7月 04 02:04:55.771458 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: calling pci_pm_resume_noirq @ 29018, parent: pci0000:00
+ 7月 04 02:04:55.771836 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: calling pci_pm_resume_noirq @ 29016, parent: pci0000:00
+ 7月 04 02:04:55.772202 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: calling pci_pm_resume_noirq @ 29020, parent: pci0000:00
+ 7月 04 02:04:55.772552 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: calling pci_pm_resume_noirq @ 27774, parent: pci0000:00
+ 7月 04 02:04:55.772876 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: calling pci_pm_resume_noirq @ 24610, parent: pci0000:00
+ 7月 04 02:04:55.773216 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: calling pci_pm_resume_noirq @ 29023, parent: pci0000:00
+ 7月 04 02:04:55.773568 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_resume_noirq returned 0 after 1 usecs
+ 7月 04 02:04:55.773816 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_resume_noirq @ 29019, parent: pci0000:00
+ 7月 04 02:04:55.774043 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: pci_pm_resume_noirq returned 0 after 98 usecs
+ 7月 04 02:04:55.774270 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_resume_noirq @ 28743, parent: platform
+ 7月 04 02:04:55.774485 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_resume_noirq returned 0 after 0 usecs
+ 7月 04 02:04:55.774698 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_resume_noirq returned 0 after 993 usecs
+ 7月 04 02:04:55.774925 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_resume_noirq returned 0 after 11413 usecs
+ 7月 04 02:04:55.775149 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_resume_noirq returned 0 after 11449 usecs
+ 7月 04 02:04:55.775380 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume_noirq @ 24610, parent: pci0000:00
+ 7月 04 02:04:55.775596 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_resume_noirq returned 0 after 11445 usecs
+ 7月 04 02:04:55.777714 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_resume_noirq returned 0 after 11415 usecs
+ 7月 04 02:04:55.778149 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: pci_pm_resume_noirq returned 0 after 11432 usecs
+ 7月 04 02:04:55.778411 macbookair2015 kernel: pcieport 0000:00:1c.0: Enabling MPC IRBNCE
+ 7月 04 02:04:55.778660 macbookair2015 kernel: pcieport 0000:00:1c.0: Intel PCH root port ACS workaround enabled
+ 7月 04 02:04:55.778894 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_resume_noirq returned 0 after 11530 usecs
+ 7月 04 02:04:55.779207 macbookair2015 kernel: pcieport 0000:00:1c.4: Enabling MPC IRBNCE
+ 7月 04 02:04:55.779581 macbookair2015 kernel: pcieport 0000:00:1c.4: Intel PCH root port ACS workaround enabled
+ 7月 04 02:04:55.779959 macbookair2015 kernel: pcieport 0000:00:1c.1: Enabling MPC IRBNCE
+ 7月 04 02:04:55.780335 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: pci_pm_resume_noirq returned 0 after 11550 usecs
+ 7月 04 02:04:55.780652 macbookair2015 kernel: pcieport 0000:00:1c.1: Intel PCH root port ACS workaround enabled
+ 7月 04 02:04:55.780886 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: pci_pm_resume_noirq returned 0 after 11573 usecs
+ 7月 04 02:04:55.781111 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_resume_noirq @ 29025, parent: 0000:00:1c.1
+ 7月 04 02:04:55.781335 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_resume_noirq @ 29026, parent: 0000:00:1c.4
+ 7月 04 02:04:55.781575 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_resume_noirq returned 0 after 109 usecs
+ 7月 04 02:04:55.781805 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_resume_noirq returned 0 after 12017 usecs
+ 7月 04 02:04:55.782027 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_resume_noirq returned 0 after 11840 usecs
+ 7月 04 02:04:55.782251 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_resume_noirq @ 28402, parent: 0000:05:00.0
+ 7月 04 02:04:55.782488 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume_noirq returned 0 after 35472 usecs
+ 7月 04 02:04:55.782708 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_resume_noirq returned 0 after 12009 usecs
+ 7月 04 02:04:55.782936 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_resume_noirq @ 11416, parent: 0000:06:00.0
+ 7月 04 02:04:55.783174 macbookair2015 kernel: pcieport 0000:00:1c.2: Enabling MPC IRBNCE
+ 7月 04 02:04:55.783400 macbookair2015 kernel: pcieport 0000:00:1c.2: Intel PCH root port ACS workaround enabled
+ 7月 04 02:04:55.783913 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: pci_pm_resume_noirq returned 0 after 71432 usecs
+ 7月 04 02:04:55.784316 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_resume_noirq @ 29023, parent: 0000:00:1c.2
+ 7月 04 02:04:55.784711 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume_noirq returned 0 after 204 usecs
+ 7月 04 02:04:55.785076 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_resume_noirq returned 0 after 63818 usecs
+ 7月 04 02:04:55.785476 macbookair2015 kernel: pcieport 0000:00:1c.5: Enabling MPC IRBNCE
+ 7月 04 02:04:55.785838 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume_noirq @ 29048, parent: 0000:05:00.0
+ 7月 04 02:04:55.786226 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_resume_noirq @ 29047, parent: 0000:05:00.0
+ 7月 04 02:04:55.786647 macbookair2015 kernel: pcieport 0000:00:1c.5: Intel PCH root port ACS workaround enabled
+ 7月 04 02:04:55.787028 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_resume_noirq @ 29049, parent: 0000:05:00.0
+ 7月 04 02:04:55.787455 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: pci_pm_resume_noirq returned 0 after 99372 usecs
+ 7月 04 02:04:55.788010 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_resume_noirq @ 29046, parent: 0000:05:00.0
+ 7月 04 02:04:55.788445 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_resume_noirq @ 29028, parent: 0000:00:1c.5
+ 7月 04 02:04:55.789393 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_resume_noirq returned 0 after 159 usecs
+ 7月 04 02:04:55.789767 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_resume_noirq returned 0 after 12327 usecs
+ 7月 04 02:04:55.790138 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_resume_noirq returned 0 after 12338 usecs
+ 7月 04 02:04:55.790387 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume_noirq returned 0 after 12354 usecs
+ 7月 04 02:04:55.790626 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_resume_noirq returned 0 after 12327 usecs
+ 7月 04 02:04:55.790921 macbookair2015 kernel: PM: noirq resume of devices complete after 112.061 msecs
+ 7月 04 02:04:55.791050 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+ 7月 04 02:04:55.791436 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.791821 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+ 7月 04 02:04:55.792196 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.792523 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_resume_early returned 0 after 1 usecs
+ 7月 04 02:04:55.792880 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.793261 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.793632 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+ 7月 04 02:04:55.794009 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+ 7月 04 02:04:55.794386 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.794836 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.795148 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.795384 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.795611 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+ 7月 04 02:04:55.795970 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+ 7月 04 02:04:55.796323 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.797688 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.798167 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.798638 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.799105 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+ 7月 04 02:04:55.799448 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+ 7月 04 02:04:55.799941 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.800354 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.800673 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.800937 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.801188 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+ 7月 04 02:04:55.801585 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.801927 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_resume_early @ 29049, parent: 0000:00:1c.1
+ 7月 04 02:04:55.802284 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.802659 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.803194 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_resume_early @ 29046, parent: 0000:00:1c.2
+ 7月 04 02:04:55.803777 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_resume_early @ 29048, parent: 0000:00:1c.4
+ 7月 04 02:04:55.804092 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_resume_early @ 28743, parent: platform
+ 7月 04 02:04:55.804336 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.804589 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.804849 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.805126 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_resume_early @ 29047, parent: pci0000:00
+ 7月 04 02:04:55.805373 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_resume_early @ 29048, parent: 0000:00:1c.5
+ 7月 04 02:04:55.805624 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.805864 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_resume_early @ 29049, parent: 0000:05:00.0
+ 7月 04 02:04:55.806123 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.806371 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_resume_early @ 29046, parent: 0000:06:00.0
+ 7月 04 02:04:55.806627 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.806870 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_resume_early @ 29040, parent: 0000:05:00.0
+ 7月 04 02:04:55.807120 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume_early @ 29017, parent: 0000:05:00.0
+ 7月 04 02:04:55.807367 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_resume_early @ 29048, parent: 0000:05:00.0
+ 7月 04 02:04:55.807609 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.807982 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.808227 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.808467 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_resume_early @ 29051, parent: 0000:05:00.0
+ 7月 04 02:04:55.808725 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_resume_early returned 0 after 178 usecs
+ 7月 04 02:04:55.809023 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.809372 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume_early @ 29028, parent: pci0000:00
+ 7月 04 02:04:55.809717 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+ 7月 04 02:04:55.810047 macbookair2015 kernel: PM: early resume of devices complete after 0.510 msecs
+ 7月 04 02:04:55.810096 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: calling pci_pm_resume @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.810431 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+ 7月 04 02:04:55.810675 macbookair2015 kernel: pcieport 0000:00:1c.1: PM: pci_pm_resume returned 0 after 2 usecs
+ 7月 04 02:04:55.810914 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: calling pci_pm_resume @ 27774, parent: pci0000:00
+ 7月 04 02:04:55.811154 macbookair2015 kernel: pcieport 0000:00:1c.2: PM: pci_pm_resume returned 0 after 2 usecs
+ 7月 04 02:04:55.811419 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: calling pci_pm_resume @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.811680 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+ 7月 04 02:04:55.811922 macbookair2015 kernel: reg-dummy reg-dummy: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.812138 macbookair2015 kernel: pcieport 0000:00:1c.4: PM: pci_pm_resume returned 0 after 1 usecs
+ 7月 04 02:04:55.812364 macbookair2015 kernel: pcieport 0000:00:1c.5: PM: pci_pm_resume returned 0 after 1 usecs
+ 7月 04 02:04:55.812584 macbookair2015 kernel: reg-dummy reg-dummy: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.812798 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+ 7月 04 02:04:55.813028 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: calling pci_pm_resume @ 29048, parent: pci0000:00
+ 7月 04 02:04:55.813263 macbookair2015 kernel: regulator regulator.0: PM: calling regulator_resume @ 28743, parent: reg-dummy
+ 7月 04 02:04:55.813466 macbookair2015 kernel: lpc_ich 0000:00:1f.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.813688 macbookair2015 kernel: regulator regulator.0: PM: regulator_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.813881 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+ 7月 04 02:04:55.814105 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.814326 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_resume @ 29028, parent: 0000:00:1c.1
+ 7月 04 02:04:55.814557 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.814781 macbookair2015 kernel: ec PNP0C09:00: PM: calling acpi_ec_resume @ 28743, parent: device:0c
+ 7月 04 02:04:55.815024 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_resume @ 29028, parent: 0000:00:1c.2
+ 7月 04 02:04:55.815259 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_resume returned 0 after 37 usecs
+ 7月 04 02:04:55.815484 macbookair2015 kernel: ec PNP0C09:00: PM: acpi_ec_resume returned 0 after 2 usecs
+ 7月 04 02:04:55.815800 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:00:1c.4
+ 7月 04 02:04:55.816166 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_resume returned 0 after 1 usecs
+ 7月 04 02:04:55.816526 macbookair2015 kernel: sbs ACPI0002:00: PM: calling acpi_sbs_resume [sbs] @ 28743, parent: ACPI0001:00
+ 7月 04 02:04:55.816918 macbookair2015 kernel: sbs ACPI0002:00: PM: acpi_sbs_resume [sbs] returned 0 after 0 usecs
+ 7月 04 02:04:55.817300 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:05:00.0
+ 7月 04 02:04:55.817676 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_resume returned 0 after 24 usecs
+ 7月 04 02:04:55.818050 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:06:00.0
+ 7月 04 02:04:55.818437 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_resume returned 0 after 120 usecs
+ 7月 04 02:04:55.818820 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_resume @ 27774, parent: 0000:00:1c.5
+ 7月 04 02:04:55.819217 macbookair2015 kernel: button PNP0C0D:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55.819601 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_resume returned 0 after 14 usecs
+ 7月 04 02:04:55.820035 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_resume @ 29046, parent: pci0000:00
+ 7月 04 02:04:55.820366 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.820642 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_resume @ 29049, parent: pci0000:00
+ 7月 04 02:04:55.820881 macbookair2015 kernel: usb usb1: PM: calling usb_dev_resume [usbcore] @ 29048, parent: 0000:00:14.0
+ 7月 04 02:04:55.821136 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_resume @ 29040, parent: pci0000:00
+ 7月 04 02:04:55.821409 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_resume @ 29017, parent: pci0000:00
+ 7月 04 02:04:55.821739 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_resume returned 0 after 12 usecs
+ 7月 04 02:04:55.822056 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_resume @ 29047, parent: pci0000:00
+ 7月 04 02:04:55.822314 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.822540 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_resume @ 29051, parent: pci0000:00
+ 7月 04 02:04:55.822774 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_resume @ 29050, parent: pci0000:00
+ 7月 04 02:04:55.823003 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_resume returned 0 after 5 usecs
+ 7月 04 02:04:55.823273 macbookair2015 kernel: usb usb2: PM: calling usb_dev_resume [usbcore] @ 29018, parent: 0000:00:14.0
+ 7月 04 02:04:55.823622 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_resume @ 29024, parent: 0000:05:00.0
+ 7月 04 02:04:55.824030 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_resume @ 28401, parent: 0000:05:00.0
+ 7月 04 02:04:55.824438 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_resume returned 0 after 15 usecs
+ 7月 04 02:04:55.824835 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_resume returned 0 after 13 usecs
+ 7月 04 02:04:55.825188 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume @ 29024, parent: 0000:05:00.0
+ 7月 04 02:04:55.825526 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_resume @ 28401, parent: 0000:05:00.0
+ 7月 04 02:04:55.825873 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume returned 0 after 7 usecs
+ 7月 04 02:04:55.826263 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_resume returned 0 after 8 usecs
+ 7月 04 02:04:55.826665 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_resume returned 0 after 2524 usecs
+ 7月 04 02:04:55.827041 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume returned 0 after 2920 usecs
+ 7月 04 02:04:55.827367 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_resume returned 0 after 20128 usecs
+ 7月 04 02:04:55.827732 macbookair2015 kernel:  ata1: PM: calling ata_port_pm_resume [libata] @ 29024, parent: 0000:04:00.0
+ 7月 04 02:04:55.827774 macbookair2015 kernel:  ata1: PM: ata_port_pm_resume [libata] returned 0 after 3 usecs
+ 7月 04 02:04:55.827809 macbookair2015 kernel: scsi host0: PM: calling scsi_bus_resume [scsi_mod] @ 28401, parent: ata1
+ 7月 04 02:04:55.828175 macbookair2015 kernel: scsi host0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+ 7月 04 02:04:55.828514 macbookair2015 kernel: scsi target0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 29033, parent: host0
+ 7月 04 02:04:55.828850 macbookair2015 kernel: scsi target0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+ 7月 04 02:04:55.829252 macbookair2015 kernel: sd 0:0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 29032, parent: target0:0:0
+ 7月 04 02:04:55.829618 macbookair2015 kernel: sd 0:0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 1 usecs
+ 7月 04 02:04:55.829887 macbookair2015 kernel: usb usb2: PM: usb_dev_resume [usbcore] returned 0 after 24019 usecs
+ 7月 04 02:04:55.830174 macbookair2015 kernel: usb usb1: PM: usb_dev_resume [usbcore] returned 0 after 52920 usecs
+ 7月 04 02:04:55.830444 macbookair2015 kernel: usb 1-3: PM: calling usb_dev_resume [usbcore] @ 29021, parent: usb1
+ 7月 04 02:04:55.830717 macbookair2015 kernel: usb 1-5: PM: calling usb_dev_resume [usbcore] @ 29031, parent: usb1
+ 7月 04 02:04:55.830985 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 54888 usecs
+ 7月 04 02:04:55.831261 macbookair2015 kernel: ieee80211 phy0: PM: calling wiphy_resume [cfg80211] @ 29044, parent: 0000:03:00.0
+ 7月 04 02:04:55.831685 macbookair2015 kernel: ieee80211 phy0: PM: wiphy_resume [cfg80211] returned 0 after 104 usecs
+ 7月 04 02:04:55.831934 macbookair2015 kernel: button PNP0C0D:00: PM: acpi_button_resume [button] returned 0 after 55223 usecs
+ 7月 04 02:04:55.832281 macbookair2015 kernel: button PNP0C0C:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55.832792 macbookair2015 kernel: button PNP0C0C:00: PM: acpi_button_resume [button] returned 0 after 11 usecs
+ 7月 04 02:04:55.833171 macbookair2015 kernel: button PNP0C0E:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55.833426 macbookair2015 kernel: button PNP0C0E:00: PM: acpi_button_resume [button] returned 0 after 0 usecs
+ 7月 04 02:04:55.833645 macbookair2015 kernel: platform acpi-cpufreq: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.833867 macbookair2015 kernel: platform acpi-cpufreq: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.834072 macbookair2015 kernel: platform INT0800:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.834296 macbookair2015 kernel: platform INT0800:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.834511 macbookair2015 kernel: platform PNP0C04:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.834729 macbookair2015 kernel: platform PNP0C04:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.834939 macbookair2015 kernel: platform APP0001:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.835152 macbookair2015 kernel: platform APP0001:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.835363 macbookair2015 kernel: platform ACPI0008:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.835577 macbookair2015 kernel: platform ACPI0008:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.835823 macbookair2015 kernel: platform PNP0C09:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.836039 macbookair2015 kernel: platform PNP0C09:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.836242 macbookair2015 kernel: platform ACPI0001:00: PM: calling platform_pm_resume @ 28743, parent: PNP0C09:00
+ 7月 04 02:04:55.836467 macbookair2015 kernel: platform ACPI0001:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.836679 macbookair2015 kernel: platform ACPI0002:00: PM: calling platform_pm_resume @ 28743, parent: ACPI0001:00
+ 7月 04 02:04:55.836900 macbookair2015 kernel: platform ACPI0002:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.837114 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_resume @ 28743, parent: platform
+ 7月 04 02:04:55.837326 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_resume returned 0 after 17 usecs
+ 7月 04 02:04:55.837528 macbookair2015 kernel: platform PNP0C0D:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.837731 macbookair2015 kernel: platform PNP0C0D:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.837977 macbookair2015 kernel: platform PNP0C0C:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.838221 macbookair2015 kernel: platform PNP0C0C:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.838457 macbookair2015 kernel: platform APP0002:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.838707 macbookair2015 kernel: platform APP0002:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.838925 macbookair2015 kernel: platform PNP0C0E:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.839129 macbookair2015 kernel: platform PNP0C0E:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.839332 macbookair2015 kernel: button LNXPWRBN:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYSTM:00
+ 7月 04 02:04:55.839548 macbookair2015 kernel: button LNXPWRBN:00: PM: acpi_button_resume [button] returned 0 after 5 usecs
+ 7月 04 02:04:55.839823 macbookair2015 kernel: platform rtc-efi.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.840046 macbookair2015 kernel: platform rtc-efi.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.840254 macbookair2015 kernel: platform efivars.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.840458 macbookair2015 kernel: platform efivars.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.840666 macbookair2015 kernel: system 00:00: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55.840871 macbookair2015 kernel: system 00:00: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.841059 macbookair2015 kernel: system 00:01: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55.841252 macbookair2015 kernel: system 00:01: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.841441 macbookair2015 kernel: rtc_cmos 00:02: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55.841636 macbookair2015 kernel: rtc_cmos 00:02: PM: pnp_bus_resume returned 0 after 4 usecs
+ 7月 04 02:04:55.841824 macbookair2015 kernel: system 00:03: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55.842017 macbookair2015 kernel: system 00:03: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.842203 macbookair2015 kernel: system 00:04: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55.842402 macbookair2015 kernel: system 00:04: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.842588 macbookair2015 kernel: pcspkr pcspkr: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.842803 macbookair2015 kernel: pcspkr pcspkr: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.843005 macbookair2015 kernel: serial8250 serial8250: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.843228 macbookair2015 kernel: serial8250 serial8250: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.843514 macbookair2015 kernel: port serial8250:0.0: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.843760 macbookair2015 kernel: port serial8250:0.0: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.843963 macbookair2015 kernel: port serial8250:0.1: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.844166 macbookair2015 kernel: port serial8250:0.1: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.844362 macbookair2015 kernel: port serial8250:0.2: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.844568 macbookair2015 kernel: port serial8250:0.2: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.844766 macbookair2015 kernel: port serial8250:0.3: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55.844967 macbookair2015 kernel: port serial8250:0.3: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.845166 macbookair2015 kernel: rtc rtc0: PM: calling rtc_resume @ 28743, parent: 00:02
+ 7月 04 02:04:55.845339 macbookair2015 kernel: rtc rtc0: PM: rtc_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.845495 macbookair2015 kernel: alarmtimer alarmtimer.0.auto: PM: calling platform_pm_resume @ 28743, parent: rtc0
+ 7月 04 02:04:55.845723 macbookair2015 kernel: alarmtimer alarmtimer.0.auto: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.845938 macbookair2015 kernel: platform microcode: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.846144 macbookair2015 kernel: platform microcode: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.846348 macbookair2015 kernel: input input0: PM: calling input_dev_resume @ 28743, parent: PNP0C0D:00
+ 7月 04 02:04:55.846600 macbookair2015 kernel: input input0: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.846831 macbookair2015 kernel: input input1: PM: calling input_dev_resume @ 28743, parent: PNP0C0C:00
+ 7月 04 02:04:55.847066 macbookair2015 kernel: input input1: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.847299 macbookair2015 kernel: input input2: PM: calling input_dev_resume @ 28743, parent: PNP0C0E:00
+ 7月 04 02:04:55.847540 macbookair2015 kernel: input input2: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.847827 macbookair2015 kernel: input input3: PM: calling input_dev_resume @ 28743, parent: LNXPWRBN:00
+ 7月 04 02:04:55.848062 macbookair2015 kernel: input input3: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.848285 macbookair2015 kernel: platform iTCO_wdt.1.auto: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.848508 macbookair2015 kernel: platform iTCO_wdt.1.auto: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.848727 macbookair2015 kernel: platform intel-spi: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55.848944 macbookair2015 kernel: platform intel-spi: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.849155 macbookair2015 kernel: usb 1-3: PM: usb_dev_resume [usbcore] returned 0 after 13174 usecs
+ 7月 04 02:04:55.849408 macbookair2015 kernel: usb 1-3.3: PM: calling usb_dev_resume [usbcore] @ 29027, parent: 1-3
+ 7月 04 02:04:55.849650 macbookair2015 kernel: usb 1-3.3: PM: usb_dev_resume [usbcore] returned 0 after 15640 usecs
+ 7月 04 02:04:55.849880 macbookair2015 kernel: usb 1-5: PM: usb_dev_resume [usbcore] returned 0 after 101091 usecs
+ 7月 04 02:04:55.850119 macbookair2015 kernel: input input4: PM: calling input_dev_resume @ 28743, parent: 0003:05AC:0290.0002
+ 7月 04 02:04:55.850469 macbookair2015 kernel: input input4: PM: input_dev_resume returned 0 after 17 usecs
+ 7月 04 02:04:55.850806 macbookair2015 kernel: input input5: PM: calling input_dev_resume @ 28743, parent: LNXVIDEO:00
+ 7月 04 02:04:55.851066 macbookair2015 kernel: input input5: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.851309 macbookair2015 kernel: leds input4::numlock: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55.851557 macbookair2015 kernel: leds input4::numlock: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.851818 macbookair2015 kernel: leds input4::capslock: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55.852055 macbookair2015 kernel: leds input4::capslock: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.852288 macbookair2015 kernel: leds input4::scrolllock: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55.852525 macbookair2015 kernel: leds input4::scrolllock: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.852763 macbookair2015 kernel: leds input4::compose: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55.853003 macbookair2015 kernel: leds input4::compose: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.853234 macbookair2015 kernel: leds input4::kana: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55.853468 macbookair2015 kernel: leds input4::kana: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.853702 macbookair2015 kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+ 7月 04 02:04:55.853731 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 7月 04 02:04:55.853756 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 7月 04 02:04:55.853774 macbookair2015 kernel: sd 0:0:0:0: [sda] Starting disk
+ 7月 04 02:04:55.854014 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 7月 04 02:04:55.854035 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 7月 04 02:04:55.854055 macbookair2015 kernel: ata1.00: configured for UDMA/133
+ 7月 04 02:04:55.854079 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_resume returned 0 after 442947 usecs
+ 7月 04 02:04:55.854328 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume @ 29045, parent: pci0000:00
+ 7月 04 02:04:55.854563 macbookair2015 kernel: backlight acpi_video0: PM: calling backlight_resume @ 28743, parent: 0000:00:02.0
+ 7月 04 02:04:55.854784 macbookair2015 kernel: backlight acpi_video0: PM: backlight_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.854998 macbookair2015 kernel: input input8: PM: calling input_dev_resume @ 28743, parent: 1-5:1.2
+ 7月 04 02:04:55.855319 macbookair2015 kernel: input input8: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.855629 macbookair2015 kernel: input input9: PM: calling input_dev_resume @ 28743, parent: pcspkr
+ 7月 04 02:04:55.855905 macbookair2015 kernel: input input9: PM: input_dev_resume returned 0 after 10 usecs
+ 7月 04 02:04:55.856135 macbookair2015 kernel: applesmc applesmc.768: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.856365 macbookair2015 kernel: applesmc applesmc.768: PM: platform_pm_resume returned 0 after 240 usecs
+ 7月 04 02:04:55.856576 macbookair2015 kernel: platform regulatory.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.856784 macbookair2015 kernel: platform regulatory.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.856990 macbookair2015 kernel: leds smc::kbd_backlight: PM: calling led_resume @ 28743, parent: applesmc.768
+ 7月 04 02:04:55.857208 macbookair2015 kernel: leds smc::kbd_backlight: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.857419 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_resume returned 0 after 2310 usecs
+ 7月 04 02:04:55.857649 macbookair2015 kernel: input input12: PM: calling input_dev_resume @ 28743, parent: card0
+ 7月 04 02:04:55.857894 macbookair2015 kernel: input input12: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.858127 macbookair2015 kernel: input input13: PM: calling input_dev_resume @ 28743, parent: card0
+ 7月 04 02:04:55.858370 macbookair2015 kernel: input input13: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.858597 macbookair2015 kernel: input input14: PM: calling input_dev_resume @ 28743, parent: card0
+ 7月 04 02:04:55.858832 macbookair2015 kernel: input input14: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.859062 macbookair2015 kernel: input input10: PM: calling input_dev_resume @ 28743, parent: card1
+ 7月 04 02:04:55.859297 macbookair2015 kernel: input input10: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.859527 macbookair2015 kernel: input input11: PM: calling input_dev_resume @ 28743, parent: card1
+ 7月 04 02:04:55.859788 macbookair2015 kernel: input input11: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.860020 macbookair2015 kernel: rfkill rfkill0: PM: calling rfkill_resume [rfkill] @ 28743, parent: hci0
+ 7月 04 02:04:55.860282 macbookair2015 kernel: rfkill rfkill0: PM: rfkill_resume [rfkill] returned 0 after 3 usecs
+ 7月 04 02:04:55.860522 macbookair2015 kernel: rfkill rfkill1: PM: calling rfkill_resume [rfkill] @ 28743, parent: phy0
+ 7月 04 02:04:55.860758 macbookair2015 kernel: rfkill rfkill1: PM: rfkill_resume [rfkill] returned 0 after 0 usecs
+ 7月 04 02:04:55.860983 macbookair2015 kernel: platform coretemp.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.861195 macbookair2015 kernel: platform coretemp.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.861401 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55.861614 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.861818 macbookair2015 kernel: input input15: PM: calling input_dev_resume @ 28743, parent: none
+ 7月 04 02:04:55.862127 macbookair2015 kernel: input input15: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55.862425 macbookair2015 kernel: PM: resume of devices complete after 445.878 msecs
+ 7月 04 02:04:55.862451 macbookair2015 kernel: OOM killer enabled.
+ 7月 04 02:04:55.862473 macbookair2015 kernel: Restarting tasks ... done.
+ 7月 04 02:04:55.862501 macbookair2015 kernel: random: crng reseeded on system resumption
+ 7月 04 02:04:55.862522 macbookair2015 kernel: video LNXVIDEO:00: Restoring backlight state
+ 7月 04 02:04:55.862755 macbookair2015 kernel: PM: suspend exit
+ 7月 04 02:04:45.028603 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:242d:2423:e808:55a1:d86c:ca33.
+ 7月 04 02:04:55.568875 macbookair2015 systemd-sleep[28743]: System returned from sleep operation 'suspend'.
+ 7月 04 02:04:45.028680 macbookair2015 charon-nm[28356]: 16[KNL] interface enx98e0d98d205e deactivated
+ 7月 04 02:04:55.580754 macbookair2015 NetworkManager[840]: <info>  [1783098295.5807] device (34:42:62:16:03:F6): state change: activated -> failed (reason 'bluetooth-failed', managed-type: 'full')
+ 7月 04 02:04:45.029408 macbookair2015 charon-nm[28356]: 07[KNL] 2001:240:242d:2423:e808:55a1:d86c:ca33 disappeared from enx98e0d98d205e
+ 7月 04 02:04:55.581373 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5813] device (34:42:62:16:03:F6): Activation: failed for connection 'iMiminashiPadPro ネットワーク'
+ 7月 04 02:04:45.029463 macbookair2015 charon-nm[28356]: 15[KNL] fe80::ee82:92f6:8780:60e8 disappeared from enx98e0d98d205e
+ 7月 04 02:04:55.582344 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5823] platform-linux: do-add-ip4-address[3: 172.20.10.13/28]: failure 19 (そのようなデバイスはありません - ipv4: Device not found)
+ 7月 04 02:04:45.029508 macbookair2015 charon-nm[28356]: 16[KNL] 172.20.10.13 disappeared from enx98e0d98d205e
+ 7月 04 02:04:55.582462 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5824] platform-linux: do-add-ip6-address[3: fe80::ee82:92f6:8780:60e8]: failure 19 (そのようなデバイスはありません - ipv6: Unable to find the interface)
+ 7月 04 02:04:45.029617 macbookair2015 charon-nm[28356]: 08[KNL] interface enx98e0d98d205e deleted
+ 7月 04 02:04:55.582534 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5825] platform-linux: do-add-ip6-address[3: 2001:240:242d:2423:e808:55a1:d86c:ca33]: failure 19 (そのようなデバイスはありません - ipv6: Unable to find the interface)
+ 7月 04 02:04:55.560462 macbookair2015 rtkit-daemon[983]: The canary thread is apparently starving. Taking action.
+ 7月 04 02:04:55.582630 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5826] l3cfg[90e9d85cef4261fa,ifindex=3]: unable to configure IPv6 route: type unicast 2001:240:242d:2423::/64 dev 3 metric 750 mss 0 rt-src ndisc
+ 7月 04 02:04:55.560472 macbookair2015 rtkit-daemon[983]: Demoting known real-time threads.
+ 7月 04 02:04:55.582648 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5826] l3cfg[90e9d85cef4261fa,ifindex=3]: unable to configure IPv6 route: type unicast fe80::/64 dev 3 metric 1024 mss 0 rt-src ipv6ll
+ 7月 04 02:04:55.560479 macbookair2015 rtkit-daemon[983]: Demoted 0 threads.
+ 7月 04 02:04:55.582673 macbookair2015 NetworkManager[840]: <warn>  [1783098295.5826] l3cfg[90e9d85cef4261fa,ifindex=3]: unable to configure IPv6 route: type unicast ::/0 via fe80::3442:62ff:feb1:5d64 dev 3 metric 750 mss 0 rt-src ndisc
+ 7月 04 02:04:55.561153 macbookair2015 avahi-daemon[740]: Interface enx98e0d98d205e.IPv4 no longer relevant for mDNS.
+ 7月 04 02:04:55.632002 macbookair2015 NetworkManager[840]: <info>  [1783098295.6319] device (34:42:62:16:03:F6): state change: failed -> disconnected (reason 'none', managed-type: 'full')
+ 7月 04 02:04:55.561167 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+ 7月 04 02:04:55.632068 macbookair2015 NetworkManager[840]: <info>  [1783098295.6320] dhcp4 (enx98e0d98d205e): canceled DHCP transaction
+ 7月 04 02:04:55.561305 macbookair2015 avahi-daemon[740]: Withdrawing address record for 2001:240:242d:2423:e808:55a1:d86c:ca33 on enx98e0d98d205e.
+ 7月 04 02:04:55.632080 macbookair2015 NetworkManager[840]: <info>  [1783098295.6320] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:55.561325 macbookair2015 avahi-daemon[740]: Withdrawing address record for 172.20.10.13 on enx98e0d98d205e.
+ 7月 04 02:04:55.632095 macbookair2015 NetworkManager[840]: <info>  [1783098295.6320] dhcp4 (enx98e0d98d205e): state changed no lease
+ 7月 04 02:04:55.561496 macbookair2015 charon-nm[28356]: 12[IKE] sending address list update using MOBIKE
+ 7月 04 02:04:55.632193 macbookair2015 NetworkManager[840]: <info>  [1783098295.6321] dhcp6 (enx98e0d98d205e): canceled DHCP transaction
+ 7月 04 02:04:55.561590 macbookair2015 charon-nm[28356]: 12[ENC] generating INFORMATIONAL request 7 [ N(ADD_6_ADDR) N(ADD_4_ADDR) ]
+ 7月 04 02:04:55.632204 macbookair2015 NetworkManager[840]: <info>  [1783098295.6321] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:55.561722 macbookair2015 charon-nm[28356]: 12[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (112 bytes)
+ 7月 04 02:04:55.632217 macbookair2015 NetworkManager[840]: <info>  [1783098295.6322] dhcp6 (enx98e0d98d205e): state changed no lease
+ 7月 04 02:04:55.561928 macbookair2015 charon-nm[28356]: 12[IKE] uninstalling bypass policy for 172.20.10.0/28
+ 7月 04 02:04:55.636631 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 7月 04 02:04:55.562054 macbookair2015 charon-nm[28356]: 12[IKE] uninstalling bypass policy for 2001:240:242d:2423::/64
+ 7月 04 02:04:55.660102 macbookair2015 NetworkManager[840]: <info>  [1783098295.6600] device (wlp3s0): supplicant interface state: completed -> disconnected
+ 7月 04 02:04:55.562167 macbookair2015 charon-nm[28356]: 12[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to wlp3s0)
+ 7月 04 02:04:55.661057 macbookair2015 NetworkManager[840]: <info>  [1783098295.6610] policy: auto-activating connection 'iMiminashiPadPro ネットワーク' (a6300eea-6e89-45f0-b494-8d60cc8515e1)
+ 7月 04 02:04:55.562442 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-DISCONNECTED bssid=d8:ec:5e:f8:c4:8b reason=0
+ 7月 04 02:04:55.661411 macbookair2015 NetworkManager[840]: <info>  [1783098295.6613] device (34:42:62:16:03:F6): Activation: starting connection 'iMiminashiPadPro ネットワーク' (a6300eea-6e89-45f0-b494-8d60cc8515e1)
+ 7月 04 02:04:55.568747 macbookair2015 bluetoothd[743]: Controller resume with wake event 0x0
+ 7月 04 02:04:55.661470 macbookair2015 NetworkManager[840]: <info>  [1783098295.6614] device (34:42:62:16:03:F6): state change: disconnected -> prepare (reason 'none', managed-type: 'full')
+ 7月 04 02:04:55.569569 macbookair2015 gdm3[934]: GLib: Source ID 93 was not found when attempting to remove it
+ 7月 04 02:04:55.690106 macbookair2015 NetworkManager[840]: <info>  [1783098295.6900] device (wlp3s0): supplicant interface state: disconnected -> scanning
+ 7月 04 02:04:55.583795 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=CORE type=WORLD
+ 7月 04 02:04:55.702566 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 7月 04 02:04:55.587209 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=CORE type=WORLD
+ 7月 04 02:04:55.588717 macbookair2015 kbd-backlight-sleep[29083]: post/suspend: restored=77
+ 7月 04 02:04:55.597255 macbookair2015 cycle-watcher[29093]: cycle 1: suspend_stats 3 -> 4
+ 7月 04 02:04:55.619021 macbookair2015 snapshot-only[29105]: [POST] bnep_rx=0 bnep_tx=0
+ 7月 04 02:04:55.627102 macbookair2015 dbus-daemon[754]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=840 comm="/usr/sbin/NetworkManager --no-daemon")
+ 7月 04 02:04:55.648088 macbookair2015 ModemManager[889]: <msg> [base-manager] port enx98e0d98d205e released by device '/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.3'
+ 7月 04 02:04:55.683577 macbookair2015 snapshot-only[29142]: [POST] kbnepd_session=NOT FOUND
+ 7月 04 02:04:55.699321 macbookair2015 snapshot-only[29152]: [POST] bnep_netdev=MISSING
+ 7月 04 02:04:55.702239 macbookair2015 dbus-daemon[754]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 7月 04 02:04:55.713329 macbookair2015 snapshot-only[29169]: [POST] xfrm_state=2 xfrm_policy=23
+ 7月 04 02:04:55.755912 macbookair2015 snapshot-only[29183]: [POST] ping_running=NO
+ 7月 04 02:04:55.792402 macbookair2015 snapshot-only[29196]: [POST] wl_loaded=YES cfg80211_loaded=YES wlp3s0_present=YES
+ 7月 04 02:04:55.959819 macbookair2015 70-h4-probe[29361]: phase=post target=suspend mode=beta file=/var/log/h4-probe/1783098295.post
+ 7月 04 02:04:56.329766 macbookair2015 systemd[1]: user.slice: Unit now thawed.
+ 7月 04 02:04:56.330314 macbookair2015 systemd-sleep[28743]: Successfully thawed unit 'user.slice'.
+ 7月 04 02:04:56.330319 macbookair2015 systemd[1]: user-1000.slice: Unit now thawed.
+ 7月 04 02:04:56.330356 macbookair2015 systemd[1]: session-3.scope: Unit now thawed.
+ 7月 04 02:04:56.330386 macbookair2015 systemd[1]: session-25.scope: Unit now thawed.
+ 7月 04 02:04:56.330415 macbookair2015 systemd[1]: user@1000.service: Unit now thawed.
+ 7月 04 02:04:56.336956 macbookair2015 systemd[1]: systemd-suspend.service: Deactivated successfully.
+ 7月 04 02:04:56.337256 macbookair2015 systemd[1]: Finished systemd-suspend.service - System Suspend.
+ 7月 04 02:04:56.338593 macbookair2015 systemd[1]: Stopped target sleep.target - Sleep.
+ 7月 04 02:04:56.339933 macbookair2015 sudo[28738]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:57.027663 macbookair2015 gnome-shell[29387]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+ 7月 04 02:04:57.027663 macbookair2015 gnome-shell[29387]: > Warning:          Unsupported maximum keycode 708, clipping.
+ 7月 04 02:04:57.027663 macbookair2015 gnome-shell[29387]: >                   X11 cannot support keycodes above 255.
+ 7月 04 02:04:57.029769 macbookair2015 gnome-shell[29387]: > Warning:          Could not resolve keysym XF86KbdInputAssistPrevgrou
+ 7月 04 02:04:57.029769 macbookair2015 gnome-shell[29387]: > Warning:          Could not resolve keysym XF86KbdInputAssistNextgrou
+ 7月 04 02:04:57.030726 macbookair2015 gnome-shell[29387]: Errors from xkbcomp are not fatal to the X server
+ 7月 04 02:04:57.050349 macbookair2015 charon-nm[28356]: 12[KNL] interface bnep0 activated
+ 7月 04 02:04:57.050385 macbookair2015 bluetoothd[743]: bnep0 connected
+ 7月 04 02:04:57.052280 macbookair2015 NetworkManager[840]: <info>  [1783098297.0522] device (34:42:62:16:03:F6): state change: prepare -> config (reason 'none', managed-type: 'full')
+ 7月 04 02:04:57.052877 macbookair2015 NetworkManager[840]: <info>  [1783098297.0528] device (34:42:62:16:03:F6): state change: config -> ip-config (reason 'none', managed-type: 'full')
+ 7月 04 02:04:57.053670 macbookair2015 NetworkManager[840]: <info>  [1783098297.0536] dhcp4 (bnep0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:57.055185 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface bnep0.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 7月 04 02:04:57.055244 macbookair2015 avahi-daemon[740]: New relevant interface bnep0.IPv6 for mDNS.
+ 7月 04 02:04:57.055278 macbookair2015 avahi-daemon[740]: Registering new address record for fe80::ee82:92f6:8780:60e8 on bnep0.*.
+ 7月 04 02:04:57.057314 macbookair2015 charon-nm[28356]: 04[KNL] fe80::ee82:92f6:8780:60e8 appeared on bnep0
+ 7月 04 02:04:57.059693 macbookair2015 kernel: bluetooth hci0:12 enx98e0d98d205e: renamed from bnep0 (while UP)
+ 7月 04 02:04:57.059915 macbookair2015 NetworkManager[840]: <info>  [1783098297.0598] device (34:42:62:16:03:F6): ip-ifname: interface index 0 renamed ip_iface (6) from 'bnep0' to 'enx98e0d98d205e'
+ 7月 04 02:04:57.059937 macbookair2015 NetworkManager[840]: <info>  [1783098297.0599] device (34:42:62:16:03:F6): ip:dhcp4: restarting
+ 7月 04 02:04:57.083755 macbookair2015 NetworkManager[840]: <info>  [1783098297.0837] dhcp4 (bnep0): canceled DHCP transaction
+ 7月 04 02:04:57.083781 macbookair2015 NetworkManager[840]: <info>  [1783098297.0837] dhcp4 (bnep0): state changed no lease
+ 7月 04 02:04:57.083865 macbookair2015 NetworkManager[840]: <info>  [1783098297.0838] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:04:57.088890 macbookair2015 ModemManager[889]: <wrn> [plugin-manager] task 5: port context already scheduled
+ 7月 04 02:04:57.151845 macbookair2015 charon-nm[28356]: 16[IKE] sending address list update using MOBIKE
+ 7月 04 02:04:57.152026 macbookair2015 charon-nm[28356]: 16[IKE] interface change for bypass policy for fe80::/64 (from wlp3s0 to enx98e0d98d205e)
+ 7月 04 02:04:57.561979 macbookair2015 charon-nm[28356]: 09[IKE] retransmit 1 of request with message ID 7
+ 7月 04 02:04:57.562080 macbookair2015 charon-nm[28356]: 09[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (112 bytes)
+ 7月 04 02:04:58.359518 macbookair2015 sudo[29395]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/journalctl -t snapshot-only --no-pager -n 6
+ 7月 04 02:04:58.360147 macbookair2015 sudo[29395]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:58.410896 macbookair2015 sudo[29395]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:58.419712 macbookair2015 charon-nm[28356]: 15[KNL] flags changed for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e
+ 7月 04 02:04:58.430732 macbookair2015 sudo[29405]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/ls -t /var/log/h4-probe/1782861920.snapshot-only.PRE /var/log/h4-probe/1782861959.snapshot-only.PRE /var/log/h4-probe/1782866910.snapshot-only.PRE /var/log/h4-probe/1782866976.snapshot-only.PRE /var/log/h4-probe/1782867025.snapshot-only.PRE /var/log/h4-probe/1782867079.snapshot-only.PRE /var/log/h4-probe/1782867135.snapshot-only.PRE /var/log/h4-probe/1782867174.snapshot-only.PRE /var/log/h4-probe/1782867216.snapshot-only.PRE /var/log/h4-probe/1782867306.snapshot-only.PRE /var/log/h4-probe/1782867461.snapshot-only.PRE /var/log/h4-probe/1782867508.snapshot-only.PRE /var/log/h4-probe/1782867598.snapshot-only.PRE /var/log/h4-probe/1782867703.snapshot-only.PRE /var/log/h4-probe/1782867769.snapshot-only.PRE /var/log/h4-probe/1782867945.snapshot-only.PRE /var/log/h4-probe/1782868144.snapshot-only.PRE /var/log/h4-probe/1782868186.snapshot-only.PRE
+ 7月 04 02:04:58.431386 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1782868245.snapshot-only.PRE /var/log/h4-probe/1782868296.snapshot-only.PRE /var/log/h4-probe/1782868370.snapshot-only.PRE /var/log/h4-probe/1782868500.snapshot-only.PRE /var/log/h4-probe/1782868592.snapshot-only.PRE /var/log/h4-probe/1782868658.snapshot-only.PRE /var/log/h4-probe/1782868739.snapshot-only.PRE /var/log/h4-probe/1782868792.snapshot-only.PRE /var/log/h4-probe/1782868866.snapshot-only.PRE /var/log/h4-probe/1782868927.snapshot-only.PRE /var/log/h4-probe/1782876053.snapshot-only.PRE /var/log/h4-probe/1782876719.snapshot-only.PRE /var/log/h4-probe/1782877033.snapshot-only.PRE /var/log/h4-probe/1782877075.snapshot-only.PRE /var/log/h4-probe/1782877122.snapshot-only.PRE /var/log/h4-probe/1782877174.snapshot-only.PRE /var/log/h4-probe/1782877226.snapshot-only.PRE /var/log/h4-probe/1782877279.snapshot-only.PRE /var/log/h4-probe/1782877322.snapshot-only.PRE
+ 7月 04 02:04:58.431395 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1782877366.snapshot-only.PRE /var/log/h4-probe/1782877441.snapshot-only.PRE /var/log/h4-probe/1782877530.snapshot-only.PRE /var/log/h4-probe/1782877573.snapshot-only.PRE /var/log/h4-probe/1782877614.snapshot-only.PRE /var/log/h4-probe/1782877656.snapshot-only.PRE /var/log/h4-probe/1782877695.snapshot-only.PRE /var/log/h4-probe/1782877734.snapshot-only.PRE /var/log/h4-probe/1782877776.snapshot-only.PRE /var/log/h4-probe/1782877816.snapshot-only.PRE /var/log/h4-probe/1782877856.snapshot-only.PRE /var/log/h4-probe/1782877896.snapshot-only.PRE /var/log/h4-probe/1782877933.snapshot-only.PRE /var/log/h4-probe/1782877972.snapshot-only.PRE /var/log/h4-probe/1782878010.snapshot-only.PRE /var/log/h4-probe/1782878061.snapshot-only.PRE /var/log/h4-probe/1782878101.snapshot-only.PRE /var/log/h4-probe/1782878143.snapshot-only.PRE /var/log/h4-probe/1782878181.snapshot-only.PRE
+ 7月 04 02:04:58.431400 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1782878216.snapshot-only.PRE /var/log/h4-probe/1782878267.snapshot-only.PRE /var/log/h4-probe/1782878307.snapshot-only.PRE /var/log/h4-probe/1782950313.snapshot-only.PRE /var/log/h4-probe/1782950989.snapshot-only.PRE /var/log/h4-probe/1782951057.snapshot-only.PRE /var/log/h4-probe/1782951100.snapshot-only.PRE /var/log/h4-probe/1782951138.snapshot-only.PRE /var/log/h4-probe/1782951175.snapshot-only.PRE /var/log/h4-probe/1782951216.snapshot-only.PRE /var/log/h4-probe/1782951254.snapshot-only.PRE /var/log/h4-probe/1782951325.snapshot-only.PRE /var/log/h4-probe/1782951423.snapshot-only.PRE /var/log/h4-probe/1782951478.snapshot-only.PRE /var/log/h4-probe/1782951869.snapshot-only.PRE /var/log/h4-probe/1782951959.snapshot-only.PRE /var/log/h4-probe/1782953515.snapshot-only.PRE /var/log/h4-probe/1782953563.snapshot-only.PRE /var/log/h4-probe/1782953728.snapshot-only.PRE
+ 7月 04 02:04:58.431406 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1782954106.snapshot-only.PRE /var/log/h4-probe/1782954150.snapshot-only.PRE /var/log/h4-probe/1782954242.snapshot-only.PRE /var/log/h4-probe/1782954327.snapshot-only.PRE /var/log/h4-probe/1782954542.snapshot-only.PRE /var/log/h4-probe/1782954608.snapshot-only.PRE /var/log/h4-probe/1782954694.snapshot-only.PRE /var/log/h4-probe/1782954964.snapshot-only.PRE /var/log/h4-probe/1782955589.snapshot-only.PRE /var/log/h4-probe/1782955633.snapshot-only.PRE /var/log/h4-probe/1782955675.snapshot-only.PRE /var/log/h4-probe/1782955718.snapshot-only.PRE /var/log/h4-probe/1782955770.snapshot-only.PRE /var/log/h4-probe/1782955810.snapshot-only.PRE /var/log/h4-probe/1782955850.snapshot-only.PRE /var/log/h4-probe/1782989291.snapshot-only.PRE /var/log/h4-probe/1782993460.snapshot-only.PRE /var/log/h4-probe/1782995864.snapshot-only.PRE /var/log/h4-probe/1782996057.snapshot-only.PRE
+ 7月 04 02:04:58.431411 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1782996101.snapshot-only.PRE /var/log/h4-probe/1782996157.snapshot-only.PRE /var/log/h4-probe/1782996818.snapshot-only.PRE /var/log/h4-probe/1782996880.snapshot-only.PRE /var/log/h4-probe/1782998798.snapshot-only.PRE /var/log/h4-probe/1783002487.snapshot-only.PRE /var/log/h4-probe/1783002543.snapshot-only.PRE /var/log/h4-probe/1783002591.snapshot-only.PRE /var/log/h4-probe/1783002662.snapshot-only.PRE /var/log/h4-probe/1783002773.snapshot-only.PRE /var/log/h4-probe/1783002841.snapshot-only.PRE /var/log/h4-probe/1783002893.snapshot-only.PRE /var/log/h4-probe/1783003037.snapshot-only.PRE /var/log/h4-probe/1783003083.snapshot-only.PRE /var/log/h4-probe/1783003143.snapshot-only.PRE /var/log/h4-probe/1783003230.snapshot-only.PRE /var/log/h4-probe/1783003319.snapshot-only.PRE /var/log/h4-probe/1783003410.snapshot-only.PRE /var/log/h4-probe/1783003451.snapshot-only.PRE
+ 7月 04 02:04:58.431416 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1783003504.snapshot-only.PRE /var/log/h4-probe/1783003570.snapshot-only.PRE /var/log/h4-probe/1783008881.snapshot-only.PRE /var/log/h4-probe/1783008968.snapshot-only.PRE /var/log/h4-probe/1783010896.snapshot-only.PRE /var/log/h4-probe/1783010995.snapshot-only.PRE /var/log/h4-probe/1783011056.snapshot-only.PRE /var/log/h4-probe/1783011097.snapshot-only.PRE /var/log/h4-probe/1783011135.snapshot-only.PRE /var/log/h4-probe/1783011180.snapshot-only.PRE /var/log/h4-probe/1783011218.snapshot-only.PRE /var/log/h4-probe/1783011276.snapshot-only.PRE /var/log/h4-probe/1783011340.snapshot-only.PRE /var/log/h4-probe/1783011376.snapshot-only.PRE /var/log/h4-probe/1783011423.snapshot-only.PRE /var/log/h4-probe/1783011458.snapshot-only.PRE /var/log/h4-probe/1783011575.snapshot-only.PRE /var/log/h4-probe/1783011626.snapshot-only.PRE /var/log/h4-probe/1783011669.snapshot-only.PRE
+ 7月 04 02:04:58.431421 macbookair2015 sudo[29405]: miminashi : (command continued) /var/log/h4-probe/1783011726.snapshot-only.PRE /var/log/h4-probe/1783011769.snapshot-only.PRE /var/log/h4-probe/1783011819.snapshot-only.PRE /var/log/h4-probe/1783011860.snapshot-only.PRE /var/log/h4-probe/1783011912.snapshot-only.PRE /var/log/h4-probe/1783011962.snapshot-only.PRE /var/log/h4-probe/1783012008.snapshot-only.PRE /var/log/h4-probe/1783012063.snapshot-only.PRE /var/log/h4-probe/1783012115.snapshot-only.PRE /var/log/h4-probe/1783012159.snapshot-only.PRE /var/log/h4-probe/1783012194.snapshot-only.PRE /var/log/h4-probe/1783012245.snapshot-only.PRE /var/log/h4-probe/1783012284.snapshot-only.PRE /var/log/h4-probe/1783012323.snapshot-only.PRE /var/log/h4-probe/1783013353.snapshot-only.PRE /var/log/h4-probe/1783060878.snapshot-only.PRE /var/log/h4-probe/1783098284.snapshot-only.PRE
+ 7月 04 02:04:58.432025 macbookair2015 sudo[29405]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:58.440315 macbookair2015 sudo[29405]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:58.451600 macbookair2015 sudo[29411]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/cat /var/log/h4-probe/1783098284.snapshot-only.PRE
+ 7月 04 02:04:58.452071 macbookair2015 sudo[29411]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:04:58.454504 macbookair2015 sudo[29411]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:04:58.520115 macbookair2015 charon-nm[28356]: 12[IKE] sending address list update using MOBIKE
+ 7月 04 02:04:59.388131 macbookair2015 NetworkManager[840]: <info>  [1783098299.3880] dhcp4 (enx98e0d98d205e): state changed new lease, address=172.20.10.13, acd pending
+ 7月 04 02:04:59.559992 macbookair2015 NetworkManager[840]: <info>  [1783098299.5599] dhcp4 (enx98e0d98d205e): state changed new lease, address=172.20.10.13
+ 7月 04 02:04:59.561348 macbookair2015 charon-nm[28356]: 13[KNL] 172.20.10.13 appeared on enx98e0d98d205e
+ 7月 04 02:04:59.561387 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+ 7月 04 02:04:59.561804 macbookair2015 avahi-daemon[740]: New relevant interface enx98e0d98d205e.IPv4 for mDNS.
+ 7月 04 02:04:59.561907 macbookair2015 avahi-daemon[740]: Registering new address record for 172.20.10.13 on enx98e0d98d205e.IPv4.
+ 7月 04 02:04:59.608317 macbookair2015 NetworkManager[840]: <info>  [1783098299.6082] device (34:42:62:16:03:F6): state change: ip-config -> ip-check (reason 'none', managed-type: 'full')
+ 7月 04 02:04:59.614854 macbookair2015 NetworkManager[840]: <info>  [1783098299.6148] device (34:42:62:16:03:F6): state change: ip-check -> secondaries (reason 'none', managed-type: 'full')
+ 7月 04 02:04:59.615286 macbookair2015 NetworkManager[840]: <info>  [1783098299.6152] device (34:42:62:16:03:F6): state change: secondaries -> activated (reason 'none', managed-type: 'full')
+ 7月 04 02:04:59.616839 macbookair2015 NetworkManager[840]: <info>  [1783098299.6167] device (34:42:62:16:03:F6): Activation: successful, device activated.
+ 7月 04 02:04:59.662012 macbookair2015 charon-nm[28356]: 04[IKE] sending address list update using MOBIKE
+ 7月 04 02:04:59.662685 macbookair2015 charon-nm[28356]: 15[IKE] installed bypass policy for 172.20.10.0/28
+ 7月 04 02:04:59.968274 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+ 7月 04 02:04:59.972113 macbookair2015 wpa_supplicant[841]: wlp3s0: Trying to associate with d8:ec:5e:f8:c4:8b (SSID='OpenWrt' freq=5680 MHz)
+ 7月 04 02:04:59.976449 macbookair2015 NetworkManager[840]: <info>  [1783098299.9763] device (wlp3s0): supplicant interface state: scanning -> associating
+ 7月 04 02:05:00.064733 macbookair2015 wpa_supplicant[841]: wlp3s0: Associated with d8:ec:5e:f8:c4:8b
+ 7月 04 02:05:00.064822 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+ 7月 04 02:05:00.065179 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=JP
+ 7月 04 02:05:00.070935 macbookair2015 NetworkManager[840]: <info>  [1783098300.0708] device (wlp3s0): supplicant interface state: associating -> 4way_handshake
+ 7月 04 02:05:00.071312 macbookair2015 wpa_supplicant[841]: wlp3s0: WPA: Key negotiation completed with d8:ec:5e:f8:c4:8b [PTK=CCMP GTK=CCMP]
+ 7月 04 02:05:00.071394 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-CONNECTED - Connection to d8:ec:5e:f8:c4:8b completed [id=0 id_str=]
+ 7月 04 02:05:00.072939 macbookair2015 wpa_supplicant[841]: bgscan simple: Failed to enable signal strength monitoring
+ 7月 04 02:05:00.077495 macbookair2015 NetworkManager[840]: <info>  [1783098300.0774] device (wlp3s0): supplicant interface state: 4way_handshake -> completed
+ 7月 04 02:05:00.077732 macbookair2015 NetworkManager[840]: <info>  [1783098300.0776] device (wlp3s0): ip:dhcp4: restarting
+ 7月 04 02:05:00.077852 macbookair2015 NetworkManager[840]: <info>  [1783098300.0778] dhcp4 (wlp3s0): canceled DHCP transaction
+ 7月 04 02:05:00.077891 macbookair2015 NetworkManager[840]: <info>  [1783098300.0778] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:00.077940 macbookair2015 NetworkManager[840]: <info>  [1783098300.0779] dhcp4 (wlp3s0): state changed no lease
+ 7月 04 02:05:00.078102 macbookair2015 NetworkManager[840]: <info>  [1783098300.0780] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:00.078414 macbookair2015 NetworkManager[840]: <info>  [1783098300.0783] device (wlp3s0): ip:dhcp6: restarting
+ 7月 04 02:05:00.078512 macbookair2015 NetworkManager[840]: <info>  [1783098300.0784] dhcp6 (wlp3s0): canceled DHCP transaction
+ 7月 04 02:05:00.078549 macbookair2015 NetworkManager[840]: <info>  [1783098300.0785] dhcp6 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:00.078592 macbookair2015 NetworkManager[840]: <info>  [1783098300.0785] dhcp6 (wlp3s0): state changed no lease
+ 7月 04 02:05:00.078717 macbookair2015 NetworkManager[840]: <info>  [1783098300.0786] dhcp6 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:00.089374 macbookair2015 NetworkManager[840]: <info>  [1783098300.0893] dhcp6 (wlp3s0): state changed new lease, address=fd9d:4bbd:50df::458
+ 7月 04 02:05:00.110015 macbookair2015 NetworkManager[840]: <info>  [1783098300.1099] dhcp4 (wlp3s0): state changed new lease, address=192.168.33.145, acd pending
+ 7月 04 02:05:00.111252 macbookair2015 NetworkManager[840]: <info>  [1783098300.1111] dhcp4 (wlp3s0): state changed new lease, address=192.168.33.145
+ 7月 04 02:05:00.362350 macbookair2015 charon-nm[28356]: 11[IKE] retransmit 2 of request with message ID 7
+ 7月 04 02:05:00.362423 macbookair2015 charon-nm[28356]: 11[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (112 bytes)
+ 7月 04 02:05:00.395822 macbookair2015 charon-nm[28356]: 10[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (80 bytes)
+ 7月 04 02:05:00.395889 macbookair2015 charon-nm[28356]: 10[ENC] parsed INFORMATIONAL response 7 [ ]
+ 7月 04 02:05:00.396004 macbookair2015 charon-nm[28356]: 10[ENC] generating INFORMATIONAL request 8 [ N(ADD_6_ADDR) N(ADD_4_ADDR) N(ADD_4_ADDR) ]
+ 7月 04 02:05:00.396113 macbookair2015 charon-nm[28356]: 10[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (128 bytes)
+ 7月 04 02:05:00.426645 macbookair2015 charon-nm[28356]: 08[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (80 bytes)
+ 7月 04 02:05:00.426698 macbookair2015 charon-nm[28356]: 08[ENC] parsed INFORMATIONAL response 8 [ ]
+ 7月 04 02:05:00.748505 macbookair2015 NetworkManager[840]: <info>  [1783098300.7484] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:00.751131 macbookair2015 charon-nm[28356]: 09[KNL] 2001:240:242d:2423:e808:55a1:d86c:ca33 appeared on enx98e0d98d205e
+ 7月 04 02:05:00.751941 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 7月 04 02:05:00.754574 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:242d:2423:e808:55a1:d86c:ca33.
+ 7月 04 02:05:00.754763 macbookair2015 avahi-daemon[740]: Registering new address record for 2001:240:242d:2423:e808:55a1:d86c:ca33 on enx98e0d98d205e.*.
+ 7月 04 02:05:00.754903 macbookair2015 avahi-daemon[740]: Withdrawing address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.
+ 7月 04 02:05:00.756081 macbookair2015 NetworkManager[840]: <info>  [1783098300.7560] policy: set 'iMiminashiPadPro ネットワーク' (enx98e0d98d205e) as default for IPv6 routing and DNS
+ 7月 04 02:05:00.816148 macbookair2015 NetworkManager[840]: <info>  [1783098300.8160] dhcp6 (enx98e0d98d205e): state changed new lease
+ 7月 04 02:05:00.851574 macbookair2015 charon-nm[28356]: 12[IKE] sending address list update using MOBIKE
+ 7月 04 02:05:00.851670 macbookair2015 charon-nm[28356]: 12[ENC] generating INFORMATIONAL request 9 [ N(ADD_6_ADDR) N(ADD_4_ADDR) N(ADD_4_ADDR) N(ADD_6_ADDR) ]
+ 7月 04 02:05:00.851779 macbookair2015 charon-nm[28356]: 12[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (144 bytes)
+ 7月 04 02:05:00.852114 macbookair2015 charon-nm[28356]: 15[IKE] installed bypass policy for 2001:240:242d:2423::/64
+ 7月 04 02:05:00.887291 macbookair2015 charon-nm[28356]: 11[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (80 bytes)
+ 7月 04 02:05:00.887384 macbookair2015 charon-nm[28356]: 11[ENC] parsed INFORMATIONAL response 9 [ ]
+ 7月 04 02:05:01.081203 macbookair2015 ModemManager[889]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.3': not supported by any plugin
+ 7月 04 02:05:01.747747 macbookair2015 sshd-session[28735]: Received disconnect from 192.168.33.215 port 36812:11: disconnected by user
+ 7月 04 02:05:01.748193 macbookair2015 sshd-session[28735]: Disconnected from user miminashi 192.168.33.215 port 36812
+ 7月 04 02:05:01.749839 macbookair2015 sshd-session[28726]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:05:01.760353 macbookair2015 systemd[1]: session-25.scope: Deactivated successfully.
+ 7月 04 02:05:01.766578 macbookair2015 systemd-logind[788]: Session 25 logged out. Waiting for processes to exit.
+ 7月 04 02:05:01.769330 macbookair2015 systemd-logind[788]: Removed session 25.
+ 7月 04 02:05:02.351870 macbookair2015 charon-nm[28356]: 10[KNL] flags changed for 2001:240:242d:2423:e808:55a1:d86c:ca33 on enx98e0d98d205e
+ 7月 04 02:05:02.452217 macbookair2015 charon-nm[28356]: 14[IKE] sending address list update using MOBIKE
+ 7月 04 02:05:02.452334 macbookair2015 charon-nm[28356]: 14[ENC] generating INFORMATIONAL request 10 [ N(ADD_6_ADDR) N(ADD_4_ADDR) N(ADD_4_ADDR) N(ADD_6_ADDR) ]
+ 7月 04 02:05:02.452442 macbookair2015 charon-nm[28356]: 14[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (144 bytes)
+ 7月 04 02:05:02.508395 macbookair2015 charon-nm[28356]: 07[NET] received packet: from 160.16.210.47[4500] to 192.168.33.145[46488] (80 bytes)
+ 7月 04 02:05:02.508460 macbookair2015 charon-nm[28356]: 07[ENC] parsed INFORMATIONAL response 10 [ ]
+ 7月 04 02:05:05.712044 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 7月 04 02:05:13.992116 macbookair2015 rtkit-daemon[983]: Supervising 0 threads of 0 processes of 0 users.
+ 7月 04 02:05:13.992413 macbookair2015 rtkit-daemon[983]: Supervising 0 threads of 0 processes of 0 users.
+ 7月 04 02:05:14.857515 macbookair2015 sshd-session[29596]: Accepted publickey for miminashi from 192.168.33.215 port 57198 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:05:14.859000 macbookair2015 sshd-session[29596]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:05:14.864425 macbookair2015 systemd-logind[788]: New session 26 of user miminashi.
+ 7月 04 02:05:14.888055 macbookair2015 systemd[1]: Started session-26.scope - Session 26 of User miminashi.
+ 7月 04 02:05:15.009570 macbookair2015 sshd-session[29616]: Received disconnect from 192.168.33.215 port 57198:11: disconnected by user
+ 7月 04 02:05:15.009815 macbookair2015 sshd-session[29616]: Disconnected from user miminashi 192.168.33.215 port 57198
+ 7月 04 02:05:15.010759 macbookair2015 sshd-session[29596]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:05:15.014158 macbookair2015 systemd[1]: session-26.scope: Deactivated successfully.
+ 7月 04 02:05:15.016469 macbookair2015 systemd-logind[788]: Session 26 logged out. Waiting for processes to exit.
+ 7月 04 02:05:15.018598 macbookair2015 systemd-logind[788]: Removed session 26.
+ 7月 04 02:05:33.931115 macbookair2015 charon-nm[28356]: 10[IKE] sending keep alive to 160.16.210.47[4500]
+ 7月 04 02:05:37.274287 macbookair2015 sshd-session[29817]: Accepted publickey for miminashi from 192.168.33.215 port 37902 ssh2: ED25519 SHA256:P99tkH7UvDa3xACn+ZXK9hD+rUnxN6WMlG1U9Hjf+6c
+ 7月 04 02:05:37.276180 macbookair2015 sshd-session[29817]: pam_unix(sshd:session): session opened for user miminashi(uid=1000) by miminashi(uid=0)
+ 7月 04 02:05:37.281269 macbookair2015 systemd-logind[788]: New session 27 of user miminashi.
+ 7月 04 02:05:37.308099 macbookair2015 systemd[1]: Started session-27.scope - Session 27 of User miminashi.
+ 7月 04 02:05:37.382171 macbookair2015 sudo[29839]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/systemd-run --unit=radio-off-detached --collect bash -c 'sleep 5; nmcli con down OpenWrt; nmcli radio wifi off'
+ 7月 04 02:05:37.382519 macbookair2015 sudo[29839]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 7月 04 02:05:37.397264 macbookair2015 systemd[1]: Started radio-off-detached.service - [systemd-run] /usr/bin/bash -c "sleep 5; nmcli con down OpenWrt; nmcli radio wifi off".
+ 7月 04 02:05:37.399014 macbookair2015 sudo[29839]: pam_unix(sudo:session): session closed for user root
+ 7月 04 02:05:37.403722 macbookair2015 sshd-session[29833]: Received disconnect from 192.168.33.215 port 37902:11: disconnected by user
+ 7月 04 02:05:37.403998 macbookair2015 sshd-session[29833]: Disconnected from user miminashi 192.168.33.215 port 37902
+ 7月 04 02:05:37.404984 macbookair2015 sshd-session[29817]: pam_unix(sshd:session): session closed for user miminashi
+ 7月 04 02:05:37.408374 macbookair2015 systemd[1]: session-27.scope: Deactivated successfully.
+ 7月 04 02:05:37.434515 macbookair2015 systemd-logind[788]: Session 27 logged out. Waiting for processes to exit.
+ 7月 04 02:05:37.435566 macbookair2015 systemd-logind[788]: Removed session 27.
+ 7月 04 02:05:42.459371 macbookair2015 NetworkManager[840]: <info>  [1783098342.4593] device (wlp3s0): state change: activated -> deactivating (reason 'user-requested', managed-type: 'full')
+ 7月 04 02:05:42.460627 macbookair2015 NetworkManager[840]: <info>  [1783098342.4606] audit: op="connection-deactivate" uuid="efa6ec65-e38a-4bfd-8b7d-298150fd2951" name="OpenWrt" pid=29887 uid=0 result="success"
+ 7月 04 02:05:42.463496 macbookair2015 dbus-daemon[754]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=840 comm="/usr/sbin/NetworkManager --no-daemon")
+ 7月 04 02:05:42.470496 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 7月 04 02:05:42.507363 macbookair2015 dbus-daemon[754]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 7月 04 02:05:42.507576 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 7月 04 02:05:42.512481 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-DISCONNECTED bssid=d8:ec:5e:f8:c4:8b reason=3 locally_generated=1
+ 7月 04 02:05:42.513302 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+ 7月 04 02:05:42.514006 macbookair2015 NetworkManager[840]: <info>  [1783098342.5139] device (wlp3s0): state change: deactivating -> disconnected (reason 'user-requested', managed-type: 'full')
+ 7月 04 02:05:42.514272 macbookair2015 avahi-daemon[740]: Withdrawing address record for fd9d:4bbd:50df::458 on wlp3s0.
+ 7月 04 02:05:42.514318 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface wlp3s0.IPv6 with address fd9d:4bbd:50df::458.
+ 7月 04 02:05:42.515135 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface wlp3s0.IPv6 with address fe80::2e29:a8c5:f098:a429.
+ 7月 04 02:05:42.515195 macbookair2015 NetworkManager[840]: <info>  [1783098342.5151] dhcp4 (wlp3s0): canceled DHCP transaction
+ 7月 04 02:05:42.515205 macbookair2015 avahi-daemon[740]: Registering new address record for fe80::2e29:a8c5:f098:a429 on wlp3s0.*.
+ 7月 04 02:05:42.515206 macbookair2015 NetworkManager[840]: <info>  [1783098342.5151] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:42.515413 macbookair2015 avahi-daemon[740]: Withdrawing address record for fe80::2e29:a8c5:f098:a429 on wlp3s0.
+ 7月 04 02:05:42.515217 macbookair2015 NetworkManager[840]: <info>  [1783098342.5152] dhcp4 (wlp3s0): state changed no lease
+ 7月 04 02:05:42.515433 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface wlp3s0.IPv6 with address fe80::2e29:a8c5:f098:a429.
+ 7月 04 02:05:42.515382 macbookair2015 NetworkManager[840]: <info>  [1783098342.5153] dhcp6 (wlp3s0): canceled DHCP transaction
+ 7月 04 02:05:42.515488 macbookair2015 avahi-daemon[740]: Interface wlp3s0.IPv6 no longer relevant for mDNS.
+ 7月 04 02:05:42.515391 macbookair2015 NetworkManager[840]: <info>  [1783098342.5153] dhcp6 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:05:42.516399 macbookair2015 wpa_supplicant[841]: nl80211: Was expecting local disconnect but got another disconnect event first
+ 7月 04 02:05:42.515399 macbookair2015 NetworkManager[840]: <info>  [1783098342.5153] dhcp6 (wlp3s0): state changed no lease
+ 7月 04 02:05:42.517178 macbookair2015 charon-nm[28356]: 13[KNL] fd9d:4bbd:50df::458 disappeared from wlp3s0
+ 7月 04 02:05:42.517392 macbookair2015 avahi-daemon[740]: Withdrawing address record for 192.168.33.145 on wlp3s0.
+ 7月 04 02:05:42.517428 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface wlp3s0.IPv4 with address 192.168.33.145.
+ 7月 04 02:05:42.517490 macbookair2015 avahi-daemon[740]: Interface wlp3s0.IPv4 no longer relevant for mDNS.
+ 7月 04 02:05:42.517832 macbookair2015 charon-nm[28356]: 11[KNL] fe80::2e29:a8c5:f098:a429 disappeared from wlp3s0
+ 7月 04 02:05:42.517948 macbookair2015 charon-nm[28356]: 10[KNL] 192.168.33.145 disappeared from wlp3s0
+ 7月 04 02:05:42.518736 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=CORE type=WORLD
+ 7月 04 02:05:42.579294 macbookair2015 NetworkManager[840]: <info>  [1783098342.5792] policy: set 'iMiminashiPadPro ネットワーク' (enx98e0d98d205e) as default for IPv4 routing and DNS
+ 7月 04 02:05:42.587929 macbookair2015 bash[29887]: 接続 'OpenWrt' が正常に非アクティブ化されました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/5)
+ 7月 04 02:05:42.596987 macbookair2015 NetworkManager[840]: <info>  [1783098342.5969] device (wlp3s0): supplicant interface state: completed -> disconnected
+ 7月 04 02:05:42.601864 macbookair2015 charon-nm[28356]: 11[KNL] 192.168.83.1 disappeared from nm-xfrm-1584672
+ 7月 04 02:05:42.604593 macbookair2015 charon-nm[28356]: 04[IKE] deleting IKE_SA GSNet[1] between 192.168.33.145[macbookair2015]...160.16.210.47[160.16.210.47]
+ 7月 04 02:05:42.604622 macbookair2015 charon-nm[28356]: 04[IKE] sending DELETE for IKE_SA GSNet[1]
+ 7月 04 02:05:42.604642 macbookair2015 charon-nm[28356]: 04[ENC] generating INFORMATIONAL request 11 [ D ]
+ 7月 04 02:05:42.604721 macbookair2015 charon-nm[28356]: 04[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:05:42.606626 macbookair2015 charon-nm[28356]: 05[NET] error writing to socket: Network is unreachable
+ 7月 04 02:05:42.615446 macbookair2015 charon-nm[28356]: 12[IKE] uninstalling bypass policy for 192.168.33.0/24
+ 7月 04 02:05:42.615842 macbookair2015 charon-nm[28356]: 12[IKE] uninstalling bypass policy for fd9d:4bbd:50df::458/128
+ 7月 04 02:05:42.616218 macbookair2015 charon-nm[28356]: 12[IKE] uninstalling bypass policy for 192.168.33.1/32
+ 7月 04 02:05:42.651453 macbookair2015 charon-nm[28356]: 15[KNL] interface wlp3s0 deactivated
+ 7月 04 02:05:42.651664 macbookair2015 wpa_supplicant[841]: rfkill: WLAN soft blocked
+ 7月 04 02:05:42.653215 macbookair2015 NetworkManager[840]: <info>  [1783098342.6531] manager: rfkill: Wi-Fi hardware radio set disabled
+ 7月 04 02:05:42.653261 macbookair2015 NetworkManager[840]: <info>  [1783098342.6532] device (wlp3s0): state change: disconnected -> unavailable (reason 'none', managed-type: 'full')
+ 7月 04 02:05:42.655232 macbookair2015 NetworkManager[840]: <info>  [1783098342.6552] audit: op="radio-control" arg="wireless-enabled:off" pid=29842 uid=0 result="success"
+ 7月 04 02:05:42.655887 macbookair2015 systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+ 7月 04 02:05:42.659224 macbookair2015 NetworkManager[840]: <info>  [1783098342.6591] manager: rfkill: Wi-Fi now disabled by radio killswitch
+ 7月 04 02:05:42.660033 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+ 7月 04 02:05:42.667552 macbookair2015 systemd[1]: radio-off-detached.service: Deactivated successfully.
+ 7月 04 02:05:42.692663 macbookair2015 systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+ 7月 04 02:05:42.700153 macbookair2015 wpa_supplicant[841]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+ 7月 04 02:05:42.700178 macbookair2015 wpa_supplicant[841]: nl80211: deinit ifname=wlp3s0 disabled_11b_rates=0
+ 7月 04 02:05:44.082774 macbookair2015 NetworkManager[840]: <info>  [1783098344.0827] agent-manager: agent[5ab622439f4ced01,:1.6229/nmcli-connect/0]: agent registered
+ 7月 04 02:05:44.084122 macbookair2015 NetworkManager[840]: <info>  [1783098344.0841] vpn[0x55c05ddb2b60,55a75765-d99e-4bc5-a05c-78b38cdefd19,"GSNet"]: starting strongswan
+ 7月 04 02:05:44.084502 macbookair2015 NetworkManager[840]: <info>  [1783098344.0844] audit: op="connection-activate" uuid="55a75765-d99e-4bc5-a05c-78b38cdefd19" name="GSNet" pid=29925 uid=0 result="success"
+ 7月 04 02:05:44.604983 macbookair2015 charon-nm[28356]: 16[IKE] retransmit 1 of request with message ID 11
+ 7月 04 02:05:44.605009 macbookair2015 charon-nm[28356]: 16[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:05:44.605160 macbookair2015 charon-nm[28356]: 05[NET] error writing to socket: Network is unreachable
+ 7月 04 02:05:47.405287 macbookair2015 charon-nm[28356]: 07[IKE] retransmit 2 of request with message ID 11
+ 7月 04 02:05:47.405351 macbookair2015 charon-nm[28356]: 07[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:05:47.405496 macbookair2015 charon-nm[28356]: 05[NET] error writing to socket: Network is unreachable
+ 7月 04 02:05:47.701809 macbookair2015 systemd[1]: systemd-rfkill.service: Deactivated successfully.
+ 7月 04 02:05:49.026585 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:05:49.025 › [GatewaySocket] Setting connection state to WILL_RECONNECT
+ 7月 04 02:05:49.028254 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:05:49.027 › [GatewaySocket] [ACK TIMEOUT] reconnecting in 2.09 seconds.
+ 7月 04 02:05:51.120764 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:05:51.120 › [GatewaySocket] Setting connection state to CONNECTING
+ 7月 04 02:05:51.121944 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:05:51.121 › [GatewaySocket] [CONNECT] wss://gateway-us-east1-c.discord.gg, encoding: etf, version: 9, compression: zstd-stream
+ 7月 04 02:05:51.324793 macbookair2015 charon-nm[28356]: 09[IKE] retransmit 3 of request with message ID 11
+ 7月 04 02:05:51.324858 macbookair2015 charon-nm[28356]: 09[NET] sending packet: from 192.168.33.145[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:05:51.325040 macbookair2015 charon-nm[28356]: 05[NET] error writing to socket: Network is unreachable
+ 7月 04 02:05:52.522376 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 7月 04 02:05:54.092306 macbookair2015 NetworkManager[840]: <warn>  [1783098354.0922] vpn[0x55c05ddb2b60,55a75765-d99e-4bc5-a05c-78b38cdefd19,"GSNet"]: plugin NeedSecrets request #1 failed: タイムアウトしました
+ 7月 04 02:05:54.095976 macbookair2015 vpn-watcher[29926]: エラー: 接続のアクティベーションに失敗: 有効なシークレットはありません
+ 7月 04 02:05:54.095999 macbookair2015 vpn-watcher[29926]: ヒント: 'journalctl -xe NM_CONNECTION=55a75765-d99e-4bc5-a05c-78b38cdefd19 + NM_DEVICE=34:42:62:16:03:F6' を使用して詳細を取得します。
+ 7月 04 02:05:56.812269 macbookair2015 charon-nm[28356]: 08[IKE] giving up after 3 retransmits
+ 7月 04 02:05:56.812301 macbookair2015 charon-nm[28356]: 08[IKE] proper IKE_SA delete failed, peer not responding
+ 7月 04 02:05:56.812450 macbookair2015 charon-nm[28356]: 08[KNL] error uninstalling route installed with policy 192.168.83.1/32 === 0.0.0.0/0 out
+ 7月 04 02:05:56.812750 macbookair2015 charon-nm[28356]: 12[KNL] interface nm-xfrm-1584672 deactivated
+ 7月 04 02:05:56.813351 macbookair2015 charon-nm[28356]: 10[KNL] fe80::7a0:4a49:8aae:51b2 disappeared from nm-xfrm-1584672
+ 7月 04 02:05:56.828252 macbookair2015 charon-nm[28356]: 16[KNL] interface nm-xfrm-1584672 deleted
+ 7月 04 02:05:56.828912 macbookair2015 avahi-daemon[740]: Withdrawing address record for 192.168.83.1 on lo.
+ 7月 04 02:05:56.828984 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface lo.IPv4 with address 192.168.83.1.
+ 7月 04 02:05:56.830895 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+ 7月 04 02:05:56.830972 macbookair2015 avahi-daemon[740]: Registering new address record for 127.0.0.1 on lo.IPv4.
+ 7月 04 02:05:56.839705 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:05:56.838 › [GatewaySocket] Setting connection state to WILL_RECONNECT
+ 7月 04 02:05:56.842756 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:05:56.839 › [GatewaySocket] [WS CLOSED] (false, 0, An error with the websocket occurred) retrying in 4.38 seconds.
+ 7月 04 02:05:57.145046 macbookair2015 NetworkManager[840]: <info>  [1783098357.1450] agent-manager: agent[28e28c8d06df4fcc,:1.6249/nmcli-connect/0]: agent registered
+ 7月 04 02:05:57.146290 macbookair2015 NetworkManager[840]: <info>  [1783098357.1462] vpn[0x55c05ddb2b60,55a75765-d99e-4bc5-a05c-78b38cdefd19,"GSNet"]: starting strongswan
+ 7月 04 02:05:57.146661 macbookair2015 NetworkManager[840]: <info>  [1783098357.1466] audit: op="connection-activate" uuid="55a75765-d99e-4bc5-a05c-78b38cdefd19" name="GSNet" pid=30019 uid=0 result="success"
+ 7月 04 02:05:57.155524 macbookair2015 charon-nm[28356]: 06[CFG] received initiate for NetworkManager connection GSNet
+ 7月 04 02:05:57.156169 macbookair2015 charon-nm[28356]: 06[CFG] using gateway identity '160.16.210.47'
+ 7月 04 02:05:57.158332 macbookair2015 charon-nm[28356]: 06[CFG] created XFRM interface nm-xfrm-1654878 for NetworkManager connection GSNet
+ 7月 04 02:05:57.158511 macbookair2015 charon-nm[28356]: 06[IKE] initiating IKE_SA GSNet[2] to 160.16.210.47
+ 7月 04 02:05:57.158658 macbookair2015 charon-nm[28356]: 10[KNL] interface nm-xfrm-1654878 activated
+ 7月 04 02:05:57.159396 macbookair2015 charon-nm[28356]: 06[ENC] generating IKE_SA_INIT request 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(FRAG_SUP) N(HASH_ALG) N(REDIR_SUP) ]
+ 7月 04 02:05:57.159432 macbookair2015 charon-nm[28356]: 08[KNL] fe80::2b79:f335:66a3:d311 appeared on nm-xfrm-1654878
+ 7月 04 02:05:57.159565 macbookair2015 charon-nm[28356]: 06[NET] sending packet: from 172.20.10.13[39520] to 160.16.210.47[500] (1080 bytes)
+ 7月 04 02:05:57.160765 macbookair2015 NetworkManager[840]: <info>  [1783098357.1607] manager: (nm-xfrm-1654878): new Generic device (/org/freedesktop/NetworkManager/Devices/6)
+ 7月 04 02:05:57.283928 macbookair2015 charon-nm[28356]: 11[NET] received packet: from 160.16.210.47[500] to 172.20.10.13[39520] (280 bytes)
+ 7月 04 02:05:57.283988 macbookair2015 charon-nm[28356]: 11[ENC] parsed IKE_SA_INIT response 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(FRAG_SUP) N(HASH_ALG) N(CHDLESS_SUP) N(MULT_AUTH) ]
+ 7月 04 02:05:57.284049 macbookair2015 charon-nm[28356]: 11[CFG] selected proposal: IKE:AES_CBC_128/HMAC_SHA2_256_128/PRF_AES128_XCBC/ECP_256
+ 7月 04 02:05:57.284186 macbookair2015 charon-nm[28356]: 11[IKE] local host is behind NAT, sending keep alives
+ 7月 04 02:05:57.284204 macbookair2015 charon-nm[28356]: 11[IKE] remote host is behind NAT
+ 7月 04 02:05:57.284692 macbookair2015 charon-nm[28356]: 11[IKE] sending cert request for "CN=GSNet mmns CA"
+ 7月 04 02:05:57.284769 macbookair2015 charon-nm[28356]: 11[IKE] establishing CHILD_SA GSNet{2}
+ 7月 04 02:05:57.284894 macbookair2015 charon-nm[28356]: 11[ENC] generating IKE_AUTH request 1 [ IDi N(INIT_CONTACT) CERTREQ IDr CPRQ(ADDR ADDR6 DNS NBNS DNS6) SA TSi TSr N(MOBIKE_SUP) N(ADD_6_ADDR) N(MULT_AUTH) N(EAP_ONLY) N(MSG_ID_SYN_SUP) ]
+ 7月 04 02:05:57.284964 macbookair2015 charon-nm[28356]: 11[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (512 bytes)
+ 7月 04 02:05:57.404227 macbookair2015 charon-nm[28356]: 16[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (1236 bytes)
+ 7月 04 02:05:57.404359 macbookair2015 charon-nm[28356]: 16[ENC] parsed IKE_AUTH response 1 [ EF(1/2) ]
+ 7月 04 02:05:57.404400 macbookair2015 charon-nm[28356]: 16[ENC] received fragment #1 of 2, waiting for complete IKE message
+ 7月 04 02:05:57.412145 macbookair2015 charon-nm[28356]: 10[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (756 bytes)
+ 7月 04 02:05:57.412289 macbookair2015 charon-nm[28356]: 10[ENC] parsed IKE_AUTH response 1 [ EF(2/2) ]
+ 7月 04 02:05:57.412343 macbookair2015 charon-nm[28356]: 10[ENC] received fragment #2 of 2, reassembled fragmented IKE message (1920 bytes)
+ 7月 04 02:05:57.412424 macbookair2015 charon-nm[28356]: 10[ENC] parsed IKE_AUTH response 1 [ IDr CERT AUTH EAP/REQ/ID ]
+ 7月 04 02:05:57.413283 macbookair2015 charon-nm[28356]: 10[IKE] received end entity cert "CN=160.16.210.47"
+ 7月 04 02:05:57.413863 macbookair2015 charon-nm[28356]: 10[CFG]   using certificate "CN=160.16.210.47"
+ 7月 04 02:05:57.414123 macbookair2015 charon-nm[28356]: 10[CFG]   using trusted ca certificate "CN=GSNet mmns CA"
+ 7月 04 02:05:57.414182 macbookair2015 charon-nm[28356]: 10[CFG]   reached self-signed root ca with a path length of 0
+ 7月 04 02:05:57.414216 macbookair2015 charon-nm[28356]: 10[CFG] checking certificate status of "CN=160.16.210.47"
+ 7月 04 02:05:57.414280 macbookair2015 charon-nm[28356]: 10[CFG] certificate status is not available
+ 7月 04 02:05:57.415077 macbookair2015 charon-nm[28356]: 10[IKE] authentication of '160.16.210.47' with RSA_EMSA_PKCS1_SHA2_384 successful
+ 7月 04 02:05:57.415168 macbookair2015 charon-nm[28356]: 10[IKE] server requested EAP_IDENTITY (id 0x00), sending 'macbookair2015'
+ 7月 04 02:05:57.415277 macbookair2015 charon-nm[28356]: 10[ENC] generating IKE_AUTH request 2 [ EAP/RES/ID ]
+ 7月 04 02:05:57.415428 macbookair2015 charon-nm[28356]: 10[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (96 bytes)
+ 7月 04 02:05:57.540207 macbookair2015 charon-nm[28356]: 14[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (112 bytes)
+ 7月 04 02:05:57.540323 macbookair2015 charon-nm[28356]: 14[ENC] parsed IKE_AUTH response 2 [ EAP/REQ/MSCHAPV2 ]
+ 7月 04 02:05:57.540395 macbookair2015 charon-nm[28356]: 14[IKE] server requested EAP_MSCHAPV2 authentication (id 0xDE)
+ 7月 04 02:05:57.540650 macbookair2015 charon-nm[28356]: 14[ENC] generating IKE_AUTH request 3 [ EAP/RES/MSCHAPV2 ]
+ 7月 04 02:05:57.540740 macbookair2015 charon-nm[28356]: 14[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (144 bytes)
+ 7月 04 02:05:57.632187 macbookair2015 charon-nm[28356]: 08[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (144 bytes)
+ 7月 04 02:05:57.632296 macbookair2015 charon-nm[28356]: 08[ENC] parsed IKE_AUTH response 3 [ EAP/REQ/MSCHAPV2 ]
+ 7月 04 02:05:57.632350 macbookair2015 charon-nm[28356]: 08[IKE] EAP-MS-CHAPv2 succeeded: 'Welcome2strongSwan'
+ 7月 04 02:05:57.632409 macbookair2015 charon-nm[28356]: 08[ENC] generating IKE_AUTH request 4 [ EAP/RES/MSCHAPV2 ]
+ 7月 04 02:05:57.632498 macbookair2015 charon-nm[28356]: 08[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:05:57.759894 macbookair2015 charon-nm[28356]: 07[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (80 bytes)
+ 7月 04 02:05:57.759964 macbookair2015 charon-nm[28356]: 07[ENC] parsed IKE_AUTH response 4 [ EAP/SUCC ]
+ 7月 04 02:05:57.759992 macbookair2015 charon-nm[28356]: 07[IKE] EAP method EAP_MSCHAPV2 succeeded, MSK established
+ 7月 04 02:05:57.760014 macbookair2015 charon-nm[28356]: 07[IKE] authentication of 'macbookair2015' (myself) with EAP
+ 7月 04 02:05:57.760053 macbookair2015 charon-nm[28356]: 07[ENC] generating IKE_AUTH request 5 [ AUTH ]
+ 7月 04 02:05:57.760104 macbookair2015 charon-nm[28356]: 07[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (96 bytes)
+ 7月 04 02:05:57.868043 macbookair2015 charon-nm[28356]: 09[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (256 bytes)
+ 7月 04 02:05:57.868197 macbookair2015 charon-nm[28356]: 09[ENC] parsed IKE_AUTH response 5 [ AUTH CPRP(ADDR DNS DNS) SA TSi TSr N(MOBIKE_SUP) N(ADD_4_ADDR) N(ADD_4_ADDR) ]
+ 7月 04 02:05:57.868253 macbookair2015 charon-nm[28356]: 09[IKE] authentication of '160.16.210.47' with EAP successful
+ 7月 04 02:05:57.868310 macbookair2015 charon-nm[28356]: 09[IKE] installing new virtual IP 192.168.83.1
+ 7月 04 02:05:57.871316 macbookair2015 charon-nm[28356]: 09[IKE] peer supports MOBIKE
+ 7月 04 02:05:57.871352 macbookair2015 charon-nm[28356]: 09[IKE] IKE_SA GSNet[2] established between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+ 7月 04 02:05:57.871366 macbookair2015 charon-nm[28356]: 09[IKE] scheduling rekeying in 35588s
+ 7月 04 02:05:57.871376 macbookair2015 charon-nm[28356]: 09[IKE] maximum IKE_SA lifetime 36188s
+ 7月 04 02:05:57.871441 macbookair2015 charon-nm[28356]: 09[CFG] selected proposal: ESP:AES_CBC_128/HMAC_SHA2_256_128/NO_EXT_SEQ
+ 7月 04 02:05:57.872140 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+ 7月 04 02:05:57.872422 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface lo.IPv4 with address 192.168.83.1.
+ 7月 04 02:05:57.872442 macbookair2015 avahi-daemon[740]: Registering new address record for 192.168.83.1 on lo.IPv4.
+ 7月 04 02:05:57.872481 macbookair2015 avahi-daemon[740]: Withdrawing address record for 127.0.0.1 on lo.
+ 7月 04 02:05:57.872711 macbookair2015 charon-nm[28356]: 09[IKE] CHILD_SA GSNet{2} established with SPIs ce975d9b_i c09bddb4_o and TS 192.168.83.1/32 === 0.0.0.0/0
+ 7月 04 02:05:57.897403 macbookair2015 charon-nm[28356]: 10[KNL] 192.168.83.1 appeared on nm-xfrm-1654878
+ 7月 04 02:05:57.899165 macbookair2015 dbus-daemon[754]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=840 comm="/usr/sbin/NetworkManager --no-daemon")
+ 7月 04 02:05:57.903491 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 7月 04 02:05:57.948182 macbookair2015 dbus-daemon[754]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 7月 04 02:05:57.948402 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 7月 04 02:05:57.950219 macbookair2015 vpn-watcher[30020]: 接続が正常にアクティベートされました (D-Bus アクティブパス: /org/freedesktop/NetworkManager/ActiveConnection/10)
+ 7月 04 02:05:57.978519 macbookair2015 charon-nm[28356]: 07[IKE] sending address list update using MOBIKE
+ 7月 04 02:05:57.978600 macbookair2015 charon-nm[28356]: 07[ENC] generating INFORMATIONAL request 6 [ N(ADD_6_ADDR) N(ADD_4_ADDR) ]
+ 7月 04 02:05:57.979003 macbookair2015 charon-nm[28356]: 07[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (112 bytes)
+ 7月 04 02:05:57.979031 macbookair2015 charon-nm[28356]: 12[IKE] installed bypass policy for 172.20.10.1/32
+ 7月 04 02:05:58.064221 macbookair2015 charon-nm[28356]: 13[NET] received packet: from 160.16.210.47[4500] to 172.20.10.13[46488] (80 bytes)
+ 7月 04 02:05:58.064315 macbookair2015 charon-nm[28356]: 13[ENC] parsed INFORMATIONAL response 6 [ ]
+ 7月 04 02:06:01.215505 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:01.214 › [GatewaySocket] Setting connection state to CONNECTING
+ 7月 04 02:06:01.217073 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:01.215 › [GatewaySocket] [CONNECT] wss://gateway.discord.gg, encoding: etf, version: 9, compression: zstd-stream
+ 7月 04 02:06:01.894663 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:01.894 › [GatewaySocket] [CONNECTED] wss://gateway.discord.gg/?encoding=etf&v=9&compress=zstd-stream in 679 ms
+ 7月 04 02:06:01.895284 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:01.895 › [GatewaySocket] Setting connection state to RESUMING
+ 7月 04 02:06:01.896530 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:01.896 › [GatewaySocket] [RESUME] resuming session b63f685b6b33894b48ac38382909c5af, seq: 632
+ 7月 04 02:06:01.897090 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:01.896 › [GatewaySocket] [HELLO] via
+ 7月 04 02:06:01.897090 macbookair2015 com.discordapp.Discord.desktop[3201]: gateway-prd-arm-us-east1-c-zxkv: 0, heartbeat interval: 41250, took 681 ms
+ 7月 04 02:06:02.166878 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:02.166 › [GatewaySocket]
+ 7月 04 02:06:02.166878 macbookair2015 com.discordapp.Discord.desktop[3201]: gateway-prd-arm-us-east1-c-zxkv: 4.19
+ 7月 04 02:06:02.166878 macbookair2015 com.discordapp.Discord.desktop[3201]: |  id_created: 0
+ 7月 04 02:06:02.166878 macbookair2015 com.discordapp.Discord.desktop[3201]: |  session_lookup_time: 3.528
+ 7月 04 02:06:02.166878 macbookair2015 com.discordapp.Discord.desktop[3201]: |  session_lookup_finished: 0.009
+ 7月 04 02:06:02.166878 macbookair2015 com.discordapp.Discord.desktop[3201]: |  sessions-prd-gcp-us-east1-c-90: 0.048
+ 7月 04 02:06:02.167691 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:02.167 › [GatewaySocket] Setting connection state to SESSION_ESTABLISHED
+ 7月 04 02:06:02.209428 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:02.208 › [Flux] Dispatching CONNECTION_RESUMED
+ 7月 04 02:06:02.212722 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:02.212 › [GatewaySocket] [RESUMED] took 997ms, replayed 0 events, new seq: 655
+ 7月 04 02:06:04.695536 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:04.694 › [discord_protos.discord_users.v1.FrecencyUserSettings] Scheduling save from markDirty
+ 7月 04 02:06:04.698056 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:04.697 › [discord_protos.discord_users.v1.FrecencyUserSettings] Persisting proto
+ 7月 04 02:06:07.961506 macbookair2015 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+ 7月 04 02:06:08.608666 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:08.608 › The resource https://discord.com/assets/189422196a4f8b53.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:06:08.609770 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:08.609 › The resource https://discord.com/assets/ce3b8055f5114434.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:06:08.611293 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:08.610 › The resource https://discord.com/assets/cb2006dbced0e246.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:06:08.612918 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:08.612 › The resource https://discord.com/assets/7a6a566c2e88a35d.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:06:08.614326 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:08.613 › The resource https://discord.com/assets/e52f0cba712e2fb4.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:06:08.615832 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:06:08.615 › The resource https://discord.com/assets/dd24010f3cf7def7.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:06:26.943099 macbookair2015 rtkit-daemon[983]: Supervising 0 threads of 0 processes of 0 users.
+ 7月 04 02:06:26.943550 macbookair2015 rtkit-daemon[983]: Supervising 0 threads of 0 processes of 0 users.
+ 7月 04 02:07:24.844339 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:07:24.843 › The resource https://discord.com/assets/189422196a4f8b53.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:07:24.846975 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:07:24.845 › The resource https://discord.com/assets/ce3b8055f5114434.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:07:24.846975 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:07:24.846 › The resource https://discord.com/assets/cb2006dbced0e246.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:07:24.847801 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:07:24.847 › The resource https://discord.com/assets/7a6a566c2e88a35d.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:07:24.848830 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:07:24.848 › The resource https://discord.com/assets/e52f0cba712e2fb4.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:07:24.849775 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:07:24.849 › The resource https://discord.com/assets/dd24010f3cf7def7.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:09:29.123598 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:09:29.122 › The resource https://discord.com/assets/189422196a4f8b53.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:09:29.135011 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:09:29.124 › The resource https://discord.com/assets/ce3b8055f5114434.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:09:29.135011 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:09:29.124 › The resource https://discord.com/assets/cb2006dbced0e246.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:09:29.135011 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:09:29.125 › The resource https://discord.com/assets/7a6a566c2e88a35d.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:09:29.135011 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:09:29.126 › The resource https://discord.com/assets/e52f0cba712e2fb4.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:09:29.135011 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:09:29.126 › The resource https://discord.com/assets/dd24010f3cf7def7.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:10:11.844949 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:10:11.844 › The resource https://discord.com/assets/189422196a4f8b53.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:10:11.846918 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:10:11.845 › The resource https://discord.com/assets/ce3b8055f5114434.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:10:11.846918 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:10:11.846 › The resource https://discord.com/assets/cb2006dbced0e246.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:10:11.847839 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:10:11.847 › The resource https://discord.com/assets/7a6a566c2e88a35d.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:10:11.848939 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:10:11.848 › The resource https://discord.com/assets/e52f0cba712e2fb4.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:10:11.849637 macbookair2015 com.discordapp.Discord.desktop[3201]: 02:10:11.849 › The resource https://discord.com/assets/dd24010f3cf7def7.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ 7月 04 02:11:56.292805 macbookair2015 charon-nm[28356]: 07[IKE] sending keep alive to 160.16.210.47[4500]
+ 7月 04 02:12:01.536956 macbookair2015 systemd-logind[788]: Lid closed.
+ 7月 04 02:12:01.609167 macbookair2015 systemd-logind[788]: Suspending...
+ 7月 04 02:12:01.611419 macbookair2015 NetworkManager[840]: <info>  [1783098721.6113] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+ 7月 04 02:12:01.611705 macbookair2015 ModemManager[889]: <msg> [sleep-monitor-systemd] system is about to suspend
+ 7月 04 02:12:01.611504 macbookair2015 NetworkManager[840]: <info>  [1783098721.6114] device (wlp3s0): state change: unavailable -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 7月 04 02:12:01.612194 macbookair2015 NetworkManager[840]: <info>  [1783098721.6121] manager: NetworkManager state is now ASLEEP
+ 7月 04 02:12:01.612355 macbookair2015 NetworkManager[840]: <info>  [1783098721.6123] device (34:42:62:16:03:F6): state change: activated -> deactivating (reason 'sleeping', managed-type: 'full')
+ 7月 04 02:12:01.622400 macbookair2015 dbus-daemon[754]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=840 comm="/usr/sbin/NetworkManager --no-daemon")
+ 7月 04 02:12:01.627402 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 7月 04 02:12:01.673354 macbookair2015 dbus-daemon[754]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 7月 04 02:12:01.673729 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 7月 04 02:12:01.675966 macbookair2015 NetworkManager[840]: <info>  [1783098721.6759] device (34:42:62:16:03:F6): state change: deactivating -> disconnected (reason 'sleeping', managed-type: 'full')
+ 7月 04 02:12:01.676981 macbookair2015 avahi-daemon[740]: Withdrawing address record for 2001:240:242d:2423:e808:55a1:d86c:ca33 on enx98e0d98d205e.
+ 7月 04 02:12:01.677035 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address 2001:240:242d:2423:e808:55a1:d86c:ca33.
+ 7月 04 02:12:01.677539 macbookair2015 NetworkManager[840]: <info>  [1783098721.6775] dhcp4 (enx98e0d98d205e): canceled DHCP transaction
+ 7月 04 02:12:01.677557 macbookair2015 NetworkManager[840]: <info>  [1783098721.6775] dhcp4 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:12:01.677571 macbookair2015 NetworkManager[840]: <info>  [1783098721.6775] dhcp4 (enx98e0d98d205e): state changed no lease
+ 7月 04 02:12:01.677771 macbookair2015 NetworkManager[840]: <info>  [1783098721.6777] dhcp6 (enx98e0d98d205e): canceled DHCP transaction
+ 7月 04 02:12:01.677787 macbookair2015 NetworkManager[840]: <info>  [1783098721.6777] dhcp6 (enx98e0d98d205e): activation: beginning transaction (timeout in 45 seconds)
+ 7月 04 02:12:01.677801 macbookair2015 NetworkManager[840]: <info>  [1783098721.6777] dhcp6 (enx98e0d98d205e): state changed no lease
+ 7月 04 02:12:01.682257 macbookair2015 avahi-daemon[740]: Joining mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 7月 04 02:12:01.682294 macbookair2015 avahi-daemon[740]: Registering new address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.*.
+ 7月 04 02:12:01.682471 macbookair2015 avahi-daemon[740]: Withdrawing address record for fe80::ee82:92f6:8780:60e8 on enx98e0d98d205e.
+ 7月 04 02:12:01.682490 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv6 with address fe80::ee82:92f6:8780:60e8.
+ 7月 04 02:12:01.682509 macbookair2015 avahi-daemon[740]: Interface enx98e0d98d205e.IPv6 no longer relevant for mDNS.
+ 7月 04 02:12:01.682602 macbookair2015 avahi-daemon[740]: Withdrawing address record for 172.20.10.13 on enx98e0d98d205e.
+ 7月 04 02:12:01.682620 macbookair2015 avahi-daemon[740]: Leaving mDNS multicast group on interface enx98e0d98d205e.IPv4 with address 172.20.10.13.
+ 7月 04 02:12:01.682640 macbookair2015 avahi-daemon[740]: Interface enx98e0d98d205e.IPv4 no longer relevant for mDNS.
+ 7月 04 02:12:01.684242 macbookair2015 charon-nm[28356]: 16[KNL] 2001:240:242d:2423:e808:55a1:d86c:ca33 disappeared from enx98e0d98d205e
+ 7月 04 02:12:01.684306 macbookair2015 charon-nm[28356]: 16[KNL] fe80::ee82:92f6:8780:60e8 disappeared from enx98e0d98d205e
+ 7月 04 02:12:01.684390 macbookair2015 charon-nm[28356]: 16[KNL] 172.20.10.13 disappeared from enx98e0d98d205e
+ 7月 04 02:12:01.687516 macbookair2015 bluetoothd[743]: profiles/network/bnep.c:bnep_if_down() bnep: Could not bring down bnep0: No such device(19)
+ 7月 04 02:12:01.687836 macbookair2015 charon-nm[28356]: 09[KNL] interface enx98e0d98d205e deactivated
+ 7月 04 02:12:01.688413 macbookair2015 charon-nm[28356]: 04[KNL] interface enx98e0d98d205e deleted
+ 7月 04 02:12:01.776943 macbookair2015 charon-nm[28356]: 14[IKE] old path is not available anymore, try to find another
+ 7月 04 02:12:01.776973 macbookair2015 charon-nm[28356]: 14[IKE] looking for a route to 160.16.210.47 ...
+ 7月 04 02:12:01.777091 macbookair2015 charon-nm[28356]: 16[IKE] interface change for bypass policy for fe80::/64 (from enx98e0d98d205e to nm-xfrm-1654878)
+ 7月 04 02:12:01.777499 macbookair2015 charon-nm[28356]: 14[IKE] looking for a route to 192.168.0.1 ...
+ 7月 04 02:12:01.777539 macbookair2015 charon-nm[28356]: 14[IKE] looking for a route to 10.1.0.1 ...
+ 7月 04 02:12:01.777574 macbookair2015 charon-nm[28356]: 14[IKE] no route found to reach 160.16.210.47, MOBIKE update deferred
+ 7月 04 02:12:01.779036 macbookair2015 NetworkManager[840]: <info>  [1783098721.7790] device (34:42:62:16:03:F6): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 7月 04 02:12:01.779154 macbookair2015 charon-nm[28356]: 16[IKE] uninstalling bypass policy for 172.20.10.0/28
+ 7月 04 02:12:01.780138 macbookair2015 charon-nm[28356]: 16[IKE] uninstalling bypass policy for 2001:240:242d:2423::/64
+ 7月 04 02:12:01.781647 macbookair2015 charon-nm[28356]: 16[IKE] uninstalling bypass policy for 172.20.10.1/32
+ 7月 04 02:12:01.782356 macbookair2015 charon-nm[28356]: 08[IKE] deleting IKE_SA GSNet[2] between 172.20.10.13[macbookair2015]...160.16.210.47[160.16.210.47]
+ 7月 04 02:12:01.782378 macbookair2015 charon-nm[28356]: 08[IKE] sending DELETE for IKE_SA GSNet[2]
+ 7月 04 02:12:01.782395 macbookair2015 charon-nm[28356]: 08[ENC] generating INFORMATIONAL request 7 [ D ]
+ 7月 04 02:12:01.782468 macbookair2015 charon-nm[28356]: 08[NET] sending packet: from 172.20.10.13[46488] to 160.16.210.47[4500] (80 bytes)
+ 7月 04 02:12:01.782747 macbookair2015 charon-nm[28356]: 05[NET] error writing to socket: Network is unreachable
+ 7月 04 02:12:01.783251 macbookair2015 charon-nm[28356]: 08[KNL] 192.168.83.1 disappeared from nm-xfrm-1654878
+ 7月 04 02:12:02.586438 macbookair2015 gnome-shell[2304]: Cursor update failed: drmModeAtomicCommit: 無効な引数です
+ 7月 04 02:12:03.101017 macbookair2015 systemd[1]: Reached target sleep.target - Sleep.
+ 7月 04 02:12:03.107500 macbookair2015 systemd[1]: Starting systemd-suspend.service - System Suspend...
+ 7月 04 02:12:03.158204 macbookair2015 systemd[1]: user@1000.service: Unit now frozen-by-parent.
+ 7月 04 02:12:03.158241 macbookair2015 systemd[1]: session-3.scope: Unit now frozen-by-parent.
+ 7月 04 02:12:03.158272 macbookair2015 systemd[1]: user-1000.slice: Unit now frozen-by-parent.
+ 7月 04 02:12:03.158300 macbookair2015 systemd[1]: user.slice: Unit now frozen.
+ 7月 04 02:12:03.158643 macbookair2015 systemd-sleep[33396]: Successfully froze unit 'user.slice'.
+ 7月 04 02:12:03.166364 macbookair2015 kbd-backlight-sleep[33406]: pre/suspend: saved=0 set->0
+ 7月 04 02:12:03.175473 macbookair2015 snapshot-only[33428]: [PRE] bnep_rx=0 bnep_tx=0
+ 7月 04 02:12:03.199037 macbookair2015 snapshot-only[33458]: [PRE] kbnepd_session=NOT FOUND
+ 7月 04 02:12:03.208087 macbookair2015 snapshot-only[33469]: [PRE] bnep_netdev=MISSING
+ 7月 04 02:12:03.216325 macbookair2015 snapshot-only[33481]: [PRE] xfrm_state=2 xfrm_policy=14
+ 7月 04 02:12:03.241752 macbookair2015 snapshot-only[33493]: [PRE] ping_running=NO
+ 7月 04 02:12:03.262510 macbookair2015 snapshot-only[33512]: [PRE] wl_loaded=YES cfg80211_loaded=YES wlp3s0_present=YES
+ 7月 04 02:12:03.474456 macbookair2015 70-h4-probe[33662]: phase=pre target=suspend mode=beta file=/var/log/h4-probe/1783098723.pre
+ 7月 04 02:12:03.775941 macbookair2015 systemd-sleep[33396]: Performing sleep operation 'suspend'...

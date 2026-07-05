@@ -1,0 +1,645 @@
+=== 70-h4-probe phase=pre target=suspend mode=beta ts=1783098723 iso=2026-07-04T02:12:03+0900 ===
+=== uname ===
+Linux macbookair2015 6.12.94-dpmwd2 #3 SMP PREEMPT_DYNAMIC Fri Jul  3 01:05:55 JST 2026 x86_64 GNU/Linux
+=== mem_sleep ===
+[s2idle] deep
+=== pm_debug_messages ===
+1
+=== suspend_stats ===
+fail: 0
+failed_freeze: 0
+failed_prepare: 0
+failed_resume: 0
+failed_resume_early: 0
+failed_resume_noirq: 0
+failed_suspend: 0
+failed_suspend_late: 0
+failed_suspend_noirq: 0
+last_failed_dev: 
+last_failed_errno: 0
+last_failed_step: 
+success: 4
+=== ip -o link show ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: wlp3s0: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000\    link/ether 98:e0:d9:8d:20:5d brd ff:ff:ff:ff:ff:ff\    altname wlx98e0d98d205d
+7: nm-xfrm-1654878@NONE: <NOARP,UP,LOWER_UP> mtu 1400 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/none 
+=== ip addr show ===
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+1: lo    inet 192.168.83.1/32 scope global lo\       valid_lft forever preferred_lft forever
+1: lo    inet6 ::1/128 scope host noprefixroute \       valid_lft forever preferred_lft forever
+7: nm-xfrm-1654878    inet6 fe80::2b79:f335:66a3:d311/64 scope link stable-privacy proto kernel_ll \       valid_lft forever preferred_lft forever
+=== ip xfrm state ===
+src 172.20.10.13 dst 160.16.210.47
+	proto esp spi 0xc09bddb4 reqid 1 mode tunnel
+	replay-window 0 flag af-unspec
+	output-mark 0xd2/0xffffffff
+	auth-trunc hmac(sha256) 0x5c2eec1e1a0f775346a10b6ef2776f3281c50a3ae4f9be5b28236e9d7862da1c 128
+	enc cbc(aes) 0x5ceac545a388ce070a84148a6e3b9710
+	encap type espinudp sport 46488 dport 4500 addr 0.0.0.0
+	lastused 2026-07-04 02:11:58
+	anti-replay context: seq 0x0, oseq 0x177, bitmap 0x00000000
+	if_id 0x62a372fd
+	dir out
+src 160.16.210.47 dst 172.20.10.13
+	proto esp spi 0xce975d9b reqid 1 mode tunnel
+	replay-window 32 flag af-unspec
+	auth-trunc hmac(sha256) 0x17b4bbb1dacd5991a15f2b9afdbe58aaf9379efec45969781bece4471c2b981a 128
+	enc cbc(aes) 0x1028d03fac3ab233340691e90eba6f9f
+	encap type espinudp sport 4500 dport 46488 addr 0.0.0.0
+	lastused 2026-07-04 02:11:58
+	anti-replay context: seq 0x173, oseq 0x0, bitmap 0xffffffff
+	if_id 0x62a372fd
+	dir in
+=== ip xfrm policy ===
+src fe80::/64 dst fe80::/64 
+	dir fwd priority 134463 ptype main 
+src fe80::/64 dst fe80::/64 
+	dir in priority 134463 ptype main 
+src fe80::/64 dst fe80::/64 
+	dir out priority 134463 ptype main 
+src 192.168.83.1/32 dst 0.0.0.0/0 
+	dir out priority 383615 ptype main 
+	tmpl src 172.20.10.13 dst 160.16.210.47
+		proto esp spi 0xc09bddb4 reqid 1 mode tunnel
+	if_id 0x62a372fd
+src 0.0.0.0/0 dst 192.168.83.1/32 
+	dir fwd priority 383615 ptype main 
+	tmpl src 160.16.210.47 dst 172.20.10.13
+		proto esp reqid 1 mode tunnel
+	if_id 0x62a372fd
+src 0.0.0.0/0 dst 192.168.83.1/32 
+	dir in priority 383615 ptype main 
+	tmpl src 160.16.210.47 dst 172.20.10.13
+		proto esp reqid 1 mode tunnel
+	if_id 0x62a372fd
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+=== /proc/net/dev ===
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+    lo:  192583    1950    0    0    0     0          0         0   192583    1950    0    0    0     0       0          0
+wlp3s0: 67121598   56120    0    0    0 403439          0         0  4017537   20295    0    3    0     0       0          0
+nm-xfrm-1654878:  102820     371    0    0    0     0          0         0    64430     371  319  319    0     0     319          0
+=== nmcli active connections ===
+lo:loopback:lo:activated
+=== lsmod bt/xfrm ===
+rfcomm                102400  6
+bnep                   36864  2
+wl                   6459392  0
+btusb                  81920  0
+btrtl                  32768  1 btusb
+btintel                69632  1 btusb
+btbcm                  24576  1 btusb
+btmtk                  32768  1 btusb
+bluetooth            1093632  34 btrtl,btmtk,btintel,btbcm,bnep,btusb,rfcomm
+=== USB device runtime status ===
+1-0:1.0: rs=suspended at=?ms prod= manu=
+1-3.3: rs=active at=475473ms prod=Bluetooth USB Host Controller manu=Apple Inc.
+1-3.3:1.0: rs=suspended at=?ms prod= manu=
+1-3.3:1.1: rs=suspended at=?ms prod= manu=
+1-3.3:1.2: rs=suspended at=?ms prod= manu=
+1-3.3:1.3: rs=unsupported at=?ms prod= manu=
+1-3: rs=active at=477229ms prod=BRCM20702 Hub manu=Apple Inc.
+1-3:1.0: rs=suspended at=?ms prod= manu=
+1-5: rs=active at=4497073ms prod=Apple Internal Keyboard / Trackpad manu=Apple Inc.
+1-5:1.0: rs=suspended at=?ms prod= manu=
+1-5:1.1: rs=suspended at=?ms prod= manu=
+1-5:1.2: rs=suspended at=?ms prod= manu=
+2-0:1.0: rs=suspended at=?ms prod= manu=
+usb1: rs=active at=4497793ms prod=xHCI Host Controller manu=Linux 6.12.94-dpmwd2 xhci-hcd
+usb2: rs=suspended at=4267ms prod=xHCI Host Controller manu=Linux 6.12.94-dpmwd2 xhci-hcd
+=== /proc/acpi/wakeup ===
+Device	S-state	  Status   Sysfs node
+PEG0	  S3	*disabled
+EC	  S4	*disabled  platform:PNP0C09:00
+HDEF	  S3	*disabled  pci:0000:00:1b.0
+RP01	  S3	*disabled  pci:0000:00:1c.0
+RP02	  S3	*disabled  pci:0000:00:1c.1
+RP03	  S3	*disabled  pci:0000:00:1c.2
+ARPT	  S4	*disabled  pci:0000:03:00.0
+RP05	  S3	*disabled  pci:0000:00:1c.4
+RP06	  S3	*disabled  pci:0000:00:1c.5
+SPIT	  S3	*disabled  spi:spi-APP000D:00
+XHC1	  S3	*disabled  pci:0000:00:14.0
+ADP1	  S4	*disabled  platform:ACPI0003:00
+LID0	  S4	*enabled   platform:PNP0C0D:00
+=== gpe70 status ===
+       0  EN     enabled      unmasked
+=== bluetoothctl devices Connected ===
+=== dmesg tail 300 ===
+[土  7月  4 05:47:47 2026] pci 0000:02:00.0: PM: pci_pm_resume_noirq returned 0 after 109 usecs
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:03.0: PM: pci_pm_resume_noirq returned 0 after 12017 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:05:00.0: PM: pci_pm_resume_noirq returned 0 after 11840 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:00.0: PM: calling pci_pm_resume_noirq @ 28402, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume_noirq returned 0 after 35472 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:00.0: PM: pci_pm_resume_noirq returned 0 after 12009 usecs
+[土  7月  4 05:47:47 2026] thunderbolt 0000:07:00.0: PM: calling pci_pm_resume_noirq @ 11416, parent: 0000:06:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: Enabling MPC IRBNCE
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: Intel PCH root port ACS workaround enabled
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: PM: pci_pm_resume_noirq returned 0 after 71432 usecs
+[土  7月  4 05:47:47 2026] wl 0000:03:00.0: PM: calling pci_pm_resume_noirq @ 29023, parent: 0000:00:1c.2
+[土  7月  4 05:47:47 2026] wl 0000:03:00.0: PM: pci_pm_resume_noirq returned 0 after 204 usecs
+[土  7月  4 05:47:47 2026] thunderbolt 0000:07:00.0: PM: pci_pm_resume_noirq returned 0 after 63818 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: Enabling MPC IRBNCE
+[土  7月  4 05:47:47 2026] pcieport 0000:06:05.0: PM: calling pci_pm_resume_noirq @ 29048, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:04.0: PM: calling pci_pm_resume_noirq @ 29047, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: Intel PCH root port ACS workaround enabled
+[土  7月  4 05:47:47 2026] pcieport 0000:06:06.0: PM: calling pci_pm_resume_noirq @ 29049, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: PM: pci_pm_resume_noirq returned 0 after 99372 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:03.0: PM: calling pci_pm_resume_noirq @ 29046, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] ahci 0000:04:00.0: PM: calling pci_pm_resume_noirq @ 29028, parent: 0000:00:1c.5
+[土  7月  4 05:47:47 2026] ahci 0000:04:00.0: PM: pci_pm_resume_noirq returned 0 after 159 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:06.0: PM: pci_pm_resume_noirq returned 0 after 12327 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:04.0: PM: pci_pm_resume_noirq returned 0 after 12338 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:05.0: PM: pci_pm_resume_noirq returned 0 after 12354 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:03.0: PM: pci_pm_resume_noirq returned 0 after 12327 usecs
+[土  7月  4 05:47:47 2026] PM: noirq resume of devices complete after 112.061 msecs
+[土  7月  4 05:47:47 2026] xhci_hcd 0000:00:14.0: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+[土  7月  4 05:47:47 2026] dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] bdw_uncore 0000:00:00.0: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+[土  7月  4 05:47:47 2026] bdw_uncore 0000:00:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] dw_dmac_pci 0000:00:15.0: PM: pci_pm_resume_early returned 0 after 1 usecs
+[土  7月  4 05:47:47 2026] xhci_hcd 0000:00:14.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] mei_me 0000:00:16.0: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] mei_me 0000:00:16.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.0: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.1: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.1: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.4: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+[土  7月  4 05:47:47 2026] lpc_ich 0000:00:1f.0: PM: calling pci_pm_resume_early @ 29049, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.4: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] lpc_ich 0000:00:1f.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] i801_smbus 0000:00:1f.3: PM: calling pci_pm_resume_early @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_resume_early @ 29046, parent: pci0000:00
+[土  7月  4 05:47:47 2026] intel_pch_thermal 0000:00:1f.6: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pci 0000:02:00.0: PM: calling pci_pm_resume_early @ 29049, parent: 0000:00:1c.1
+[土  7月  4 05:47:47 2026] i801_smbus 0000:00:1f.3: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pci 0000:02:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] wl 0000:03:00.0: PM: calling pci_pm_resume_early @ 29046, parent: 0000:00:1c.2
+[土  7月  4 05:47:47 2026] pcieport 0000:05:00.0: PM: calling pci_pm_resume_early @ 29048, parent: 0000:00:1c.4
+[土  7月  4 05:47:47 2026] ac ACPI0003:00: PM: calling acpi_subsys_resume_early @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] wl 0000:03:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:05:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] ac ACPI0003:00: PM: acpi_subsys_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] i915 0000:00:02.0: PM: calling pci_pm_resume_early @ 29047, parent: pci0000:00
+[土  7月  4 05:47:47 2026] ahci 0000:04:00.0: PM: calling pci_pm_resume_early @ 29048, parent: 0000:00:1c.5
+[土  7月  4 05:47:47 2026] ahci 0000:04:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:00.0: PM: calling pci_pm_resume_early @ 29049, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] thunderbolt 0000:07:00.0: PM: calling pci_pm_resume_early @ 29046, parent: 0000:06:00.0
+[土  7月  4 05:47:47 2026] thunderbolt 0000:07:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:04.0: PM: calling pci_pm_resume_early @ 29040, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:05.0: PM: calling pci_pm_resume_early @ 29017, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:03.0: PM: calling pci_pm_resume_early @ 29048, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:04.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:03.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:05.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:06.0: PM: calling pci_pm_resume_early @ 29051, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] i915 0000:00:02.0: PM: pci_pm_resume_early returned 0 after 178 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:06.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume_early @ 29028, parent: pci0000:00
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:03.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] PM: early resume of devices complete after 0.510 msecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.1: PM: calling pci_pm_resume @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.1: PM: pci_pm_resume returned 0 after 2 usecs
+[土  7月  4 05:47:47 2026] xhci_hcd 0000:00:14.0: PM: calling pci_pm_resume @ 27774, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.2: PM: pci_pm_resume returned 0 after 2 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.4: PM: calling pci_pm_resume @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+[土  7月  4 05:47:47 2026] reg-dummy reg-dummy: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.4: PM: pci_pm_resume returned 0 after 1 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.5: PM: pci_pm_resume returned 0 after 1 usecs
+[土  7月  4 05:47:47 2026] reg-dummy reg-dummy: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] lpc_ich 0000:00:1f.0: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+[土  7月  4 05:47:47 2026] i801_smbus 0000:00:1f.3: PM: calling pci_pm_resume @ 29048, parent: pci0000:00
+[土  7月  4 05:47:47 2026] regulator regulator.0: PM: calling regulator_resume @ 28743, parent: reg-dummy
+[土  7月  4 05:47:47 2026] lpc_ich 0000:00:1f.0: PM: pci_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] regulator regulator.0: PM: regulator_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] intel_pch_thermal 0000:00:1f.6: PM: calling pci_pm_resume @ 29028, parent: pci0000:00
+[土  7月  4 05:47:47 2026] intel_pch_thermal 0000:00:1f.6: PM: pci_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pci 0000:02:00.0: PM: calling pci_pm_resume @ 29028, parent: 0000:00:1c.1
+[土  7月  4 05:47:47 2026] pci 0000:02:00.0: PM: pci_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] ec PNP0C09:00: PM: calling acpi_ec_resume @ 28743, parent: device:0c
+[土  7月  4 05:47:47 2026] wl 0000:03:00.0: PM: calling pci_pm_resume @ 29028, parent: 0000:00:1c.2
+[土  7月  4 05:47:47 2026] i801_smbus 0000:00:1f.3: PM: pci_pm_resume returned 0 after 37 usecs
+[土  7月  4 05:47:47 2026] ec PNP0C09:00: PM: acpi_ec_resume returned 0 after 2 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:05:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:00:1c.4
+[土  7月  4 05:47:47 2026] pcieport 0000:05:00.0: PM: pci_pm_resume returned 0 after 1 usecs
+[土  7月  4 05:47:47 2026] sbs ACPI0002:00: PM: calling acpi_sbs_resume [sbs] @ 28743, parent: ACPI0001:00
+[土  7月  4 05:47:47 2026] sbs ACPI0002:00: PM: acpi_sbs_resume [sbs] returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:00.0: PM: pci_pm_resume returned 0 after 24 usecs
+[土  7月  4 05:47:47 2026] thunderbolt 0000:07:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:06:00.0
+[土  7月  4 05:47:47 2026] xhci_hcd 0000:00:14.0: PM: pci_pm_resume returned 0 after 120 usecs
+[土  7月  4 05:47:47 2026] ahci 0000:04:00.0: PM: calling pci_pm_resume @ 27774, parent: 0000:00:1c.5
+[土  7月  4 05:47:47 2026] button PNP0C0D:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+[土  7月  4 05:47:47 2026] thunderbolt 0000:07:00.0: PM: pci_pm_resume returned 0 after 14 usecs
+[土  7月  4 05:47:47 2026] dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_resume @ 29046, parent: pci0000:00
+[土  7月  4 05:47:47 2026] dw_dmac_pci 0000:00:15.0: PM: pci_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] mei_me 0000:00:16.0: PM: calling pci_pm_resume @ 29049, parent: pci0000:00
+[土  7月  4 05:47:47 2026] usb usb1: PM: calling usb_dev_resume [usbcore] @ 29048, parent: 0000:00:14.0
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_resume @ 29040, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.0: PM: calling pci_pm_resume @ 29017, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pcieport 0000:00:1c.0: PM: pci_pm_resume returned 0 after 12 usecs
+[土  7月  4 05:47:47 2026] bdw_uncore 0000:00:00.0: PM: calling pci_pm_resume @ 29047, parent: pci0000:00
+[土  7月  4 05:47:47 2026] bdw_uncore 0000:00:00.0: PM: pci_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] i915 0000:00:02.0: PM: calling pci_pm_resume @ 29051, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_resume @ 29050, parent: pci0000:00
+[土  7月  4 05:47:47 2026] pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_resume returned 0 after 5 usecs
+[土  7月  4 05:47:47 2026] usb usb2: PM: calling usb_dev_resume [usbcore] @ 29018, parent: 0000:00:14.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:03.0: PM: calling pci_pm_resume @ 29024, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:04.0: PM: calling pci_pm_resume @ 28401, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:03.0: PM: pci_pm_resume returned 0 after 15 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:04.0: PM: pci_pm_resume returned 0 after 13 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:05.0: PM: calling pci_pm_resume @ 29024, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:06.0: PM: calling pci_pm_resume @ 28401, parent: 0000:05:00.0
+[土  7月  4 05:47:47 2026] pcieport 0000:06:05.0: PM: pci_pm_resume returned 0 after 7 usecs
+[土  7月  4 05:47:47 2026] pcieport 0000:06:06.0: PM: pci_pm_resume returned 0 after 8 usecs
+[土  7月  4 05:47:47 2026] mei_me 0000:00:16.0: PM: pci_pm_resume returned 0 after 2524 usecs
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume returned 0 after 2920 usecs
+[土  7月  4 05:47:47 2026] ahci 0000:04:00.0: PM: pci_pm_resume returned 0 after 20128 usecs
+[土  7月  4 05:47:47 2026]  ata1: PM: calling ata_port_pm_resume [libata] @ 29024, parent: 0000:04:00.0
+[土  7月  4 05:47:47 2026]  ata1: PM: ata_port_pm_resume [libata] returned 0 after 3 usecs
+[土  7月  4 05:47:47 2026] scsi host0: PM: calling scsi_bus_resume [scsi_mod] @ 28401, parent: ata1
+[土  7月  4 05:47:47 2026] scsi host0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] scsi target0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 29033, parent: host0
+[土  7月  4 05:47:47 2026] scsi target0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] sd 0:0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 29032, parent: target0:0:0
+[土  7月  4 05:47:47 2026] sd 0:0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 1 usecs
+[土  7月  4 05:47:47 2026] usb usb2: PM: usb_dev_resume [usbcore] returned 0 after 24019 usecs
+[土  7月  4 05:47:47 2026] usb usb1: PM: usb_dev_resume [usbcore] returned 0 after 52920 usecs
+[土  7月  4 05:47:47 2026] usb 1-3: PM: calling usb_dev_resume [usbcore] @ 29021, parent: usb1
+[土  7月  4 05:47:47 2026] usb 1-5: PM: calling usb_dev_resume [usbcore] @ 29031, parent: usb1
+[土  7月  4 05:47:47 2026] wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 54888 usecs
+[土  7月  4 05:47:47 2026] ieee80211 phy0: PM: calling wiphy_resume [cfg80211] @ 29044, parent: 0000:03:00.0
+[土  7月  4 05:47:47 2026] ieee80211 phy0: PM: wiphy_resume [cfg80211] returned 0 after 104 usecs
+[土  7月  4 05:47:47 2026] button PNP0C0D:00: PM: acpi_button_resume [button] returned 0 after 55223 usecs
+[土  7月  4 05:47:47 2026] button PNP0C0C:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+[土  7月  4 05:47:47 2026] button PNP0C0C:00: PM: acpi_button_resume [button] returned 0 after 11 usecs
+[土  7月  4 05:47:47 2026] button PNP0C0E:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+[土  7月  4 05:47:47 2026] button PNP0C0E:00: PM: acpi_button_resume [button] returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform acpi-cpufreq: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform acpi-cpufreq: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform INT0800:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform INT0800:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform PNP0C04:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform PNP0C04:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform APP0001:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform APP0001:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform ACPI0008:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform ACPI0008:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform PNP0C09:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform PNP0C09:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform ACPI0001:00: PM: calling platform_pm_resume @ 28743, parent: PNP0C09:00
+[土  7月  4 05:47:47 2026] platform ACPI0001:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform ACPI0002:00: PM: calling platform_pm_resume @ 28743, parent: ACPI0001:00
+[土  7月  4 05:47:47 2026] platform ACPI0002:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] ac ACPI0003:00: PM: calling acpi_subsys_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] ac ACPI0003:00: PM: acpi_subsys_resume returned 0 after 17 usecs
+[土  7月  4 05:47:47 2026] platform PNP0C0D:00: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform PNP0C0D:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform PNP0C0C:00: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform PNP0C0C:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform APP0002:00: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform APP0002:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform PNP0C0E:00: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform PNP0C0E:00: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] button LNXPWRBN:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYSTM:00
+[土  7月  4 05:47:47 2026] button LNXPWRBN:00: PM: acpi_button_resume [button] returned 0 after 5 usecs
+[土  7月  4 05:47:47 2026] platform rtc-efi.0: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform rtc-efi.0: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform efivars.0: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform efivars.0: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] system 00:00: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+[土  7月  4 05:47:47 2026] system 00:00: PM: pnp_bus_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] system 00:01: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+[土  7月  4 05:47:47 2026] system 00:01: PM: pnp_bus_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] rtc_cmos 00:02: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+[土  7月  4 05:47:47 2026] rtc_cmos 00:02: PM: pnp_bus_resume returned 0 after 4 usecs
+[土  7月  4 05:47:47 2026] system 00:03: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+[土  7月  4 05:47:47 2026] system 00:03: PM: pnp_bus_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] system 00:04: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+[土  7月  4 05:47:47 2026] system 00:04: PM: pnp_bus_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] pcspkr pcspkr: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] pcspkr pcspkr: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] serial8250 serial8250: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] serial8250 serial8250: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] port serial8250:0.0: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+[土  7月  4 05:47:47 2026] port serial8250:0.0: PM: pm_runtime_force_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] port serial8250:0.1: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+[土  7月  4 05:47:47 2026] port serial8250:0.1: PM: pm_runtime_force_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] port serial8250:0.2: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+[土  7月  4 05:47:47 2026] port serial8250:0.2: PM: pm_runtime_force_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] port serial8250:0.3: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+[土  7月  4 05:47:47 2026] port serial8250:0.3: PM: pm_runtime_force_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] rtc rtc0: PM: calling rtc_resume @ 28743, parent: 00:02
+[土  7月  4 05:47:47 2026] rtc rtc0: PM: rtc_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] alarmtimer alarmtimer.0.auto: PM: calling platform_pm_resume @ 28743, parent: rtc0
+[土  7月  4 05:47:47 2026] alarmtimer alarmtimer.0.auto: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform microcode: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform microcode: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input0: PM: calling input_dev_resume @ 28743, parent: PNP0C0D:00
+[土  7月  4 05:47:47 2026] input input0: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input1: PM: calling input_dev_resume @ 28743, parent: PNP0C0C:00
+[土  7月  4 05:47:47 2026] input input1: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input2: PM: calling input_dev_resume @ 28743, parent: PNP0C0E:00
+[土  7月  4 05:47:47 2026] input input2: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input3: PM: calling input_dev_resume @ 28743, parent: LNXPWRBN:00
+[土  7月  4 05:47:47 2026] input input3: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform iTCO_wdt.1.auto: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform iTCO_wdt.1.auto: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform intel-spi: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+[土  7月  4 05:47:47 2026] platform intel-spi: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] usb 1-3: PM: usb_dev_resume [usbcore] returned 0 after 13174 usecs
+[土  7月  4 05:47:47 2026] usb 1-3.3: PM: calling usb_dev_resume [usbcore] @ 29027, parent: 1-3
+[土  7月  4 05:47:47 2026] usb 1-3.3: PM: usb_dev_resume [usbcore] returned 0 after 15640 usecs
+[土  7月  4 05:47:47 2026] usb 1-5: PM: usb_dev_resume [usbcore] returned 0 after 101091 usecs
+[土  7月  4 05:47:47 2026] input input4: PM: calling input_dev_resume @ 28743, parent: 0003:05AC:0290.0002
+[土  7月  4 05:47:47 2026] input input4: PM: input_dev_resume returned 0 after 17 usecs
+[土  7月  4 05:47:47 2026] input input5: PM: calling input_dev_resume @ 28743, parent: LNXVIDEO:00
+[土  7月  4 05:47:47 2026] input input5: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] leds input4::numlock: PM: calling led_resume @ 28743, parent: input4
+[土  7月  4 05:47:47 2026] leds input4::numlock: PM: led_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] leds input4::capslock: PM: calling led_resume @ 28743, parent: input4
+[土  7月  4 05:47:47 2026] leds input4::capslock: PM: led_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] leds input4::scrolllock: PM: calling led_resume @ 28743, parent: input4
+[土  7月  4 05:47:47 2026] leds input4::scrolllock: PM: led_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] leds input4::compose: PM: calling led_resume @ 28743, parent: input4
+[土  7月  4 05:47:47 2026] leds input4::compose: PM: led_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] leds input4::kana: PM: calling led_resume @ 28743, parent: input4
+[土  7月  4 05:47:47 2026] leds input4::kana: PM: led_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[土  7月  4 05:47:47 2026] ata1.00: LPM support broken, forcing max_power
+[土  7月  4 05:47:47 2026] ata1.00: unexpected _GTF length (8)
+[土  7月  4 05:47:47 2026] sd 0:0:0:0: [sda] Starting disk
+[土  7月  4 05:47:47 2026] ata1.00: LPM support broken, forcing max_power
+[土  7月  4 05:47:47 2026] ata1.00: unexpected _GTF length (8)
+[土  7月  4 05:47:47 2026] ata1.00: configured for UDMA/133
+[土  7月  4 05:47:47 2026] i915 0000:00:02.0: PM: pci_pm_resume returned 0 after 442947 usecs
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume @ 29045, parent: pci0000:00
+[土  7月  4 05:47:47 2026] backlight acpi_video0: PM: calling backlight_resume @ 28743, parent: 0000:00:02.0
+[土  7月  4 05:47:47 2026] backlight acpi_video0: PM: backlight_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input8: PM: calling input_dev_resume @ 28743, parent: 1-5:1.2
+[土  7月  4 05:47:47 2026] input input8: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input9: PM: calling input_dev_resume @ 28743, parent: pcspkr
+[土  7月  4 05:47:47 2026] input input9: PM: input_dev_resume returned 0 after 10 usecs
+[土  7月  4 05:47:47 2026] applesmc applesmc.768: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] applesmc applesmc.768: PM: platform_pm_resume returned 0 after 240 usecs
+[土  7月  4 05:47:47 2026] platform regulatory.0: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform regulatory.0: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] leds smc::kbd_backlight: PM: calling led_resume @ 28743, parent: applesmc.768
+[土  7月  4 05:47:47 2026] leds smc::kbd_backlight: PM: led_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] snd_hda_intel 0000:00:03.0: PM: pci_pm_resume returned 0 after 2310 usecs
+[土  7月  4 05:47:47 2026] input input12: PM: calling input_dev_resume @ 28743, parent: card0
+[土  7月  4 05:47:47 2026] input input12: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input13: PM: calling input_dev_resume @ 28743, parent: card0
+[土  7月  4 05:47:47 2026] input input13: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input14: PM: calling input_dev_resume @ 28743, parent: card0
+[土  7月  4 05:47:47 2026] input input14: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input10: PM: calling input_dev_resume @ 28743, parent: card1
+[土  7月  4 05:47:47 2026] input input10: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input11: PM: calling input_dev_resume @ 28743, parent: card1
+[土  7月  4 05:47:47 2026] input input11: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] rfkill rfkill0: PM: calling rfkill_resume [rfkill] @ 28743, parent: hci0
+[土  7月  4 05:47:47 2026] rfkill rfkill0: PM: rfkill_resume [rfkill] returned 0 after 3 usecs
+[土  7月  4 05:47:47 2026] rfkill rfkill1: PM: calling rfkill_resume [rfkill] @ 28743, parent: phy0
+[土  7月  4 05:47:47 2026] rfkill rfkill1: PM: rfkill_resume [rfkill] returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] platform coretemp.0: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] platform coretemp.0: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_resume @ 28743, parent: platform
+[土  7月  4 05:47:47 2026] intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] input input15: PM: calling input_dev_resume @ 28743, parent: none
+[土  7月  4 05:47:47 2026] input input15: PM: input_dev_resume returned 0 after 0 usecs
+[土  7月  4 05:47:47 2026] PM: resume of devices complete after 445.878 msecs
+[土  7月  4 05:47:47 2026] OOM killer enabled.
+[土  7月  4 05:47:47 2026] Restarting tasks ... done.
+[土  7月  4 05:47:47 2026] random: crng reseeded on system resumption
+[土  7月  4 05:47:47 2026] video LNXVIDEO:00: Restoring backlight state
+[土  7月  4 05:47:47 2026] PM: suspend exit
+[土  7月  4 05:47:49 2026] bluetooth hci0:12 enx98e0d98d205e: renamed from bnep0 (while UP)
+=== journal kernel last 200 ===
+ 7月 04 02:04:55 macbookair2015 kernel: pci 0000:02:00.0: PM: calling pci_pm_resume @ 29028, parent: 0000:00:1c.1
+ 7月 04 02:04:55 macbookair2015 kernel: pci 0000:02:00.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ec PNP0C09:00: PM: calling acpi_ec_resume @ 28743, parent: device:0c
+ 7月 04 02:04:55 macbookair2015 kernel: wl 0000:03:00.0: PM: calling pci_pm_resume @ 29028, parent: 0000:00:1c.2
+ 7月 04 02:04:55 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PM: pci_pm_resume returned 0 after 37 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ec PNP0C09:00: PM: acpi_ec_resume returned 0 after 2 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:05:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:00:1c.4
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:05:00.0: PM: pci_pm_resume returned 0 after 1 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: sbs ACPI0002:00: PM: calling acpi_sbs_resume [sbs] @ 28743, parent: ACPI0001:00
+ 7月 04 02:04:55 macbookair2015 kernel: sbs ACPI0002:00: PM: acpi_sbs_resume [sbs] returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:05:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:00.0: PM: pci_pm_resume returned 0 after 24 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: calling pci_pm_resume @ 29048, parent: 0000:06:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PM: pci_pm_resume returned 0 after 120 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ahci 0000:04:00.0: PM: calling pci_pm_resume @ 27774, parent: 0000:00:1c.5
+ 7月 04 02:04:55 macbookair2015 kernel: button PNP0C0D:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55 macbookair2015 kernel: thunderbolt 0000:07:00.0: PM: pci_pm_resume returned 0 after 14 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: calling pci_pm_resume @ 29046, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: mei_me 0000:00:16.0: PM: calling pci_pm_resume @ 29049, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: usb usb1: PM: calling usb_dev_resume [usbcore] @ 29048, parent: 0000:00:14.0
+ 7月 04 02:04:55 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: calling pci_pm_resume @ 29040, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: calling pci_pm_resume @ 29017, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:00:1c.0: PM: pci_pm_resume returned 0 after 12 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: calling pci_pm_resume @ 29047, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: bdw_uncore 0000:00:00.0: PM: pci_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: i915 0000:00:02.0: PM: calling pci_pm_resume @ 29051, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: calling pci_pm_resume @ 29050, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PM: pci_pm_resume returned 0 after 5 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb usb2: PM: calling usb_dev_resume [usbcore] @ 29018, parent: 0000:00:14.0
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:03.0: PM: calling pci_pm_resume @ 29024, parent: 0000:05:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:04.0: PM: calling pci_pm_resume @ 28401, parent: 0000:05:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:03.0: PM: pci_pm_resume returned 0 after 15 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:04.0: PM: pci_pm_resume returned 0 after 13 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume @ 29024, parent: 0000:05:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:06.0: PM: calling pci_pm_resume @ 28401, parent: 0000:05:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume returned 0 after 7 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: pcieport 0000:06:06.0: PM: pci_pm_resume returned 0 after 8 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: mei_me 0000:00:16.0: PM: pci_pm_resume returned 0 after 2524 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PM: pci_pm_resume returned 0 after 2920 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ahci 0000:04:00.0: PM: pci_pm_resume returned 0 after 20128 usecs
+ 7月 04 02:04:55 macbookair2015 kernel:  ata1: PM: calling ata_port_pm_resume [libata] @ 29024, parent: 0000:04:00.0
+ 7月 04 02:04:55 macbookair2015 kernel:  ata1: PM: ata_port_pm_resume [libata] returned 0 after 3 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: scsi host0: PM: calling scsi_bus_resume [scsi_mod] @ 28401, parent: ata1
+ 7月 04 02:04:55 macbookair2015 kernel: scsi host0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: scsi target0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 29033, parent: host0
+ 7月 04 02:04:55 macbookair2015 kernel: scsi target0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: sd 0:0:0:0: PM: calling scsi_bus_resume [scsi_mod] @ 29032, parent: target0:0:0
+ 7月 04 02:04:55 macbookair2015 kernel: sd 0:0:0:0: PM: scsi_bus_resume [scsi_mod] returned 0 after 1 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb usb2: PM: usb_dev_resume [usbcore] returned 0 after 24019 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb usb1: PM: usb_dev_resume [usbcore] returned 0 after 52920 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb 1-3: PM: calling usb_dev_resume [usbcore] @ 29021, parent: usb1
+ 7月 04 02:04:55 macbookair2015 kernel: usb 1-5: PM: calling usb_dev_resume [usbcore] @ 29031, parent: usb1
+ 7月 04 02:04:55 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 54888 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ieee80211 phy0: PM: calling wiphy_resume [cfg80211] @ 29044, parent: 0000:03:00.0
+ 7月 04 02:04:55 macbookair2015 kernel: ieee80211 phy0: PM: wiphy_resume [cfg80211] returned 0 after 104 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: button PNP0C0D:00: PM: acpi_button_resume [button] returned 0 after 55223 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: button PNP0C0C:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55 macbookair2015 kernel: button PNP0C0C:00: PM: acpi_button_resume [button] returned 0 after 11 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: button PNP0C0E:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYBUS:00
+ 7月 04 02:04:55 macbookair2015 kernel: button PNP0C0E:00: PM: acpi_button_resume [button] returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform acpi-cpufreq: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform acpi-cpufreq: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform INT0800:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform INT0800:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C04:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C04:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform APP0001:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform APP0001:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform ACPI0008:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform ACPI0008:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C09:00: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C09:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform ACPI0001:00: PM: calling platform_pm_resume @ 28743, parent: PNP0C09:00
+ 7月 04 02:04:55 macbookair2015 kernel: platform ACPI0001:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform ACPI0002:00: PM: calling platform_pm_resume @ 28743, parent: ACPI0001:00
+ 7月 04 02:04:55 macbookair2015 kernel: platform ACPI0002:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ac ACPI0003:00: PM: calling acpi_subsys_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: ac ACPI0003:00: PM: acpi_subsys_resume returned 0 after 17 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C0D:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C0D:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C0C:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C0C:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform APP0002:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform APP0002:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C0E:00: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform PNP0C0E:00: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: button LNXPWRBN:00: PM: calling acpi_button_resume [button] @ 28743, parent: LNXSYSTM:00
+ 7月 04 02:04:55 macbookair2015 kernel: button LNXPWRBN:00: PM: acpi_button_resume [button] returned 0 after 5 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform rtc-efi.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform rtc-efi.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform efivars.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform efivars.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:00: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:00: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:01: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:01: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: rtc_cmos 00:02: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55 macbookair2015 kernel: rtc_cmos 00:02: PM: pnp_bus_resume returned 0 after 4 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:03: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:03: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:04: PM: calling pnp_bus_resume @ 28743, parent: pnp0
+ 7月 04 02:04:55 macbookair2015 kernel: system 00:04: PM: pnp_bus_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: pcspkr pcspkr: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: pcspkr pcspkr: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: serial8250 serial8250: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: serial8250 serial8250: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.0: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.0: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.1: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.1: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.2: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.2: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.3: PM: calling pm_runtime_force_resume @ 28743, parent: serial8250:0
+ 7月 04 02:04:55 macbookair2015 kernel: port serial8250:0.3: PM: pm_runtime_force_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: rtc rtc0: PM: calling rtc_resume @ 28743, parent: 00:02
+ 7月 04 02:04:55 macbookair2015 kernel: rtc rtc0: PM: rtc_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: alarmtimer alarmtimer.0.auto: PM: calling platform_pm_resume @ 28743, parent: rtc0
+ 7月 04 02:04:55 macbookair2015 kernel: alarmtimer alarmtimer.0.auto: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform microcode: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform microcode: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input0: PM: calling input_dev_resume @ 28743, parent: PNP0C0D:00
+ 7月 04 02:04:55 macbookair2015 kernel: input input0: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input1: PM: calling input_dev_resume @ 28743, parent: PNP0C0C:00
+ 7月 04 02:04:55 macbookair2015 kernel: input input1: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input2: PM: calling input_dev_resume @ 28743, parent: PNP0C0E:00
+ 7月 04 02:04:55 macbookair2015 kernel: input input2: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input3: PM: calling input_dev_resume @ 28743, parent: LNXPWRBN:00
+ 7月 04 02:04:55 macbookair2015 kernel: input input3: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform iTCO_wdt.1.auto: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform iTCO_wdt.1.auto: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform intel-spi: PM: calling platform_pm_resume @ 28743, parent: 0000:00:1f.0
+ 7月 04 02:04:55 macbookair2015 kernel: platform intel-spi: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb 1-3: PM: usb_dev_resume [usbcore] returned 0 after 13174 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb 1-3.3: PM: calling usb_dev_resume [usbcore] @ 29027, parent: 1-3
+ 7月 04 02:04:55 macbookair2015 kernel: usb 1-3.3: PM: usb_dev_resume [usbcore] returned 0 after 15640 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: usb 1-5: PM: usb_dev_resume [usbcore] returned 0 after 101091 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input4: PM: calling input_dev_resume @ 28743, parent: 0003:05AC:0290.0002
+ 7月 04 02:04:55 macbookair2015 kernel: input input4: PM: input_dev_resume returned 0 after 17 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input5: PM: calling input_dev_resume @ 28743, parent: LNXVIDEO:00
+ 7月 04 02:04:55 macbookair2015 kernel: input input5: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::numlock: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::numlock: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::capslock: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::capslock: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::scrolllock: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::scrolllock: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::compose: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::compose: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::kana: PM: calling led_resume @ 28743, parent: input4
+ 7月 04 02:04:55 macbookair2015 kernel: leds input4::kana: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+ 7月 04 02:04:55 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 7月 04 02:04:55 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 7月 04 02:04:55 macbookair2015 kernel: sd 0:0:0:0: [sda] Starting disk
+ 7月 04 02:04:55 macbookair2015 kernel: ata1.00: LPM support broken, forcing max_power
+ 7月 04 02:04:55 macbookair2015 kernel: ata1.00: unexpected _GTF length (8)
+ 7月 04 02:04:55 macbookair2015 kernel: ata1.00: configured for UDMA/133
+ 7月 04 02:04:55 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_resume returned 0 after 442947 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: calling pci_pm_resume @ 29045, parent: pci0000:00
+ 7月 04 02:04:55 macbookair2015 kernel: backlight acpi_video0: PM: calling backlight_resume @ 28743, parent: 0000:00:02.0
+ 7月 04 02:04:55 macbookair2015 kernel: backlight acpi_video0: PM: backlight_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input8: PM: calling input_dev_resume @ 28743, parent: 1-5:1.2
+ 7月 04 02:04:55 macbookair2015 kernel: input input8: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input9: PM: calling input_dev_resume @ 28743, parent: pcspkr
+ 7月 04 02:04:55 macbookair2015 kernel: input input9: PM: input_dev_resume returned 0 after 10 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: applesmc applesmc.768: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: applesmc applesmc.768: PM: platform_pm_resume returned 0 after 240 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform regulatory.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform regulatory.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: leds smc::kbd_backlight: PM: calling led_resume @ 28743, parent: applesmc.768
+ 7月 04 02:04:55 macbookair2015 kernel: leds smc::kbd_backlight: PM: led_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PM: pci_pm_resume returned 0 after 2310 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input12: PM: calling input_dev_resume @ 28743, parent: card0
+ 7月 04 02:04:55 macbookair2015 kernel: input input12: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input13: PM: calling input_dev_resume @ 28743, parent: card0
+ 7月 04 02:04:55 macbookair2015 kernel: input input13: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input14: PM: calling input_dev_resume @ 28743, parent: card0
+ 7月 04 02:04:55 macbookair2015 kernel: input input14: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input10: PM: calling input_dev_resume @ 28743, parent: card1
+ 7月 04 02:04:55 macbookair2015 kernel: input input10: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input11: PM: calling input_dev_resume @ 28743, parent: card1
+ 7月 04 02:04:55 macbookair2015 kernel: input input11: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: rfkill rfkill0: PM: calling rfkill_resume [rfkill] @ 28743, parent: hci0
+ 7月 04 02:04:55 macbookair2015 kernel: rfkill rfkill0: PM: rfkill_resume [rfkill] returned 0 after 3 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: rfkill rfkill1: PM: calling rfkill_resume [rfkill] @ 28743, parent: phy0
+ 7月 04 02:04:55 macbookair2015 kernel: rfkill rfkill1: PM: rfkill_resume [rfkill] returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: platform coretemp.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: platform coretemp.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: calling platform_pm_resume @ 28743, parent: platform
+ 7月 04 02:04:55 macbookair2015 kernel: intel_rapl_msr intel_rapl_msr.0: PM: platform_pm_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: input input15: PM: calling input_dev_resume @ 28743, parent: none
+ 7月 04 02:04:55 macbookair2015 kernel: input input15: PM: input_dev_resume returned 0 after 0 usecs
+ 7月 04 02:04:55 macbookair2015 kernel: PM: resume of devices complete after 445.878 msecs
+ 7月 04 02:04:55 macbookair2015 kernel: OOM killer enabled.
+ 7月 04 02:04:55 macbookair2015 kernel: Restarting tasks ... done.
+ 7月 04 02:04:55 macbookair2015 kernel: random: crng reseeded on system resumption
+ 7月 04 02:04:55 macbookair2015 kernel: video LNXVIDEO:00: Restoring backlight state
+ 7月 04 02:04:55 macbookair2015 kernel: PM: suspend exit
+ 7月 04 02:04:57 macbookair2015 kernel: bluetooth hci0:12 enx98e0d98d205e: renamed from bnep0 (while UP)
+=== END phase=pre mode=beta ===
