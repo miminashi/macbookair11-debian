@@ -1,0 +1,96 @@
+=== boots ===
+ -7 4a5338625d1b40f3b6fdc3cf93e6ab63 Wed 2027-01-13 11:02:02 JST Sun 2026-07-05 21:19:31 JST
+ -6 d9dcd2efbb54475eafa75a3be5fcad85 Sun 2026-07-05 21:19:52 JST Sun 2026-07-05 21:23:35 JST
+ -5 25afb61490ec4d9ea742977335fb2a5a Tue 2027-08-03 09:01:39 JST Sun 2026-07-05 21:28:49 JST
+ -4 c289e96428db4c659147821d04c8a989 Fri 2027-12-24 00:06:44 JST Sun 2026-07-05 23:26:50 JST
+ -3 c61463d273304a7ca42e2a0917289599 Sun 2027-03-28 00:12:20 JST Sun 2026-07-05 23:50:12 JST
+ -2 9697a6fc78a0478aac05503667d6ae5e Wed 2027-07-28 01:07:37 JST Mon 2026-07-06 00:03:21 JST
+ -1 ce26dd4801b4490e9d456a954c8d9eb2 Fri 2027-03-19 15:01:02 JST Mon 2026-07-06 00:12:07 JST
+  0 6e07fa4c0374448bba4371fd4ae69775 Wed 2027-07-28 01:07:23 JST Mon 2026-07-06 00:26:04 JST
+=== per-boot decode lines ===
+--- boot -6 ---
+ 7月 05 21:19:52 macbookair2015 kernel: PM: RTC time: 12:19:48, date: 2026-07-05
+ 7月 05 21:19:52 macbookair2015 kernel: PM:   no trace data (RTC year 2026, expected 2027: firmware reset or real time)
+--- boot -5 ---
+ 8月 03 09:01:39 macbookair2015 kernel: PM: RTC time: 00:01:35, date: 2027-08-03
+ 8月 03 09:01:39 macbookair2015 kernel: PM:   trace data valid, 01:35 elapsed since last trace write
+ 8月 03 09:01:39 macbookair2015 kernel: PM:   Magic number: 15:1
+ 8月 03 09:01:39 macbookair2015 kernel: PM:   device marker: device_resume exit
+ 8月 03 09:01:39 macbookair2015 kernel: acpi device:4e: hash matches
+--- boot -4 ---
+12月 24 00:06:44 macbookair2015 kernel: PM: RTC time: 15:06:39, date: 2027-12-23
+12月 24 00:06:44 macbookair2015 kernel: PM:   trace data valid, 06:39 elapsed since last trace write
+12月 24 00:06:44 macbookair2015 kernel: PM:   Magic number: 3:332
+12月 24 00:06:44 macbookair2015 kernel: PM:   hash matches kernel/power/suspend.c:152
+--- boot -3 ---
+ 3月 28 00:12:20 macbookair2015 kernel: PM: RTC time: 15:12:15, date: 2027-03-27
+ 3月 28 00:12:20 macbookair2015 kernel: PM:   trace data valid, 12:15 elapsed since last trace write
+ 3月 28 00:12:20 macbookair2015 kernel: PM:   Magic number: 10:334
+ 3月 28 00:12:20 macbookair2015 kernel: PM:   device marker: device_resume_noirq entry
+ 3月 28 00:12:20 macbookair2015 kernel: pcieport 0000:06:03.0: hash matches
+--- boot -2 ---
+ 7月 28 01:07:37 macbookair2015 kernel: PM: RTC time: 16:07:33, date: 2027-07-27
+ 7月 28 01:07:37 macbookair2015 kernel: PM:   trace data valid, 07:33 elapsed since last trace write
+ 7月 28 01:07:37 macbookair2015 kernel: PM:   Magic number: 14:355
+ 7月 28 01:07:37 macbookair2015 kernel: PM:   device marker: device_resume entry
+ 7月 28 01:07:37 macbookair2015 kernel: pci 0000:00:02.0: hash matches
+ 7月 28 01:07:37 macbookair2015 kernel: acpi LNXSYBUS:00: hash matches
+ 7月 28 01:07:37 macbookair2015 kernel: acpi LNXCPU:06: hash matches
+--- boot -1 ---
+ 3月 19 15:01:02 macbookair2015 kernel: PM: RTC time: 06:00:57, date: 2027-03-19
+ 3月 19 15:01:02 macbookair2015 kernel: PM:   trace data valid, 00:57 elapsed since last trace write
+ 3月 19 15:01:02 macbookair2015 kernel: PM:   Magic number: 10:139
+ 3月 19 15:01:02 macbookair2015 kernel: PM:   device marker: device_resume_noirq entry
+ 3月 19 15:01:02 macbookair2015 kernel: pcieport 0000:06:06.0: hash matches
+ 3月 19 15:01:02 macbookair2015 kernel: pci_bus 0000:03: hash matches
+ 3月 19 15:01:02 macbookair2015 kernel: acpi device:63: hash matches
+--- boot 0 ---
+ 7月 28 01:07:23 macbookair2015 kernel: PM: RTC time: 16:07:19, date: 2027-07-27
+ 7月 28 01:07:23 macbookair2015 kernel: PM:   trace data valid, 07:19 elapsed since last trace write
+ 7月 28 01:07:23 macbookair2015 kernel: PM:   Magic number: 14:355
+ 7月 28 01:07:23 macbookair2015 kernel: PM:   device marker: device_resume entry
+ 7月 28 01:07:23 macbookair2015 kernel: pci 0000:00:02.0: hash matches
+ 7月 28 01:07:23 macbookair2015 kernel: acpi LNXSYBUS:00: hash matches
+ 7月 28 01:07:23 macbookair2015 kernel: acpi LNXCPU:06: hash matches
+=== session PRE/POST (since 1783255126) ===
+1783256426.pre
+1783256430.post
+1783256808.pre
+1783256812.post
+1783261194.pre
+1783261199.post
+1783261482.pre
+1783261487.post
+1783261609.pre
+1783262917.pre
+1783262922.post
+1783263011.pre
+1783263715.pre
+1783263722.post
+1783263801.pre
+1783264255.pre
+1783264260.post
+1783264291.pre
+1783264296.post
+1783264326.pre
+=== src-ip gate per valid PRE ===
+1783261194: src 172.20.10.13
+1783261482: src 172.20.10.13
+1783261609: src 172.20.10.13
+1783262917: src 172.20.10.13
+1783263011: src 172.20.10.13
+1783263715: src 172.20.10.13
+1783263801: src 172.20.10.13
+1783264255: src 172.20.10.13
+1783264291: src 172.20.10.13
+1783264326: src 172.20.10.13
+=== watcher logs tail ===
+1783264260.398226 macbookair2015 kernel: PM: suspend exit
+1783264292.169044 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783264296.558967 macbookair2015 kernel: PM: suspend exit
+1783264273 172.20.10.13/28 xfrm=2
+1783264296  xfrm=2
+1783264316 172.20.10.13/28 xfrm=2
+iMiminashiPadPro ネットワーク
+OpenWrt
+lo

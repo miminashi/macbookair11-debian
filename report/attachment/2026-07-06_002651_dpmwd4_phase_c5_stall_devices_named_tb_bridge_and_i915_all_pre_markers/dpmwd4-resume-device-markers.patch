@@ -1,0 +1,326 @@
+From 4b279c26a324e74c8c879864354ec2c31b374f5a Mon Sep 17 00:00:00 2001
+From: miminashi <s.nohara.2001@gmail.com>
+Date: Sun, 5 Jul 2026 20:41:17 +0900
+Subject: [PATCH] PM: trace: name the device at resume-side phase boundaries
+
+dpmwd3 located the silent lid-close hang at a device boundary in the
+dpm resume noirq/early phases (main.c sites 627/700/836 were the last
+RTC writes), but the firmware-safe encoding had dropped the device
+channel for lack of RTC capacity, so the device stays anonymous.
+
+Split the user field instead of adding a channel: values 0-9 remain
+plain file:line sites, and 10-15 become per-phase boundary markers
+whose file field carries hash(dev_name) % 397.  The six resume-side
+trace points in drivers/base/power/main.c are replaced with
+TRACE_RESUME_DEVICE() entry/exit markers, so the last RTC write before
+a stall names both the phase boundary and the device at it.  The write
+count per device per phase is unchanged (2), keeping the pm_trace
+perturbation identical to dpmwd3.
+
+Fallout handled: the three s2idle-region sites that used user codes
+10-12 move down to 7-9 (the file:line hash is the discriminator, so
+reuse is fine), and generate_pm_trace() clamps site user values to 9
+so an error code passed to TRACE_RESUME(error) (e.g. -1 -> 15) cannot
+spoof a marker.  Boot-time decode prints the marker meaning and walks
+dpm_list for matching device names; /sys/power/pm_trace_dev_match
+works again for marker values.
+---
+ drivers/acpi/sleep.c       |  2 +-
+ drivers/acpi/x86/s2idle.c  |  4 +-
+ drivers/base/power/main.c  | 15 +++---
+ drivers/base/power/trace.c | 97 ++++++++++++++++++++++++++++++++++++--
+ include/linux/pm-trace.h   | 23 +++++++++
+ 5 files changed, 125 insertions(+), 16 deletions(-)
+
+diff --git a/drivers/acpi/sleep.c b/drivers/acpi/sleep.c
+index 1e4a7d94d..bf479b31d 100644
+--- a/drivers/acpi/sleep.c
++++ b/drivers/acpi/sleep.c
+@@ -758,7 +758,7 @@ int acpi_s2idle_prepare(void)
+ 
+ bool acpi_s2idle_wake(void)
+ {
+-	TRACE_RESUME(12);
++	TRACE_RESUME(9);
+ 	if (!acpi_sci_irq_valid())
+ 		return pm_wakeup_pending();
+ 
+diff --git a/drivers/acpi/x86/s2idle.c b/drivers/acpi/x86/s2idle.c
+index 468662014..72af0d50c 100644
+--- a/drivers/acpi/x86/s2idle.c
++++ b/drivers/acpi/x86/s2idle.c
+@@ -589,7 +589,7 @@ int acpi_s2idle_prepare_late(void)
+ 	}
+ 
+ 
+-	TRACE_SUSPEND(10);
++	TRACE_SUSPEND(7);
+ 	return 0;
+ }
+ 
+@@ -610,7 +610,7 @@ void acpi_s2idle_restore_early(void)
+ {
+ 	struct acpi_s2idle_dev_ops *handler;
+ 
+-	TRACE_RESUME(11);
++	TRACE_RESUME(8);
+ 	if (!lps0_device_handle || sleep_no_lps0)
+ 		return;
+ 
+diff --git a/drivers/base/power/main.c b/drivers/base/power/main.c
+index 82153193b..366466669 100644
+--- a/drivers/base/power/main.c
++++ b/drivers/base/power/main.c
+@@ -623,8 +623,7 @@ static void device_resume_noirq(struct device *dev, pm_message_t state, bool asy
+ 	DECLARE_DPM_WATCHDOG_ON_STACK(wd);
+ 	int error = 0;
+ 
+-	TRACE_DEVICE(dev);
+-	TRACE_RESUME(0);
++	TRACE_RESUME_DEVICE(dev, PM_TRACE_DEV_NOIRQ_ENTRY);
+ 
+ 	if (dev->power.syscore || dev->power.direct_complete)
+ 		goto Out;
+@@ -697,7 +696,7 @@ static void device_resume_noirq(struct device *dev, pm_message_t state, bool asy
+ 
+ Out:
+ 	complete_all(&dev->power.completion);
+-	TRACE_RESUME(error);
++	TRACE_RESUME_DEVICE(dev, PM_TRACE_DEV_NOIRQ_EXIT);
+ 
+ 	if (error) {
+ 		async_error = error;
+@@ -788,8 +787,7 @@ static void device_resume_early(struct device *dev, pm_message_t state, bool asy
+ 	DECLARE_DPM_WATCHDOG_ON_STACK(wd);
+ 	int error = 0;
+ 
+-	TRACE_DEVICE(dev);
+-	TRACE_RESUME(0);
++	TRACE_RESUME_DEVICE(dev, PM_TRACE_DEV_EARLY_ENTRY);
+ 
+ 	if (dev->power.syscore || dev->power.direct_complete)
+ 		goto Out;
+@@ -833,7 +831,7 @@ static void device_resume_early(struct device *dev, pm_message_t state, bool asy
+ 	dev->power.is_late_suspended = false;
+ 
+ Out:
+-	TRACE_RESUME(error);
++	TRACE_RESUME_DEVICE(dev, PM_TRACE_DEV_EARLY_EXIT);
+ 
+ 	pm_runtime_enable(dev);
+ 	complete_all(&dev->power.completion);
+@@ -925,8 +923,7 @@ static void device_resume(struct device *dev, pm_message_t state, bool async)
+ 	int error = 0;
+ 	DECLARE_DPM_WATCHDOG_ON_STACK(wd);
+ 
+-	TRACE_DEVICE(dev);
+-	TRACE_RESUME(0);
++	TRACE_RESUME_DEVICE(dev, PM_TRACE_DEV_RESUME_ENTRY);
+ 
+ 	if (dev->power.syscore)
+ 		goto Complete;
+@@ -998,7 +995,7 @@ static void device_resume(struct device *dev, pm_message_t state, bool async)
+  Complete:
+ 	complete_all(&dev->power.completion);
+ 
+-	TRACE_RESUME(error);
++	TRACE_RESUME_DEVICE(dev, PM_TRACE_DEV_RESUME_EXIT);
+ 
+ 	if (error) {
+ 		async_error = error;
+diff --git a/drivers/base/power/trace.c b/drivers/base/power/trace.c
+index 5418973b2..6b873073d 100644
+--- a/drivers/base/power/trace.c
++++ b/drivers/base/power/trace.c
+@@ -86,7 +86,13 @@
+  * only in month/day/hour: 12*28*24 = 8064 > USERHASH*FILEHASH = 6352.
+  * min/sec are left at zero, so the decode stays valid for up to an hour
+  * between the last trace write and the boot-time read (the RTC keeps
+- * ticking across the power cut).  The device channel is dropped.
++ * ticking across the power cut).
++ *
++ * There is no room for a separate device channel, so the user field is
++ * split instead: values 0-9 are plain file:line sites, and values 10-15
++ * (PM_TRACE_DEV_*) mark writes where the file field carries a device
++ * name hash (mod FILEHASH) for the resume-side phase boundaries in
++ * drivers/base/power/main.c.
+  *
+  * The year doubles as a validity signature: it must differ from the real
+  * current year, or a boot with a sane RTC would decode as a bogus hash.
+@@ -194,11 +200,35 @@ void generate_pm_trace(const void *tracedata, unsigned int user)
+ 		return;
+ 
+ 	user_hash_value = user % USERHASH;
++	/* users >= PM_TRACE_DEV_MARKER_FIRST are reserved for device
++	 * markers; keep error codes passed via TRACE_RESUME(error) from
++	 * aliasing them (e.g. -1 would read back as user 15). */
++	if (user_hash_value >= PM_TRACE_DEV_MARKER_FIRST)
++		user_hash_value = PM_TRACE_DEV_MARKER_FIRST - 1;
+ 	file_hash_value = hash_string(lineno, file, FILEHASH);
+ 	set_magic_time(user_hash_value, file_hash_value, dev_hash_value);
+ }
+ EXPORT_SYMBOL(generate_pm_trace);
+ 
++static const char * const pm_trace_dev_markers[] = {
++	"device_resume_noirq entry",	/* PM_TRACE_DEV_NOIRQ_ENTRY  (10) */
++	"device_resume_noirq exit",	/* PM_TRACE_DEV_NOIRQ_EXIT   (11) */
++	"device_resume_early entry",	/* PM_TRACE_DEV_EARLY_ENTRY  (12) */
++	"device_resume_early exit",	/* PM_TRACE_DEV_EARLY_EXIT   (13) */
++	"device_resume entry",		/* PM_TRACE_DEV_RESUME_ENTRY (14) */
++	"device_resume exit",		/* PM_TRACE_DEV_RESUME_EXIT  (15) */
++};
++
++void generate_pm_trace_dev(struct device *dev, unsigned int marker)
++{
++	if (!x86_platform.legacy.rtc)
++		return;
++
++	set_magic_time(marker % USERHASH,
++		       hash_string(DEVSEED, dev_name(dev), FILEHASH), 0);
++}
++EXPORT_SYMBOL(generate_pm_trace_dev);
++
+ extern char __tracedata_start[], __tracedata_end[];
+ static int show_file_hash(unsigned int value)
+ {
+@@ -219,12 +249,65 @@ static int show_file_hash(unsigned int value)
+ 	return match;
+ }
+ 
++/*
++ * Match a device-name hash (mod FILEHASH) against the current dpm_list.
++ * Multiple devices may collide on the same hash; print them all.
++ */
++static int show_dev_hash(unsigned int value)
++{
++	int match = 0;
++	struct list_head *entry;
++
++	device_pm_lock();
++	entry = dpm_list.prev;
++	while (entry != &dpm_list) {
++		struct device *dev = to_device(entry);
++		unsigned int hash = hash_string(DEVSEED, dev_name(dev), FILEHASH);
++		if (hash == value) {
++			dev_info(dev, "hash matches\n");
++			match++;
++		}
++		entry = entry->prev;
++	}
++	device_pm_unlock();
++	return match;
++}
++
+ static unsigned int hash_value_early_read;
+ 
+ int show_trace_dev_match(char *buf, size_t size)
+ {
+-	/* The device channel is gone from the firmware-safe encoding. */
+-	return 0;
++	unsigned int user = hash_value_early_read % USERHASH;
++	unsigned int value = hash_value_early_read / USERHASH;
++	int ret = 0;
++	struct list_head *entry;
++
++	if (!magic_time_valid || user < PM_TRACE_DEV_MARKER_FIRST)
++		return 0;
++
++	/*
++	 * It's possible that multiple devices will match the hash and we can't
++	 * tell which is the culprit, so it's best to output them all.
++	 */
++	device_pm_lock();
++	entry = dpm_list.prev;
++	while (size && entry != &dpm_list) {
++		struct device *dev = to_device(entry);
++		unsigned int hash = hash_string(DEVSEED, dev_name(dev),
++						FILEHASH);
++		if (hash == value) {
++			int len = snprintf(buf, size, "%s\n",
++					    dev_driver_string(dev));
++			if (len > size)
++				len = size;
++			buf += len;
++			ret += len;
++			size -= len;
++		}
++		entry = entry->prev;
++	}
++	device_pm_unlock();
++	return ret;
+ }
+ 
+ static int
+@@ -274,7 +357,13 @@ static int __init late_resume_init(void)
+ 	file = val /* % FILEHASH */;
+ 
+ 	pr_info("  Magic number: %d:%d\n", user, file);
+-	show_file_hash(file);
++	if (user >= PM_TRACE_DEV_MARKER_FIRST) {
++		pr_info("  device marker: %s\n",
++			pm_trace_dev_markers[user - PM_TRACE_DEV_MARKER_FIRST]);
++		show_dev_hash(file);
++	} else {
++		show_file_hash(file);
++	}
+ 	return 0;
+ }
+ 
+diff --git a/include/linux/pm-trace.h b/include/linux/pm-trace.h
+index b8604f884..a88bbb18f 100644
+--- a/include/linux/pm-trace.h
++++ b/include/linux/pm-trace.h
+@@ -3,6 +3,22 @@
+ #define PM_TRACE_H
+ 
+ #include <linux/types.h>
++
++/*
++ * user-field device markers: the resume-side trace points in
++ * drivers/base/power/main.c write "which device is at which phase
++ * boundary" instead of a file:line site.  Plain sites keep user <= 9
++ * (generate_pm_trace() clamps, so an error code passed to
++ * TRACE_RESUME() cannot spoof a marker).
++ */
++#define PM_TRACE_DEV_NOIRQ_ENTRY	10
++#define PM_TRACE_DEV_NOIRQ_EXIT		11
++#define PM_TRACE_DEV_EARLY_ENTRY	12
++#define PM_TRACE_DEV_EARLY_EXIT		13
++#define PM_TRACE_DEV_RESUME_ENTRY	14
++#define PM_TRACE_DEV_RESUME_EXIT	15
++#define PM_TRACE_DEV_MARKER_FIRST	PM_TRACE_DEV_NOIRQ_ENTRY
++
+ #ifdef CONFIG_PM_TRACE
+ #include <asm/pm-trace.h>
+ 
+@@ -22,6 +38,7 @@ static inline int pm_trace_is_enabled(void)
+ struct device;
+ extern void set_trace_device(struct device *);
+ extern void generate_pm_trace(const void *tracedata, unsigned int user);
++extern void generate_pm_trace_dev(struct device *dev, unsigned int marker);
+ extern int show_trace_dev_match(char *buf, size_t size);
+ 
+ #define TRACE_DEVICE(dev) do { \
+@@ -29,6 +46,11 @@ extern int show_trace_dev_match(char *buf, size_t size);
+ 		set_trace_device(dev); \
+ 	} while(0)
+ 
++#define TRACE_RESUME_DEVICE(dev, marker) do { \
++	if (pm_trace_enabled) \
++		generate_pm_trace_dev(dev, marker); \
++	} while (0)
++
+ #else
+ 
+ static inline bool pm_trace_rtc_valid(void) { return true; }
+@@ -37,6 +59,7 @@ static inline int pm_trace_is_enabled(void) { return 0; }
+ #define TRACE_DEVICE(dev) do { } while (0)
+ #define TRACE_RESUME(dev) do { } while (0)
+ #define TRACE_SUSPEND(dev) do { } while (0)
++#define TRACE_RESUME_DEVICE(dev, marker) do { } while (0)
+ 
+ #endif
+ 
+-- 
+2.47.3
+

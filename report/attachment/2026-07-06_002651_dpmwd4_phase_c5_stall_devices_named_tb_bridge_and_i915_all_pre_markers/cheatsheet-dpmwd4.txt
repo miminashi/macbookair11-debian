@@ -1,0 +1,34 @@
+=== dpmwd4 site table (RTC year=2027 signature, min/sec=0) ===
+file                            line user filehash  Magic(user:file)  RTC(UTC mon/day/hour)  label
+kernel/power/suspend.c           130    2       59  2:59        2027-11-23 02:00  s2idle_loop entry
+kernel/power/suspend.c           152    3      332  3:332       2027-12-23 15:00  before s2idle_enter (= asleep/wake-lost if final)
+kernel/power/suspend.c           154    4      201  4:201       2027-05-17 09:00  after s2idle_enter returned
+kernel/power/suspend.c           157    5      318  5:318       2027-06-05 15:00  s2idle_loop exited (wake accepted)
+kernel/power/suspend.c           430    0      372  0:372       2027-01-21 17:00  before platform_suspend_prepare_noirq
+kernel/power/suspend.c           434    1      340  1:340       2027-06-06 16:00  after platform_suspend_prepare_noirq ok
+kernel/power/suspend.c           477    6      241  6:241       2027-11-14 11:00  Platform_wake: before platform_resume_noirq
+drivers/acpi/x86/s2idle.c        550    8      214  8:214       2027-01-07 10:00  acpi_s2idle_prepare_late entry
+drivers/acpi/x86/s2idle.c        568    9      299  9:299       2027-06-08 14:00  prepare_late: before LPS0 entry DSM
+drivers/acpi/x86/s2idle.c        592    7      301  7:301       2027-12-10 14:00  prepare_late done
+drivers/acpi/x86/s2idle.c        613    8      313  8:313       2027-01-27 14:00  acpi_s2idle_restore_early entry
+drivers/acpi/sleep.c             761    9      370  9:370       2027-02-19 17:00  acpi_s2idle_wake entry (wake-check iteration)
+drivers/base/power/main.c       1226    0       23  0:23        2027-09-03 01:00  device_suspend_noirq start
+drivers/base/power/main.c       1289  err      122  0:122       2027-09-23 05:00  device_suspend_noirq end (user=error)
+drivers/base/power/main.c       1401    0       82  0:82        2027-05-26 03:00  device_suspend_late start
+drivers/base/power/main.c       1458  err       97  0:97        2027-05-18 04:00  device_suspend_late end (user=error)
+drivers/base/power/main.c       1611    0      224  0:224       2027-09-19 10:00  device_suspend start
+drivers/base/power/main.c       1725  err      254  0:254       2027-09-03 12:00  device_suspend end (user=error)
+
+=== device markers (user 10-15): file field = sdbm(7919, dev_name) % 397 ===
+  user=10  device_resume_noirq entry  (pre: callback/wait ahead for this device)
+  user=11  device_resume_noirq exit   (post: this device done, stall is in machinery after it)
+  user=12  device_resume_early entry  (pre)
+  user=13  device_resume_early exit   (post)
+  user=14  device_resume entry        (pre, main phase)
+  user=15  device_resume exit         (post, main phase) [success-cycle final]
+  decode: boot-time kernel walks dpm_list and prints 'hash matches' per device;
+  offline: decode.py --devlist <snapshot> lists colliding candidates.
+
+No filehash collisions among the 18 sites (mod 397).
+
+t3 synthetic-hang expectation: Magic 3:332 (suspend.c:152) -> unchanged vs dpmwd3 (332) OK
