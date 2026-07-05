@@ -1,0 +1,35 @@
+--- boot 0:
+ 1月 13 11:02:02 macbookair2015 kernel: PM: RTC time: 02:01:58, date: 2027-01-13
+ 1月 13 11:02:02 macbookair2015 kernel: PM:   trace data valid, 01:58 elapsed since last trace write
+ 1月 13 11:02:02 macbookair2015 kernel: PM:   Magic number: 0:51
+--- boot -1:
+ 1月 13 10:00:19 macbookair2015 kernel: PM: RTC time: 01:00:15, date: 2027-01-13
+ 1月 13 10:00:19 macbookair2015 kernel: PM:   trace data valid, 00:15 elapsed since last trace write
+ 1月 13 10:00:19 macbookair2015 kernel: PM:   Magic number: 0:30
+ 1月 13 10:00:19 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:700
+--- boot -2:
+ 9月 27 16:20:25 macbookair2015 kernel: PM: RTC time: 07:20:21, date: 2027-09-27
+ 9月 27 16:20:25 macbookair2015 kernel: PM:   trace data valid, 20:21 elapsed since last trace write
+ 9月 27 16:20:25 macbookair2015 kernel: PM:   Magic number: 0:167
+ 9月 27 16:20:25 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:627
+--- boot -3:
+ 9月 16 03:01:15 macbookair2015 kernel: PM: RTC time: 18:01:11, date: 2027-09-15
+ 9月 16 03:01:15 macbookair2015 kernel: PM:   trace data valid, 01:11 elapsed since last trace write
+ 9月 16 03:01:15 macbookair2015 kernel: PM:   Magic number: 0:389
+ 9月 16 03:01:15 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:836
+--- boot -4:
+12月 24 00:02:15 macbookair2015 kernel: PM: RTC time: 15:02:10, date: 2027-12-23
+12月 24 00:02:15 macbookair2015 kernel: PM:   trace data valid, 02:10 elapsed since last trace write
+12月 24 00:02:15 macbookair2015 kernel: PM:   Magic number: 3:332
+12月 24 00:02:15 macbookair2015 kernel: PM:   hash matches kernel/power/suspend.c:152
+--- boot -5:
+ 1月 21 14:00:23 macbookair2015 kernel: PM: RTC time: 05:00:19, date: 2027-01-21
+ 1月 21 14:00:23 macbookair2015 kernel: PM:   trace data valid, 00:19 elapsed since last trace write
+ 1月 21 14:00:24 macbookair2015 kernel: PM:   Magic number: 0:120
+ 1月 21 14:00:24 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:1001
+--- boot -6:
+ 7月 04 18:22:19 macbookair2015 kernel: PM: RTC time: 09:22:15, date: 2026-07-04
+ 7月 04 18:22:19 macbookair2015 kernel: PM:   no trace data (RTC year 2026, expected 2027: firmware reset or real time)
+--- boot -7:
+ 1月 21 14:00:25 macbookair2015 kernel: PM: RTC time: 05:00:20, date: 2027-01-21
+ 1月 21 14:00:25 macbookair2015 kernel: PM:   Magic number: 11:37:12

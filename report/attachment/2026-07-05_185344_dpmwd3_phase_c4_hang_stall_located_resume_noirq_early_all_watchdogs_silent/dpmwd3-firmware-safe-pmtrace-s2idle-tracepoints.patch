@@ -1,0 +1,338 @@
+From 7c86c399489a27a6acd7525472feb01a0fcfb34a Mon Sep 17 00:00:00 2001
+From: miminashi <s.nohara.2001@gmail.com>
+Date: Sat, 4 Jul 2026 17:41:26 +0900
+Subject: [PATCH] PM: trace: firmware-safe RTC encoding + s2idle-region trace
+ points
+
+Apple firmware validates the RTC date at POST and resets implausible
+dates (e.g. the year-2056 values the stock encoding produces) to
+2016-01-01, destroying the hash before the kernel can read it back.
+Probed on the target machine: years near the present (2026, 2027) pass
+through untouched.
+
+Rework the encoding to survive that check:
+ - keep tm_year fixed at 2027 (also serves as a validity signature,
+   since the real clock reads 2026)
+ - encode only in mon/mday/hour (12*28*24 = 8064 slots); shrink
+   FILEHASH to 397 and drop the device channel so user*file =
+   16*397 = 6352 fits
+ - leave min/sec at zero so the decode tolerates up to an hour of
+   RTC ticking between the last trace write and the boot-time read
+ - reject the decode when the year signature does not match
+
+Also add TRACE_SUSPEND/TRACE_RESUME points in the s2idle region, which
+the stock pm_trace cannot see at all (deepest stock point is the noirq
+phase in drivers/base/power/main.c): around
+platform_suspend_prepare_noirq, in s2idle_loop/s2idle_enter, at
+Platform_wake, in acpi_s2idle_prepare_late/restore_early and in
+acpi_s2idle_wake. This is the instrumentation for the silent
+BT-PAN+VPN+radio-off lid-close hang whose stall stage was narrowed to
+{prepare_noirq, s2idle_loop, wake side} by dpmwd1/dpmwd2.
+---
+ drivers/acpi/sleep.c       |   2 +
+ drivers/acpi/x86/s2idle.c  |   6 +++
+ drivers/base/power/trace.c | 107 ++++++++++++++-----------------------
+ kernel/power/suspend.c     |   8 +++
+ 4 files changed, 57 insertions(+), 66 deletions(-)
+
+diff --git a/drivers/acpi/sleep.c b/drivers/acpi/sleep.c
+index 0b7fa4a8c..1e4a7d94d 100644
+--- a/drivers/acpi/sleep.c
++++ b/drivers/acpi/sleep.c
+@@ -19,6 +19,7 @@
+ #include <linux/reboot.h>
+ #include <linux/acpi.h>
+ #include <linux/module.h>
++#include <linux/pm-trace.h>
+ #include <linux/syscore_ops.h>
+ #include <asm/io.h>
+ #include <trace/events/power.h>
+@@ -757,6 +758,7 @@ int acpi_s2idle_prepare(void)
+ 
+ bool acpi_s2idle_wake(void)
+ {
++	TRACE_RESUME(12);
+ 	if (!acpi_sci_irq_valid())
+ 		return pm_wakeup_pending();
+ 
+diff --git a/drivers/acpi/x86/s2idle.c b/drivers/acpi/x86/s2idle.c
+index 377a26886..468662014 100644
+--- a/drivers/acpi/x86/s2idle.c
++++ b/drivers/acpi/x86/s2idle.c
+@@ -18,6 +18,7 @@
+ #include <linux/acpi.h>
+ #include <linux/device.h>
+ #include <linux/dmi.h>
++#include <linux/pm-trace.h>
+ #include <linux/suspend.h>
+ 
+ #include "../sleep.h"
+@@ -546,6 +547,7 @@ int acpi_s2idle_prepare_late(void)
+ {
+ 	struct acpi_s2idle_dev_ops *handler;
+ 
++	TRACE_SUSPEND(8);
+ 	if (!lps0_device_handle || sleep_no_lps0)
+ 		return 0;
+ 
+@@ -563,6 +565,7 @@ int acpi_s2idle_prepare_late(void)
+ 		acpi_sleep_run_lps0_dsm(ACPI_LPS0_SCREEN_OFF,
+ 				lps0_dsm_func_mask_microsoft, lps0_dsm_guid_microsoft);
+ 
++	TRACE_SUSPEND(9);
+ 	/* LPS0 entry */
+ 	if (lps0_dsm_func_mask > 0 && acpi_s2idle_vendor_amd())
+ 		acpi_sleep_run_lps0_dsm(ACPI_LPS0_ENTRY_AMD,
+@@ -585,6 +588,8 @@ int acpi_s2idle_prepare_late(void)
+ 			handler->prepare();
+ 	}
+ 
++
++	TRACE_SUSPEND(10);
+ 	return 0;
+ }
+ 
+@@ -605,6 +610,7 @@ void acpi_s2idle_restore_early(void)
+ {
+ 	struct acpi_s2idle_dev_ops *handler;
+ 
++	TRACE_RESUME(11);
+ 	if (!lps0_device_handle || sleep_no_lps0)
+ 		return;
+ 
+diff --git a/drivers/base/power/trace.c b/drivers/base/power/trace.c
+index cd6e55964..5418973b2 100644
+--- a/drivers/base/power/trace.c
++++ b/drivers/base/power/trace.c
+@@ -73,11 +73,26 @@
+  *  - 0-1008: device
+  */
+ #define USERHASH (16)
+-#define FILEHASH (997)
++#define FILEHASH (397)
+ #define DEVHASH (1009)
+ 
+ #define DEVSEED (7919)
+ 
++/*
++ * Apple (and possibly other) firmware validates the RTC date at POST and
++ * resets "implausible" dates (e.g. year 2056) to a fixed epoch, destroying
++ * the hash before the kernel can read it.  To survive that check we keep
++ * the year field fixed at a value the firmware accepts and encode the hash
++ * only in month/day/hour: 12*28*24 = 8064 > USERHASH*FILEHASH = 6352.
++ * min/sec are left at zero, so the decode stays valid for up to an hour
++ * between the last trace write and the boot-time read (the RTC keeps
++ * ticking across the power cut).  The device channel is dropped.
++ *
++ * The year doubles as a validity signature: it must differ from the real
++ * current year, or a boot with a sane RTC would decode as a bogus hash.
++ */
++#define PM_TRACE_RTC_YEAR (127)	/* 2027 */
++
+ bool pm_trace_rtc_abused __read_mostly;
+ EXPORT_SYMBOL_GPL(pm_trace_rtc_abused);
+ 
+@@ -85,7 +100,7 @@ static unsigned int dev_hash_value;
+ 
+ static int set_magic_time(unsigned int user, unsigned int file, unsigned int device)
+ {
+-	unsigned int n = user + USERHASH*(file + FILEHASH*device);
++	unsigned int n = user + USERHASH*file;
+ 
+ 	// June 7th, 2006
+ 	static struct rtc_time time = {
+@@ -100,21 +115,22 @@ static int set_magic_time(unsigned int user, unsigned int file, unsigned int dev
+ 		.tm_isdst = 1
+ 	};
+ 
+-	time.tm_year = (n % 100);
+-	n /= 100;
++	time.tm_year = PM_TRACE_RTC_YEAR;
+ 	time.tm_mon = (n % 12);
+ 	n /= 12;
+ 	time.tm_mday = (n % 28) + 1;
+ 	n /= 28;
+ 	time.tm_hour = (n % 24);
+ 	n /= 24;
+-	time.tm_min = (n % 20) * 3;
+-	n /= 20;
++	time.tm_min = 0;
++	time.tm_sec = 0;
+ 	mc146818_set_time(&time);
+ 	pm_trace_rtc_abused = true;
+ 	return n ? -1 : 0;
+ }
+ 
++static bool magic_time_valid;
++
+ static unsigned int read_magic_time(void)
+ {
+ 	struct rtc_time time;
+@@ -126,13 +142,17 @@ static unsigned int read_magic_time(void)
+ 	}
+ 
+ 	pr_info("RTC time: %ptRt, date: %ptRd\n", &time, &time);
+-	val = time.tm_year;				/* 100 years */
+-	if (val > 100)
+-		val -= 100;
+-	val += time.tm_mon * 100;			/* 12 months */
+-	val += (time.tm_mday-1) * 100 * 12;		/* 28 month-days */
+-	val += time.tm_hour * 100 * 12 * 28;		/* 24 hours */
+-	val += (time.tm_min / 3) * 100 * 12 * 28 * 24;	/* 20 3-minute intervals */
++	if (time.tm_year != PM_TRACE_RTC_YEAR) {
++		pr_info("  no trace data (RTC year %d, expected %d: firmware reset or real time)\n",
++			time.tm_year + 1900, PM_TRACE_RTC_YEAR + 1900);
++		return 0;
++	}
++	magic_time_valid = true;
++	pr_info("  trace data valid, %02d:%02d elapsed since last trace write\n",
++		time.tm_min, time.tm_sec);
++	val = time.tm_mon;			/* 12 months */
++	val += (time.tm_mday-1) * 12;		/* 28 month-days */
++	val += time.tm_hour * 12 * 28;		/* 24 hours */
+ 	return val;
+ }
+ 
+@@ -199,57 +219,12 @@ static int show_file_hash(unsigned int value)
+ 	return match;
+ }
+ 
+-static int show_dev_hash(unsigned int value)
+-{
+-	int match = 0;
+-	struct list_head *entry;
+-
+-	device_pm_lock();
+-	entry = dpm_list.prev;
+-	while (entry != &dpm_list) {
+-		struct device * dev = to_device(entry);
+-		unsigned int hash = hash_string(DEVSEED, dev_name(dev), DEVHASH);
+-		if (hash == value) {
+-			dev_info(dev, "hash matches\n");
+-			match++;
+-		}
+-		entry = entry->prev;
+-	}
+-	device_pm_unlock();
+-	return match;
+-}
+-
+ static unsigned int hash_value_early_read;
+ 
+ int show_trace_dev_match(char *buf, size_t size)
+ {
+-	unsigned int value = hash_value_early_read / (USERHASH * FILEHASH);
+-	int ret = 0;
+-	struct list_head *entry;
+-
+-	/*
+-	 * It's possible that multiple devices will match the hash and we can't
+-	 * tell which is the culprit, so it's best to output them all.
+-	 */
+-	device_pm_lock();
+-	entry = dpm_list.prev;
+-	while (size && entry != &dpm_list) {
+-		struct device *dev = to_device(entry);
+-		unsigned int hash = hash_string(DEVSEED, dev_name(dev),
+-						DEVHASH);
+-		if (hash == value) {
+-			int len = snprintf(buf, size, "%s\n",
+-					    dev_driver_string(dev));
+-			if (len > size)
+-				len = size;
+-			buf += len;
+-			ret += len;
+-			size -= len;
+-		}
+-		entry = entry->prev;
+-	}
+-	device_pm_unlock();
+-	return ret;
++	/* The device channel is gone from the firmware-safe encoding. */
++	return 0;
+ }
+ 
+ static int
+@@ -286,20 +261,20 @@ static int __init early_resume_init(void)
+ static int __init late_resume_init(void)
+ {
+ 	unsigned int val = hash_value_early_read;
+-	unsigned int user, file, dev;
++	unsigned int user, file;
+ 
+ 	if (!x86_platform.legacy.rtc)
+ 		return 0;
+ 
++	if (!magic_time_valid)
++		return 0;
++
+ 	user = val % USERHASH;
+ 	val = val / USERHASH;
+-	file = val % FILEHASH;
+-	val = val / FILEHASH;
+-	dev = val /* % DEVHASH */;
++	file = val /* % FILEHASH */;
+ 
+-	pr_info("  Magic number: %d:%d:%d\n", user, file, dev);
++	pr_info("  Magic number: %d:%d\n", user, file);
+ 	show_file_hash(file);
+-	show_dev_hash(dev);
+ 	return 0;
+ }
+ 
+diff --git a/kernel/power/suspend.c b/kernel/power/suspend.c
+index 09f8397ba..72dab0ff6 100644
+--- a/kernel/power/suspend.c
++++ b/kernel/power/suspend.c
+@@ -30,6 +30,7 @@
+ #include <trace/events/power.h>
+ #include <linux/compiler.h>
+ #include <linux/moduleparam.h>
++#include <linux/pm-trace.h>
+ 
+ #include "power.h"
+ 
+@@ -126,6 +127,7 @@ static void s2idle_enter(void)
+ static void s2idle_loop(void)
+ {
+ 	pm_pr_dbg("suspend-to-idle\n");
++	TRACE_SUSPEND(2);
+ 
+ 	/*
+ 	 * Suspend-to-idle equals:
+@@ -147,9 +149,12 @@ static void s2idle_loop(void)
+ 		if (s2idle_ops && s2idle_ops->check)
+ 			s2idle_ops->check();
+ 
++		TRACE_SUSPEND(3);
+ 		s2idle_enter();
++		TRACE_RESUME(4);
+ 	}
+ 
++	TRACE_RESUME(5);
+ 	pm_pr_dbg("resume from suspend-to-idle\n");
+ }
+ 
+@@ -422,9 +427,11 @@ static int suspend_enter(suspend_state_t state, bool *wakeup)
+ 		pr_err("noirq suspend of devices failed\n");
+ 		goto Platform_early_resume;
+ 	}
++	TRACE_SUSPEND(0);
+ 	error = platform_suspend_prepare_noirq(state);
+ 	if (error)
+ 		goto Platform_wake;
++	TRACE_SUSPEND(1);
+ 
+ 	if (suspend_test(TEST_PLATFORM))
+ 		goto Platform_wake;
+@@ -467,6 +474,7 @@ static int suspend_enter(suspend_state_t state, bool *wakeup)
+ 	pm_sleep_enable_secondary_cpus();
+ 
+  Platform_wake:
++	TRACE_RESUME(6);
+ 	platform_resume_noirq(state);
+ 	dpm_resume_noirq(PMSG_RESUME);
+ 
+-- 
+2.47.3
+
