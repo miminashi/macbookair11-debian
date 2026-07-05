@@ -118,7 +118,7 @@ cd src && apt-get source systemd=<上で得た版>
 
 ### Discord 通知
 
-レポート作成時（Write ツールで `report/` 直下に `.md` を書き込んだ時）、PostToolUse hook により Discord webhook で自動通知される。Webhook URL は `.env` の `DISCORD_WEBHOOK_URL` で設定する。
+レポート作成時（Write ツールで `report/` 直下に `.md` を書き込んだ時）、`.env` に `DISCORD_WEBHOOK_URL` が設定されているときに限り、PostToolUse hook により Discord webhook で自動通知される。`DISCORD_WEBHOOK_URL` が未設定 (`.env` 自体が無い場合も含む) のときは通知しない (hook は no-op)。
 
 ### 例
 
