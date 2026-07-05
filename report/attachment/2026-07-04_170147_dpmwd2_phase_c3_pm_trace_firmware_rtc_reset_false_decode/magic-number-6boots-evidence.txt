@@ -1,0 +1,33 @@
+=== 143949 PRE の xfrm / wl (BT-PAN cycle 1 の条件判定) ===
+=== ip xfrm state ===
+src 172.20.10.13 dst 160.16.210.47
+	proto esp spi 0xc6b380a0 reqid 1 mode tunnel
+ping_running=NO
+wl_loaded=YES cfg80211_loaded=YES wlp3s0_present=YES
+=== 全ブートの Magic number 証跡 (レポート用) ===
+--- boot -5 ---
+ 7月 04 02:22:14 macbookair2015 kernel: PM: RTC time: 17:22:10, date: 2026-07-03
+ 7月 04 02:22:15 macbookair2015 kernel: PM:   Magic number: 2:856:389
+--- boot -4 ---
+ 7月 04 14:11:12 macbookair2015 kernel: PM: RTC time: 00:00:13, date: 2016-01-01
+ 7月 04 14:11:13 macbookair2015 kernel: PM:   Magic number: 0:1:0
+ 7月 04 14:11:13 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:1728
+--- boot -3 ---
+ 7月 04 14:27:33 macbookair2015 kernel: PM: RTC time: 05:27:28, date: 2026-07-04
+ 7月 04 14:27:33 macbookair2015 kernel: PM:   Magic number: 2:759:465
+--- boot -2 ---
+ 7月 04 14:47:00 macbookair2015 kernel: PM: RTC time: 00:00:13, date: 2016-01-01
+ 7月 04 14:47:00 macbookair2015 kernel: PM:   Magic number: 0:1:0
+ 7月 04 14:47:00 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:1728
+--- boot -1 ---
+ 7月 04 16:52:17 macbookair2015 kernel: PM: RTC time: 00:00:13, date: 2016-01-01
+ 7月 04 16:52:17 macbookair2015 kernel: PM:   Magic number: 0:1:0
+ 7月 04 16:52:17 macbookair2015 kernel: PM:   hash matches drivers/base/power/main.c:1728
+--- boot 0 ---
+12月 28 23:57:24 macbookair2015 kernel: PM: RTC time: 14:57:20, date: 2026-12-28
+12月 28 23:57:24 macbookair2015 kernel: PM:   Magic number: 6:71:992
+12月 28 23:57:24 macbookair2015 kernel: memory memory35: hash matches
+=== pstore 最終状態 ===
+/sys/fs/pstore/:
+
+/var/lib/systemd/pstore/:
