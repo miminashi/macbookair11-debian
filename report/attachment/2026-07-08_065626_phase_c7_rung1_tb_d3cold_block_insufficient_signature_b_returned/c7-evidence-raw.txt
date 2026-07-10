@@ -1,0 +1,69 @@
+##### C-7 evidence bundle (collected 2026-07-08 06:56 JST) #####
+
+=== [1] session marker ===
+C7 session start 1783440948
+
+=== [2] cycle-watch-c7.log (full) ===
+1783441584.797230 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783441620.482291 macbookair2015 kernel: PM: suspend exit
+1783441652.161173 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783441656.459145 macbookair2015 kernel: PM: suspend exit
+1783444198.917187 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783444214.001712 macbookair2015 kernel: PM: suspend exit
+1783452792.115846 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783452796.242961 macbookair2015 kernel: PM: suspend exit
+1783454182.651841 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783454186.892628 macbookair2015 kernel: PM: suspend exit
+1783460291.501768 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783460295.628164 macbookair2015 kernel: PM: suspend exit
+1783460394.567089 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783460398.776877 macbookair2015 kernel: PM: suspend exit
+
+=== [3] PRE ledger (epoch / validity / pairing) ===
+1783441584 INVALID paired
+1783441651 INVALID paired
+1783444198 INVALID paired
+1783452791 BT_PAN_VALID paired
+1783454182 BT_PAN_VALID paired
+1783460290 BT_PAN_VALID paired
+1783460393 BT_PAN_VALID paired
+1783460452 BT_PAN_VALID unpaired
+
+=== [4] hang cycle PRE (1783460452.pre, SA 部) ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: wlp3s0: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000\    link/ether 98:e0:d9:8d:20:5d brd ff:ff:ff:ff:ff:ff\    altname wlx98e0d98d205d
+15: nm-xfrm-1519072@NONE: <NOARP,UP,LOWER_UP> mtu 1400 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/none 
+src 172.20.10.13 dst 160.16.210.47
+src 160.16.210.47 dst 172.20.10.13
+src fe80::/64 dst fe80::/64 
+src fe80::/64 dst fe80::/64 
+src fe80::/64 dst fe80::/64 
+
+=== [5] boot-time pm_trace decode (hang 後 boot = -b -1 相当を現 boot 前の journal から) ===
+ 7月 28 01:07:43 macbookair2015 kernel: PM:   Magic number: 14:355
+ 7月 28 01:07:43 macbookair2015 kernel: pci 0000:00:02.0: hash matches
+ 7月 28 01:07:43 macbookair2015 kernel: acpi LNXSYBUS:00: hash matches
+ 7月 28 01:07:43 macbookair2015 kernel: acpi LNXCPU:06: hash matches
+
+=== [6] vpn-watch-c7.log tail ===
+1783454206 172.20.10.13/28 xfrm=2
+1783460174 172.20.10.13/28 xfrm=2
+1783460194 172.20.10.13/28 xfrm=2
+1783460214 172.20.10.13/28 xfrm=2
+1783460234 172.20.10.13/28 xfrm=2
+1783460254 172.20.10.13/28 xfrm=2
+1783460278 172.20.10.13/28 xfrm=2
+1783460298  xfrm=2
+1783460318 172.20.10.13/28 xfrm=2
+1783460375 172.20.10.13/28 xfrm=2
+1783460398  xfrm=2
+1783460418 172.20.10.13/28 xfrm=2
+
+=== [7] 現状 (復旧後) ===
+BOOT_IMAGE=/boot/vmlinuz-6.12.94-dpmwd4 root=UUID=147f49dc-e854-47df-a721-b304a1c0c7bd ro quiet no_console_suspend mem_sleep_default=s2idle panic=15 pcie_port_pm=off
+0000:06:03.0: active D0 d3cold_allowed=1
+0000:06:04.0: active D0 d3cold_allowed=1
+0000:06:05.0: active D0 d3cold_allowed=1
+0000:06:06.0: active D0 d3cold_allowed=1
+0000:00:1c.0: active D0 d3cold_allowed=1
+0000:05:00.0: active D0 d3cold_allowed=1
