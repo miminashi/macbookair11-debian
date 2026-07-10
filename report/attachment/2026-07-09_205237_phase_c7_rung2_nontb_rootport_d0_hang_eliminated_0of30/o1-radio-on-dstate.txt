@@ -1,0 +1,34 @@
+1783495694.909885 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783495826.712312 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: power state changed by ACPI to D0
+1783495826.752631 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PCI PM: Suspend power state: D0
+1783495826.758253 macbookair2015 kernel: mei_me 0000:00:16.0: PCI PM: Suspend power state: D3hot
+1783495826.758978 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PCI PM: Suspend power state: D3hot
+1783495826.759339 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PCI PM: Suspend power state: D3hot
+1783495826.760963 macbookair2015 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+1783495826.761717 macbookair2015 kernel: i915 0000:00:02.0: PCI PM: Suspend power state: D3hot
+1783495826.763226 macbookair2015 kernel: ahci 0000:04:00.0: power state changed by ACPI to D3hot
+1783495826.763658 macbookair2015 kernel: ahci 0000:04:00.0: PCI PM: Suspend power state: D3hot
+1783495826.764913 macbookair2015 kernel: pcieport 0000:00:1c.1: PCI PM: Suspend power state: D3hot
+1783495826.765700 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PCI PM: Suspend power state: D3hot
+1783495826.766454 macbookair2015 kernel: thunderbolt 0000:07:00.0: PCI PM: Suspend power state: D3hot
+1783495826.767467 macbookair2015 kernel: xhci_hcd 0000:00:14.0: power state changed by ACPI to D3hot
+1783495826.767742 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PCI PM: Suspend power state: D3hot
+1783495826.769098 macbookair2015 kernel: pcieport 0000:06:00.0: PCI PM: Suspend power state: D3hot
+1783495826.770035 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: power state changed by ACPI to D3hot
+1783495826.770345 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PCI PM: Suspend power state: D3hot
+1783495826.771148 macbookair2015 kernel: pcieport 0000:05:00.0: power state changed by ACPI to D3hot
+1783495826.771464 macbookair2015 kernel: pcieport 0000:05:00.0: PCI PM: Suspend power state: D3hot
+1783495826.772497 macbookair2015 kernel: pcieport 0000:00:1c.4: PCI PM: Suspend power state: D3hot
+1783495826.773112 macbookair2015 kernel: pcieport 0000:00:1c.5: power state changed by ACPI to D3hot
+1783495826.773486 macbookair2015 kernel: pcieport 0000:00:1c.5: PCI PM: Suspend power state: D3hot
+1783495826.774053 macbookair2015 kernel: pcieport 0000:00:1c.2: power state changed by ACPI to D3hot
+1783495826.775959 macbookair2015 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D3hot
+1783495826.776959 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PCI PM: Suspend power state: D3hot
+1783495826.786696 macbookair2015 kernel: xhci_hcd 0000:00:14.0: power state changed by ACPI to D0
+1783495826.794312 macbookair2015 kernel: pcieport 0000:05:00.0: power state changed by ACPI to D0
+1783495826.795267 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: power state changed by ACPI to D0
+1783495826.797790 macbookair2015 kernel: pcieport 0000:00:1c.2: power state changed by ACPI to D0
+1783495826.801551 macbookair2015 kernel: pcieport 0000:00:1c.5: power state changed by ACPI to D0
+1783495826.803385 macbookair2015 kernel: ahci 0000:04:00.0: power state changed by ACPI to D0
+1783495826.876968 macbookair2015 kernel: PM: suspend exit
+1783495838.927808 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: power state changed by ACPI to D3hot

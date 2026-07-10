@@ -1,0 +1,158 @@
+===== SESSION marker =====
+C7R2 session start 1783577736
+===== cycle-watch-c7r2.log =====
+1783577650.242443 macbookair2015 kernel: PM: suspend exit
+1783577814.172493 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783577843.397485 macbookair2015 kernel: PM: suspend exit
+1783577866.796462 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783577897.456284 macbookair2015 kernel: PM: suspend exit
+1783578073.460609 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783578099.530675 macbookair2015 kernel: PM: suspend exit
+1783578830.075750 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783578864.277022 macbookair2015 kernel: PM: suspend exit
+1783578940.096982 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783578972.072209 macbookair2015 kernel: PM: suspend exit
+1783579016.836954 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783579055.513530 macbookair2015 kernel: PM: suspend exit
+1783579077.588974 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783579080.425417 macbookair2015 kernel: PM: suspend exit
+1783580780.766120 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783580818.994461 macbookair2015 kernel: PM: suspend exit
+1783581826.919458 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783581845.639618 macbookair2015 kernel: PM: suspend exit
+1783581881.803460 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783581908.169356 macbookair2015 kernel: PM: suspend exit
+1783581935.567614 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783581974.342746 macbookair2015 kernel: PM: suspend exit
+1783582032.587554 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783582055.584164 macbookair2015 kernel: PM: suspend exit
+1783582105.731575 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783582141.543630 macbookair2015 kernel: PM: suspend exit
+1783582215.747311 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783582253.228174 macbookair2015 kernel: PM: suspend exit
+1783582387.465662 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783582419.561714 macbookair2015 kernel: PM: suspend exit
+1783582564.671939 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783582602.298665 macbookair2015 kernel: PM: suspend exit
+1783583701.646774 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783583739.307298 macbookair2015 kernel: PM: suspend exit
+1783583763.920476 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783583803.021592 macbookair2015 kernel: PM: suspend exit
+1783593436.428326 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783593452.068949 macbookair2015 kernel: PM: suspend exit
+1783594386.256309 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783594424.208743 macbookair2015 kernel: PM: suspend exit
+1783594612.144226 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783594649.342067 macbookair2015 kernel: PM: suspend exit
+1783595877.383730 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783595897.460027 macbookair2015 kernel: PM: suspend exit
+1783595924.663774 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783595961.262781 macbookair2015 kernel: PM: suspend exit
+1783596231.096448 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596259.665596 macbookair2015 kernel: PM: suspend exit
+1783596306.540243 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596320.229489 macbookair2015 kernel: PM: suspend exit
+1783596346.020256 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596359.786209 macbookair2015 kernel: PM: suspend exit
+1783596393.300241 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596431.457529 macbookair2015 kernel: PM: suspend exit
+1783596653.162452 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596668.240103 macbookair2015 kernel: PM: suspend exit
+1783596700.934424 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596733.185868 macbookair2015 kernel: PM: suspend exit
+1783596773.554424 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596795.113873 macbookair2015 kernel: PM: suspend exit
+1783596818.214395 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783596856.305241 macbookair2015 kernel: PM: suspend exit
+1783596981.376278 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783597017.297798 macbookair2015 kernel: PM: suspend exit
+1783597065.306319 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783597092.933697 macbookair2015 kernel: PM: suspend exit
+1783597355.578299 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783597371.529270 macbookair2015 kernel: PM: suspend exit
+1783597400.294293 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783597421.940807 macbookair2015 kernel: PM: suspend exit
+1783597451.870298 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783597489.193071 macbookair2015 kernel: PM: suspend exit
+===== PRE 台帳 (有効性+ペア判定) =====
+1783577813 INVALID paired(1783577843)
+1783577866 INVALID paired(1783577897)
+1783578072 INVALID paired(1783578099)
+1783578829 INVALID paired(1783578863)
+1783578939 INVALID paired(1783578971)
+1783579016 BT_PAN_VALID paired(1783579055)
+1783579076 BT_PAN_VALID paired(1783579080)
+1783580780 BT_PAN_VALID paired(1783580818)
+1783581826 BT_PAN_VALID paired(1783581845)
+1783581881 INVALID paired(1783581907)
+1783581934 BT_PAN_VALID paired(1783581974)
+1783582031 BT_PAN_VALID paired(1783582055)
+1783582105 BT_PAN_VALID paired(1783582141)
+1783582215 BT_PAN_VALID paired(1783582252)
+1783582386 BT_PAN_VALID paired(1783582419)
+1783582564 BT_PAN_VALID paired(1783582601)
+1783583701 BT_PAN_VALID paired(1783583738)
+1783583763 BT_PAN_VALID paired(1783583802)
+1783593435 BT_PAN_VALID paired(1783593451)
+1783594385 BT_PAN_VALID paired(1783594423)
+1783594611 BT_PAN_VALID paired(1783594648)
+1783595876 BT_PAN_VALID paired(1783595897)
+1783595924 BT_PAN_VALID paired(1783595960)
+1783596230 BT_PAN_VALID paired(1783596259)
+1783596305 BT_PAN_VALID paired(1783596319)
+1783596345 BT_PAN_VALID paired(1783596359)
+1783596392 BT_PAN_VALID paired(1783596431)
+1783596652 BT_PAN_VALID paired(1783596667)
+1783596700 BT_PAN_VALID paired(1783596732)
+1783596772 BT_PAN_VALID paired(1783596794)
+1783596817 BT_PAN_VALID paired(1783596855)
+1783596980 BT_PAN_VALID paired(1783597016)
+1783597064 BT_PAN_VALID paired(1783597092)
+1783597354 BT_PAN_VALID paired(1783597371)
+1783597399 BT_PAN_VALID paired(1783597421)
+1783597451 BT_PAN_VALID paired(1783597488)
+===== rtc-catch-s4.log (smoke S4 成功形 decode 元値) =====
+read#1 1783578099.541236250 rtc=2027-08-03 09:00:00.893848+09:00 00:00:01
+read#2 1783578099.654432930 rtc=2027-08-03 09:00:01.007705+09:00 00:00:02
+read#3 1783578100.653973927 rtc=2027-08-03 09:00:02.007332+09:00 00:00:03
+2027-08-03
+00:00:03
+===== vpn-watch-c7r2.log (先頭 5 + 末尾 10) =====
+1783577736  xfrm=0
+1783577756  xfrm=0
+1783577776  xfrm=0
+1783577796  xfrm=0
+1783577843  xfrm=0
+...
+1783597729  xfrm=0
+1783597749  xfrm=0
+1783597769  xfrm=0
+1783597789  xfrm=0
+1783597809  xfrm=0
+1783597829  xfrm=0
+1783597849  xfrm=0
+1783597869  xfrm=0
+1783597889  xfrm=0
+1783597909  xfrm=0
+===== S1 smoke: Rung 2 実効 (sleep 中 D-state) =====
+1783577650.101238 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PCI PM: Suspend power state: D0
+1783577650.105398 macbookair2015 kernel: pcieport 0000:00:1c.1: PCI PM: Suspend power state: D0
+1783577650.108437 macbookair2015 kernel: mei_me 0000:00:16.0: PCI PM: Suspend power state: D3hot
+1783577650.108834 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PCI PM: Suspend power state: D3hot
+1783577650.109989 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PCI PM: Suspend power state: D3hot
+1783577650.111160 macbookair2015 kernel: i915 0000:00:02.0: PCI PM: Suspend power state: D3hot
+1783577650.111566 macbookair2015 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+1783577650.112773 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PCI PM: Suspend power state: D3hot
+1783577650.114013 macbookair2015 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D0
+1783577650.115928 macbookair2015 kernel: ahci 0000:04:00.0: PCI PM: Suspend power state: D3hot
+1783577650.117933 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PCI PM: Suspend power state: D3hot
+1783577650.118883 macbookair2015 kernel: pcieport 0000:00:1c.5: PCI PM: Suspend power state: D0
+1783577650.120471 macbookair2015 kernel: thunderbolt 0000:07:00.0: PCI PM: Suspend power state: D3hot
+1783577650.121583 macbookair2015 kernel: pcieport 0000:06:00.0: PCI PM: Suspend power state: D3hot
+1783577650.123040 macbookair2015 kernel: pcieport 0000:05:00.0: PCI PM: Suspend power state: D0
+1783577650.124817 macbookair2015 kernel: pcieport 0000:00:1c.4: PCI PM: Suspend power state: D0
+1783577650.126449 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PCI PM: Suspend power state: D3hot
+1783577650.127822 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PCI PM: Suspend power state: D3hot
+===== pstore / boot =====
+0
+  0 624a95a31b41455ea580399c2d58c039 Wed 2026-07-08 16:26:01 JST Thu 2026-07-09 20:51:51 JST
