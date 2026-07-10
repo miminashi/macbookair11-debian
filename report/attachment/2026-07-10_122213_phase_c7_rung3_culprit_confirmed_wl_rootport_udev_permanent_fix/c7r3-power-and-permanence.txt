@@ -1,0 +1,96 @@
+##### C7R3 待機電力計測 + 恒久化検証 証跡 1783653767 2026年  7月 10日 金曜日 12:22:47 JST #####
+
+===== [A] s3-soak.log 計測区間 (7/10) =====
+2026-07-10T01:07:37+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=9 ss_fail=0 gpe70=0
+2026-07-10T01:07:40+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=10 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T01:13:35+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=10 ss_fail=0 gpe70=0
+2026-07-10T01:13:39+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=11 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:15:22+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=11 ss_fail=0 gpe70=0
+2026-07-10T01:15:26+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=12 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:16:19+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=12 ss_fail=0 gpe70=0
+2026-07-10T01:16:22+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=13 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T01:16:51+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=13 ss_fail=0 gpe70=0
+2026-07-10T01:16:54+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=14 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T01:28:00+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=14 ss_fail=0 gpe70=0
+2026-07-10T01:28:04+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=15 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:29:31+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=15 ss_fail=0 gpe70=0
+2026-07-10T01:29:35+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=16 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:30:05+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=16 ss_fail=0 gpe70=0
+2026-07-10T01:30:09+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=17 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:31:42+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=17 ss_fail=0 gpe70=0
+2026-07-10T01:31:46+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=18 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:32:57+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=18 ss_fail=0 gpe70=0
+2026-07-10T01:33:01+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=19 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:35:39+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=19 ss_fail=0 gpe70=0
+2026-07-10T01:35:43+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=20 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:38:10+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=20 ss_fail=0 gpe70=0
+2026-07-10T01:38:14+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=21 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:39:10+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=21 ss_fail=0 gpe70=0
+2026-07-10T01:39:14+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=22 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:40:21+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=22 ss_fail=0 gpe70=0
+2026-07-10T01:40:24+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=23 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T01:44:07+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=23 ss_fail=0 gpe70=0
+2026-07-10T01:44:11+0900 WAKE type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=24 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T01:45:16+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4576000 ss_ok=24 ss_fail=0 gpe70=0
+2026-07-10T01:45:19+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=25 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T02:55:03+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=25 ss_fail=0 gpe70=0
+2026-07-10T02:55:06+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=26 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T02:55:35+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=26 ss_fail=0 gpe70=0
+2026-07-10T02:55:39+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=27 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T02:56:10+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=27 ss_fail=0 gpe70=0
+2026-07-10T02:56:14+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=28 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T02:56:44+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=28 ss_fail=0 gpe70=0
+2026-07-10T02:56:48+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=29 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T02:57:19+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=29 ss_fail=0 gpe70=0
+2026-07-10T02:57:23+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=30 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T02:57:51+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=30 ss_fail=0 gpe70=0
+2026-07-10T02:57:54+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=31 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T04:17:08+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=31 ss_fail=0 gpe70=0
+2026-07-10T04:17:11+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=32 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T04:17:39+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=32 ss_fail=0 gpe70=0
+2026-07-10T04:17:43+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=33 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:18:14+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=33 ss_fail=0 gpe70=0
+2026-07-10T04:18:18+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=34 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:21:15+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=34 ss_fail=0 gpe70=0
+2026-07-10T04:21:19+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=35 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:21:47+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=35 ss_fail=0 gpe70=0
+2026-07-10T04:21:51+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=36 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:22:23+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=36 ss_fail=0 gpe70=0
+2026-07-10T04:22:26+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=37 ss_fail=0 gpe70=0 asleep_s=3 drm_err=0 lid=*enabled
+2026-07-10T04:22:58+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=37 ss_fail=0 gpe70=0
+2026-07-10T04:23:02+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=38 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:23:34+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=38 ss_fail=0 gpe70=0
+2026-07-10T04:23:38+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=39 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:24:09+0900 SLEEP type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=39 ss_fail=0 gpe70=0
+2026-07-10T04:24:13+0900 WAKE type=suspend ac=1 cap=90 charge_now=4569000 ss_ok=40 ss_fail=0 gpe70=0 asleep_s=4 drm_err=0 lid=*enabled
+2026-07-10T04:45:07+0900 SLEEP type=suspend-then-hibernate ac=0 cap=91 charge_now=4633000 ss_ok=40 ss_fail=0 gpe70=0
+2026-07-10T11:11:00+0900 WAKE type=suspend-then-hibernate ac=0 cap=65 charge_now=3280000 ss_ok=41 ss_fail=0 gpe70=0 asleep_s=23153 drm_err=0 lid=*enabled
+2026-07-10T11:26:13+0900 SLEEP type=suspend ac=0 cap=60 charge_now=3014000 ss_ok=41 ss_fail=0 gpe70=0
+2026-07-10T12:02:07+0900 WAKE type=suspend ac=0 cap=58 charge_now=2925000 ss_ok=42 ss_fail=0 gpe70=0 asleep_s=2154 drm_err=0 lid=*enabled
+2026-07-10T12:17:11+0900 SLEEP type=suspend ac=0 cap=53 charge_now=2672000 ss_ok=42 ss_fail=0 gpe70=0
+2026-07-10T12:20:08+0900 WAKE type=suspend ac=0 cap=53 charge_now=2698000 ss_ok=43 ss_fail=0 gpe70=0 asleep_s=177 drm_err=0 lid=*enabled
+
+===== [B] 計測 cycle の journal suspend entry/exit (計測時 boot 871fb3c0) =====
+1783653432.407307 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783653609.138057 macbookair2015 kernel: PM: suspend exit
+
+===== [C] udev rule (恒久対策) =====
+# Phase C-7 Rung 3 恒久対策 (2026-07-10)
+# 03:00.0 (BCM4360 wl) の D3cold を禁止 → 親 root port 00:1c.2 が sleep 中 D0 常駐に固定され
+# BT-PAN+VPN+radio-off lid close hang を抑止する (hang 0/37, Fisher p≈7.5e-5)。
+# 撤去 = このファイルを rm して再起動。
+ACTION=="add", SUBSYSTEM=="pci", KERNEL=="0000:03:00.0", ATTR{d3cold_allowed}="0"
+
+===== [D] 再起動後の自動適用検収 (現 boot) =====
+  0 4b635cfcbb364631a9a465dfa9c896da Fri 2026-07-10 12:20:58 JST Fri 2026-07-10 12:22:47 JST
+BOOT_IMAGE=/boot/vmlinuz-6.12.94-dpmwd4 root=UUID=147f49dc-e854-47df-a721-b304a1c0c7bd ro quiet no_console_suspend mem_sleep_default=s2idle panic=15
+d3cold_allowed(03:00.0)=0
+
+===== [E] grub 現状 (pcie_port_pm=off 撤去恒久) =====
+GRUB_CMDLINE_LINUX_DEFAULT="quiet no_console_suspend mem_sleep_default=s2idle panic=15"
+-rw-r--r-- 1 root root 1608  7月  8 01:11 /etc/default/grub.bak-c7
+-rw-r--r-- 1 root root 1608  7月  8 16:25 /etc/default/grub.bak-c7r2
+-rw-r--r-- 1 root root 1608  7月  9 23:02 /etc/default/grub.bak-c7r3
+1783626307.695277 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783649461.095907 macbookair2015 kernel: PM: suspend exit
+===== [B 補足] 上 2 行 = 計測 cycle (entry 1783626307=04:45:07 / exit 1783649461=11:11:01 JST、[B] 本体は boot -1 最終 cycle を誤掲載) =====
