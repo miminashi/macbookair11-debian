@@ -1,0 +1,25 @@
+# stock カーネル smoke の D-state 抜粋 (journal より、/tmp 原本は再起動で消失したため会話回収分)
+
+## smoke 1: stock 6.12.94+deb13-amd64 (2026-07-12 04:34 JST、radio on、マーカー C8-STOCK-SMOKE-START)
+# 00:1c.2 のみ D0 で sleep、他は従来どおり = udev rule の保護が stock で機能
+ 7月 12 04:34:53.732903 kernel: pcieport 0000:00:1c.1: PCI PM: Suspend power state: D3hot
+ 7月 12 04:34:53.737010 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+ 7月 12 04:34:53.740925 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D0
+ 7月 12 04:34:53.745883 kernel: pcieport 0000:06:00.0: PCI PM: Suspend power state: D3hot
+ 7月 12 04:34:53.749358 kernel: pcieport 0000:05:00.0: PCI PM: Suspend power state: D3hot
+ 7月 12 04:34:53.750520 kernel: pcieport 0000:00:1c.4: PCI PM: Suspend power state: D3hot
+ 7月 12 04:34:53.751518 kernel: pcieport 0000:00:1c.5: PCI PM: Suspend power state: D3hot
+
+# wl callback (pm_debug_messages) — dpmwd4 の T1 と同一シグネチャ (war は stock でも走る)
+ 7月 12 04:34:53.671016 kernel: wl 0000:03:00.0: PM: calling pci_pm_suspend @ 4231, parent: 0000:00:1c.2
+ 7月 12 04:34:53.681847 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 4996 usecs
+ 7月 12 04:34:53.816946 kernel: wl 0000:03:00.0: PM: calling pci_pm_resume @ 4239, parent: 0000:00:1c.2
+ 7月 12 04:34:53.858426 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 54043 usecs
+
+## smoke 2: stock 6.12.95+deb13-amd64 (2026-07-12 05:58 JST、radio on、マーカー C8-695-SMOKE-START)
+# セキュリティ更新で入った新カーネルでも udev rule の保護が機能
+ 7月 12 05:58:49.783946 kernel: pcieport 0000:00:1c.1: PCI PM: Suspend power state: D3hot
+ 7月 12 05:58:49.785731 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+ 7月 12 05:58:49.788900 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D0
+ 7月 12 05:58:49.796132 kernel: pcieport 0000:00:1c.4: PCI PM: Suspend power state: D3hot
+ 7月 12 05:58:49.796795 kernel: pcieport 0000:00:1c.5: PCI PM: Suspend power state: D3hot
