@@ -1,0 +1,26 @@
+bus-watch 残渣集計 (03:00.0 wl エンドポイント)
+cycle 種別: baseline=起動後suspend前 / 806094=radio-on smoke / 806264-365=batch1 radio-off / 807xxx=batch2 radio-off / 860045=batch3 radio-off
+
+snapshot               DevSta                       HeaderLog 
+1783805912_up108       CorrErr- NonFatalErr-        00000000  
+1783806094_up290       CorrErr- NonFatalErr-        00000000  
+1783806264_up427       CorrErr+ NonFatalErr-        00000000  
+1783806329_up467       CorrErr+ NonFatalErr-        00000000  
+1783806365_up502       CorrErr+ NonFatalErr-        00000000  
+1783807073_up249       CorrErr- NonFatalErr-        40000001  
+1783807105_up281       CorrErr+ NonFatalErr+        40000001  
+1783807140_up316       CorrErr- NonFatalErr-        40000001  
+1783807167_up343       CorrErr- NonFatalErr-        40000001  
+1783807195_up371       CorrErr+ NonFatalErr-        40000001  
+1783807228_up404       CorrErr+ NonFatalErr-        40000001  
+1783807258_up434       CorrErr- NonFatalErr-        40000001  
+1783860045_up1355      CorrErr- NonFatalErr-        40000001  
+
+HeaderLog 40000001 0000000f c1201408 00000000 の TLP decode:
+  DW0 40000001 = MWr32 (fmt=010 type=00000), length=1DW
+  DW1 0000000f = requester 0000:00:00.0 (CPU), tag 0, FirstBE=0xF
+  DW2 c1201408 = 宛先アドレス = wl BAR0 (c1200000, 32K) + 0x1408
+
+00:1c.2 (親 root port) の一回性ラッチ (初回 cycle 以降全 snapshot):
+  Secondary status: <MAbort+ (secondary bus で Master Abort 受信)
+  Slot Changed: PresDet+ LinkState+ (presence detect / data link layer 状態変化)

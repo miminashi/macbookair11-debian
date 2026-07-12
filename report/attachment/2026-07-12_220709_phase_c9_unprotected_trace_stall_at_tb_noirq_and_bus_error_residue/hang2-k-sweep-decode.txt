@@ -1,0 +1,23 @@
+hang #2 decode: boot 時読み値 Magic 10:395 (放置 ~14.4h で hour 汚染)
+user=10 (device_resume_noirq entry) は hour 汚染で不変 (336 = 21*16 = 0 mod 16)
+file(k) = 395 - 21*k  (k = trace 書込みから boot 読取りまでの経過時間 [h])
+
+k   wake時刻範囲(JST)      file  一致デバイス (devlist 578 名, dpm_list 相当)
+ 0  20:24-21:24            395  LNXVIDEO:00, device:4b
+ 1  19:24-20:24            374  LNXPWRBN:00, device:08, tty22
+ 2  18:24-19:24            353  0000:6b, LNXCPU:04, controlC0, cstate_core, machinecheck3, tty62
+ 3  17:24-18:24            332  vcs4
+ 4  16:24-17:24            311  -
+ 5  15:24-16:24            290  0000:00:03.0
+ 6  14:24-15:24            269  0000:06:04.0, memory9
+ 7  13:24-14:24            248  kvm
+ 8  12:24-13:24            227  -
+ 9  11:24-12:24            206  -
+10  10:24-11:24            185  device:6a, pci0000:00
+11  09:24-10:24            164  0000:00:16.0-fbf6fcf1-96cf-4e2e-a6a6-1bab8cbe36b1, tty41, usb2-port3
+12  08:24-09:24            143  0000:07, device:67, input8
+13  07:24-08:24            122  0000:06:00.0:pcie204, timer
+14  07:01-07:24 (lid close 07:01:23 以降のみ有効) 101  0000:06:05.0:pcie204, 0000:07:00.0, PNP0C0D:00, event5, tty2
+
+検算: 0000:06:05.0 -> 204 (hang #3 の 10:204 と一致)
+      0000:06:05.0:pcie204 -> 101 / 0000:07:00.0 -> 101 (k=14 の file=101 と一致)

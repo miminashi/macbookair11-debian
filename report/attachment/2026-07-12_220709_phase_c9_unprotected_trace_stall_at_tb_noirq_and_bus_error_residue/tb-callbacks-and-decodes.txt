@@ -1,0 +1,29 @@
+=== 06:05.0 の noirq/main callback 時間 (成功 cycle、hang #3 boot) ===
+1783860043.351226 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_suspend @ 13962, parent: 0000:05:00.0
+1783860043.351628 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_suspend returned 0 after 3 usecs
+1783860043.403572 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_suspend_late @ 13962, parent: 0000:05:00.0
+1783860043.403971 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+1783860043.421599 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_suspend_noirq @ 13962, parent: 0000:05:00.0
+1783860043.421894 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_suspend_noirq returned 0 after 0 usecs
+1783860043.464345 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume_noirq @ 13962, parent: 0000:05:00.0
+1783860043.464581 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume_noirq returned 0 after 11687 usecs
+1783860043.479632 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume_early @ 13962, parent: 0000:05:00.0
+1783860043.479863 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+1783860043.508355 macbookair2015 kernel: pcieport 0000:06:05.0: PM: calling pci_pm_resume @ 13962, parent: 0000:05:00.0
+1783860043.508562 macbookair2015 kernel: pcieport 0000:06:05.0: PM: pci_pm_resume returned 0 after 7 usecs
+
+=== i915 の resume callback (窓構造確認) ===
+1783860043.485022 macbookair2015 kernel: i915 0000:00:02.0: PM: pci_pm_resume returned 0 after 445086 usecs
+
+=== 3 hang の boot decode 行 (証跡) ===
+ 7月 25 03:15:32 macbookair2015 kernel: PM:   Magic number: 10:395
+ 7月 25 03:15:32 macbookair2015 kernel: acpi device:4b: hash matches
+ 7月 25 03:15:32 macbookair2015 kernel: acpi LNXVIDEO:00: hash matches
+--
+11月 21 18:07:12 macbookair2015 kernel: PM:   Magic number: 10:204
+11月 21 18:07:12 macbookair2015 kernel: pcieport 0000:06:05.0: hash matches
+--
+ 7月 28 01:06:39 macbookair2015 kernel: PM:   Magic number: 14:355
+ 7月 28 01:06:39 macbookair2015 kernel: pci 0000:00:02.0: hash matches
+ 7月 28 01:06:39 macbookair2015 kernel: acpi LNXSYBUS:00: hash matches
+ 7月 28 01:06:39 macbookair2015 kernel: acpi LNXCPU:06: hash matches

@@ -1,0 +1,40 @@
+=== [1] hang #3 boot (-1) の hang cycle 周辺: suspend 側 D-state (TB/1c.2/wl) ===
+1783860043.426914 macbookair2015 kernel: thunderbolt 0000:07:00.0: PCI PM: Suspend power state: D3hot
+1783860043.428416 macbookair2015 kernel: pcieport 0000:06:00.0: PCI PM: Suspend power state: D3hot
+1783860043.430194 macbookair2015 kernel: pcieport 0000:05:00.0: power state changed by ACPI to D3hot
+1783860043.430707 macbookair2015 kernel: pcieport 0000:05:00.0: PCI PM: Suspend power state: D3hot
+1783860043.431694 macbookair2015 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+1783860043.437769 macbookair2015 kernel: pcieport 0000:00:1c.2: power state changed by ACPI to D3hot
+1783860043.437985 macbookair2015 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D3hot
+1783860043.453062 macbookair2015 kernel: pcieport 0000:00:1c.2: power state changed by ACPI to D0
+1783860043.460054 macbookair2015 kernel: pcieport 0000:05:00.0: power state changed by ACPI to D0
+
+=== [2] hang #3 boot の wl callback 時間 (全 cycle) ===
+1783860043.383839 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 10 usecs
+1783860043.491375 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22301 usecs
+
+=== [3] hang #2 boot (-2) の wl callback 時間 ===
+1783807071.749421 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 10 usecs
+1783807071.854198 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22363 usecs
+1783807103.550140 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 11 usecs
+1783807103.651639 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22293 usecs
+1783807138.044080 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 11 usecs
+1783807138.131269 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22328 usecs
+1783807164.902849 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 11 usecs
+1783807165.001460 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22321 usecs
+1783807193.087840 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 10 usecs
+1783807193.183220 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22337 usecs
+1783807226.820731 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 10 usecs
+1783807226.922999 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22240 usecs
+1783807256.735166 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_suspend returned 0 after 10 usecs
+1783807256.880606 macbookair2015 kernel: wl 0000:03:00.0: PM: pci_pm_resume returned 0 after 22292 usecs
+
+=== [4] 06:05.0 の async / 親子 ===
+enabled
+/sys/devices/pci0000:00/0000:00:1c.4/0000:05:00.0/0000:06:00.0
+(07:00.0 は 06:05.0 配下ではない)
+0000:06:00.0: 0000:06:00.0:pcie204 0000:06:00.0:pcie210 0000:07:00.0 
+0000:06:03.0: 0000:06:03.0:pcie204 0000:06:03.0:pcie210 
+0000:06:04.0: 0000:06:04.0:pcie204 0000:06:04.0:pcie210 
+0000:06:05.0: 0000:06:05.0:pcie204 0000:06:05.0:pcie210 
+0000:06:06.0: 0000:06:06.0:pcie204 0000:06:06.0:pcie210 
