@@ -2,7 +2,7 @@
 
 **サマリ**: C-8 で唯一残っていた「radio-off の短縮経路が無保護の親ポート D3hot 復帰をバスレベルでどう壊すか」に踏み込むため、udev 保護を runtime で一時解除 (d3cold_allowed=1) し、dpmwd4 + pm_trace で hang を 3 回再現・全 decode に成功した。**hang #1 = 署名 B (i915 main entry、`14:355` 完全一致、通算 4 度目)、hang #3 = 署名 A (`10:204` = pcieport **0000:06:05.0** の resume noirq entry、一意 decode)、hang #2 (放置 14 時間の汚染 decode) も hour 汚染補正の総当たりで **同じ 06:05.0 の PME service device / TB NHI** に収束** — 署名 A の停止域が「TB サブツリーの noirq 復帰域」であることが 3 例目で強固になった。新設した bus-watch (resume ごとの lspci -vv/-xxx snapshot) からは、**radio-off cycle の 6/11 で wl の `DevSta: CorrErr+`、1 cycle で `NonFatalErr+` (非致命の uncorrectable)、AER HeaderLog に「wl BAR0+0x1408 への MemWr 失敗 TLP」の記録、親 00:1c.2 に `<MAbort+` (Master Abort 受信) とリンク断/再確立のラッチ**という、radio-off 経路が毎 cycle バスにエラーを撒いている直接証拠が得られた (radio-on smoke は残渣ゼロ)。副産物として「無保護 arm で lid close 放置は危険 (無人 wake → hang #2)」という運用知見も得た。セッション終了時に stock 6.12.95 + udev 保護へ完全復帰済み。
 
-- **実施日時**: 2026年7月12日 06:20 〜 22:10 JST (hang #2 の放置 07:01〜21:24 を含む)
+- **実施日時**: 2026年7月12日 06:20 〜 22:55 JST (hang #2 の放置 07:01〜21:24 を含む。22:51 の stock 検収 smoke まで)
 - **位置づけ**: [C-8](2026-07-12_060000_phase_c8_wl_war_mechanism_traced_and_stock_kernel_restored.md) の引継ぎ 2 (機序の残り、無保護トレース) を実施
 
 ## 概要
@@ -28,6 +28,7 @@
 - [D-state / callback 時間の journal 抜粋](attachment/2026-07-12_220709_phase_c9_unprotected_trace_stall_at_tb_noirq_and_bus_error_residue/journal-dstate-callbacks.txt)
 - [TB callback 時間と 3 hang の boot decode 行](attachment/2026-07-12_220709_phase_c9_unprotected_trace_stall_at_tb_noirq_and_bus_error_residue/tb-callbacks-and-decodes.txt)
 - [cycle-watch ログ](attachment/2026-07-12_220709_phase_c9_unprotected_trace_stall_at_tb_noirq_and_bus_error_residue/cycle-watch-c9.log) / [vpn-watch ログ](attachment/2026-07-12_220709_phase_c9_unprotected_trace_stall_at_tb_noirq_and_bus_error_residue/vpn-watch-c9.log)
+- [stock 検収 smoke の D-state 抜粋 (00:1c.2 のみ D0)](attachment/2026-07-12_220709_phase_c9_unprotected_trace_stall_at_tb_noirq_and_bus_error_residue/c9-stock-smoke-dstate.txt)
 
 ## 前提・目的
 
@@ -104,7 +105,7 @@ resume ごとの config space snapshot 13 枚 (baseline 1 + radio-on smoke 1 + r
 | arm 解除 | pm_trace=0 (stock には機構ごと無し)、sysctl panic 系 0、dynamic debug 無効、watchers 停止 |
 | pstore | 空 |
 | 残置物 | `/usr/local/bin/c9-bus-snap.sh` (保護あり比較の follow-up 用)、`/var/log/h4-probe/` に C9 marker・cycle/vpn-watch ログ・c9-bus-watch/ (**削除しないこと**) |
-| stock smoke | セッション末時点で未実施 (C-8 で stock+udev は 0/30 検証済みのため形式的検収。次回 suspend の PRE/POST ペアで代替確認可) |
+| stock smoke | **実施済み (7/12 22:51 JST)**: WiFi on lid cycle → PRE/POST ペア成立 (1783863109/1783863141)、dynamic debug 一時有効化で **00:1c.2 のみ D0 で sleep** (wl/TB 系/他 root port は D3hot) = 保護ありの正しい形を実測確認。dynamic debug は検収後に無効へ復旧済み |
 
 ## 次セッション引継ぎ
 

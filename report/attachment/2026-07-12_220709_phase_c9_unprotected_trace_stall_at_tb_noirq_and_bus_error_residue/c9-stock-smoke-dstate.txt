@@ -1,0 +1,42 @@
+1783862050.258620 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783862566.853032 macbookair2015 kernel: PM: suspend exit
+1783862822.266423 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783862871.713254 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PCI PM: Suspend power state: D0
+1783862871.722984 macbookair2015 kernel: mei_me 0000:00:16.0: PCI PM: Suspend power state: D3hot
+1783862871.724043 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PCI PM: Suspend power state: D3hot
+1783862871.725696 macbookair2015 kernel: i915 0000:00:02.0: PCI PM: Suspend power state: D3hot
+1783862871.726500 macbookair2015 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+1783862871.727487 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PCI PM: Suspend power state: D3hot
+1783862871.728246 macbookair2015 kernel: pcieport 0000:00:1c.1: PCI PM: Suspend power state: D3hot
+1783862871.728721 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PCI PM: Suspend power state: D3hot
+1783862871.729820 macbookair2015 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D0
+1783862871.732984 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PCI PM: Suspend power state: D3hot
+1783862871.734099 macbookair2015 kernel: ahci 0000:04:00.0: PCI PM: Suspend power state: D3hot
+1783862871.735027 macbookair2015 kernel: thunderbolt 0000:07:00.0: PCI PM: Suspend power state: D3hot
+1783862871.736271 macbookair2015 kernel: pcieport 0000:06:00.0: PCI PM: Suspend power state: D3hot
+1783862871.737792 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PCI PM: Suspend power state: D3hot
+1783862871.739108 macbookair2015 kernel: pcieport 0000:05:00.0: PCI PM: Suspend power state: D3hot
+1783862871.740275 macbookair2015 kernel: pcieport 0000:00:1c.4: PCI PM: Suspend power state: D3hot
+1783862871.741395 macbookair2015 kernel: pcieport 0000:00:1c.5: PCI PM: Suspend power state: D3hot
+1783862871.742329 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PCI PM: Suspend power state: D3hot
+1783862871.847066 macbookair2015 kernel: PM: suspend exit
+1783863109.863729 macbookair2015 kernel: PM: suspend entry (s2idle)
+1783863141.732915 macbookair2015 kernel: i801_smbus 0000:00:1f.3: PCI PM: Suspend power state: D0
+1783863141.739269 macbookair2015 kernel: pxa2xx_spi_pci 0000:00:15.4: PCI PM: Suspend power state: D3hot
+1783863141.740429 macbookair2015 kernel: mei_me 0000:00:16.0: PCI PM: Suspend power state: D3hot
+1783863141.741189 macbookair2015 kernel: snd_hda_intel 0000:00:03.0: PCI PM: Suspend power state: D3hot
+1783863141.741553 macbookair2015 kernel: wl 0000:03:00.0: PCI PM: Suspend power state: D3hot
+1783863141.743245 macbookair2015 kernel: i915 0000:00:02.0: PCI PM: Suspend power state: D3hot
+1783863141.743601 macbookair2015 kernel: dw_dmac_pci 0000:00:15.0: PCI PM: Suspend power state: D3hot
+1783863141.744530 macbookair2015 kernel: pcieport 0000:00:1c.1: PCI PM: Suspend power state: D3hot
+1783863141.745451 macbookair2015 kernel: pcieport 0000:00:1c.2: PCI PM: Suspend power state: D0
+1783863141.747043 macbookair2015 kernel: ahci 0000:04:00.0: PCI PM: Suspend power state: D3hot
+1783863141.747907 macbookair2015 kernel: xhci_hcd 0000:00:14.0: PCI PM: Suspend power state: D3hot
+1783863141.748760 macbookair2015 kernel: thunderbolt 0000:07:00.0: PCI PM: Suspend power state: D3hot
+1783863141.749702 macbookair2015 kernel: pcieport 0000:06:00.0: PCI PM: Suspend power state: D3hot
+1783863141.750821 macbookair2015 kernel: snd_hda_intel 0000:00:1b.0: PCI PM: Suspend power state: D3hot
+1783863141.752245 macbookair2015 kernel: pcieport 0000:05:00.0: PCI PM: Suspend power state: D3hot
+1783863141.753338 macbookair2015 kernel: pcieport 0000:00:1c.4: PCI PM: Suspend power state: D3hot
+1783863141.754516 macbookair2015 kernel: pcieport 0000:00:1c.5: PCI PM: Suspend power state: D3hot
+1783863141.755581 macbookair2015 kernel: intel_pch_thermal 0000:00:1f.6: PCI PM: Suspend power state: D3hot
+1783863141.868036 macbookair2015 kernel: PM: suspend exit
