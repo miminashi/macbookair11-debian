@@ -1,6 +1,6 @@
 # S3 スリープ再挑戦 — lid open 復帰は復活できる (ただし wl unload が条件)
 
-- **実施日時**: 2026年7月13日 03:16〜14:05 (JST、05:55〜13:58 は Phase 4 自動計測)
+- **実施日時**: 2026年7月13日 03:16〜17:55 (JST、05:55〜13:58 は Phase 4 自動計測、17:29〜 Phase 5 恒久化)
 - **執筆者**: Claude Fable 5
 - **対象機**: MacBook Air 11" (Early 2015) / Debian 13 (trixie) / kernel 6.12.95+deb13-amd64 (stock)
 
@@ -14,7 +14,7 @@ suspend hang 問題の真因確定 (wl 親ポート 00:1c.2 の D3 復帰不全�
 
 残る障壁だったバッテリ時 spurious wake (gpe70 = LID0 _PRW) も再確認した。バッテリ + LID0 有効の S3 は今も **決定論的に 6 秒で誤起床** (3/3、gpe70 毎回 +1) し、LID0 凍結で 63 秒完走する対照も取れた。firmware 挙動は 6/18 から不変であり、恒久ポリシーは「**AC 接続時のみ LID0 有効 = AC では lid open 復帰、バッテリでは従来通り電源ボタン復帰**」の動的切替が妥当である。
 
-最後の待機電力も文句なしだった。`s3-soak-measure.sh` による 8 時間計測 (バッテリ、LID0 凍結) の結果は **0.0917W** — 無保護時代の 0.098W (6/19) と同じ桁で udev 保護の電力ペナルティはゼロ、現行 s2idle+保護 (~1.6W) の約 1/17 である。全検証は runtime の `echo deep` のみで行っており、GRUB・service・フックは一切変更していない (強制断 → 再起動で自動的に s2idle へ戻るフェイルセーフを 2 回の hang で実地確認済み)。恒久化 (wl unload フック + AC 連動 LID0 + deep 化 oneshot) はユーザの採否判断を経て次のステップで行う。
+最後の待機電力も文句なしだった。`s3-soak-measure.sh` による 8 時間計測 (バッテリ、LID0 凍結) の結果は **0.0917W** — 無保護時代の 0.098W (6/19) と同じ桁で udev 保護の電力ペナルティはゼロ、現行 s2idle+保護 (~1.6W) の約 1/17 である。検証は全て runtime の `echo deep` のみで行い (強制断 → 再起動で s2idle へ戻るフェイルセーフを 2 回の hang で実地確認)、ユーザの採用判断を受けて同日中に恒久化まで完了した。新設したのは wl unload フック・AC 連動 LID0 フック・deep 選択 oneshot の 3 点 (すべて可逆、GRUB は s2idle 据置の二段構え)。AC/バッテリ両系統の実地検証と再起動 e2e を通し、resume 後の WiFi 再接続は約 5 秒だった。本機は今日から「AC では lid を開ければ起きる」マシンに戻っている。1〜2 週間の常用 soak を経て問題なければ GRUB の deep 化で本採用とする。
 
 ## 前提・目的
 
@@ -109,22 +109,35 @@ RESULT dq=88000 uAh dEnergy=0.7362 Wh dt=8.024 h V_mean=8.366 V W=0.0917 W cap_d
 - 健全性: 22 セグメント全て rc=0、suspend fail=0、boot_id 不変、gpe70 は 8 時間凍結のまま (=LID0 凍結が効いた)。spurious=6 は計測初期のユーザの電源ボタン押下由来 (re-suspend ループが即再投入、積分への影響は無視できる)。
 - 計測終了後、LID0 は `*enabled` に復帰済み (14:0x JST、ガード付きトグルで確認)。
 
-## 実機に残した状態 (要注意)
+## Phase 5: 恒久化 (実施済み、17:29〜17:52 JST)
 
-- **mem_sleep = deep (runtime)** — この boot 中は deep のまま。再起動すれば s2idle に戻る。**恒久化 (wl unload フック) 前に BT+VPN+radio-off で lid close すると hang し得るため、常用に戻すなら再起動して s2idle にするのが安全**。
-- LID0 = `*enabled` (Phase 4 終了後に復帰済み)。
-- watcher (cycle-watch-s3r / vpn-watch-s3r / bus-watch-c9) は停止済み。marker 3 個とログは /var/log/h4-probe/ に残置 (歴史データ)。
-- GRUB・udev rule・フック類: 一切変更なし。
+ユーザ採用判断を受け、以下 3 点を実機に配置した (すべて可逆、**GRUB は s2idle 据置のまま**)。
 
-## 次セッションへの引き継ぎ (Phase 5 = 恒久化)
+| 新設物 | 役割 | ロールバック |
+|---|---|---|
+| `/usr/lib/systemd/system-sleep/45-wl-unload` | pre で `modprobe -r wl` (10s timeout)、post で reload。常時 unload (radio 状態の条件分岐なし = 安全側)。フラグ `/run/wl-unloaded`、ログ `/var/log/wl-unload.log` | `rm` 一発 |
+| `/usr/lib/systemd/system-sleep/46-lid0-ac-policy` | pre で「battery かつ LID0 enabled」のときのみ凍結、post で復元。ガード付きトグル。フラグ `/run/lid0-frozen`、ログ `/var/log/lid0-ac-policy.log` | `rm` 一発 |
+| `s3-deep-select.service` + `/usr/local/sbin/s3-deep-select.sh` | 起動時に `mem_sleep=deep` を選択する oneshot (LID0 には触らない = 旧 s3-deep-apply との違い)。BOOT-DEEP マーカーを s3-soak.log に記録 | `systemctl disable` + 再起動 |
 
-1. ~~Phase 4 の RESULT 回収 + LID0 復帰~~ (完了、上記)
-2. 採否最終判断 (ユーザ)。採用なら:
-   - **wl unload フック** (新規 system-sleep フック): pre で `modprobe -r wl`、post で `modprobe wl` + NM 再スキャン。radio-on 時も含め常時 unload が簡潔 (bedrock は radio-off 時のみ必要条件だが、常時 unload なら条件分岐不要で安全側)。resume 後の WiFi 再接続遅延を実測して許容判断。
-   - **AC 連動 LID0 フック** (新規): pre で `ac=0 かつ *enabled → toggle`、post で `ac=1 かつ *disabled → toggle`。/proc/acpi/wakeup はトグルなのでガード必須。
-   - **deep 化 oneshot**: 旧 s3-deep-apply.sh から LID0 凍結節を除いた版を新設・enable。GRUB `mem_sleep_default=deep` 化は 1〜2 週間の常用 soak 通過後 (6/20 と同じ二段構え)。
-   - 検証: フック経由の実 lid cycle (AC/battery 両方) + BT-PAN+VPN+radio-off 追加 cycle で 0/30 級に積み増し。
-3. 不採用なら: `echo s2idle > /sys/power/mem_sleep` (または再起動) だけで現状復帰。
+**検証結果 (全 green)**:
+- **Test A (AC lid wake ×2)**: LID0 no-op (enabled 維持)、lid open で即復帰 (gpe70 +1 ずつ)、wl unload/reload 動作。
+- **Test B (バッテリ ×1)**: type=suspend-then-hibernate 経路でフック発火、**LID0 凍結 → 50 秒 hold (6 秒 spurious なし・gpe70 凍結) → 電源ボタン復帰 → LID0 自動復元**。
+- **WiFi 再接続**: resume → wl reload → NM activated (assoc+DHCP 完了) まで**約 5 秒** (17:39:37 → 17:39:42)。
+- **再起動 e2e**: reboot 後に deep 自動選択 (BOOT-DEEP、新 boot_id)、service active、udev 保護・LID0 enabled・フック残存 → 初 lid cycle も wl unload/reload・gpe70 wake・drm_err=0 で完走。
+- 副観測: STH 経路 (`pre(suspend-then-hibernate)`) でも両フックが正しく発火する。
+
+## 実機の最終状態
+
+- **常用構成 = S3 (deep) + udev 保護 + 45-wl-unload + 46-lid0-ac-policy + s3-deep-select.service (enabled)**
+- GRUB: `mem_sleep_default=s2idle` 据置 (フェイルセーフ: service を disable して再起動すれば s2idle)
+- 旧 `s3-deep-apply.service`: disabled のまま残置 (**enable 禁止** — LID0 無条件凍結の旧仕様。soak 通過後に削除推奨)
+- watcher (cycle-watch-s3r / vpn-watch-s3r / bus-watch-c9) 停止済み。marker/ログは /var/log/h4-probe/ に残置
+
+## 今後 (soak と残課題)
+
+1. **常用 soak 1〜2 週間** (全条件解禁)。ウォッチリスト: (i) hang 再発 (wl unload 下では初の反例 = 一級データ。5 分放置 → 長押し → 報告)、(ii) `wl-unload.log` の FAILED 行 (unload/reload 失敗 → WiFi 不通の形で顕在化)、(iii) バッテリ spurious wake (lid0-ac-policy の取りこぼし、s3-soak.log の asleep_s で判別)、(iv) 待機電力の体感 (モバイル解禁可否)。
+2. soak 通過後: **GRUB `mem_sleep_default=deep` 化** (二段構えの本採用) + 旧 s3-deep-apply 削除などのクリーンアップ。
+3. 残課題 (優先度低): S3 hang の停止点実名 (dpmwd4+pm_trace で decode 可能。S3 は syscore/pm_trace 本来の土俵なので s2idle より素直に取れる見込み)、edge case「バッテリで suspend 中に AC を挿しても次の resume まで lid wake は無効のまま」(仕様として許容)。
 
 ## 運用知見・罠 (新規)
 
