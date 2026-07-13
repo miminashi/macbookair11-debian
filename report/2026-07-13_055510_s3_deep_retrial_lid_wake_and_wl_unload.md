@@ -1,6 +1,6 @@
 # S3 スリープ再挑戦 — lid open 復帰は復活できる (ただし wl unload が条件)
 
-- **実施日時**: 2026年7月13日 03:16〜05:55 (JST)
+- **実施日時**: 2026年7月13日 03:16〜14:05 (JST、05:55〜13:58 は Phase 4 自動計測)
 - **執筆者**: Claude Fable 5
 - **対象機**: MacBook Air 11" (Early 2015) / Debian 13 (trixie) / kernel 6.12.95+deb13-amd64 (stock)
 
@@ -14,7 +14,7 @@ suspend hang 問題の真因確定 (wl 親ポート 00:1c.2 の D3 復帰不全�
 
 残る障壁だったバッテリ時 spurious wake (gpe70 = LID0 _PRW) も再確認した。バッテリ + LID0 有効の S3 は今も **決定論的に 6 秒で誤起床** (3/3、gpe70 毎回 +1) し、LID0 凍結で 63 秒完走する対照も取れた。firmware 挙動は 6/18 から不変であり、恒久ポリシーは「**AC 接続時のみ LID0 有効 = AC では lid open 復帰、バッテリでは従来通り電源ボタン復帰**」の動的切替が妥当である。
 
-最後に、当時 0.06〜0.10W だった S3 待機電力が現構成でも維持されるかを見るため、`s3-soak-measure.sh` による 8 時間計測 (バッテリ、LID0 凍結) を 05:54 に仕掛けて本セッションを終えた。全検証は runtime の `echo deep` のみで行っており、GRUB・service・フックは一切変更していない (強制断 → 再起動で自動的に s2idle へ戻るフェイルセーフを 2 回の hang で実地確認済み)。恒久化 (wl unload フック + AC 連動 LID0 + deep 化 oneshot) は Phase 4 の結果を見た上で次セッションで行う。
+最後の待機電力も文句なしだった。`s3-soak-measure.sh` による 8 時間計測 (バッテリ、LID0 凍結) の結果は **0.0917W** — 無保護時代の 0.098W (6/19) と同じ桁で udev 保護の電力ペナルティはゼロ、現行 s2idle+保護 (~1.6W) の約 1/17 である。全検証は runtime の `echo deep` のみで行っており、GRUB・service・フックは一切変更していない (強制断 → 再起動で自動的に s2idle へ戻るフェイルセーフを 2 回の hang で実地確認済み)。恒久化 (wl unload フック + AC 連動 LID0 + deep 化 oneshot) はユーザの採否判断を経て次のステップで行う。
 
 ## 前提・目的
 
@@ -89,28 +89,36 @@ marker `SESSION-S3R3-START` (epoch 1783887906) 以降、同一ストレス条件
 - AC で lid close → lid open で復帰 (今回実証した挙動)
 - バッテリで lid close → sleep は保たれ、復帰は従来通り電源ボタン (suspend-then-hibernate も現行のまま機能)
 
-## Phase 4: 待機電力 8 時間計測 (仕掛け済み、結果は次セッション)
+## Phase 4: 待機電力 8 時間計測 (結果: 0.0917W = 保護の電力ペナルティなし)
 
-05:54:57 JST に `s3-soak-measure.sh 28800 1800 s3r` を起動 (systemd-run unit `s3r-night`、バッテリ 89%、LID0 凍結、deep 選択、30 分 ×16 セグメント)。約 14:00 JST に自動終了・起床する。
+05:54:57 JST に `s3-soak-measure.sh 28800 1800 s3r` を起動 (systemd-run unit `s3r-night`、バッテリ 89%、LID0 凍結、deep 選択)。13:57:50 JST に自動完了。
 
-**次セッションの回収手順**:
-```bash
-ssh miminashi@macbookair2015.lan 'sudo grep RESULT /var/log/s3-soak-measure.log | tail -1'
-# LID0 を enabled に戻す (disabled のときのみトグル):
-ssh miminashi@macbookair2015.lan 'if grep -q "LID0.*\*disabled" /proc/acpi/wakeup; then echo LID0 | sudo tee /proc/acpi/wakeup; fi; grep LID0 /proc/acpi/wakeup'
 ```
-比較基準: S3 無保護時代 0.098W (6/19)、現行 s2idle+保護 ~1.6W、pcie_port_pm=off ~3W。S3 はバス電源断なので保護 (ソフト D0) の電力ペナルティは出ない見込み — それ自体が「保護が S3 で無力」解釈の傍証にもなる。
+RESULT dq=88000 uAh dEnergy=0.7362 Wh dt=8.024 h V_mean=8.366 V W=0.0917 W cap_drop=2% segments=22 spurious=6
+```
+
+| 構成 | 待機電力 |
+|---|---|
+| **S3 + udev 保護 (今回)** | **0.0917 W** (2%/8h) |
+| S3 無保護 (6/19) | 0.0980 W (2%/8h) |
+| s2idle + udev 保護 (現行常用) | ~1.6 W (4%/h) |
+| s2idle + pcie_port_pm=off (撤去済) | 2.8〜3.4 W |
+
+- **保護あり/なしで S3 待機電力は同一の桁** (0.09W 級) → udev 保護 (ソフト D0) は S3 では電力面でも no-op = 「S3 はバス電源を落とすため保護が無力」という Phase 2 の機序解釈のダメ押し。
+- **現行 s2idle+保護の約 1/17**。ゲージ非依存の傍証: 8 時間で容量低下 2pt (89→87%)。1.6W なら ~26pt 減るはず。
+- 健全性: 22 セグメント全て rc=0、suspend fail=0、boot_id 不変、gpe70 は 8 時間凍結のまま (=LID0 凍結が効いた)。spurious=6 は計測初期のユーザの電源ボタン押下由来 (re-suspend ループが即再投入、積分への影響は無視できる)。
+- 計測終了後、LID0 は `*enabled` に復帰済み (14:0x JST、ガード付きトグルで確認)。
 
 ## 実機に残した状態 (要注意)
 
-- **mem_sleep = deep (runtime)** — 計測終了後もこの boot 中は deep のまま。再起動すれば s2idle に戻る。
-- **LID0 = *disabled (計測中のみ)** — 計測終了後に enabled へ戻すこと (上記コマンド)。
+- **mem_sleep = deep (runtime)** — この boot 中は deep のまま。再起動すれば s2idle に戻る。**恒久化 (wl unload フック) 前に BT+VPN+radio-off で lid close すると hang し得るため、常用に戻すなら再起動して s2idle にするのが安全**。
+- LID0 = `*enabled` (Phase 4 終了後に復帰済み)。
 - watcher (cycle-watch-s3r / vpn-watch-s3r / bus-watch-c9) は停止済み。marker 3 個とログは /var/log/h4-probe/ に残置 (歴史データ)。
 - GRUB・udev rule・フック類: 一切変更なし。
 
 ## 次セッションへの引き継ぎ (Phase 5 = 恒久化)
 
-1. Phase 4 の RESULT 回収 + LID0 復帰 (上記)
+1. ~~Phase 4 の RESULT 回収 + LID0 復帰~~ (完了、上記)
 2. 採否最終判断 (ユーザ)。採用なら:
    - **wl unload フック** (新規 system-sleep フック): pre で `modprobe -r wl`、post で `modprobe wl` + NM 再スキャン。radio-on 時も含め常時 unload が簡潔 (bedrock は radio-off 時のみ必要条件だが、常時 unload なら条件分岐不要で安全側)。resume 後の WiFi 再接続遅延を実測して許容判断。
    - **AC 連動 LID0 フック** (新規): pre で `ac=0 かつ *enabled → toggle`、post で `ac=1 かつ *disabled → toggle`。/proc/acpi/wakeup はトグルなのでガード必須。
