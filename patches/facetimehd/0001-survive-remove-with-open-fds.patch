@@ -1,0 +1,123 @@
+Survive fthd_pci_remove() with open fds (suspend while camera in use)
+
+facetimehd suspends by removing the whole device (fthd_pci_suspend =
+fthd_pci_remove) and resumes by re-probing. If /dev/video0 is open
+(camera in use), the systemd-sleep unload hook fails and this remove
+runs with live fds: the later release path then calls
+fthd_stop_streaming/fthd_buffer_cleanup against torn-down HW state
+(iounmapped s2_io, freed mem/iommu resource roots) -> observed kernel
+Oops (NULL deref in isp_mem_create, 2026-07-29 20:31 JST), and blocked
+vb2 reads hang forever (GNOME Camera freeze).
+
+Fix: mark dev_priv->removed before teardown, fail the vb2 queue to
+wake blocked readers, guard the two release-path callbacks to hand
+buffers back without touching HW, and defer v4l2_ctrl_handler_free to
+a video_device release callback (last close) instead of unregister.
+dev_priv itself is never freed on remove (pre-existing), so the stale
+fds keep a valid flag to read. Small objects leak per cycle; bounded
+and consistent with existing remove behavior.
+
+--- a/fthd_drv.h	2026-07-29 22:23:52.646962399 +0900
++++ b/fthd_drv.h	2026-07-29 22:24:14.379074686 +0900
+@@ -55,6 +55,11 @@
+ 	struct video_device *videodev;
+ 	struct mutex ioctl_lock;
+ 	int users;
++	/* Set before teardown in fthd_pci_remove(). The HW registers are
++	 * unmapped and the resource roots freed afterwards, so any fd still
++	 * open (camera in use across suspend) must not touch HW or the
++	 * iommu/mem allocators once this is set. */
++	bool removed;
+ 	/* lock for synchronizing with irq/workqueue */
+ 	spinlock_t io_lock;
+ 
+--- a/fthd_drv.c	2026-07-29 22:23:52.926963884 +0900
++++ b/fthd_drv.c	2026-07-29 22:24:25.755131188 +0900
+@@ -326,6 +326,12 @@
+ 	if (!dev_priv)
+ 		goto out;
+ 
++	/* Must happen before any teardown below: mark the device dead and
++	 * fail all pending/future vb2 waits so fds held across this remove
++	 * (camera in use during suspend) unblock and can release safely. */
++	dev_priv->removed = true;
++	vb2_queue_error(&dev_priv->vb2_queue);
++
+ 	fthd_debugfs_exit(dev_priv);
+ 
+ 	fthd_v4l2_unregister(dev_priv);
+--- a/fthd_v4l2.c	2026-07-29 22:23:53.170965175 +0900
++++ b/fthd_v4l2.c	2026-07-29 22:24:53.311261822 +0900
+@@ -106,6 +106,15 @@
+ 
+ 	ctx->state = BUF_FREE;
+ 	ctx->vb = NULL;
++	if (dev_priv->removed) {
++		/* HW is torn down: s2_io is unmapped and the mem/iommu
++		 * resource roots are freed, so leak these small objects
++		 * instead of touching them. */
++		for(i = 0; i < dev_priv->fmt.planes; i++)
++			ctx->plane[i] = NULL;
++		ctx->dma_desc_obj = NULL;
++		return;
++	}
+ 	isp_mem_destroy(ctx->dma_desc_obj);
+ 	for(i = 0; i < dev_priv->fmt.planes; i++) {
+ 		iommu_free(dev_priv, ctx->plane[i]);
+@@ -288,6 +297,19 @@
+ 	struct h2t_buf_ctx *ctx;
+ 	int ret, i;
+ 
++	if (dev_priv->removed) {
++		/* HW already torn down; just hand the buffers back. */
++		for(i = 0; i < FTHD_BUFFERS; i++) {
++			ctx = dev_priv->h2t_bufs + i;
++			if (ctx->state == BUF_DRV_QUEUED || ctx->state == BUF_HW_QUEUED) {
++				vb2_buffer_done(ctx->vb, VB2_BUF_STATE_ERROR);
++				ctx->vb = NULL;
++				ctx->state = BUF_ALLOC;
++			}
++		}
++		return;
++	}
++
+ 	ret = fthd_stop_channel(dev_priv, 0);
+ 	if (!ret) {
+ 		pr_debug("waiting for buffers...\n");
+@@ -683,6 +705,18 @@
+ 	.s_ctrl = fthd_s_ctrl,
+ };
+ 
++static void fthd_vdev_release(struct video_device *vdev)
++{
++	struct fthd_private *dev_priv = video_get_drvdata(vdev);
++
++	/* Runs at the last video_device put, i.e. after unregister AND the
++	 * last fd close. Freeing the ctrl handler earlier (in unregister,
++	 * as before) is a use-after-free for fds still open across
++	 * remove/suspend: their release path unsubscribes ctrl events. */
++	v4l2_ctrl_handler_free(&dev_priv->v4l2_ctrl_handler);
++	video_device_release(vdev);
++}
++
+ int fthd_v4l2_register(struct fthd_private *dev_priv)
+ {
+ 	struct v4l2_device *v4l2_dev = &dev_priv->v4l2_dev;
+@@ -748,7 +782,7 @@
+ 	vdev->fops = &fthd_vdev_fops;
+ 	vdev->ioctl_ops = &fthd_ioctl_ops;
+ 	vdev->queue = q;
+-	vdev->release = video_device_release;
++	vdev->release = fthd_vdev_release;
+ 	vdev->ctrl_handler = &dev_priv->v4l2_ctrl_handler;
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(5,4,0)
+ 	vdev->device_caps = V4L2_CAP_VIDEO_CAPTURE | V4L2_CAP_READWRITE |
+@@ -781,7 +815,7 @@
+ void fthd_v4l2_unregister(struct fthd_private *dev_priv)
+ {
+ 
+-	v4l2_ctrl_handler_free(&dev_priv->v4l2_ctrl_handler);
++	/* ctrl handler is freed in fthd_vdev_release (after last close) */
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(4,8,0)
+ 	vb2_dma_sg_cleanup_ctx(dev_priv->alloc_ctx);
+ #endif

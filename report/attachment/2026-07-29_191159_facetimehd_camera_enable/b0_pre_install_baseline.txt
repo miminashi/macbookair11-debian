@@ -1,0 +1,34 @@
+=== B-0 baseline (pre-facetimehd) captured 2026-07-29T18:47:43+0900 ===
+--- runtime PM state ---
+02:00.0 power_state = D0
+00:1c.1 power_state = D0
+02:00.0 d3cold_allowed = 1
+00:1c.1 d3cold_allowed = 1
+--- lspci -nnk 02:00.0 ---
+02:00.0 Multimedia controller [0480]: Broadcom Inc. and subsidiaries 720p FaceTime HD Camera [14e4:1570]
+	Subsystem: Broadcom Inc. and subsidiaries 720p FaceTime HD Camera [14e4:1570]
+--- last sleep cycle PM callbacks (dmesg) ---
+[168433.223648] pcieport 0000:00:1c.1: PM: calling pci_pm_suspend @ 1659762, parent: pci0000:00
+[168433.223652] pcieport 0000:00:1c.1: PM: pci_pm_suspend returned 0 after 0 usecs
+[168433.713056] pci 0000:02:00.0: PM: calling pci_pm_suspend_late @ 1645961, parent: 0000:00:1c.1
+[168433.713063] pci 0000:02:00.0: PM: pci_pm_suspend_late returned 0 after 0 usecs
+[168433.713104] pcieport 0000:00:1c.1: PM: calling pci_pm_suspend_late @ 1656938, parent: pci0000:00
+[168433.713111] pcieport 0000:00:1c.1: PM: pci_pm_suspend_late returned 0 after 0 usecs
+[168433.726187] pci 0000:02:00.0: PM: calling pci_pm_suspend_noirq @ 1659753, parent: 0000:00:1c.1
+[168433.726461] pci 0000:02:00.0: PM: pci_pm_suspend_noirq returned 0 after 262 usecs
+[168433.726478] pcieport 0000:00:1c.1: PM: calling pci_pm_suspend_noirq @ 1659764, parent: pci0000:00
+[168433.737831] pcieport 0000:00:1c.1: PM: pci_pm_suspend_noirq returned 0 after 11348 usecs
+[168434.934966] pcieport 0000:00:1c.1: PM: calling pci_pm_resume_noirq @ 1659751, parent: pci0000:00
+[168434.935231] pcieport 0000:00:1c.1: Enabling MPC IRBNCE
+[168434.935237] pcieport 0000:00:1c.1: Intel PCH root port ACS workaround enabled
+[168434.935253] pcieport 0000:00:1c.1: PM: pci_pm_resume_noirq returned 0 after 280 usecs
+[168434.935273] pci 0000:02:00.0: PM: calling pci_pm_resume_noirq @ 1659763, parent: 0000:00:1c.1
+[168434.935534] pci 0000:02:00.0: PM: pci_pm_resume_noirq returned 0 after 253 usecs
+[168436.027371] pcieport 0000:00:1c.1: PM: calling pci_pm_resume_early @ 1659782, parent: pci0000:00
+[168436.027378] pcieport 0000:00:1c.1: PM: pci_pm_resume_early returned 0 after 0 usecs
+[168436.027429] pci 0000:02:00.0: PM: calling pci_pm_resume_early @ 1659783, parent: 0000:00:1c.1
+[168436.027436] pci 0000:02:00.0: PM: pci_pm_resume_early returned 0 after 0 usecs
+[168436.028758] pcieport 0000:00:1c.1: PM: calling pci_pm_resume @ 1659777, parent: pci0000:00
+[168436.028767] pcieport 0000:00:1c.1: PM: pci_pm_resume returned 0 after 2 usecs
+[168436.028822] pci 0000:02:00.0: PM: calling pci_pm_resume @ 1659777, parent: 0000:00:1c.1
+[168436.028828] pci 0000:02:00.0: PM: pci_pm_resume returned 0 after 0 usecs

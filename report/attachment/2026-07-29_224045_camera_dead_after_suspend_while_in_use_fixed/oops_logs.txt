@@ -1,0 +1,83 @@
+=== 1st Oops (Firefox VideoCapture の stale fd close, 20:31) ===
+ 7月 29 20:31:32 macbookair2015 kernel: facetimehd 0000:02:00.0: Failed to allocate resource (size: 12, start: -124921266131712, end: 19)
+ 7月 29 20:31:32 macbookair2015 kernel: BUG: kernel NULL pointer dereference, address: 0000000000000000
+ 7月 29 20:31:32 macbookair2015 kernel: #PF: supervisor read access in kernel mode
+ 7月 29 20:31:32 macbookair2015 kernel: #PF: error_code(0x0000) - not-present page
+ 7月 29 20:31:32 macbookair2015 kernel: PGD 8000000079481067 P4D 8000000079481067 PUD 0 
+ 7月 29 20:31:32 macbookair2015 kernel: Oops: Oops: 0000 [#1] PREEMPT SMP PTI
+ 7月 29 20:31:32 macbookair2015 kernel: CPU: 3 UID: 1000 PID: 39756 Comm: VideoCapture Tainted: P        W  OE      6.12.95+deb13-amd64 #1  Debian 6.12.95-1
+ 7月 29 20:31:32 macbookair2015 kernel: Tainted: [P]=PROPRIETARY_MODULE, [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+ 7月 29 20:31:32 macbookair2015 kernel: Hardware name: Apple Inc. MacBookAir7,1/Mac-9F18E312C5C2BF0B, BIOS MBA71.88Z.0166.B13.1611031424 11/03/2016
+ 7月 29 20:31:32 macbookair2015 kernel: RIP: 0010:isp_mem_create+0x75/0xb0 [facetimehd]
+ 7月 29 20:31:32 macbookair2015 kernel: Code: 00 48 89 c6 48 c7 40 10 30 55 38 c1 48 8b 4d 00 48 89 ef 4c 8b 45 08 6a 00 6a 00 e8 15 ee 95 df 5a 59 85 c0 0f 85 e5 82 00 00 <48> 8b 13 48 89 d0 48 2b 45 00 4c 89 63 48 48 89 43 58 48 8b 43 08
+ 7月 29 20:31:32 macbookair2015 kernel: RSP: 0018:ffffd4c94b263a48 EFLAGS: 00010246
+ 7月 29 20:31:32 macbookair2015 kernel: RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000023622003
+ 7月 29 20:31:32 macbookair2015 kernel: RDX: 0000000023620003 RSI: 000000000003b040 RDI: 10bbe96b628effff
+ 7月 29 20:31:32 macbookair2015 kernel: RBP: ffff8e6341686100 R08: 0000000000000000 R09: ffffd4c94b2637c0
+ 7月 29 20:31:32 macbookair2015 kernel: R10: ffffffffa28b43c8 R11: 0000000000000003 R12: 000000000000000c
+ 7月 29 20:31:32 macbookair2015 kernel: R13: ffff8e6382b01000 R14: 0000000000000005 R15: 0000000000000000
+ 7月 29 20:31:32 macbookair2015 kernel: FS:  00007f9b766ff6c0(0000) GS:ffff8e63aad80000(0000) knlGS:0000000000000000
+ 7月 29 20:31:32 macbookair2015 kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+ 7月 29 20:31:32 macbookair2015 kernel: CR2: 0000000000000000 CR3: 0000000161040005 CR4: 00000000003726f0
+ 7月 29 20:31:32 macbookair2015 kernel: Call Trace:
+ 7月 29 20:31:32 macbookair2015 kernel:  <TASK>
+ 7月 29 20:31:32 macbookair2015 kernel:  fthd_isp_cmd+0x6a/0x270 [facetimehd]
+ 7月 29 20:31:32 macbookair2015 kernel:  fthd_isp_cmd_channel_stop+0x43/0x80 [facetimehd]
+ 7月 29 20:31:32 macbookair2015 kernel:  fthd_stop_channel+0x12/0x70 [facetimehd]
+ 7月 29 20:31:32 macbookair2015 kernel:  fthd_stop_streaming+0x1c/0xc0 [facetimehd]
+ 7月 29 20:31:32 macbookair2015 kernel:  __vb2_queue_cancel+0x2d/0x2d0 [videobuf2_common]
+ 7月 29 20:31:32 macbookair2015 kernel:  vb2_core_queue_release+0x22/0x80 [videobuf2_common]
+ 7月 29 20:31:32 macbookair2015 kernel:  _vb2_fop_release+0x58/0xb0 [videobuf2_v4l2]
+ 7月 29 20:31:32 macbookair2015 kernel:  v4l2_release+0xc0/0xd0 [videodev]
+ 7月 29 20:31:32 macbookair2015 kernel:  __fput+0xe1/0x2a0
+ 7月 29 20:31:32 macbookair2015 kernel:  __x64_sys_close+0x3c/0x80
+ 7月 29 20:31:32 macbookair2015 kernel:  do_syscall_64+0x87/0x1b0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 7月 29 20:31:32 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+
+=== 2nd Oops (shutdown, 22:26) ===
+ 7月 29 22:26:40 macbookair2015 kernel: facetimehd 0000:02:00.0: Failed to allocate resource (size: 12, start: 0, end: 0)
+ 7月 29 22:26:40 macbookair2015 kernel: BUG: kernel NULL pointer dereference, address: 0000000000000000
+ 7月 29 22:26:40 macbookair2015 kernel: #PF: supervisor read access in kernel mode
+ 7月 29 22:26:40 macbookair2015 kernel: #PF: error_code(0x0000) - not-present page
+ 7月 29 22:26:40 macbookair2015 kernel: PGD 0 P4D 0 
+ 7月 29 22:26:40 macbookair2015 kernel: Oops: Oops: 0000 [#2] PREEMPT SMP PTI
+ 7月 29 22:26:40 macbookair2015 kernel: CPU: 2 UID: 1000 PID: 1551 Comm: pipewire Tainted: P      D W  OE      6.12.95+deb13-amd64 #1  Debian 6.12.95-1
+ 7月 29 22:26:40 macbookair2015 kernel: Tainted: [P]=PROPRIETARY_MODULE, [D]=DIE, [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+ 7月 29 22:26:40 macbookair2015 kernel: Hardware name: Apple Inc. MacBookAir7,1/Mac-9F18E312C5C2BF0B, BIOS MBA71.88Z.0166.B13.1611031424 11/03/2016
+ 7月 29 22:26:40 macbookair2015 kernel: RIP: 0010:isp_mem_create+0x75/0xb0 [facetimehd]
+ 7月 29 22:26:40 macbookair2015 kernel: Code: 00 48 89 c6 48 c7 40 10 30 55 38 c1 48 8b 4d 00 48 89 ef 4c 8b 45 08 6a 00 6a 00 e8 15 ee 95 df 5a 59 85 c0 0f 85 e5 82 00 00 <48> 8b 13 48 89 d0 48 2b 45 00 4c 89 63 48 48 89 43 58 48 8b 43 08
+ 7月 29 22:26:40 macbookair2015 kernel: RSP: 0018:ffffd4c942e478f8 EFLAGS: 00010246
+ 7月 29 22:26:40 macbookair2015 kernel: RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000044528002
+ 7月 29 22:26:40 macbookair2015 kernel: RDX: 0000000044526002 RSI: 000000000003b040 RDI: b001df45638effff
+ 7月 29 22:26:40 macbookair2015 kernel: RBP: ffff8e63475ff0c0 R08: 0000000000000000 R09: ffffd4c942e47670
+ 7月 29 22:26:40 macbookair2015 kernel: R10: ffffffffa28b43c8 R11: 0000000000000003 R12: 000000000000000c
+ 7月 29 22:26:40 macbookair2015 kernel: R13: ffff8e6346a2f000 R14: 0000000000000005 R15: 0000000000000000
+ 7月 29 22:26:40 macbookair2015 kernel: FS:  0000000000000000(0000) GS:ffff8e63aad00000(0000) knlGS:0000000000000000
+ 7月 29 22:26:40 macbookair2015 kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+ 7月 29 22:26:40 macbookair2015 kernel: CR2: 0000000000000000 CR3: 0000000059e22001 CR4: 00000000003726f0
+ 7月 29 22:26:40 macbookair2015 kernel: Call Trace:
+ 7月 29 22:26:40 macbookair2015 kernel:  <TASK>
+ 7月 29 22:26:40 macbookair2015 kernel:  fthd_isp_cmd+0x6a/0x270 [facetimehd]
+ 7月 29 22:26:40 macbookair2015 kernel:  fthd_isp_cmd_channel_stop+0x43/0x80 [facetimehd]
+ 7月 29 22:26:40 macbookair2015 kernel:  fthd_stop_channel+0x12/0x70 [facetimehd]
+ 7月 29 22:26:40 macbookair2015 kernel:  fthd_stop_streaming+0x1c/0xc0 [facetimehd]
+ 7月 29 22:26:40 macbookair2015 kernel:  __vb2_queue_cancel+0x2d/0x2d0 [videobuf2_common]
+ 7月 29 22:26:40 macbookair2015 kernel:  vb2_core_queue_release+0x22/0x80 [videobuf2_common]
+ 7月 29 22:26:40 macbookair2015 kernel:  _vb2_fop_release+0x58/0xb0 [videobuf2_v4l2]
+ 7月 29 22:26:40 macbookair2015 kernel:  v4l2_release+0xc0/0xd0 [videodev]
+ 7月 29 22:26:40 macbookair2015 kernel:  __fput+0xe1/0x2a0
+ 7月 29 22:26:40 macbookair2015 kernel:  task_work_run+0x5c/0x90
+ 7月 29 22:26:40 macbookair2015 kernel:  do_exit+0x330/0xad0
+ 7月 29 22:26:40 macbookair2015 kernel:  do_group_exit+0x30/0x80
+ 7月 29 22:26:40 macbookair2015 kernel:  __x64_sys_exit_group+0x18/0x20
+ 7月 29 22:26:40 macbookair2015 kernel:  x64_sys_call+0x14b4/0x14c0
+ 7月 29 22:26:40 macbookair2015 kernel:  do_syscall_64+0x87/0x1b0
+ 7月 29 22:26:40 macbookair2015 kernel:  ? free_unref_page_commit+0x7c/0x330
+ 7月 29 22:26:40 macbookair2015 kernel:  ? __mod_memcg_lruvec_state+0x9c/0x140
+ 7月 29 22:26:40 macbookair2015 kernel:  ? __lruvec_stat_mod_folio+0x83/0xd0
