@@ -1,0 +1,40 @@
+2026-07-30T17:40:18+0900 SLEEP type=suspend-then-hibernate ac=0 cap=26 charge_now=1320000 ss_ok=22 ss_fail=0 gpe70=18
+2026-07-30T17:49:38+0900 WAKE type=suspend-then-hibernate ac=0 cap=28 charge_now=1388000 ss_ok=23 ss_fail=0 gpe70=18 asleep_s=560 drm_err=0 lid=*enabled
+2026-07-30T18:17:33+0900 SLEEP type=suspend-then-hibernate ac=0 cap=13 charge_now=614000 ss_ok=23 ss_fail=0 gpe70=18
+2026-07-30T21:59:57+0900 WAKE type=suspend-then-hibernate ac=0 cap=11 charge_now=519000 ss_ok=24 ss_fail=0 gpe70=18 asleep_s=13344 drm_err=0 lid=*enabled
+2026-07-30T22:00:27+0900 SLEEP type=suspend-then-hibernate ac=0 cap=9 charge_now=429000 ss_ok=24 ss_fail=0 gpe70=18
+2026-07-31T06:30:30+0900 WAKE type=suspend-then-hibernate ac=1 cap=88 charge_now=4450000 ss_ok=25 ss_fail=0 gpe70=18 asleep_s=30603 drm_err=0 lid=*enabled
+2026-07-31T06:30:31+0900 SLEEP type=suspend-then-hibernate ac=1 cap=88 charge_now=4450000 ss_ok=25 ss_fail=0 gpe70=18
+2026-08-01T01:31:19+0900 WAKE type=suspend-then-hibernate ac=0 cap=88 charge_now=4453000 ss_ok=26 ss_fail=0 gpe70=19 asleep_s=68448 drm_err=0 lid=*enabled
+2026-08-01T02:02:50+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4430000 ss_ok=26 ss_fail=0 gpe70=19
+2026-08-01T03:55:22+0900 WAKE type=suspend ac=1 cap=88 charge_now=4475000 ss_ok=27 ss_fail=0 gpe70=20 asleep_s=6752 drm_err=0 lid=*enabled
+2026-08-01T06:59:29+0900 SLEEP type=suspend ac=1 cap=88 charge_now=4453000 ss_ok=27 ss_fail=0 gpe70=20
+2026-08-02T01:51:10+0900 WAKE type=suspend ac=1 cap=87 charge_now=4432000 ss_ok=28 ss_fail=0 gpe70=21 asleep_s=67901 drm_err=0 lid=*enabled
+2026-08-02T01:51:36+0900 SLEEP type=suspend ac=1 cap=87 charge_now=4432000 ss_ok=28 ss_fail=0 gpe70=21
+2026-08-02T18:58:55+0900 WAKE type=suspend ac=0 cap=89 charge_now=4502000 ss_ok=29 ss_fail=0 gpe70=22 asleep_s=61639 drm_err=0 lid=*enabled
+2026-08-02T19:03:53+0900 SLEEP type=suspend-then-hibernate ac=0 cap=85 charge_now=4303000 ss_ok=29 ss_fail=0 gpe70=22
+2026-08-02T22:42:43+0900 WAKE type=suspend-then-hibernate ac=0 cap=86 charge_now=4371000 ss_ok=30 ss_fail=0 gpe70=22 asleep_s=13130 drm_err=0 lid=*enabled
+2026-08-02T22:43:12+0900 SLEEP type=suspend-then-hibernate ac=0 cap=85 charge_now=4291000 ss_ok=30 ss_fail=0 gpe70=22
+2026-08-02T22:46:14+0900 WAKE type=suspend-then-hibernate ac=0 cap=86 charge_now=4366000 ss_ok=31 ss_fail=0 gpe70=22 asleep_s=182 drm_err=0 lid=*enabled
+2026-08-02T22:53:18+0900 SLEEP type=suspend-then-hibernate ac=0 cap=81 charge_now=4120000 ss_ok=31 ss_fail=0 gpe70=22
+2026-08-03T21:51:57+0900 WAKE type=suspend-then-hibernate ac=0 cap=88 charge_now=4482000 ss_ok=32 ss_fail=0 gpe70=22 asleep_s=82719 drm_err=0 lid=*enabled
+2026-08-03T21:52:24+0900 SLEEP type=suspend-then-hibernate ac=0 cap=86 charge_now=4361000 ss_ok=32 ss_fail=0 gpe70=22
+2026-08-03T22:22:54+0900 WAKE type=suspend-then-hibernate ac=0 cap=88 charge_now=4466000 ss_ok=33 ss_fail=0 gpe70=22 asleep_s=1830 drm_err=0 lid=*enabled
+2026-08-03T23:06:39+0900 SLEEP type=suspend ac=0 cap=64 charge_now=3244000 ss_ok=33 ss_fail=0 gpe70=22
+2026-08-03T23:07:37+0900 WAKE type=suspend ac=0 cap=66 charge_now=3334000 ss_ok=34 ss_fail=0 gpe70=22 asleep_s=57 drm_err=0 lid=*enabled
+2026-08-03T23:29:41+0900 SLEEP type=suspend-then-hibernate ac=0 cap=53 charge_now=2701000 ss_ok=34 ss_fail=0 gpe70=22
+2026-08-04T19:41:30+0900 WAKE type=suspend-then-hibernate ac=0 cap=90 charge_now=4556000 ss_ok=35 ss_fail=0 gpe70=22 asleep_s=72709 drm_err=0 lid=*enabled
+2026-08-04T20:58:38+0900 SLEEP type=suspend-then-hibernate ac=0 cap=55 charge_now=2763000 ss_ok=35 ss_fail=0 gpe70=22
+2026-08-04T21:06:11+0900 WAKE type=suspend-then-hibernate ac=0 cap=56 charge_now=2840000 ss_ok=36 ss_fail=0 gpe70=22 asleep_s=452 drm_err=0 lid=*enabled
+2026-08-04T21:14:55+0900 SLEEP type=suspend-then-hibernate ac=0 cap=51 charge_now=2576000 ss_ok=36 ss_fail=0 gpe70=22
+2026-08-04T23:54:45+0900 WAKE type=suspend-then-hibernate ac=1 cap=89 charge_now=4515000 ss_ok=37 ss_fail=0 gpe70=22 asleep_s=9590 drm_err=0 lid=*enabled
+2026-08-05T01:47:30+0900 SLEEP type=suspend ac=1 cap=89 charge_now=4512000 ss_ok=37 ss_fail=0 gpe70=22
+2026-08-05T15:41:01+0900 WAKE type=suspend ac=0 cap=90 charge_now=4556000 ss_ok=38 ss_fail=0 gpe70=23 asleep_s=50011 drm_err=0 lid=*enabled
+2026-08-05T15:49:20+0900 SLEEP type=suspend-then-hibernate ac=0 cap=84 charge_now=4274000 ss_ok=38 ss_fail=0 gpe70=23
+2026-08-05T15:55:30+0900 WAKE type=suspend-then-hibernate ac=0 cap=86 charge_now=4359000 ss_ok=39 ss_fail=0 gpe70=23 asleep_s=370 drm_err=0 lid=*enabled
+2026-08-05T18:06:18+0900 SLEEP type=suspend ac=0 cap=9 charge_now=419000 ss_ok=39 ss_fail=0 gpe70=23
+2026-08-05T18:09:31+0900 WAKE type=suspend ac=0 cap=11 charge_now=513000 ss_ok=40 ss_fail=0 gpe70=23 asleep_s=193 drm_err=0 lid=*enabled
+2026-08-05T18:20:52+0900 SLEEP type=suspend-then-hibernate ac=0 cap=3 charge_now=111000 ss_ok=40 ss_fail=0 gpe70=23
+2026-08-05T18:20:59+0900 WAKE type=suspend-then-hibernate ac=0 cap=3 charge_now=107000 ss_ok=40 ss_fail=0 gpe70=23 asleep_s=7 drm_err=0 lid=*enabled
+2026-08-05T18:20:59+0900 SLEEP type=suspend-then-hibernate ac=0 cap=3 charge_now=107000 ss_ok=40 ss_fail=0 gpe70=23
+2026-08-05T23:30:45+0900 BOOT-DEEP mem_sleep="s2idle [deep]" boot_id=00b807e2-81d3-4764-b5d3-8d3dcf91ea3c
