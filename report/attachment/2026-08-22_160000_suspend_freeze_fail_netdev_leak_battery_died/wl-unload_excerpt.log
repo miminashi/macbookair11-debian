@@ -1,0 +1,16 @@
+2026-08-21T14:12:42+0900 post(suspend-then-hibernate): wl reloaded
+2026-08-21T14:13:10+0900 pre(suspend): wl unloaded
+2026-08-21T17:14:01+0900 post(suspend): wl reloaded
+2026-08-21T17:38:52+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T17:45:35+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T17:52:18+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T17:59:01+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T18:05:44+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+...
+2026-08-21T22:28:20+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T22:28:42+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T22:35:24+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+2026-08-21T22:35:46+0900 pre(suspend-then-hibernate): modprobe -r wl FAILED rc=1 (suspend 続行, hang リスク残)
+
+FAILED 総数 (8/21):
+49

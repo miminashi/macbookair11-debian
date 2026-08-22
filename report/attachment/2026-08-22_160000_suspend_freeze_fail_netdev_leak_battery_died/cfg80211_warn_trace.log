@@ -1,0 +1,83 @@
+ 8月 21 17:30:37 macbookair2015 systemd-logind[819]: Lid closed.
+ 8月 21 17:30:37 macbookair2015 systemd-logind[819]: Suspending, then hibernating...
+ 8月 21 17:30:37 macbookair2015 ModemManager[911]: <msg> [sleep-monitor-systemd] system is about to suspend
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.6813] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.6817] device (CC:60:23:AF:2C:60): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.6825] device (34:42:62:16:03:F6): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.6830] manager: NetworkManager state is now ASLEEP
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.6832] device (wlp3s0): state change: activated -> deactivating (reason 'sleeping', managed-type: 'full')
+ 8月 21 17:30:37 macbookair2015 dbus-daemon[776]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.13' (uid=0 pid=861 comm="/usr/sbin/NetworkManager --no-daemon")
+ 8月 21 17:30:37 macbookair2015 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+ 8月 21 17:30:37 macbookair2015 dbus-daemon[776]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+ 8月 21 17:30:37 macbookair2015 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: wlp3s0: CTRL-EVENT-DISCONNECTED bssid=f0:f8:4a:9d:9d:02 reason=3 locally_generated=1
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.7755] device (wlp3s0): supplicant interface state: completed -> disconnected
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.7757] device (wlp3s0): state change: deactivating -> disconnected (reason 'sleeping', managed-type: 'full')
+ 8月 21 17:30:37 macbookair2015 avahi-daemon[767]: Withdrawing address record for fe80::fc0b:caf7:5ba6:5834 on wlp3s0.
+ 8月 21 17:30:37 macbookair2015 avahi-daemon[767]: Leaving mDNS multicast group on interface wlp3s0.IPv6 with address fe80::fc0b:caf7:5ba6:5834.
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 16[KNL] fe80::fc0b:caf7:5ba6:5834 disappeared from wlp3s0
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.7798] dhcp4 (wlp3s0): canceled DHCP transaction
+ 8月 21 17:30:37 macbookair2015 avahi-daemon[767]: Interface wlp3s0.IPv6 no longer relevant for mDNS.
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.7798] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.7799] dhcp4 (wlp3s0): state changed no lease
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: ioctl[SIOCSIWSCAN]: Device or resource busy
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: wlp3s0: CTRL-EVENT-SCAN-FAILED ret=-1
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 01[KNL] 192.168.1.10 disappeared from wlp3s0
+ 8月 21 17:30:37 macbookair2015 avahi-daemon[767]: Withdrawing address record for 192.168.1.10 on wlp3s0.
+ 8月 21 17:30:37 macbookair2015 avahi-daemon[767]: Leaving mDNS multicast group on interface wlp3s0.IPv4 with address 192.168.1.10.
+ 8月 21 17:30:37 macbookair2015 avahi-daemon[767]: Interface wlp3s0.IPv4 no longer relevant for mDNS.
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: Ignore unexpected EVENT_ASSOC in disconnected state
+ 8月 21 17:30:37 macbookair2015 kernel: ------------[ cut here ]------------
+ 8月 21 17:30:37 macbookair2015 kernel: WARNING: CPU: 3 PID: 631306 at net/wireless/sme.c:848 __cfg80211_connect_result+0x8be/0x8d0 [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel: Modules linked in: wl(POE) facetimehd(OE) cfg80211 videobuf2_dma_sg videobuf2_v4l2 snd_ctl_led snd_usb_audio snd_usbmidi_lib hid_jabra snd_rawmidi authenc echainiv geniv crypto_null esp4 xfrm_interface xfrm6_tunnel tunnel6 tunnel4 twofish_generic twofish_avx_x86_64 twofish_x86_64_3way twofish_x86_64 twofish_common serpent_avx2 serpent_avx_x86_64 serpent_sse2_x86_64 serpent_generic blowfish_generic blowfish_x86_64 blowfish_common cast5_avx_x86_64 cast5_generic cast_common des3_ede_x86_64 des_generic libdes camellia_generic camellia_aesni_avx2 camellia_aesni_avx_x86_64 camellia_x86_64 xcbc md4 xfrm_user xfrm_algo snd_seq_dummy snd_hrtimer snd_seq snd_seq_device qrtr rfcomm cmac algif_hash algif_skcipher af_alg bnep intel_rapl_msr intel_rapl_common x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm binfmt_misc irqbypass crct10dif_pclmul ghash_clmulni_intel sha512_ssse3 sha256_ssse3 sha1_ssse3 aesni_intel btusb mei_hdcp gf128mul btrtl videobuf2_memops nls_ascii crypto_simd cryptd btintel mei_pxp
+ 8月 21 17:30:37 macbookair2015 kernel:  nls_cp437 btbcm snd_hda_codec_cirrus rapl vfat intel_cstate joydev snd_hda_codec_generic snd_hda_codec_hdmi btmtk fat applesmc videodev intel_uncore snd_hda_intel pcspkr bluetooth mei_me snd_intel_dspcfg snd_intel_sdw_acpi mei snd_hda_codec videobuf2_common intel_pch_thermal mc snd_hda_core snd_hwdep snd_pcm ecdh_generic snd_timer rfkill snd soundcore acpi_als bcm5974 industrialio_triggered_buffer sbs kfifo_buf industrialio sbshc ac apple_mfi_fastcharge evdev sg uinput msr parport_pc ppdev lp parport efi_pstore configfs nfnetlink zstd zram lz4hc_compress lz4_compress efivarfs ip_tables x_tables autofs4 ext4 crc16 mbcache jbd2 crc32c_generic hid_apple hid_generic usbhid hid i915 sd_mod drm_buddy i2c_algo_bit drm_display_helper cec rc_core ahci ttm xhci_pci libahci iTCO_wdt intel_pmc_bxt xhci_hcd iTCO_vendor_support drm_kms_helper libata thunderbolt watchdog usbcore crc32_pclmul drm crc32c_intel scsi_mod lpc_ich scsi_common i2c_i801 i2c_smbus dw_dmac_pci usb_common spi_pxa2xx_platform spi_pxa2xx_pci dw_dmac
+ 8月 21 17:30:37 macbookair2015 kernel:  video dw_dmac_core wmi spi_pxa2xx_core button [last unloaded: cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel: CPU: 3 UID: 0 PID: 631306 Comm: kworker/u16:45 Tainted: P        W  OE      6.12.95+deb13-amd64 #1  Debian 6.12.95-1
+ 8月 21 17:30:37 macbookair2015 kernel: Tainted: [P]=PROPRIETARY_MODULE, [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+ 8月 21 17:30:37 macbookair2015 kernel: Hardware name: Apple Inc. MacBookAir7,1/Mac-9F18E312C5C2BF0B, BIOS MBA71.88Z.0166.B13.1611031424 11/03/2016
+ 8月 21 17:30:37 macbookair2015 kernel: Workqueue: cfg80211 cfg80211_event_work [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel: RIP: 0010:__cfg80211_connect_result+0x8be/0x8d0 [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel: Code: ff e8 86 7d 39 d1 45 31 ed 0f b7 d0 e9 a2 f8 ff ff 0f b7 f0 e9 be fd ff ff 4c 89 e7 e8 0b e0 ff ff 83 3b 00 0f 85 44 fe ff ff <0f> 0b 48 89 de 4c 89 e7 e8 05 df ff ff e9 0a fb ff ff 90 90 90 90
+ 8月 21 17:30:37 macbookair2015 kernel: RSP: 0018:ffffcbb5c1963da0 EFLAGS: 00010246
+ 8月 21 17:30:37 macbookair2015 kernel: RAX: 0000000000000000 RBX: ffff8959426d7018 RCX: 0000000000000000
+ 8月 21 17:30:37 macbookair2015 kernel: RDX: 0000000000000000 RSI: 00000000fffffe00 RDI: ffff895a0b19e000
+ 8月 21 17:30:37 macbookair2015 kernel: RBP: ffffcbb5c1963df0 R08: 0000000000000000 R09: 0000000000000000
+ 8月 21 17:30:37 macbookair2015 kernel: R10: ffff895a09fda0c0 R11: 0000000000000000 R12: ffff895a0b19e000
+ 8月 21 17:30:37 macbookair2015 kernel: R13: 0000000000000000 R14: ffff8959426d73a1 R15: ffff8959426d7018
+ 8月 21 17:30:37 macbookair2015 kernel: FS:  0000000000000000(0000) GS:ffff895a6ad80000(0000) knlGS:0000000000000000
+ 8月 21 17:30:37 macbookair2015 kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+ 8月 21 17:30:37 macbookair2015 kernel: CR2: 00007f15b0a85f40 CR3: 000000000fe22005 CR4: 00000000003726f0
+ 8月 21 17:30:37 macbookair2015 kernel: Call Trace:
+ 8月 21 17:30:37 macbookair2015 kernel:  <TASK>
+ 8月 21 17:30:37 macbookair2015 kernel:  ? cfg80211_process_wdev_events+0x89/0x1a0 [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel:  cfg80211_process_wdev_events+0x89/0x1a0 [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel:  cfg80211_process_rdev_events+0x2a/0x40 [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel:  cfg80211_event_work+0x29/0x40 [cfg80211]
+ 8月 21 17:30:37 macbookair2015 kernel:  process_one_work+0x177/0x330
+ 8月 21 17:30:37 macbookair2015 kernel:  worker_thread+0x191/0x2f0
+ 8月 21 17:30:37 macbookair2015 kernel:  ? __pfx_worker_thread+0x10/0x10
+ 8月 21 17:30:37 macbookair2015 kernel:  kthread+0xd2/0x100
+ 8月 21 17:30:37 macbookair2015 kernel:  ? __pfx_kthread+0x10/0x10
+ 8月 21 17:30:37 macbookair2015 kernel:  ret_from_fork+0x34/0x50
+ 8月 21 17:30:37 macbookair2015 kernel:  ? __pfx_kthread+0x10/0x10
+ 8月 21 17:30:37 macbookair2015 kernel:  ret_from_fork_asm+0x1a/0x30
+ 8月 21 17:30:37 macbookair2015 kernel:  </TASK>
+ 8月 21 17:30:37 macbookair2015 kernel: ---[ end trace 0000000000000000 ]---
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 15[IKE] old path is not available anymore, try to find another
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 07[IKE] uninstalling bypass policy for 192.168.1.0/24
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 07[IKE] interface change for bypass policy for fe80::/64 (from wlp3s0 to nm-xfrm-1102441)
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 15[IKE] looking for a route to 160.16.210.47 ...
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 15[IKE] looking for a route to 192.168.0.1 ...
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 15[IKE] looking for a route to 10.1.0.1 ...
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 15[IKE] no route found to reach 160.16.210.47, MOBIKE update deferred
+ 8月 21 17:30:37 macbookair2015 NetworkManager[861]: <info>  [1787301037.9005] device (wlp3s0): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', managed-type: 'full')
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 13[KNL] interface wlp3s0 deactivated
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 16[IKE] deleting IKE_SA GSNet[1] between 192.168.1.10[macbookair2015]...160.16.210.47[160.16.210.47]
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 16[IKE] sending DELETE for IKE_SA GSNet[1]
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 16[ENC] generating INFORMATIONAL request 8 [ D ]
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 16[NET] sending packet: from 192.168.1.10[46588] to 160.16.210.47[4500] (80 bytes)
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 05[NET] error writing to socket: Network is unreachable
+ 8月 21 17:30:37 macbookair2015 charon-nm[632968]: 09[KNL] 192.168.83.1 disappeared from nm-xfrm-1102441
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+ 8月 21 17:30:37 macbookair2015 wpa_supplicant[872]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all

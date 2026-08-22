@@ -1,0 +1,38 @@
+#!/bin/sh
+# 48-netdev-leak-guard: 2026-08-21 障害対策 (report 2026-08-22_*_suspend_freeze_fail_netdev_leak_battery_died)。
+# WiFi+VPN の sleep teardown 競合で netdev refcount が壊れると、以後 suspend は
+# 毎回 freeze 失敗するが、lid closed のまま logind が約 7 分周期で無限再試行し、
+# バッテリ枯渇死に至る (2026-08-21 実績: 46 回 ×5 時間)。回復手段は再起動のみ。
+# post 段でリーク署名 (unregister_netdevice が増え続ける) を検知したら、
+# 猶予つきでクリーンシャットダウンに倒す。可逆: このファイルを rm すれば従来動作。
+LOG=/var/log/netdev-leak-guard.log
+GRACE=60
+SIG='unregister_netdevice: waiting'
+ts() { TZ=Asia/Tokyo date +%Y-%m-%dT%H:%M:%S%z; }
+
+[ "$1" = "post" ] || exit 0
+
+c1=$(dmesg | grep -c "$SIG")
+[ "$c1" -eq 0 ] && exit 0
+
+# 署名が「増え続けている」ことを確認 (過去に一度出て解消した残渣との判別)
+sleep 25
+c2=$(dmesg | grep -c "$SIG")
+if [ "$c2" -le "$c1" ]; then
+    echo "$(ts) post($2): signature present but not growing (c1=$c1 c2=$c2), no action" >> "$LOG"
+    exit 0
+fi
+
+echo "$(ts) post($2): netdev refcount leak ACTIVE (c1=$c1 -> c2=$c2), suspend は回復不能。${GRACE}s 後に poweroff をスケジュール" >> "$LOG"
+wall "netdev-leak-guard: suspend 不能な netdev リークを検知しました。バッテリ枯渇死防止のため ${GRACE} 秒後に poweroff します。中止: sudo systemctl stop netdev-leak-poweroff.timer" 2>>"$LOG" || true
+
+if [ -n "$LEAK_GUARD_DRYRUN" ]; then
+    echo "$(ts) post($2): DRYRUN=1 のため poweroff はスケジュールしない" >> "$LOG"
+    exit 0
+fi
+
+systemd-run --unit=netdev-leak-poweroff --on-active="$GRACE" \
+    --description="netdev leak guard: clean poweroff" \
+    systemctl poweroff >>"$LOG" 2>&1 \
+    || echo "$(ts) post($2): systemd-run rc=$? (前 cycle でスケジュール済みなら正常)" >> "$LOG"
+exit 0

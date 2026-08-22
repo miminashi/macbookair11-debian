@@ -1,0 +1,252 @@
+ 8月 21 17:32:09 macbookair2015 kernel: PM: suspend entry (deep)
+ 8月 21 17:32:09 macbookair2015 kernel: Filesystems sync: 0.005 seconds
+ 8月 21 17:32:30 macbookair2015 kernel: Freezing user space processes
+ 8月 21 17:32:30 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 17:32:30 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8
+ 8月 21 17:32:30 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 17:32:30 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8
+ 8月 21 17:32:30 macbookair2015 kernel: Freezing user space processes failed after 20.007 seconds (2 tasks refusing to freeze, wq_busy=0):
+ 8月 21 17:32:30 macbookair2015 kernel: task:charon-nm       state:D stack:0     pid:632986 tgid:632968 ppid:1      flags:0x00004006
+ 8月 21 17:32:30 macbookair2015 kernel: Call Trace:
+ 8月 21 17:32:30 macbookair2015 kernel:  <TASK>
+ 8月 21 17:32:30 macbookair2015 kernel:  __schedule+0x505/0xc00
+ 8月 21 17:32:30 macbookair2015 kernel:  schedule+0x27/0xc0
+ 8月 21 17:32:30 macbookair2015 kernel:  schedule_timeout+0x9e/0x160
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __pfx_process_timeout+0x10/0x10
+ 8月 21 17:32:30 macbookair2015 kernel:  msleep+0x2b/0x40
+ 8月 21 17:32:30 macbookair2015 kernel:  netdev_run_todo+0x333/0x530
+ 8月 21 17:32:30 macbookair2015 kernel:  rtnetlink_rcv_msg+0x14d/0x3f0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __alloc_skb+0x14a/0x1a0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __pfx_rtnetlink_rcv_msg+0x10/0x10
+ 8月 21 17:32:30 macbookair2015 kernel:  netlink_rcv_skb+0x53/0x100
+ 8月 21 17:32:30 macbookair2015 kernel:  netlink_unicast+0x27f/0x3d0
+ 8月 21 17:32:30 macbookair2015 kernel:  netlink_sendmsg+0x21b/0x470
+ 8月 21 17:32:30 macbookair2015 kernel:  __sys_sendto+0x1d7/0x1e0
+ 8月 21 17:32:30 macbookair2015 kernel:  __x64_sys_sendto+0x24/0x30
+ 8月 21 17:32:30 macbookair2015 kernel:  do_syscall_64+0x87/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __rseq_handle_notify_resume+0xa2/0x490
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __x64_sys_futex+0x127/0x1e0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? restore_fpregs_from_fpstate+0x3c/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? switch_fpu_return+0x4e/0xd0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x75/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+ 8月 21 17:32:30 macbookair2015 kernel: RIP: 0033:0x7fe3d7a46687
+ 8月 21 17:32:30 macbookair2015 kernel: RSP: 002b:00007fe3c5ffa240 EFLAGS: 00000202 ORIG_RAX: 000000000000002c
+ 8月 21 17:32:30 macbookair2015 kernel: RAX: ffffffffffffffda RBX: 00007fe3c5ffb6c0 RCX: 00007fe3d7a46687
+ 8月 21 17:32:30 macbookair2015 kernel: RDX: 0000000000000040 RSI: 00007fe3c5ffa370 RDI: 000000000000000b
+ 8月 21 17:32:30 macbookair2015 kernel: RBP: 0000000000000040 R08: 00007fe3c5ffa2d8 R09: 000000000000000c
+ 8月 21 17:32:30 macbookair2015 kernel: R10: 0000000000000000 R11: 0000000000000202 R12: 00007fe3c5ffa370
+ 8月 21 17:32:30 macbookair2015 kernel: R13: 00007fe3c5ffa2d8 R14: 00007fe3c5ffa348 R15: 0000000000000007
+ 8月 21 17:32:30 macbookair2015 kernel:  </TASK>
+ 8月 21 17:32:30 macbookair2015 kernel: task:modprobe        state:D stack:0     pid:639913 tgid:639913 ppid:639909 flags:0x00004006
+ 8月 21 17:32:30 macbookair2015 kernel: Call Trace:
+ 8月 21 17:32:30 macbookair2015 kernel:  <TASK>
+ 8月 21 17:32:30 macbookair2015 kernel:  __schedule+0x505/0xc00
+ 8月 21 17:32:30 macbookair2015 kernel:  schedule+0x27/0xc0
+ 8月 21 17:32:30 macbookair2015 kernel:  schedule_timeout+0x9e/0x160
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __pfx_process_timeout+0x10/0x10
+ 8月 21 17:32:30 macbookair2015 kernel:  msleep+0x2b/0x40
+ 8月 21 17:32:30 macbookair2015 kernel:  netdev_run_todo+0x333/0x530
+ 8月 21 17:32:30 macbookair2015 kernel:  wl_free_if+0x7a/0xa0 [wl]
+ 8月 21 17:32:30 macbookair2015 kernel:  ? wl_free+0x4e/0x230 [wl]
+ 8月 21 17:32:30 macbookair2015 kernel:  ? wlc_down+0x26a/0x286 [wl]
+ 8月 21 17:32:30 macbookair2015 kernel:  ? warn_thunk_thunk+0x1a/0x30
+ 8月 21 17:32:30 macbookair2015 kernel:  ? wl_remove+0x5f/0xa0 [wl]
+ 8月 21 17:32:30 macbookair2015 kernel:  ? pci_device_remove+0x42/0xb0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? device_release_driver_internal+0x19c/0x200
+ 8月 21 17:32:30 macbookair2015 kernel:  ? driver_detach+0x48/0x90
+ 8月 21 17:32:30 macbookair2015 kernel:  ? bus_remove_driver+0x6d/0xf0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? pci_unregister_driver+0x2e/0xb0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? __do_sys_delete_module+0x1b8/0x330
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_syscall_64+0x87/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? vfs_read+0x247/0x360
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? count_memcg_events.constprop.0+0x1a/0x30
+ 8月 21 17:32:30 macbookair2015 kernel:  ? handle_mm_fault+0x1bb/0x2c0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? do_user_addr_fault+0x36c/0x620
+ 8月 21 17:32:30 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:30 macbookair2015 kernel:  ? entry_SYSCALL_64_after_hwframe+0x76/0x7e
+ 8月 21 17:32:30 macbookair2015 kernel:  </TASK>
+ 8月 21 17:32:30 macbookair2015 kernel: OOM killer enabled.
+ 8月 21 17:32:30 macbookair2015 kernel: Restarting tasks ... done.
+ 8月 21 17:32:30 macbookair2015 kernel: random: crng reseeded on system resumption
+ 8月 21 17:32:30 macbookair2015 kernel: video LNXVIDEO:00: Restoring backlight state
+ 8月 21 17:32:30 macbookair2015 kernel: PM: suspend exit
+ 8月 21 17:32:30 macbookair2015 kernel: PM: suspend entry (s2idle)
+ 8月 21 17:32:30 macbookair2015 kernel: Filesystems sync: 0.014 seconds
+ 8月 21 17:32:50 macbookair2015 kernel: Freezing user space processes
+ 8月 21 17:32:50 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 17:32:50 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8
+ 8月 21 17:32:50 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 17:32:50 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8
+ 8月 21 17:32:50 macbookair2015 kernel: Freezing user space processes failed after 20.008 seconds (2 tasks refusing to freeze, wq_busy=0):
+ 8月 21 17:32:50 macbookair2015 kernel: task:charon-nm       state:D stack:0     pid:632986 tgid:632968 ppid:1      flags:0x00004006
+ 8月 21 17:32:50 macbookair2015 kernel: Call Trace:
+ 8月 21 17:32:50 macbookair2015 kernel:  <TASK>
+ 8月 21 17:32:50 macbookair2015 kernel:  __schedule+0x505/0xc00
+ 8月 21 17:32:50 macbookair2015 kernel:  schedule+0x27/0xc0
+ 8月 21 17:32:50 macbookair2015 kernel:  schedule_timeout+0x9e/0x160
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __pfx_process_timeout+0x10/0x10
+ 8月 21 17:32:50 macbookair2015 kernel:  msleep+0x2b/0x40
+ 8月 21 17:32:50 macbookair2015 kernel:  netdev_run_todo+0x333/0x530
+ 8月 21 17:32:50 macbookair2015 kernel:  rtnetlink_rcv_msg+0x14d/0x3f0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __alloc_skb+0x14a/0x1a0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __pfx_rtnetlink_rcv_msg+0x10/0x10
+ 8月 21 17:32:50 macbookair2015 kernel:  netlink_rcv_skb+0x53/0x100
+ 8月 21 17:32:50 macbookair2015 kernel:  netlink_unicast+0x27f/0x3d0
+ 8月 21 17:32:50 macbookair2015 kernel:  netlink_sendmsg+0x21b/0x470
+ 8月 21 17:32:50 macbookair2015 kernel:  __sys_sendto+0x1d7/0x1e0
+ 8月 21 17:32:50 macbookair2015 kernel:  __x64_sys_sendto+0x24/0x30
+ 8月 21 17:32:50 macbookair2015 kernel:  do_syscall_64+0x87/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __rseq_handle_notify_resume+0xa2/0x490
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __x64_sys_futex+0x127/0x1e0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? restore_fpregs_from_fpstate+0x3c/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? switch_fpu_return+0x4e/0xd0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x75/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+ 8月 21 17:32:50 macbookair2015 kernel: RIP: 0033:0x7fe3d7a46687
+ 8月 21 17:32:50 macbookair2015 kernel: RSP: 002b:00007fe3c5ffa240 EFLAGS: 00000202 ORIG_RAX: 000000000000002c
+ 8月 21 17:32:50 macbookair2015 kernel: RAX: ffffffffffffffda RBX: 00007fe3c5ffb6c0 RCX: 00007fe3d7a46687
+ 8月 21 17:32:50 macbookair2015 kernel: RDX: 0000000000000040 RSI: 00007fe3c5ffa370 RDI: 000000000000000b
+ 8月 21 17:32:50 macbookair2015 kernel: RBP: 0000000000000040 R08: 00007fe3c5ffa2d8 R09: 000000000000000c
+ 8月 21 17:32:50 macbookair2015 kernel: R10: 0000000000000000 R11: 0000000000000202 R12: 00007fe3c5ffa370
+ 8月 21 17:32:50 macbookair2015 kernel: R13: 00007fe3c5ffa2d8 R14: 00007fe3c5ffa348 R15: 0000000000000007
+ 8月 21 17:32:50 macbookair2015 kernel:  </TASK>
+ 8月 21 17:32:50 macbookair2015 kernel: task:modprobe        state:D stack:0     pid:639913 tgid:639913 ppid:639909 flags:0x00004006
+ 8月 21 17:32:50 macbookair2015 kernel: Call Trace:
+ 8月 21 17:32:50 macbookair2015 kernel:  <TASK>
+ 8月 21 17:32:50 macbookair2015 kernel:  __schedule+0x505/0xc00
+ 8月 21 17:32:50 macbookair2015 kernel:  schedule+0x27/0xc0
+ 8月 21 17:32:50 macbookair2015 kernel:  schedule_timeout+0x9e/0x160
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __pfx_process_timeout+0x10/0x10
+ 8月 21 17:32:50 macbookair2015 kernel:  msleep+0x2b/0x40
+ 8月 21 17:32:50 macbookair2015 kernel:  netdev_run_todo+0x333/0x530
+ 8月 21 17:32:50 macbookair2015 kernel:  wl_free_if+0x7a/0xa0 [wl]
+ 8月 21 17:32:50 macbookair2015 kernel:  ? wl_free+0x4e/0x230 [wl]
+ 8月 21 17:32:50 macbookair2015 kernel:  ? wlc_down+0x26a/0x286 [wl]
+ 8月 21 17:32:50 macbookair2015 kernel:  ? warn_thunk_thunk+0x1a/0x30
+ 8月 21 17:32:50 macbookair2015 kernel:  ? wl_remove+0x5f/0xa0 [wl]
+ 8月 21 17:32:50 macbookair2015 kernel:  ? pci_device_remove+0x42/0xb0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? device_release_driver_internal+0x19c/0x200
+ 8月 21 17:32:50 macbookair2015 kernel:  ? driver_detach+0x48/0x90
+ 8月 21 17:32:50 macbookair2015 kernel:  ? bus_remove_driver+0x6d/0xf0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? pci_unregister_driver+0x2e/0xb0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? __do_sys_delete_module+0x1b8/0x330
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_syscall_64+0x87/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? vfs_read+0x247/0x360
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? syscall_exit_to_user_mode+0x37/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_syscall_64+0x93/0x1b0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? count_memcg_events.constprop.0+0x1a/0x30
+ 8月 21 17:32:50 macbookair2015 kernel:  ? handle_mm_fault+0x1bb/0x2c0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? do_user_addr_fault+0x36c/0x620
+ 8月 21 17:32:50 macbookair2015 kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0x16/0xa0
+ 8月 21 17:32:50 macbookair2015 kernel:  ? entry_SYSCALL_64_after_hwframe+0x76/0x7e
+ 8月 21 17:32:50 macbookair2015 kernel:  </TASK>
+ 8月 21 17:32:50 macbookair2015 kernel: OOM killer enabled.
+ 8月 21 17:32:50 macbookair2015 kernel: Restarting tasks ... done.
+ 8月 21 17:32:50 macbookair2015 kernel: random: crng reseeded on system resumption
+ 8月 21 17:32:50 macbookair2015 kernel: video LNXVIDEO:00: Restoring backlight state
+ 8月 21 17:32:50 macbookair2015 kernel: PM: suspend exit
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Found FaceTime HD camera with device id: 1570
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Setting 64bit DMA mask
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: S2 PCIe link init succeeded
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Refclk: 25MHz (0xa)
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: PLL reset finished
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Waiting for S2 PLL to lock at 450 MHz
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: S2 PLL is locked after 10 us
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: S2 PLL is in bypass mode
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: DDR40 PHY PLL locked on safe settings
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: STRAP valid
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Configuring DDR PLLs for 450 MHz
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: DDR40 PLL is locked after 0 us
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: First DDR40 VDL calibration completed after 2 us
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Second DDR40 VDL calibration completed after 1 us
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Using step size 144
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: VDL set to: coarse=0x10008, fine=0x10119
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Virtual VTT enabled
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: S2 DRAM memory address: 0x22159559
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Rewrite DDR mode registers succeeded
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Full memory verification succeeded! (0)
+ 8月 21 17:32:50 macbookair2015 kernel: facetimehd 0000:02:00.0: Loaded firmware, size: 1392kb
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: ISP woke up after 0ms
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: Number of IPC channels: 7, queue size: 44865
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: Firmware requested heap size: 3072kb
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: ISP second int after 0ms
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: Channel description table at 00800000
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: magic value: 00000000 after 0 ms
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: Enabling interrupts
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: 
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: - APOLLO-ISP-APPLE ------------------------------------------------------------
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: 
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Restart count : 0
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Platform : mode = TARGET, ID = 0x00000000, HW = 00020018.00000000
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   System Clock : 200000000 Hz
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Processor mode : SUPERVISOR
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Cache architecture type : SEPARATE
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Cache type : WRITEBACK
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Data Cache Line : 32 [0x20]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Boot arguments entries : 2
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:     0000: 0x00000000 0x00000000
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Physical memory base : 0x00000000 [TLB base 0x00160000]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Main memory :   base : 0x00000000
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:                   size : 8388608 [0x00800000] [8.0 MB]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Extra heap :    base : 0x2080b000 [phy = 0x0080b000]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:                   size : 3145728 [0x00300000] [3.0 MB]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Shared window : base : 0x00800000 [static wiring]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:                   size : 125829120 [0x07800000] [120.0 MB]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Shared memory : base : 0x00800000
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:                   size : 260046848 [0x0f800000] [248.0 MB]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   TEXT : 1421992 [0x15b2a8] - text 667256, cstring  38749, const 715528
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   DATA : 8076 [0x1f8c] - data 0, bss 460, common 1452, noinit 6144
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Heap free space : 10002626 [0x0098a0c2]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Heap allocated space : 94656 [0x000171c0]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Disclaimer : Copyright (c) APPLE Inc. All Rights Reserved.
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Application : adc [release]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Linked on : Jul 25 2015 - 08:48:55
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Release : S2ISP-01.43.00
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   H4ISPAPPLE : 11536
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   H4ISPCD : 4081
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   ffw : 4143
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG:   Tool-chain : iPhone OS - 7.0.3 [clang/clang++]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: 
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: -------------------------------------------------------------------------------
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: 
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [ISP] CMD = 0x0004 [CISP_CMD_PRINT_ENABLE]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [ISP] CMD = 0x0003 [CISP_CMD_CONFIG_GET]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [ISP] CH = 0 CMD = 0x010d [CISP_CMD_CH_INFO_GET]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [ISP] CH = 0 CMD = 0x0106 [CISP_CMD_CH_CAMERA_CONFIG_GET]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [DSC] CH = 0   Camera current config Get [0] 
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [ISP] CH = 0 CMD = 0x0106 [CISP_CMD_CH_CAMERA_CONFIG_GET]
+ 8月 21 17:32:51 macbookair2015 kernel: FWMSG: [DSC] CH = 0   Camera current config Get [1] 
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: firmware: failed to load facetimehd/1871_01XX.dat (-2)
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: firmware: failed to load facetimehd/1871_01XX.dat (-2)
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: firmware: failed to load facetimehd/1871_01XX.dat (-2)
+ 8月 21 17:32:51 macbookair2015 kernel: facetimehd 0000:02:00.0: Direct firmware load for facetimehd/1871_01XX.dat failed with error -2
+ 8月 21 17:32:51 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10

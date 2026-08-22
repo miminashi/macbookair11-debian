@@ -1,0 +1,8 @@
+ 8月 21 22:40:37 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 22:40:38 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8
+ 8月 21 22:40:47 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 22:40:48 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8
+ 8月 21 22:40:57 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 10
+ 8月 21 22:40:57 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'final-sigterm' timed out. Killing.
+ 8月 21 22:40:57 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 22:40:58 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1102441 to become free. Usage count = -8

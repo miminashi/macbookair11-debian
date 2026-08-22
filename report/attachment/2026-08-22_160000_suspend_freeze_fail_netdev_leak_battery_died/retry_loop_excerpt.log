@@ -1,0 +1,60 @@
+ 8月 21 17:30:37 macbookair2015 systemd-logind[819]: Lid closed.
+ 8月 21 17:30:37 macbookair2015 systemd-logind[819]: Suspending, then hibernating...
+ 8月 21 17:30:39 macbookair2015 systemd[1]: Starting systemd-suspend-then-hibernate.service - System Suspend then Hibernate...
+ 8月 21 17:32:09 macbookair2015 systemd-sleep[639875]: Performing sleep operation 'suspend'...
+ 8月 21 17:32:51 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Main process exited, code=exited, status=1/FAILURE
+ 8月 21 17:34:21 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'stop-sigterm' timed out. Killing.
+ 8月 21 17:34:21 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639909 (timeout) with signal SIGKILL.
+ 8月 21 17:34:21 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:35:51 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after SIGKILL. Ignoring.
+ 8月 21 17:37:21 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'final-sigterm' timed out. Killing.
+ 8月 21 17:37:21 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after final SIGKILL. Entering failed mode.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Failed with result 'exit-code'.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Unit process 639913 (modprobe) remains running after unit stopped.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: Failed to start systemd-suspend-then-hibernate.service - System Suspend then Hibernate.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Consumed 3.345s CPU time, 140M memory peak.
+ 8月 21 17:38:52 macbookair2015 systemd-logind[819]: Operation 'suspend-then-hibernate' finished.
+ 8月 21 17:38:52 macbookair2015 systemd-logind[819]: Suspending, then hibernating...
+ 8月 21 17:38:52 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Found left-over process 639913 (modprobe) in control group while starting unit. Ignoring.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
+ 8月 21 17:38:52 macbookair2015 systemd[1]: Starting systemd-suspend-then-hibernate.service - System Suspend then Hibernate...
+ 8月 21 17:38:52 macbookair2015 systemd-sleep[642569]: Performing sleep operation 'suspend'...
+ 8月 21 17:39:34 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Main process exited, code=exited, status=1/FAILURE
+ 8月 21 17:41:04 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'stop-sigterm' timed out. Killing.
+ 8月 21 17:41:04 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:42:34 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after SIGKILL. Ignoring.
+ 8月 21 17:44:04 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'final-sigterm' timed out. Killing.
+ 8月 21 17:44:04 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:45:34 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after final SIGKILL. Entering failed mode.
+ 8月 21 17:45:34 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Failed with result 'exit-code'.
+ 8月 21 17:45:34 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Unit process 639913 (modprobe) remains running after unit stopped.
+ 8月 21 17:45:34 macbookair2015 systemd[1]: Failed to start systemd-suspend-then-hibernate.service - System Suspend then Hibernate.
+ 8月 21 17:45:34 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Consumed 3.118s CPU time, 140M memory peak.
+ 8月 21 17:45:34 macbookair2015 systemd-logind[819]: Operation 'suspend-then-hibernate' finished.
+ 8月 21 17:45:34 macbookair2015 systemd-logind[819]: Suspending, then hibernating...
+ 8月 21 17:45:35 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Found left-over process 639913 (modprobe) in control group while starting unit. Ignoring.
+ 8月 21 17:45:35 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
+ 8月 21 17:45:35 macbookair2015 systemd[1]: Starting systemd-suspend-then-hibernate.service - System Suspend then Hibernate...
+ 8月 21 17:45:35 macbookair2015 systemd-sleep[645226]: Performing sleep operation 'suspend'...
+ 8月 21 17:46:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Main process exited, code=exited, status=1/FAILURE
+ 8月 21 17:47:47 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'stop-sigterm' timed out. Killing.
+ 8月 21 17:47:47 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:49:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after SIGKILL. Ignoring.
+ 8月 21 17:50:47 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'final-sigterm' timed out. Killing.
+ 8月 21 17:50:47 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after final SIGKILL. Entering failed mode.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Failed with result 'exit-code'.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Unit process 639913 (modprobe) remains running after unit stopped.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: Failed to start systemd-suspend-then-hibernate.service - System Suspend then Hibernate.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Consumed 3.351s CPU time, 141.1M memory peak.
+ 8月 21 17:52:17 macbookair2015 systemd-logind[819]: Operation 'suspend-then-hibernate' finished.
+ 8月 21 17:52:17 macbookair2015 systemd-logind[819]: Suspending, then hibernating...
+ 8月 21 17:52:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Found left-over process 639913 (modprobe) in control group while starting unit. Ignoring.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
+ 8月 21 17:52:17 macbookair2015 systemd[1]: Starting systemd-suspend-then-hibernate.service - System Suspend then Hibernate...
+ 8月 21 17:52:18 macbookair2015 systemd-sleep[647868]: Performing sleep operation 'suspend'...
+ 8月 21 17:53:00 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Main process exited, code=exited, status=1/FAILURE
+ 8月 21 17:54:30 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: State 'stop-sigterm' timed out. Killing.
+ 8月 21 17:54:30 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Killing process 639913 (modprobe) with signal SIGKILL.
+ 8月 21 17:56:00 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after SIGKILL. Ignoring.
