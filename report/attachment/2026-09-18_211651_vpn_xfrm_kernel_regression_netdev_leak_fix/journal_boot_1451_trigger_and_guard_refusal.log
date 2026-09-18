@@ -1,0 +1,112 @@
+ 9月 18 14:51:21.438923 macbookair2015 charon-nm[998733]: 11[KNL] interface enxce6023bad528 deactivated
+ 9月 18 14:51:21.445902 macbookair2015 charon-nm[998733]: 08[KNL] 2001:240:2429:37f3:3e48:a7fa:5b45:2be2 disappeared from enxce6023bad528
+ 9月 18 14:51:21.452573 macbookair2015 charon-nm[998733]: 04[KNL] 2001:240:2429:37f3:cc60:23ff:feba:d528 disappeared from enxce6023bad528
+ 9月 18 14:51:21.453229 macbookair2015 charon-nm[998733]: 11[KNL] fe80::cc60:23ff:feba:d528 disappeared from enxce6023bad528
+ 9月 18 14:51:21.453742 macbookair2015 charon-nm[998733]: 07[KNL] 172.20.10.5 disappeared from enxce6023bad528
+ 9月 18 14:51:21.454429 macbookair2015 charon-nm[998733]: 09[KNL] interface enxce6023bad528 deleted
+ 9月 18 14:51:21.473579 macbookair2015 NetworkManager[889]: <info>  [1789710681.4722] device (enxce6023bad528): state change: activated -> unmanaged (reason 'unmanaged-link-not-init', managed-type: 'removed')
+ 9月 18 14:51:21.474597 macbookair2015 NetworkManager[889]: <info>  [1789710681.4745] dhcp4 (enxce6023bad528): canceled DHCP transaction
+ 9月 18 14:51:21.474610 macbookair2015 NetworkManager[889]: <info>  [1789710681.4746] dhcp4 (enxce6023bad528): activation: beginning transaction (timeout in 45 seconds)
+ 9月 18 14:51:21.474628 macbookair2015 NetworkManager[889]: <info>  [1789710681.4746] dhcp4 (enxce6023bad528): state changed no lease
+ 9月 18 14:51:21.475229 macbookair2015 NetworkManager[889]: <info>  [1789710681.4752] dhcp6 (enxce6023bad528): canceled DHCP transaction
+ 9月 18 14:51:21.475242 macbookair2015 NetworkManager[889]: <info>  [1789710681.4752] dhcp6 (enxce6023bad528): activation: beginning transaction (timeout in 45 seconds)
+ 9月 18 14:51:21.475293 macbookair2015 NetworkManager[889]: <info>  [1789710681.4752] dhcp6 (enxce6023bad528): state changed no lease
+ 9月 18 14:51:21.522579 macbookair2015 charon-nm[998733]: 10[IKE] deleting IKE_SA GSNet[3] between 172.20.10.5[macbookair2015]...160.16.210.47[160.16.210.47]
+ 9月 18 14:51:21.522688 macbookair2015 charon-nm[998733]: 10[IKE] sending DELETE for IKE_SA GSNet[3]
+ 9月 18 14:51:21.522968 macbookair2015 charon-nm[998733]: 10[ENC] generating INFORMATIONAL request 7 [ D ]
+ 9月 18 14:51:21.526746 macbookair2015 charon-nm[998733]: 10[NET] sending packet: from 172.20.10.5[51026] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 14:51:21.527294 macbookair2015 charon-nm[998733]: 05[NET] error writing to socket: Network is unreachable
+ 9月 18 14:51:21.540696 macbookair2015 charon-nm[998733]: 12[IKE] interface change for bypass policy for fe80::/64 (from enxce6023bad528 to nm-xfrm-1860628)
+ 9月 18 14:51:21.542398 macbookair2015 charon-nm[998733]: 12[IKE] uninstalling bypass policy for 172.20.10.0/28
+ 9月 18 14:51:21.542616 macbookair2015 charon-nm[998733]: 12[IKE] uninstalling bypass policy for 2001:240:2429:37f3::/64
+ 9月 18 14:51:21.545283 macbookair2015 charon-nm[998733]: 12[IKE] uninstalling bypass policy for 172.20.10.1/32
+ 9月 18 14:51:21.579265 macbookair2015 charon-nm[998733]: 15[KNL] 192.168.83.1 disappeared from nm-xfrm-1860628
+ 9月 18 14:51:23.528827 macbookair2015 charon-nm[998733]: 13[IKE] retransmit 1 of request with message ID 7
+ 9月 18 14:51:23.528856 macbookair2015 charon-nm[998733]: 13[NET] sending packet: from 172.20.10.5[51026] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 14:51:23.528940 macbookair2015 charon-nm[998733]: 05[NET] error writing to socket: Network is unreachable
+ 9月 18 14:51:26.200494 macbookair2015 systemd-logind[830]: Lid closed.
+ 9月 18 14:51:26.209166 macbookair2015 systemd-logind[830]: Suspending, then hibernating...
+ 9月 18 14:51:26.226657 macbookair2015 charon-nm[998733]: 04[KNL] interface wlp3s0 deactivated
+ 9月 18 14:51:26.329013 macbookair2015 charon-nm[998733]: 10[IKE] retransmit 2 of request with message ID 7
+ 9月 18 14:51:26.329044 macbookair2015 charon-nm[998733]: 10[NET] sending packet: from 172.20.10.5[51026] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 14:51:26.329107 macbookair2015 charon-nm[998733]: 05[NET] error writing to socket: Network is unreachable
+ 9月 18 14:51:27.919928 macbookair2015 systemd-sleep[1042626]: Successfully froze unit 'user.slice'.
+ 9月 18 14:51:28.002834 macbookair2015 charon-nm[998733]: 14[KNL] interface wlp3s0 deleted
+ 9月 18 14:51:30.248527 macbookair2015 charon-nm[998733]: 07[IKE] retransmit 3 of request with message ID 7
+ 9月 18 14:51:30.248681 macbookair2015 charon-nm[998733]: 07[NET] sending packet: from 172.20.10.5[51026] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 14:51:30.248801 macbookair2015 charon-nm[998733]: 05[NET] error writing to socket: Network is unreachable
+ 9月 18 14:51:31.586719 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:51:35.736063 macbookair2015 charon-nm[998733]: 09[IKE] giving up after 3 retransmits
+ 9月 18 14:51:35.736107 macbookair2015 charon-nm[998733]: 09[IKE] proper IKE_SA delete failed, peer not responding
+ 9月 18 14:51:35.736926 macbookair2015 charon-nm[998733]: 09[KNL] error uninstalling route installed with policy 192.168.83.1/32 === 0.0.0.0/0 out
+ 9月 18 14:51:35.739489 macbookair2015 charon-nm[998733]: 10[KNL] interface nm-xfrm-1860628 deactivated
+ 9月 18 14:51:35.740188 macbookair2015 charon-nm[998733]: 08[KNL] fe80::edcf:a00b:efb0:2891 disappeared from nm-xfrm-1860628
+ 9月 18 14:51:35.755006 macbookair2015 charon-nm[998733]: 11[KNL] interface nm-xfrm-1860628 deleted
+ 9月 18 14:51:35.839764 macbookair2015 charon-nm[998733]: 15[IKE] uninstalling bypass policy for fe80::/64
+ 9月 18 14:51:41.730844 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:51:45.890794 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:51:51.746821 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:51:55.906793 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:01.986819 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:52:06.146793 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:12.226823 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:52:16.386824 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:22.242820 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:52:26.402799 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:32.482823 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:52:36.642792 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:42.498818 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:52:46.658820 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:52.738821 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:52:56.898790 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:52:57.947714 macbookair2015 systemd-sleep[1042626]: Performing sleep operation 'suspend'...
+ 9月 18 14:53:18.716696 macbookair2015 kernel: Freezing user space processes
+ 9月 18 14:53:18.716883 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:53:18.717970 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:53:18.732398 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:53:18.739623 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:53:18.751104 macbookair2015 kernel: Freezing user space processes failed after 20.006 seconds (1 tasks refusing to freeze, wq_busy=0):
+ 9月 18 14:53:18.760577 macbookair2015 kernel: task:charon-nm       state:D stack:0     pid:998753 tgid:998733 ppid:1      flags:0x00004006
+ 9月 18 14:53:39.121289 macbookair2015 kernel: Freezing user space processes
+ 9月 18 14:53:39.121646 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:53:39.122326 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:53:39.138385 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:53:39.147371 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:53:39.155385 macbookair2015 kernel: Freezing user space processes failed after 20.006 seconds (1 tasks refusing to freeze, wq_busy=0):
+ 9月 18 14:53:39.163062 macbookair2015 kernel: task:charon-nm       state:D stack:0     pid:998753 tgid:998733 ppid:1      flags:0x00004006
+ 9月 18 14:53:39.298724 macbookair2015 systemd-sleep[1042626]: Failed to put system to sleep. System resumed again: Device or resource busy
+ 9月 18 14:53:43.490820 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:53:47.842794 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:53:53.506818 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:53:57.890795 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:54:03.522822 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:54:04.387026 macbookair2015 systemd[1]: Started netdev-leak-poweroff.timer - netdev leak guard: clean poweroff.
+ 9月 18 14:54:08.130792 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:54:13.762820 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:54:18.146794 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:54:23.778819 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:54:28.162793 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:54:33.794820 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:54:38.402818 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:54:44.034822 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:54:48.642818 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:54:54.274820 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:54:58.658820 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:55:04.290820 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12
+ 9月 18 14:55:04.586092 macbookair2015 systemd[1]: Started netdev-leak-poweroff.service - netdev leak guard: clean poweroff.
+ 9月 18 14:55:04.653401 macbookair2015 systemctl[1042959]: Call to PowerOff failed: Action suspend-then-hibernate already in progress, refusing requested poweroff operation.
+ 9月 18 14:55:04.656106 macbookair2015 systemd[1]: netdev-leak-poweroff.service: Main process exited, code=exited, status=1/FAILURE
+ 9月 18 14:55:04.656477 macbookair2015 systemd[1]: netdev-leak-poweroff.service: Failed with result 'exit-code'.
+ 9月 18 14:55:04.657059 macbookair2015 systemd[1]: netdev-leak-poweroff.timer: Deactivated successfully.
+ 9月 18 14:55:08.674765 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1860628 to become free. Usage count = -10
+ 9月 18 14:55:09.316372 macbookair2015 systemd-sleep[1042626]: Successfully thawed unit 'user.slice'.
+ 9月 18 14:55:09.463495 macbookair2015 systemd-logind[830]: Suspending, then hibernating...
+ 9月 18 14:55:09.566999 macbookair2015 charon-nm[998733]: 07[KNL] interface wlp3s0 activated
+ 9月 18 14:55:09.572903 macbookair2015 charon-nm[998733]: 09[KNL] interface wlp3s0 deactivated
+ 9月 18 14:55:09.575661 macbookair2015 charon-nm[998733]: 16[KNL] interface wlp3s0 activated
+ 9月 18 14:55:09.668850 macbookair2015 charon-nm[998733]: 04[IKE] installed bypass policy for fe80::/64
+ 9月 18 14:55:09.699888 macbookair2015 charon-nm[998733]: 11[KNL] interface wlp3s0 deactivated
+ 9月 18 14:55:09.802844 macbookair2015 charon-nm[998733]: 09[IKE] uninstalling bypass policy for fe80::/64
+ 9月 18 14:55:10.006961 macbookair2015 systemd-sleep[1042977]: Successfully froze unit 'user.slice'.
+ 9月 18 14:55:10.075964 macbookair2015 charon-nm[998733]: 14[KNL] interface wlp3s0 deleted
+ 9月 18 14:55:14.466817 macbookair2015 kernel: unregister_netdevice: waiting for enxce6023bad528 to become free. Usage count = 12

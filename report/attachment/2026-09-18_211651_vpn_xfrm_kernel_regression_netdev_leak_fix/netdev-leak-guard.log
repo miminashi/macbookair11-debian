@@ -1,0 +1,64 @@
+2026-08-22T15:58:57+0900 post(suspend-test): signature present but not growing (c1=1 c2=1), no action
+2026-08-22T15:59:46+0900 post(suspend-test): netdev refcount leak ACTIVE (c1=1 -> c2=2), suspend は回復不能。60s 後に poweroff をスケジュール
+2026-08-22T15:59:46+0900 post(suspend-test): DRYRUN=1 のため poweroff はスケジュールしない
+2026-08-22T17:56:47+0900 post(suspend): signature present but not growing (c1=2 c2=2), no action
+2026-08-22T21:38:23+0900 post(suspend-then-hibernate): signature present but not growing (c1=2 c2=0), no action
+2026-09-18T14:54:04+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=25 -> c2=30), suspend は回復不能。60s 後に poweroff をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T14:57:45+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=69 -> c2=73), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T14:57:45+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:01:26+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=112 -> c2=117), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T15:01:26+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:05:07+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=155 -> c2=161), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T15:05:07+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:08:49+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=199 -> c2=204), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T15:08:49+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:12:30+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=243 -> c2=248), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T15:12:30+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:16:11+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=287 -> c2=291), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T15:16:11+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:19:52+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=330 -> c2=335), suspend は回復不能。60s 後に poweroff をスケジュール
+Failed to start transient timer unit: Unit netdev-leak-poweroff.service was already loaded or has a fragment file.
+2026-09-18T15:19:52+0900 post(suspend-then-hibernate): systemd-run rc=1 (前 cycle でスケジュール済みなら正常)
+2026-09-18T15:23:33+0900 post(suspend-then-hibernate): signature present but not growing (c1=374 c2=354), no action
+2026-09-18T15:27:14+0900 post(suspend-then-hibernate): signature present but not growing (c1=383 c2=353), no action
+2026-09-18T15:30:55+0900 post(suspend-then-hibernate): signature present but not growing (c1=384 c2=354), no action
+2026-09-18T16:16:08+0900 post(suspend-then-hibernate): netdev refcount leak ACTIVE (c1=23 -> c2=29), suspend は回復不能。60s 後に poweroff をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T19:13:45+0900 pre(suspend-test): netdev refcount leak ACTIVE (ACTIVE: [ 4751.605375] unregister_netdevice: waiting for leaktest0 to become free. Usage count = 3)。sleep は回復不能。60s 後に poweroff をスケジュール
+2026-09-18T19:13:45+0900 pre(suspend-test): DRYRUN のため poweroff はスケジュールしない
+2026-09-18T19:13:57+0900 watch: netdev refcount leak ACTIVE (ACTIVE: [ 4766.612566] unregister_netdevice: waiting for leaktest0 to become free. Usage count = 6)。ユーザ通知
+2026-09-18T19:14:37+0900 post(suspend-test): stale: [ 4776.617549] unregister_netdevice: waiting for leaktest0 to become free. Usage count = 8, no action
+2026-09-18T19:19:41+0900 watch: netdev refcount leak ACTIVE ([ 5106.787626] unregister_netdevice: waiting for nm-xfrm-1261756 to become free. Usage count = -10)。ユーザ通知
+2026-09-18T19:21:03+0900 pre(suspend): netdev refcount leak ACTIVE ([ 5190.272486] unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 12)。sleep は回復不能。60s 後に reboot をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T19:23:14+0900 post(suspend): netdev refcount leak ACTIVE ([ 5322.169937] unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 12)。sleep は回復不能。60s 後に reboot をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T19:46:42+0900 watch: netdev refcount leak ACTIVE ([  249.346208] unregister_netdevice: waiting for nm-xfrm-1151632 to become free. Usage count = -4)。ユーザ通知
+2026-09-18T19:46:45+0900 pre(suspend): netdev refcount leak ACTIVE ([  257.281702] unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 6)。sleep は回復不能。60s 後に reboot をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T19:47:45 job 投入拒否 → systemctl --force reboot
+
+Session terminated, killing shell... ...killed.
+2026-09-18T20:34:41+0900 pre(suspend): netdev refcount leak ACTIVE ([  324.057540] unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 8)。sleep は回復不能。60s 後に reboot をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T20:35:34+0900 watch: netdev refcount leak ACTIVE ([  374.643626] unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 8)。ユーザ通知
+2026-09-18T20:35:41 job 投入拒否 → systemctl --force reboot
+2026-09-18T20:57:10+0900 pre(suspend): netdev refcount leak ACTIVE ([  240.173366] unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 113)。sleep は回復不能。60s 後に reboot をスケジュール
+Running timer as unit: netdev-leak-poweroff.timer
+Will run service as unit: netdev-leak-poweroff.service
+2026-09-18T20:57:27+0900 watch: netdev refcount leak ACTIVE ([  257.173928] unregister_netdevice: waiting for nm-xfrm-5746502 to become free. Usage count = -111)。ユーザ通知
+2026-09-18T20:58:10 job 投入拒否 → systemctl --force reboot
+GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files

@@ -1,0 +1,6 @@
+[Unit]
+Description=Detect netdev refcount leak (unregister_netdevice waiting) and notify the user
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/netdev-leak-watch

@@ -1,0 +1,23 @@
+#!/bin/sh
+# netdev-leak-check: netdev refcount 破壊 (unregister_netdevice が永久待機) が「今も進行中」かを判定する。
+# 2026-09-18 改修 (report 2026-09-18_*_vpn_xfrm_kernel_regression_netdev_leak_fix)。
+# 旧方式 (署名の件数比較) は dmesg リングバッファ飽和で件数が減り誤判定したため、
+# 「最新の署名行 (タイムスタンプ込み) が WAIT 秒後に更新されたか」で判定する。
+# 署名はカーネルが待機中デバイスごとに 10 秒周期で出すので、12 秒待てば必ず更新される。
+# 終了コード: 0 = ACTIVE (進行中), 1 = 署名なし / 過去の残渣。標準出力に判定理由。
+SIG='unregister_netdevice: waiting for'
+WAIT=${1:-12}
+
+l1=$(dmesg 2>/dev/null | grep -F "$SIG" | tail -n 1)
+if [ -z "$l1" ]; then
+    echo "none"
+    exit 1
+fi
+sleep "$WAIT"
+l2=$(dmesg 2>/dev/null | grep -F "$SIG" | tail -n 1)
+if [ -n "$l2" ] && [ "$l2" != "$l1" ]; then
+    echo "ACTIVE: $l2"
+    exit 0
+fi
+echo "stale: $l1"
+exit 1

@@ -1,0 +1,48 @@
+ 9月 18 16:13:30.520922 macbookair2015 systemd-logind[816]: Lid closed.
+ 9月 18 16:13:30.681850 macbookair2015 charon-nm[2645]: 10[KNL] fe80::fc0b:caf7:5ba6:5834 disappeared from wlp3s0
+ 9月 18 16:13:30.684184 macbookair2015 charon-nm[2645]: 02[KNL] 192.168.1.13 disappeared from wlp3s0
+ 9月 18 16:13:30.781424 macbookair2015 charon-nm[2645]: 12[IKE] interface change for bypass policy for fe80::/64 (from wlp3s0 to nm-xfrm-1147959)
+ 9月 18 16:13:30.781571 macbookair2015 charon-nm[2645]: 14[IKE] old path is not available anymore, try to find another
+ 9月 18 16:13:30.784948 macbookair2015 charon-nm[2645]: 14[IKE] looking for a route to 160.16.210.47 ...
+ 9月 18 16:13:30.785126 macbookair2015 charon-nm[2645]: 14[IKE] looking for a route to 192.168.0.1 ...
+ 9月 18 16:13:30.785168 macbookair2015 charon-nm[2645]: 14[IKE] looking for a route to 10.1.0.1 ...
+ 9月 18 16:13:30.785202 macbookair2015 charon-nm[2645]: 14[IKE] no route found to reach 160.16.210.47, MOBIKE update deferred
+ 9月 18 16:13:30.789471 macbookair2015 charon-nm[2645]: 12[IKE] uninstalling bypass policy for 192.168.1.0/24
+ 9月 18 16:13:30.797459 macbookair2015 charon-nm[2645]: 07[KNL] interface wlp3s0 deactivated
+ 9月 18 16:13:30.797654 macbookair2015 charon-nm[2645]: 16[KNL] 192.168.83.1 disappeared from nm-xfrm-1147959
+ 9月 18 16:13:30.801156 macbookair2015 charon-nm[2645]: 05[IKE] deleting IKE_SA GSNet[2] between 192.168.1.13[macbookair2015]...160.16.210.47[160.16.210.47]
+ 9月 18 16:13:30.801233 macbookair2015 charon-nm[2645]: 05[IKE] sending DELETE for IKE_SA GSNet[2]
+ 9月 18 16:13:30.801816 macbookair2015 charon-nm[2645]: 05[ENC] generating INFORMATIONAL request 7 [ D ]
+ 9月 18 16:13:30.807206 macbookair2015 kernel: WARNING: CPU: 3 PID: 9424 at net/wireless/sme.c:848 __cfg80211_connect_result+0x8be/0x8d0 [cfg80211]
+ 9月 18 16:13:30.820964 macbookair2015 charon-nm[2645]: 05[NET] sending packet: from 192.168.1.13[51023] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 16:13:30.821199 macbookair2015 charon-nm[2645]: 09[NET] error writing to socket: Network is unreachable
+ 9月 18 16:13:30.897857 macbookair2015 charon-nm[2645]: 06[IKE] uninstalling bypass policy for 192.168.1.1/32
+ 9月 18 16:13:32.228476 macbookair2015 charon-nm[2645]: 11[KNL] interface wlp3s0 deleted
+ 9月 18 16:13:32.821286 macbookair2015 charon-nm[2645]: 15[IKE] retransmit 1 of request with message ID 7
+ 9月 18 16:13:32.821400 macbookair2015 charon-nm[2645]: 15[NET] sending packet: from 192.168.1.13[51023] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 16:13:32.821557 macbookair2015 charon-nm[2645]: 09[NET] error writing to socket: Network is unreachable
+ 9月 18 16:13:35.621825 macbookair2015 charon-nm[2645]: 16[IKE] retransmit 2 of request with message ID 7
+ 9月 18 16:13:35.621875 macbookair2015 charon-nm[2645]: 16[NET] sending packet: from 192.168.1.13[51023] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 16:13:35.621996 macbookair2015 charon-nm[2645]: 09[NET] error writing to socket: Network is unreachable
+ 9月 18 16:13:39.541276 macbookair2015 charon-nm[2645]: 06[IKE] retransmit 3 of request with message ID 7
+ 9月 18 16:13:39.541326 macbookair2015 charon-nm[2645]: 06[NET] sending packet: from 192.168.1.13[51023] to 160.16.210.47[4500] (80 bytes)
+ 9月 18 16:13:39.541477 macbookair2015 charon-nm[2645]: 09[NET] error writing to socket: Network is unreachable
+ 9月 18 16:13:42.319793 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 3
+ 9月 18 16:13:45.028694 macbookair2015 charon-nm[2645]: 10[IKE] giving up after 3 retransmits
+ 9月 18 16:13:45.028726 macbookair2015 charon-nm[2645]: 10[IKE] proper IKE_SA delete failed, peer not responding
+ 9月 18 16:13:45.029109 macbookair2015 charon-nm[2645]: 10[KNL] error uninstalling route installed with policy 192.168.83.1/32 === 0.0.0.0/0 out
+ 9月 18 16:13:45.031849 macbookair2015 charon-nm[2645]: 05[KNL] interface nm-xfrm-1147959 deactivated
+ 9月 18 16:13:45.032356 macbookair2015 charon-nm[2645]: 16[KNL] fe80::ea72:e4d6:1c73:beb2 disappeared from nm-xfrm-1147959
+ 9月 18 16:13:45.056348 macbookair2015 charon-nm[2645]: 06[KNL] interface nm-xfrm-1147959 deleted
+ 9月 18 16:13:45.132103 macbookair2015 charon-nm[2645]: 02[IKE] uninstalling bypass policy for fe80::/64
+ 9月 18 16:13:52.335793 macbookair2015 kernel: unregister_netdevice: waiting for wlp3s0 to become free. Usage count = 3
+ 9月 18 16:13:55.183726 macbookair2015 kernel: unregister_netdevice: waiting for nm-xfrm-1147959 to become free. Usage count = -1
+...
+ 9月 18 16:19:04.888109 macbookair2015 sudo[19883]: miminashi : TTY=pts/0 ; PWD=/home/miminashi ; USER=root ; COMMAND=/usr/sbin/reboot
+ 9月 18 16:19:04.889469 macbookair2015 sudo[19883]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 9月 18 16:19:04.899772 macbookair2015 sudo[19883]: pam_unix(sudo:session): session closed for user root
+ 9月 18 16:19:08.903393 macbookair2015 systemd[1]: systemd-suspend-then-hibernate.service: Processes still around after SIGKILL. Ignoring.
+ 9月 18 16:19:11.795861 macbookair2015 sudo[19937]: miminashi : TTY=pts/0 ; PWD=/home/miminashi ; USER=root ; COMMAND=/usr/sbin/halt
+ 9月 18 16:19:11.796445 macbookair2015 sudo[19937]: pam_unix(sudo:session): session opened for user root(uid=0) by miminashi(uid=1000)
+ 9月 18 16:19:11.805535 macbookair2015 sudo[19937]: pam_unix(sudo:session): session closed for user root
+ 9月 18 16:19:24.791256 macbookair2015 systemd-logind[816]: Power key pressed short.

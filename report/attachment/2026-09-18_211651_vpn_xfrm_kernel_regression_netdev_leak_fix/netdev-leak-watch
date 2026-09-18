@@ -1,0 +1,32 @@
+#!/bin/sh
+# netdev-leak-watch: 実行中 (蓋を開けて使用中) に netdev refcount 破壊を検知してデスクトップ通知する。
+# 2026-09-18 新設 (report 2026-09-18_*_vpn_xfrm_kernel_regression_netdev_leak_fix)。
+# 破壊は VPN 稼働中の下位デバイス消失 (USB テザリング抜去等) の瞬間に表面化し、以後のスリープは全て失敗する。
+# 電源断はしない (作業中に落とさない)。自動電源断はスリープ試行時の 48-netdev-leak-guard が担う。
+LOG=/var/log/netdev-leak-guard.log
+STAMP=/run/netdev-leak-watch.last
+INTERVAL=1800
+ts() { TZ=Asia/Tokyo date +%Y-%m-%dT%H:%M:%S%z; }
+
+dmesg 2>/dev/null | grep -qF 'unregister_netdevice: waiting for' || exit 0
+res=$(/usr/local/sbin/netdev-leak-check 12) || exit 0
+
+now=$(date +%s)
+last=$(cat "$STAMP" 2>/dev/null || echo 0)
+[ $((now - last)) -lt "$INTERVAL" ] && exit 0
+echo "$now" > "$STAMP"
+
+echo "$(ts) watch: netdev refcount leak ACTIVE (${res#ACTIVE: })。ユーザ通知" >> "$LOG"
+TITLE="ネットワークのカーネル不具合を検知"
+BODY="このままではスリープできません (蓋を閉じると電源断になります)。作業を保存して再起動してください。
+${res#ACTIVE: }"
+wall "netdev-leak-watch: $TITLE — $BODY" 2>/dev/null || true
+for bus in /run/user/*/bus; do
+    [ -S "$bus" ] || continue
+    uid=$(stat -c %u "$bus")
+    [ "$uid" -ge 1000 ] || continue
+    user=$(id -nu "$uid") || continue
+    runuser -u "$user" -- env DBUS_SESSION_BUS_ADDRESS="unix:path=$bus" \
+        notify-send -u critical -a netdev-leak-guard -i dialog-warning "$TITLE" "$BODY" >>"$LOG" 2>&1 || true
+done
+exit 0

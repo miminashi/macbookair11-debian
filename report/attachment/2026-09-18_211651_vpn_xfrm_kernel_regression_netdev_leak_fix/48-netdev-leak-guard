@@ -1,0 +1,58 @@
+#!/bin/sh
+# 48-netdev-leak-guard: netdev refcount 破壊時のフェイルセーフ。
+# 初版 2026-08-22 (report 2026-08-22_160000_*)、改修 2026-09-18 (report 2026-09-18_*_vpn_xfrm_kernel_regression_netdev_leak_fix)。
+# refcount が壊れると (原因: 6.12.94 以降の xfrm 非同期復号の dev 参照デグレ)、suspend/hibernate は毎回
+# freeze 段で失敗し、lid closed のまま logind が無限再試行してバッテリ枯渇・発熱に至る。回復手段は再起動のみ。
+# pre/post 段で「署名が今も増えている」ことを確認したら、猶予つきでクリーン電源断に倒す。
+# 改修点 (9/18 に初版が発火したのに電源断が不発だった 3 欠陥の修正):
+#  - systemctl poweroff は sleep 処理中だと logind が拒否する ("already in progress")。
+#    PID1 への start poweroff.target も、sleep と一緒に irreversible で積まれた grub-common.service の
+#    start job と衝突して "Transaction ... is destructive" で拒否される (9/18 実測)。
+#    → まず通常の job 投入を試し、拒否されたら systemctl --force (PID1 直接、job を経由しない。
+#      systemd-shutdown が全プロセス kill → sync → unmount/ro remount してから電源断) にフォールバック
+#    ただし sleep 処理中は user.slice が cgroup freezer で凍結されており、そのまま --force すると
+#    systemd-shutdown が固まった (9/18 実測、35 分以上停止)。--force の前に user.slice を thaw する。
+#    最後の保険: softdog + RebootWatchdogSec=5min (/etc/systemd/system.conf.d/60-reboot-watchdog.conf)
+#  - 失敗した transient unit の残留で以後の systemd-run が全滅 → --collect + reset-failed + 多重投入チェック
+#  - 件数比較はリングバッファ飽和で誤判定 → netdev-leak-check (最新行の更新で判定)
+# 設定: /etc/netdev-leak-guard.conf (ACTION=poweroff|reboot, GRACE=秒, DRYRUN=1)
+# 猶予中の中止: sudo systemctl stop netdev-leak-poweroff.timer
+# 可逆: このファイルを rm すれば従来動作。
+LOG=/var/log/netdev-leak-guard.log
+ACTION=poweroff
+GRACE=60
+DRYRUN=
+[ -r /etc/netdev-leak-guard.conf ] && . /etc/netdev-leak-guard.conf
+UNIT=netdev-leak-poweroff
+ts() { TZ=Asia/Tokyo date +%Y-%m-%dT%H:%M:%S%z; }
+
+case "$1" in pre|post) ;; *) exit 0 ;; esac
+
+# 通常時の fast path: 署名が一度も出ていなければ即終了
+dmesg 2>/dev/null | grep -qF 'unregister_netdevice: waiting for' || exit 0
+
+if ! res=$(/usr/local/sbin/netdev-leak-check 12); then
+    echo "$(ts) $1($2): $res, no action" >> "$LOG"
+    exit 0
+fi
+
+if systemctl -q is-active "$UNIT.timer" || systemctl -q is-active "$UNIT.service"; then
+    echo "$(ts) $1($2): leak ACTIVE, ${ACTION} は既にスケジュール済み" >> "$LOG"
+    exit 0
+fi
+
+echo "$(ts) $1($2): netdev refcount leak ACTIVE (${res#ACTIVE: })。sleep は回復不能。${GRACE}s 後に ${ACTION} をスケジュール" >> "$LOG"
+wall "netdev-leak-guard: スリープ不能な netdev リークを検知しました。${GRACE} 秒後に ${ACTION} します。中止: sudo systemctl stop ${UNIT}.timer" 2>>"$LOG" || true
+
+if [ -n "$DRYRUN" ]; then
+    echo "$(ts) $1($2): DRYRUN のため ${ACTION} はスケジュールしない" >> "$LOG"
+    exit 0
+fi
+
+systemctl reset-failed "$UNIT.timer" "$UNIT.service" 2>/dev/null
+# logind を経由しない。job 投入が拒否されたら --force で PID1 に直接指示する
+systemd-run --collect --unit="$UNIT" --on-active="$GRACE" --timer-property=AccuracySec=1s \
+    --description="netdev leak guard: clean ${ACTION}" \
+    sh -c "systemctl start ${ACTION}.target --job-mode=replace-irreversibly --no-block || { echo \"\$(date +%FT%T) job 投入拒否 → systemctl --force ${ACTION}\" >> $LOG; systemctl thaw user.slice; systemctl --force ${ACTION}; }" >>"$LOG" 2>&1 \
+    || echo "$(ts) $1($2): systemd-run rc=$?" >> "$LOG"
+exit 0

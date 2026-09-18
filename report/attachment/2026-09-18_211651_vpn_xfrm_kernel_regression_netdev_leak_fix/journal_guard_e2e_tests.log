@@ -1,0 +1,43 @@
+=== boot 0258793e3cf64648894482fbeca75d59
+ 9月 18 19:42:31.701765 macbookair2015 kernel: NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+ 9月 18 19:42:33.394674 macbookair2015 kernel:  ahci libahci cec libata rc_core ttm iTCO_wdt xhci_pci intel_pmc_bxt crc32_pclmul iTCO_vendor_support drm_kms_helper xhci_hcd scsi_mod watchdog crc32c_intel i2c_i801 thunderbolt drm i2c_smbus dw_dmac_pci usbcore scsi_common spi_pxa2xx_pci lpc_ich usb_common spi_pxa2xx_platform dw_dmac dw_dmac_core video spi_pxa2xx_core button wmi
+ 9月 18 19:42:52.095307 macbookair2015 boltd[909]: watchdog: enabled [pulse: 90s]
+ 9月 18 19:43:55.496796 macbookair2015 geoclue[1347]: Service not used for 60 seconds. Shutting down..
+ 9月 18 19:46:28.446700 macbookair2015 sudo[4025]: miminashi : PWD=/home/miminashi ; USER=root ; COMMAND=/usr/bin/systemctl suspend --no-block
+ 9月 18 19:46:45.757813 macbookair2015 systemd[1]: Started netdev-leak-poweroff.timer - netdev leak guard: clean reboot.
+ 9月 18 19:47:45.832151 macbookair2015 systemd[1]: Started netdev-leak-poweroff.service - netdev leak guard: clean reboot.
+ 9月 18 19:47:45.888849 macbookair2015 systemd[1]: Requested transaction contradicts existing jobs: Transaction for reboot.target/start is destructive (grub-common.service has 'start' job queued, but 'stop' is included in transaction).
+ 9月 18 19:47:45.888997 macbookair2015 systemctl[4531]: Failed to start reboot.target: Transaction for reboot.target/start is destructive (grub-common.service has 'start' job queued, but 'stop' is included in transaction).
+ 9月 18 19:47:45.900750 macbookair2015 systemd[1]: Reboot requested from client PID 4533 ('systemctl') (unit netdev-leak-poweroff.service)...
+ 9月 18 19:47:45.900776 macbookair2015 systemd[1]: Shutting down.
+ 9月 18 19:47:46.277738 macbookair2015 systemd-journald[318]: Journal stopped
+=== boot a007184f3c8847df8fe4cc00bf94ab10
+ 9月 18 20:34:41.776192 macbookair2015 systemd[1]: Started netdev-leak-poweroff.timer - netdev leak guard: clean reboot.
+ 9月 18 20:35:41.928752 macbookair2015 systemd[1]: Started netdev-leak-poweroff.service - netdev leak guard: clean reboot.
+ 9月 18 20:35:41.973704 macbookair2015 systemd[1]: Requested transaction contradicts existing jobs: Transaction for reboot.target/start is destructive (grub-common.service has 'start' job queued, but 'stop' is included in transaction).
+ 9月 18 20:35:41.973909 macbookair2015 systemctl[6047]: Failed to start reboot.target: Transaction for reboot.target/start is destructive (grub-common.service has 'start' job queued, but 'stop' is included in transaction).
+ 9月 18 20:35:41.987566 macbookair2015 systemd[1]: user@1000.service: Unit now thawed.
+ 9月 18 20:35:41.987612 macbookair2015 systemd[1]: session-5.scope: Unit now thawed.
+ 9月 18 20:35:41.987644 macbookair2015 systemd[1]: user-1000.slice: Unit now thawed.
+ 9月 18 20:35:41.987676 macbookair2015 systemd[1]: user.slice: Unit now thawed.
+ 9月 18 20:35:42.018453 macbookair2015 systemd[1]: Reboot requested from client PID 6053 ('systemctl') (unit netdev-leak-poweroff.service)...
+ 9月 18 20:35:42.018479 macbookair2015 systemd[1]: Shutting down.
+ 9月 18 20:35:42.332788 macbookair2015 systemd[1]: Using hardware watchdog 'Software Watchdog', version 0, device /dev/watchdog0
+ 9月 18 20:35:42.336588 macbookair2015 kernel: watchdog: watchdog0: watchdog did not stop!
+ 9月 18 20:35:42.344630 macbookair2015 systemd-shutdown[1]: Using hardware watchdog 'Software Watchdog', version 0, device /dev/watchdog0
+ 9月 18 20:35:42.499429 macbookair2015 systemd-journald[328]: Journal stopped
+=== boot b273bdbf86d8455cb63a066d023eae64
+ 9月 18 20:58:10.952115 macbookair2015 systemd[1]: Requested transaction contradicts existing jobs: Transaction for reboot.target/start is destructive (grub-common.service has 'start' job queued, but 'stop' is included in transaction).
+ 9月 18 20:58:10.952326 macbookair2015 systemctl[20003]: Failed to start reboot.target: Transaction for reboot.target/start is destructive (grub-common.service has 'start' job queued, but 'stop' is included in transaction).
+ 9月 18 20:58:10.967421 macbookair2015 systemd[1]: user@1000.service: Unit now thawed.
+ 9月 18 20:58:10.967458 macbookair2015 systemd[1]: user-1000.slice: Unit now thawed.
+ 9月 18 20:58:10.967493 macbookair2015 systemd[1]: session-c1.scope: Unit now thawed.
+ 9月 18 20:58:10.967525 macbookair2015 systemd[1]: user@110.service: Unit now thawed.
+ 9月 18 20:58:10.967559 macbookair2015 systemd[1]: user-110.slice: Unit now thawed.
+ 9月 18 20:58:10.967589 macbookair2015 systemd[1]: user.slice: Unit now thawed.
+ 9月 18 20:58:10.998840 macbookair2015 systemd[1]: Reboot requested from client PID 20012 ('systemctl') (unit netdev-leak-poweroff.service)...
+ 9月 18 20:58:10.998881 macbookair2015 systemd[1]: Shutting down.
+ 9月 18 20:58:11.295851 macbookair2015 systemd[1]: Using hardware watchdog 'Software Watchdog', version 0, device /dev/watchdog0
+ 9月 18 20:58:11.299652 macbookair2015 kernel: watchdog: watchdog0: watchdog did not stop!
+ 9月 18 20:58:11.307710 macbookair2015 systemd-shutdown[1]: Using hardware watchdog 'Software Watchdog', version 0, device /dev/watchdog0
+ 9月 18 20:58:11.426615 macbookair2015 systemd-journald[323]: Journal stopped
